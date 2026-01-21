@@ -1,0 +1,5 @@
+2025-12-16 10:25:29 - obtenerDocentes llamado
+id_instancia recibido: 1
+Conexion nexus obtenida OK
+EXCEPTION: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'verumax_certifi.participaciones_docente' doesn't exist
+

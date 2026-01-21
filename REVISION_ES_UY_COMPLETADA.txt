@@ -1,0 +1,119 @@
+REVISION EXHAUSTIVA DE TRADUCCIONES AL ESPAÑOL URUGUAYO
+========================================================
+
+Archivos revisados: 2
+Claves totales: 401 (79 + 322)
+Fecha: 2025-12-25
+
+CORRECCIONES REALIZADAS
+=======================
+
+ARCHIVO: E:\appVerumax\lang\es_UY\common.php
+-------------------------------------------
+
+Línea 13:
+ANTES: 'nav_ecosistema' => 'Un Ecosistema de Soluciones a tu Disposición',
+DESPUÉS: 'nav_ecosistema' => 'Un Ecosistema de Soluciones a su Disposición',
+MOTIVO: Cambio de "tu" (informal) a "su" (formal). Contexto institucional dirigido a educadores/profesionales.
+
+Línea 14:
+ANTES: 'nav_rapido_titulo' => '¿Qué estás buscando?',
+DESPUÉS: 'nav_rapido_titulo' => '¿Qué está buscando?',
+MOTIVO: Eliminación de voseo "estás" → "está" (usted formal). Público profesional/institucional.
+
+TOTAL CORRECCIONES EN common.php: 2
+
+
+ARCHIVO: E:\appVerumax\lang\es_UY\land_certificatum.php
+-------------------------------------------------------
+
+Línea 28:
+ANTES: 'acad_hero_propuesta_valor' => 'El sistema lo hace todo. Usted solo carga los datos una vez.',
+DESPUÉS: 'acad_hero_propuesta_valor' => 'El sistema lo hace todo. Solo carga los datos una vez.',
+MOTIVO: Eliminación de "Usted" redundante. Simplificación para naturalidad del español uruguayo formal.
+
+Línea 139:
+ANTES: 'acad_portal_demo_dni' => 'C.I.: 12.345.678',
+DESPUÉS: 'acad_portal_demo_dni' => 'C.I.: 12345678',
+MOTIVO: Formato correcto de Cédula de Identidad uruguaya (sin puntos separadores).
+
+Línea 231:
+ANTES: 'acad_faq_cargo_titulo' => '¿Cómo cargo la información de mis estudiantes?',
+DESPUÉS: 'acad_faq_cargo_titulo' => '¿Cómo cargo la información de los estudiantes?',
+MOTIVO: Eliminación de "mis" para mayor formalidad institucional. Dirigido a administradores/directivos.
+
+TOTAL CORRECCIONES EN land_certificatum.php: 3
+
+CORRECCIONES TOTALES: 5
+
+
+VERIFICACIONES REALIZADAS
+==========================
+
+✓ Búsqueda exhaustiva de voseo:
+  - Verificadas palabras: tenés, querés, podés, hacé, mirá, vos
+  - Resultado: 0 casos encontrados
+
+✓ Terminología educativa uruguaya:
+  - "Cédula de Identidad" y "C.I.": Consistentes
+  - "curso", "materia", "estudiante": Apropiados
+  - "alumno": No se usa (correcto en este contexto)
+  - "docente": Usado correctamente
+
+✓ Formalidad y registro lingüístico:
+  - Público objetivo: Educadores, profesionales educativos, directivos
+  - Tono: Formal pero accesible
+  - "Usted" / "su": Usado consistentemente
+  - Imperativos formales: Configure, Personalice, Transforme (correcto)
+
+✓ Acrónimos y extranjerismos:
+  - QR: Correcto (mayúsculas)
+  - API: Correcto
+  - CSV/Excel: Correctos
+  - Email/correo: Mixto pero aceptable en Uruguay
+
+✓ Dominio geográfico:
+  - .uy: Presente en referencias a dominios (correcto para Uruguay)
+  - Menciones a organismos uruguayos: Coherentes
+
+✓ Ortografía y acentuación:
+  - Tildes: Correctas en todas las palabras
+  - Puntuación: Consistente
+
+✓ Validación PHP:
+  - common.php: Sin errores de sintaxis ✓
+  - land_certificatum.php: Sin errores de sintaxis ✓
+
+PATRONES DE CALIDAD VERIFICADOS
+================================
+
+✓ No hay voseo argentino residual
+✓ Consistencia de formalidad (usted/su)
+✓ Terminología educativa uruguaya apropiada
+✓ Formato correcto de documentos de identidad
+✓ Coherencia en genero (masculino/femenino) con barras (nuestros/as, los/as)
+✓ Mayúsculas y minúsculas apropiadas
+✓ Acentuación correcta
+✓ Ausencia de coloquialismos inadecuados
+✓ Público objetivo adecuado para educadores/profesionales
+✓ Referencias institucionales correctas
+
+CONCLUSION
+==========
+
+Los archivos han sido corregidos exhaustivamente para cumplir con los estándares del español uruguayo formal para contextos institucionales y educativos. Todas las 401 claves fueron revisadas.
+
+Los 5 errores encontrados han sido corregidos:
+- 2 casos de formalidad insuficiente
+- 1 error de formato de documento de identidad
+- 1 redundancia de lenguaje
+- 1 inconsistencia de posesión
+
+RECOMENDACIONES ADICIONALES
+============================
+
+1. Mantener revisiones periódicas de actualizaciones futuras
+2. Considerar crear un glosario de términos específicos para el sector educativo uruguayo
+3. Validar con hablantes nativos de educadores uruguayos si hay más revisiones
+4. Documentar los criterios de formalidad usados en future translations
+

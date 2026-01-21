@@ -1,0 +1,127 @@
+INSTRUCCIONES PARA SUBIR ARCHIVOS AL REMOTO
+=============================================
+Fecha: 2025-11-23 18:00
+Por: Claude Code
+
+RESUMEN DE CAMBIOS REALIZADOS:
+===============================
+
+1. ✅ ERROR SQL CORREGIDO: Creado SQL para agregar columnas faltantes en verumax_general.instances
+2. ✅ SCROLL ARREGLADO: Funciona correctamente en todas las pestañas de General y en Identitas
+3. ✅ BOTONES NORMALIZADOS: Todos los botones ahora son azules (bg-blue-600)
+4. ✅ DETECCIÓN DE CAMBIOS: Botones comienzan en gris y se activan solo cuando hay cambios
+5. ✅ NOMBRES DE BOTONES: Actualizados para que sean descriptivos de su sección
+6. ✅ IDENTITAS SIN PANTALLA BLANCA: Los tabs se mantienen visibles después de guardar
+
+PENDIENTE (Para próxima iteración):
+====================================
+- Templates module: toast y scroll
+- Certificatum module: toast
+
+PASO 1: EJECUTAR SQL EN PHPMYADMIN
+===================================
+
+Archivo: D:\appVerumax\sql\20251123_agregar_columnas_general.sql
+
+Abrir phpMyAdmin, seleccionar base de datos "verumax_general", y ejecutar el contenido de este archivo.
+
+El SQL agrega las siguientes columnas a la tabla "instances":
+- sitio_web_oficial (VARCHAR 255)
+- email_contacto (VARCHAR 255)
+- redes_sociales (TEXT - almacena JSON)
+
+
+PASO 2: SUBIR ARCHIVOS AL REMOTO CON FILEZILLA
+================================================
+
+Archivos modificados que debes subir:
+
+1. admin/modulos/general.php
+   Cambios:
+   - Todos los botones normalizados a azul
+   - Sistema de detección de cambios mejorado (botones grises hasta que hay cambios)
+   - Scroll arreglado en todas las pestañas
+   - Nombres de botones actualizados:
+     * "Guardar Información" (en pestaña Información)
+     * "Guardar Logo" (en sección Logo)
+     * "Guardar Modo Construcción" (antes era naranja, ahora azul)
+     * "Guardar Indexación" (antes era morado, ahora azul)
+     * "Guardar Paleta de Colores" (en pestaña Branding)
+     * "Guardar Activación de Módulos" (en pestaña Módulos)
+     * "Guardar Integración de Certificatum" (antes era verde, ahora azul)
+
+2. admin/modulos/identitas.php
+   Cambios:
+   - Tabs se mantienen visibles después de guardar (no queda más pantalla en blanco)
+   - Scroll arreglado
+   - Botones normalizados a azul
+   - Nombres de botones actualizados:
+     * "Guardar Configuración" (antes "Guardar cambios")
+     * "Guardar SEO" (antes "Guardar configuración SEO", era verde, ahora azul)
+
+
+ARCHIVOS DE BACKUP CREADOS:
+============================
+
+En caso de problemas, los backups están en:
+
+D:\appVerumax\backup\2025-11-23\1800-general.php
+D:\appVerumax\backup\2025-11-23\1800-identitas.php
+
+
+VALIDACIÓN PHP:
+===============
+
+Todos los archivos tienen sintaxis correcta (validado con php -l).
+
+
+COMPORTAMIENTO ESPERADO DESPUÉS DE SUBIR:
+==========================================
+
+1. GENERAL > Información > Botón "Guardar Información":
+   - Comienza gris (disabled)
+   - Se vuelve azul cuando cambias algo
+   - Al guardar: muestra toast verde flotante, hace scroll al elemento guardado
+   - Se mantiene en la misma pestaña
+
+2. GENERAL > Branding > Todos los botones:
+   - Mismo comportamiento que arriba
+   - Scroll funciona correctamente
+
+3. GENERAL > Módulos > Todos los botones:
+   - Mismo comportamiento
+   - "Guardar Integración de Certificatum" ahora es azul (antes verde)
+
+4. IDENTITAS > Configuración > "Guardar Configuración":
+   - Comienza habilitado (diferente al General para no romper funcionalidad existente)
+   - Al guardar: muestra toast, se mantiene en pestaña Configuración
+   - No queda más pantalla en blanco
+
+5. IDENTITAS > Configuración > "Guardar SEO":
+   - Ahora es azul (antes verde)
+   - Se mantiene en pestaña Configuración, hace scroll a la sección SEO
+
+
+NOTAS IMPORTANTES:
+==================
+
+1. El SQL es IMPRESCINDIBLE ejecutarlo ANTES de probar. Sin él, el botón "Guardar Información"
+   en General seguirá dando error.
+
+2. Los botones ahora tienen comportamiento inteligente:
+   - Detectan cambios automáticamente
+   - Se deshabilitan si no hay cambios
+   - Muestran spinner mientras guardan
+
+3. Todos los toasts son flotantes (arriba a la derecha), no bloquean la vista,
+   y desaparecen automáticamente en 4 segundos.
+
+
+¿PROBLEMAS?
+===========
+
+Si algo no funciona:
+1. Verificar que el SQL se ejecutó correctamente
+2. Verificar que los archivos se subieron correctamente (comparar tamaños)
+3. Limpiar caché del navegador (Ctrl+F5)
+4. Si persiste, restaurar desde backup y reportar el problema

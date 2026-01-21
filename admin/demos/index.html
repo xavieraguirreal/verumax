@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales Interactivos - VERUMax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-demo {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-demo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15);
+        }
+        .card-demo.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .card-demo.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-4">
+                    <a href="../index.php" class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        <span class="hidden sm:inline">Volver al Panel</span>
+                    </a>
+                    <div class="w-px h-6 bg-gray-300"></div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-lg font-bold text-gray-900">Tutoriales Interactivos</h1>
+                            <p class="text-xs text-gray-500">Aprende a usar VERUMax paso a paso</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="../manual.php#tutoriales-interactivos"
+                   class="text-sm text-purple-600 hover:text-purple-800 inline-flex items-center gap-1 transition">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Ver en Manual</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Intro -->
+        <div class="text-center mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Aprendizaje Interactivo</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Estos demos simulan el panel de administración real para que puedas aprender cada proceso sin afectar tus datos.
+                Funcionan en computadoras, tablets y celulares.
+            </p>
+        </div>
+
+        <!-- How it works -->
+        <div class="bg-white rounded-2xl shadow-sm border p-6 mb-8">
+            <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+                Como funcionan los demos
+            </h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="play" class="w-4 h-4 text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900 text-sm">Modo Automatico</p>
+                        <p class="text-xs text-gray-500">El demo avanza solo</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="keyboard" class="w-4 h-4 text-blue-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900 text-sm">Flechas del teclado</p>
+                        <p class="text-xs text-gray-500">Navega a tu ritmo</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-amber-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900 text-sm">Tips contextuales</p>
+                        <p class="text-xs text-gray-500">Globos explicativos</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="smartphone" class="w-4 h-4 text-purple-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-900 text-sm">Desliza en movil</p>
+                        <p class="text-xs text-gray-500">Swipe para navegar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demos Grid -->
+        <div class="grid sm:grid-cols-2 gap-6">
+
+            <!-- Demo: Agregar Estudiante -->
+            <a href="demo_agregar_estudiante.html" class="card-demo bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="user-plus" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Agregar Estudiante</h3>
+                            <p class="text-sm text-gray-600 mb-3">Aprende a registrar un nuevo estudiante paso a paso.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 30 seg
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 5 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">
+                                    Disponible
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Demo: Flujo Completo -->
+            <a href="demo_flujo_completo.html" class="card-demo bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="award" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Flujo Completo del Certificado</h3>
+                            <p class="text-sm text-gray-600 mb-3">Desde agregar estudiante hasta que recibe su certificado por email.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 3 min
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 11 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">
+                                    Disponible
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Demo: Configurar Branding -->
+            <div class="card-demo disabled bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="palette" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Configurar Branding</h3>
+                            <p class="text-sm text-gray-600 mb-3">Personaliza logo, colores y apariencia de tu institucion.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 1 min
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 6 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                                    Proximamente
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo: Configurar Plantilla -->
+            <div class="card-demo disabled bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="file-signature" class="w-6 h-6 text-amber-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Configurar Plantilla y Firma</h3>
+                            <p class="text-sm text-gray-600 mb-3">Selecciona plantilla, sube firma y previsualiza certificados.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 2 min
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 8 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                                    Proximamente
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo: Importar Estudiantes -->
+            <div class="card-demo disabled bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-teal-500 to-cyan-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="upload" class="w-6 h-6 text-teal-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Importar Estudiantes (CSV)</h3>
+                            <p class="text-sm text-gray-600 mb-3">Carga masiva de estudiantes desde archivo CSV.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 2 min
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 7 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                                    Proximamente
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo: Crear Curso -->
+            <div class="card-demo disabled bg-white rounded-2xl shadow-sm border overflow-hidden">
+                <div class="h-3 bg-gradient-to-r from-rose-500 to-red-600"></div>
+                <div class="p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="book-plus" class="w-6 h-6 text-rose-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 mb-1">Crear y Configurar Curso</h3>
+                            <p class="text-sm text-gray-600 mb-3">Nuevo curso con competencias y criterios de evaluacion.</p>
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3 h-3"></i> 2 min
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="layers" class="w-3 h-3"></i> 9 pasos
+                                </span>
+                                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 font-medium">
+                                    Proximamente
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Request Demo -->
+        <div class="mt-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 text-center text-white">
+            <h3 class="text-xl font-bold mb-2">Necesitas ayuda con algo especifico?</h3>
+            <p class="text-blue-100 mb-4">Si hay algun proceso que te gustaria ver como demo, escribinos y lo creamos.</p>
+            <a href="mailto:soporte@verumax.com?subject=Solicitud de Demo"
+               class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                Solicitar Demo
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500">
+        <p>VERUMax - Tutoriales Interactivos</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

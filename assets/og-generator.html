@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OG Image Generator - Certificatum</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #333;
+            padding: 20px;
+        }
+        .og-image {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Patrón de fondo */
+        .og-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(46, 125, 50, 0.03) 20px, rgba(46, 125, 50, 0.03) 40px);
+            pointer-events: none;
+        }
+        /* Línea decorativa superior */
+        .top-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #1B5E20 0%, #4CAF50 50%, #1B5E20 100%);
+        }
+        /* Contenido principal */
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        /* Logo Verumax (texto) */
+        .logo-verumax {
+            font-size: 18px;
+            font-weight: 600;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        /* Nombre del producto */
+        .product-name {
+            font-size: 84px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4CAF50 0%, #81C784 30%, #A5D6A7 50%, #81C784 70%, #4CAF50 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 30px rgba(76, 175, 80, 0.4));
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        /* Tagline */
+        .tagline {
+            font-size: 32px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        /* Features */
+        .features {
+            display: flex;
+            gap: 40px;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #888;
+            font-size: 18px;
+        }
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
+        }
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .url {
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        /* Decoración lateral */
+        .side-decoration {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgba(76, 175, 80, 0.2);
+            border-radius: 50%;
+        }
+        .side-decoration::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid rgba(76, 175, 80, 0.15);
+            border-radius: 50%;
+        }
+        /* QR mock */
+        .qr-mock {
+            position: absolute;
+            right: 60px;
+            bottom: 100px;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 2px;
+            padding: 8px;
+        }
+        .qr-cell {
+            background: #1a1a1a;
+            border-radius: 2px;
+        }
+        .qr-cell.white { background: white; }
+    </style>
+</head>
+<body>
+    <div class="og-image">
+        <div class="top-line"></div>
+
+        <div class="content">
+            <div class="logo-verumax">VERUMAX</div>
+            <div class="product-name">Certificatum</div>
+            <div class="tagline">Certificados Digitales Profesionales</div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    Validación QR
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    Emisión Automática
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    Portal 24/7
+                </div>
+            </div>
+        </div>
+
+        <!-- QR decorativo -->
+        <div class="qr-mock">
+            <div class="qr-cell"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell"></div>
+            <div class="qr-cell white"></div>
+            <div class="qr-cell"></div>
+        </div>
+
+        <div class="footer">
+            <div class="url">verumax.com/certificatum</div>
+        </div>
+    </div>
+
+    <p style="color: #999; margin-top: 20px; font-family: sans-serif;">
+        Abrí esta página en Chrome → Click derecho → Inspeccionar → Seleccioná el div .og-image →
+        Click derecho → "Capture node screenshot" → Guardalo como og-image-certificatum.png
+    </p>
+</body>
+</html>

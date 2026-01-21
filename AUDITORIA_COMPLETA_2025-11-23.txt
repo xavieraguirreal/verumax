@@ -1,0 +1,95 @@
+AUDITORÍA COMPLETA - ADMIN VERUMAX
+===================================
+Fecha: 2025-11-23 20:00
+
+ESTADO ACTUAL:
+==============
+
+✅ GENERAL.PHP:
+--------------
+✅ Toast funcionando en todos los handlers
+✅ Scroll con highlight funcionando
+✅ Mantiene pestañas correctas
+✅ Botones normalizados a azul (excepto favicon verde/rojo que es correcto)
+✅ Clase save-button en todos los botones principales
+⚠️  console.log de debugging aún presente (limpiar después)
+
+HANDLERS VERIFICADOS EN GENERAL:
+- actualizar_informacion ✅
+- actualizar_colores ✅
+- actualizar_modulos ✅
+- actualizar_integracion_certificatum ✅
+- actualizar_logo ✅
+- generar_favicon ✅
+- eliminar_favicon ✅
+- actualizar_construccion ✅
+- actualizar_seo_robots ✅
+
+✅ IDENTITAS.PHP:
+-----------------
+✅ Toast funcionando
+✅ Scroll con highlight funcionando
+✅ Ya NO queda en blanco
+✅ Botones principales con clase save-button
+❌ Botón "Guardar página" (línea 607) NO tiene clase save-button
+❌ Botón "Marcar leído" (línea 644) es correcto como text-link
+
+HANDLERS VERIFICADOS EN IDENTITAS:
+- actualizar_instancia ✅
+- actualizar_seo ✅
+- actualizar_pagina ⚠️ (sin mensaje/toast implementado)
+- marcar_leido ⚠️ (sin mensaje/toast implementado)
+
+❌ CERTIFICATUM.PHP:
+--------------------
+Sistema completamente diferente:
+- Usa array $mensaje = ['success' => bool, 'mensaje' => str, 'scroll_to' => str]
+- NO usa toast flotante
+- NO usa highlight en scroll
+- Scroll implementado pero sin feedback visual
+- Necesita normalización completa
+
+PENDIENTE POR CORREGIR:
+=======================
+
+1. IDENTITAS - Botón "Guardar página":
+   Línea 607: Agregar clase save-button y normalizar estilo
+
+2. IDENTITAS - Handler actualizar_pagina:
+   Sin mensaje de éxito, no redirige, no muestra toast
+
+3. IDENTITAS - Handler marcar_leido:
+   Sin mensaje de éxito, no redirige, no muestra toast
+
+4. CERTIFICATUM - TODO el módulo:
+   - Convertir sistema de mensajes al nuevo formato
+   - Agregar toast notifications
+   - Agregar highlight en scroll
+   - Normalizar colores de botones
+   - Agregar clase save-button
+
+5. TEMPLATES (identitas_templates.php):
+   - Agregar toast notifications
+   - Agregar scroll con highlight
+   - Normalizar botones
+
+6. LIMPIEZA GENERAL:
+   - Eliminar console.log de debugging
+   - Eliminar código $GET['success'] que ya no se usa
+   - Eliminar redirects comentados
+
+
+RECOMENDACIÓN:
+==============
+Dado el volumen de cambios pendientes, sugiero:
+
+OPCIÓN A (Completa):
+- Corregir TODO ahora (40-60 minutos más de trabajo)
+- Resultado: Sistema 100% normalizado
+
+OPCIÓN B (Pragmática):
+- Corregir solo IDENTITAS (botones faltantes)
+- Dejar CERTIFICATUM y TEMPLATES para próxima sesión
+- Resultado: GENERAL e IDENTITAS 100% funcionales
+
+¿Qué opción prefieres?

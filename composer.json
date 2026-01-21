@@ -1,0 +1,25 @@
+{
+    "name": "verumax/validarcert",
+    "description": "Plataforma multi-tenant de validacion de certificados educativos",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "VERUMax Team"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "mpdf/mpdf": "^8.2",
+        "tecnickcom/tcpdf": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "VERUMax\\": "src/VERUMax/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

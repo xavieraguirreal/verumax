@@ -1,0 +1,661 @@
+<?php
+declare(encoding='UTF-8');
+// Euskera - eu_ES
+$lang = [
+    // Meta
+    'meta_title' => 'OriginalisDoc - QR Balidazioarekin Dokumentazioa Sektorerako',
+    'meta_description' => 'Hezkuntza-erakundeentzat, profesionalentzat, ekitaldientzat, enpresentzat, kooperatibentzat eta elkarteentzat dokumentu digitalak emititzeko eta balidatzeko soluzioak.',
+
+    // Header/Navigation
+    'nav_inicio' => 'Hasiera',
+    'nav_categorias' => 'Kategoriak',
+    'nav_beneficios' => 'Abantailak',
+    'nav_faq' => 'FAQ',
+    'nav_validar' => 'Balidatu',
+    'nav_demo' => 'Eskatu Demoa',
+
+    // Hero Section
+    'hero_badge' => 'Mundu osoko erakunde eta profesionalen konfiantza irabazita',
+    'hero_title' => 'QR Balidazioa duen Dokumentazioa',
+    'hero_subtitle' => 'Hezkuntza-erakundeentzat, profesional independenteentzat, ekitaldi-antolatzaileentzat, enpresentzat, kooperatibentzat eta elkarteentzat dokumentu digitalak emititzeko eta balidatzeko soluzioak. QR balidazio faltsutegaitza eta atari pertsonalizatua.',
+    'hero_cta_primary' => 'Arakatu Soluzioak',
+    'hero_cta_secondary' => 'Balidatu Dokumentua',
+
+    // Categorías Section
+    'cat_title' => 'Industriarako Soluzioak',
+    'cat_subtitle' => 'Aukeratu zure sektorea bere beharretarako egokitutako soluzio perfektua aurkitzeko',
+
+    'cat_academico' => 'Akademikoa',
+    'cat_academico_1' => 'Hezkuntza-Erakundeak',
+    'cat_academico_2' => 'Formazio-Zentroak',
+    'cat_academico_3' => 'Irakasle Partikularrak',
+    'cat_academico_cta' => 'Ikusi Soluzioa →',
+
+    'cat_profesional' => 'Profesionala',
+    'cat_profesional_1' => 'Osasuna eta Ongizatea',
+    'cat_profesional_2' => 'Ingeniaritza eta Arkitektura',
+    'cat_profesional_3' => 'Profesional Guztiak',
+
+    'cat_eventos' => 'Ekitaldiak',
+    'cat_eventos_1' => 'Kongresuak eta Hitzaldiak',
+    'cat_eventos_2' => 'Jaleginak eta Kontzertuak',
+    'cat_eventos_3' => 'Sarrera-Kontrola',
+
+    'cat_empresarial' => 'Enpresariala',
+    'cat_empresarial_1' => 'Bermeak eta Egiaztagiriak',
+    'cat_empresarial_2' => 'Kalitate-Ziurtagiriak',
+    'cat_empresarial_3' => 'Ordainagiriak',
+
+    'cat_cooperativas' => 'Kooperatibak',
+    'cat_cooperativas_1' => 'Kideen Kredentzialak',
+    'cat_cooperativas_2' => 'Partaidetzaren Ziurtagiriak',
+    'cat_cooperativas_3' => 'Jardueren Agiriak',
+
+    'cat_mutuales' => 'Elkarteak',
+    'cat_mutuales_1' => 'Elkartekideen Kredentzialak',
+    'cat_mutuales_2' => 'Zerbitzuen Agiriak',
+    'cat_mutuales_3' => 'Onurak dituzten Txartelak',
+
+    'cat_proximamente' => 'Laster',
+    'cat_footer' => 'Kategoria gehiago laster.',
+    'cat_footer_link' => 'Galdetu iezaguzu',
+    'cat_footer_text' => 'zure sektorea zerrendan ez badago.',
+
+    // Servicios Principales
+    'servicios_title' => 'Gure Zerbitzu Nagusiak',
+    'servicios_subtitle' => 'Gure erakunde guztiek dituzten funtzionalitate esentzialak, zein sektoretan dauden ez du axola',
+
+    'serv_antifraude' => 'Segurtasun Anti-Frode Osoa',
+    'serv_antifraude_desc' => 'QR kode bakunak eta faltsutu ezinak zeinak dokumentu bakoitzaren egiazkotasuna bermatzen dutenak.',
+
+    'serv_portal' => '24/7 Ataria',
+    'serv_portal_desc' => 'Sarbide iraunkorra ikasleentzat, bezeroentzat, kideentzat edo langileentzat edozein gailutik.',
+
+    'serv_impresion' => 'Premium Inprimaketa',
+    'serv_impresion_desc' => 'Kalitate handiko dokumentu fisikoak hologramak eta laminazioa dituztenak, etxera bidalia.',
+
+    'serv_branding' => 'Pertsonalizatuko Branding-a',
+    'serv_branding_desc' => 'Ataria eta dokumentuak zure logoa, koloreak eta diseinu instituzional bakana dituztenak.',
+
+    'serv_emision' => 'Emate Masiboa',
+    'serv_emision_desc' => 'Egin ehunka dokumentu bat-batean jakinarazpen berehalakoa izanda.',
+
+    'serv_validacion' => 'Balidazio-Ataria',
+    'serv_validacion_desc' => 'Edonor balioztatu dezake zure dokumentuen egiazkotasuna berehala.',
+
+    // Casos de Éxito
+    'casos_title' => 'Arrakasten Kasuak',
+    'casos_subtitle' => 'OriginalisDoc-en konfiantza duten erakundeak eta profesionalak',
+
+    'caso_sajur_org' => 'Justizia Berrezartzaileko Gizarte Elkartea',
+    'caso_sajur_tipo' => 'Hezkuntza-espezializatuko erakundea',
+    'caso_sajur_texto' => '"Eskuz ziurtagiri bakoitza prozesatzetik hamarreka ematera pasatu ginen minutu gutxitan. Gure ikasleek euren ibilbide osoa 24/7 atzitu ahal izatea baloratzen dute, eta enpleatzaileek QR balidazioan konfiantza dute. Administrazio-denboraren aurreztea %90koa izan da."',
+
+    'caso_liberte_org' => 'Liberté Lan Taldeko Kooperatiba',
+    'caso_liberte_tipo' => 'Hezkuntza profesionala eta prestakuntza',
+    'caso_liberte_texto' => '"Inplementazioa berehalakoa izan zen. 24 ordur baino gutxiagoan ziurtagiriak jada gure markarekin ari ginen ematen. Pertsonalizatuko atariak irudi profesionala ematen dio gure irteerari, ikasleek harrotziaz partekatzen dutena. Premium inprimaketa aukera bikaina da."',
+
+    'caso_nutricion_org' => 'Maria Gonzalez Lizentziatua',
+    'caso_nutricion_tipo' => 'Nutrizionista profesional independentea',
+    'caso_nutricion_texto' => '"Orain nire nutrizio-planek QR kodea dute nire pazienteek balioztatu ahal izateko. Honek konfiantza handiagoa sortu du eta autentifikazioari buruzko galderak murriztu ditu. Gainera, bidalketa fisikoa premiuma bikaina da nahi izaten dutenentzat inprimatuta izateko."',
+
+    'caso_empresa_org' => 'TechVision S.A.',
+    'caso_empresa_tipo' => 'Teknologia-enpresa',
+    'caso_empresa_texto' => '"OriginalisDoc erabiltzen dugu gure produktuen bermeak QR bidez egiaztatu daitezkeelarik. Gure bezeroek egiazkotasuna berehala baliozta dezakete eta informazio teknikoa guztia atzitu. Faltsutzeen inguruko erreklamazioen murrizketa %95ekoa izan da."',
+
+    // FAQ
+    'faq_title' => 'Galdera Ohikoak',
+    'faq_subtitle' => 'OriginalisDoc-i buruz jakin beharreko guztia',
+
+    'faq_1_q' => 'Zenbat denboratan behar du OriginalisDoc inplementatzeko?',
+    'faq_1_a' => '24 ordur baino gutxiago. Zure marka (logoa eta koloreak) konfiguratu besterik ez duzu egin behar, zure datuak kargatu eta ematen hasteko. Urratsez urrats gidatutako onboardinga dakar.',
+
+    'faq_2_q' => 'Dokumentu digitalak benetako balio juridikoa dute?',
+    'faq_2_a' => 'Bai. Dokumentu digitalak balio juridiko osoa dute. Gainera, gure QR sistemak egiazkotasuna berehala egiaztatzeko aukera ematen du, dokumentu fisiko ohikoei ezinezkoa dena.',
+
+    'faq_3_q' => 'Eta dokumentu fisiko bertsioa behar badut?',
+    'faq_3_a' => 'Premium inprimaketa zerbitzua eskaintzen dugu hologramen eta laminazio segurua duten HD inprimaketarekin, posta arrastreagarrian bidalia. Zuzenean zure ataletik eskatu dezakezu eta bidalketaren jarraipena egingo dizu.',
+
+    'faq_4_q' => 'Nola funtzionatzen du QR bidezko balidazioak?',
+    'faq_4_a' => 'Dokumentu bakoitzak QR kode bakarra dauka zeinak zure markarekin pertsonalizatutako balidazio-atarira bidaltzen duen. Hor bertan dokumentuaren informazio osoa eta bere ibilbidea erakusten da. Ezin da faltsutu edo aldatu.',
+
+    'faq_5_q' => 'Dokumentuen diseinua pertsonalizatu dezaket?',
+    'faq_5_a' => 'Bai, %100ean. Erakunde edo profesional bakoitzak markaren logoa, koloreak eta diseinua erabat pertsonalizatutako ataria dauka. Dokumentuek zure ikus-identitate bakana islatzen dute.',
+
+    'faq_6_q' => 'Plataforma erabiltzeko ezagutza teknikorik behar dut?',
+    'faq_6_a' => 'Ez. Plataforma estremez intuitiboa da. Interneten nabigatzeko gai bazara, arazorik gabe kudeatu ahal izango duzu OriginalisDoc. Gainera, laguntza tekniko osoa eskaintzen dugu.',
+
+    'faq_7_q' => 'Eta nire datuei buruz? Seguruak al dira?',
+    'faq_7_a' => 'Segurtasun absolutua. Banku-mailako enkriptazioa erabiltzen dugu, eguneroko babeskopia automatikoak eta datu-pribatutasunaren arauak betetzen ditugu. Zure datuak artxibo fisiko batean baino seguruago daude.',
+
+    // Validar Documento Section
+    'validar_title' => 'Dokumentu bat balidatu',
+    'validar_subtitle' => 'Sartu dokumentuan agertzen den balidazio-kodea (formatua: VALID-XXXXXXXXXXXX)',
+    'validar_placeholder' => 'VALID-XXXXXXXXXXXX',
+    'validar_btn' => 'Balidatu Orain',
+    'validar_ejemplo' => 'Adibidea: VALID-A1B2C3D4E5F6',
+
+    // Contacto Section
+    'contacto_title' => 'Hasi Gaur Bertan Dokumentu Profesionalak Erosten',
+    'contacto_subtitle' => 'Jar zaitez gurekin harremanetan demo pertsonalizatu batengatik eta ikusi nola alda dezakeen OriginalisDoc-ek zure dokumentuen kudeaketa.',
+    'contacto_nombre' => 'Izen Osoa',
+    'contacto_email' => 'Posta elektronikoa',
+    'contacto_institucion' => 'Erakundea/Antolaketa',
+    'contacto_mensaje' => 'Esaiguzu zure beharrari buruz...',
+    'contacto_btn' => 'Eskatu Demoa',
+    'contacto_info' => 'Edo idatzi iezaguzu zuzenean:',
+
+    // Footer
+    'footer_descripcion' => 'QR balidazioa duten dokumentu digital eta fisikoen plataforma definitiboa.',
+    'footer_enlaces' => 'Esteka Azkarrak',
+    'footer_caracteristicas' => 'Ezaugarriak',
+    'footer_contacto' => 'Harremana',
+    'footer_seguridad' => 'Enpresa Mailako Teknologia eta Segurtasuna',
+    'footer_copyright' => '© 2025 OriginalisDoc. Eskubide guztiak erreserbatuta.',
+    'footer_terminos' => 'Zerbitzu-baldintzak',
+    'footer_privacidad' => 'Pribatutasun-politika',
+
+    // Badges de Seguridad
+    'badge_ssl' => 'SSL',
+    'badge_ssl_desc' => '256-bit Enkriptazioa',
+    'badge_https' => 'HTTPS',
+    'badge_https_desc' => 'Konexio Segurua',
+    'badge_privacidad' => 'Pribatutasuna',
+    'badge_privacidad_desc' => 'Babestutako Datuak',
+    'badge_backup' => 'Babeskopia',
+    'badge_backup_desc' => 'Eguneroko Automatikoa',
+    'badge_uptime' => 'Erabilgarritasuna %99,9',
+    'badge_uptime_desc' => 'Erabilgarritasuna',
+    'badge_soporte' => 'Laguntza',
+    'badge_soporte_desc' => 'Laguntza 24/7',
+
+    // Estadísticas Hero
+    'stat_uptime' => 'Erabilgarritasuna',
+    'stat_documentos' => 'Emititako dokumentuak',
+    'stat_acceso' => 'Sarrera erabilgarri',
+    'stat_ahorro' => 'Administrazio-kostenetan aurreztea',
+
+    // Social Proof Contacto
+    'social_confianza' => 'OriginalisDoc-en konfiantza duten erakunde eta profesionalak',
+    'social_mas' => '+ erakunde eta profesional gehiago',
+
+    // Beneficios Contacto
+    'benefit_demo' => 'Doako demoa konpromisorik gabe',
+    'benefit_demo_desc' => 'Probatu funtzio guztiak',
+    'benefit_implementacion' => '24 orduko inplementazioa',
+    'benefit_implementacion_desc' => 'Hasi bihar ematen',
+    'benefit_soporte' => 'Sartutako laguntza teknikoa',
+    'benefit_soporte_desc' => 'Laguntza osoa',
+
+    // CTA Contacto
+    'contacto_cta_btn' => 'Eskatu Doako Demoa',
+    'contacto_cta_email' => 'Edo idatzi iezaguzu hona',
+
+    // Footer - Enlaces rápidos
+    'footer_link_beneficios' => 'Abantailak',
+    'footer_link_como' => 'Nola Funtzionatzen Du',
+    'footer_link_validar' => 'Balidatu Dokumentua',
+    'footer_link_demo' => 'Eskatu Demoa',
+
+    // Footer - Características
+    'footer_feat_qr' => 'QR Balidazioa',
+    'footer_feat_portal' => '24/7 Ataria',
+    'footer_feat_impresion' => 'Premium Inprimaketa',
+    'footer_feat_personalizable' => '%100 Pertsonalizagarria',
+
+    // Footer - Contacto
+    'footer_horario' => 'Al - Ol: 9:00 - 18:00',
+
+    // Página de Privacidad
+    'privacidad_title' => 'Pribatutasun-politika',
+    'privacidad_updated' => 'Azken eguneraketa',
+
+    // Términos de Servicio
+    'terminos_title' => 'Zerbitzu-baldintzak',
+    'terminos_updated' => 'Azken eguneraketa',
+
+    // Términos de Servicio - Contenido
+    'terminos_seccion1_titulo' => '1. Baldintzak Onartzea',
+    'terminos_seccion1_p1' => 'OriginalisDoc plataformara sartzen eta erabiltzen duzunean (\"Zerbitzua\"), baldintza horiek juridikoki lotzen zaituela onartzen duzu. Baldintza horiekin ados ez bazaude, ez erabili Zerbitzua.',
+    'terminos_seccion1_p2' => 'OriginalisDoc-ek eskubidea gordetzen du baldintza horiek edozein unetan aldatzeko. Aldaketak webgunean argitaratzen diren bezain laster sartzen dira indarrean.',
+
+    'terminos_seccion2_titulo' => '2. Zerbitzuaren Deskribapena',
+    'terminos_seccion2_p1' => 'OriginalisDoc hezkuntza-erakundeek, profesional independenteek, ekitaldi-antolatzaileek, enpresek, kooperatibek eta elkarteek QR berrespen-kodeak dituzten dokumentu digitalak igorri, kudeatu eta balidatzeko aukera ematen duen plataforma da.',
+    'terminos_seccion2_p2' => 'Zerbitzuak hauek ditu, besteak beste:',
+    'terminos_seccion2_li1' => 'Pertsonalizatutako dokumentu digitalen igorpena',
+    'terminos_seccion2_li2' => 'Erakunde/profesional bakoitzerako pertsonalizatutako ataria',
+    'terminos_seccion2_li3' => 'QR kode bakunak dituen balidazio-sistema',
+    'terminos_seccion2_li4' => 'Hodeian biltegiratze segurua',
+    'terminos_seccion2_li5' => 'Dokumentu fisikoen premium inprimaketa-aukera',
+    'terminos_seccion2_li6' => 'Dokumentuen igorpen masiboa',
+
+    'terminos_seccion3_titulo' => '3. Erregistroa eta Erabiltzaile-Kontua',
+    'terminos_seccion3_p1' => 'Zerbitzua erabiltzeko, informazio zehatza, osoa eta eguneratua emanez kontu bat sortu behar duzu. Honakoak dira zure erantzukizunak:',
+    'terminos_seccion3_li1' => 'Zure pasahitza eta sarbide-kredentzialak isilik mantentzea',
+    'terminos_seccion3_li2' => 'Zure kontuaren pean gertatzen diren jarduera guztiak',
+    'terminos_seccion3_li3' => 'Zure kontuaren baimenik gabeko erabilera berehalako jakinaraztea',
+    'terminos_seccion3_li4' => 'Zure erakundeari edo antolaketari buruzko datu zuzenak ematea',
+    'terminos_seccion3_p2' => 'OriginalisDoc-ek eskubidea gordetzen du baldintza horiek hausten dituzten kontuak etenda edo bertan behera uzteko edo informazio faltsua ematen dutenak.',
+
+    'terminos_seccion4_titulo' => '4. Baimendutako Erabilpena',
+    'terminos_seccion4_p1' => 'Zerbitzua helburu legitimoekin eta baldintza horiekin bat etortzeko soilik erabil daiteke. Debekatuta dago OriginalisDoc jarduera iruzurtarako, ilegalentzat jo direnak edo hirugarrenen eskubideak hausteko erabiltzea.',
+
+    'terminos_seccion5_titulo' => '5. Jabetza Intelektuala',
+    'terminos_seccion5_p1' => 'OriginalisDoc-en eduki, diseinu, logo eta teknologia guztiak plataformaren jabetza esklusiboa dira eta jabetza intelektualaren legeek babesten dituzte.',
+
+    'terminos_seccion6_titulo' => '6. Erantzukizunaren Mugaketa',
+    'terminos_seccion6_p1' => 'OriginalisDoc ez da erantzule izango Zerbitzuaren erabileraren ondorioz edo erabil ezinezkoagatik eragindako kalte zeharkariei, fortuitoei edo ondorioei buruz.',
+
+    'terminos_seccion7_titulo' => '7. Harremana',
+    'terminos_seccion7_p1' => 'Zerbitzu-baldintzei buruzko kontsultak egiteko, jar zaitez gurekin harremanetan:',
+
+    // Política de Privacidad - Contenido
+    'privacidad_intro_titulo' => 'Sarrera',
+    'privacidad_intro_p1' => 'OriginalisDoc-en, zure datuen pribatutasuna eta segurtasuna dira gure lehentasun nagusia. Pribatutasun-politika honek deskribatzen du nola bildu, erabili, gorde eta babesten ditugun zure informazio pertsonala gure zerbitzuak erabiltzen dituzunean.',
+    'privacidad_intro_p2' => 'OriginalisDoc erabiltzen duzunean, politika horretan deskribatutako praktikak onartzen dituzu. Ez bazaude ados, ez erabili gure zerbitzurik.',
+
+    'privacidad_seccion1_titulo' => '1. Bildutako Informazioa',
+    'privacidad_seccion1_sub1_titulo' => '1.1 Kontuari Buruzko Informazioa',
+    'privacidad_seccion1_sub1_p1' => 'Kontu bat sortzen duzunean, hauxe biltzen dugu:',
+    'privacidad_seccion1_sub1_li1' => 'Izen osoa eta harremanetarako datuak (posta elektronikoa, telefonoa)',
+    'privacidad_seccion1_sub1_li2' => 'Erakundearen, antolaketaren edo profesional independentearen izena',
+    'privacidad_seccion1_sub1_li3' => 'Helbide fisikoa eta fiskala',
+    'privacidad_seccion1_sub1_li4' => 'Fakturazio eta ordainketari buruzko informazioa',
+    'privacidad_seccion1_sub1_li5' => 'Sarbide-kredentzialak (enkriptatutako erabiltzaile/pasahitza)',
+
+    'privacidad_seccion1_sub2_titulo' => '1.2 Dokumentuei eta Onbenefiziariei Buruzko Datuak',
+    'privacidad_seccion1_sub2_p1' => 'Dokumentuak igortzean, onbenefizarien datuak biltzen ditugu (ikasleak, bezeroak, langileak, kideak, etab.):',
+    'privacidad_seccion1_sub2_li1' => 'Izen osoa eta identifikazio-zenbakia (DNI, CUIT, etab.)',
+    'privacidad_seccion1_sub2_li2' => 'Posta elektronikoa eta telefonoa (jakinarazpenetarako)',
+    'privacidad_seccion1_sub2_li3' => 'Dokumentuaren igorpenarekin lotutako datu akademikoak, profesionalak edo lanekoak',
+    'privacidad_seccion1_sub2_li4' => 'Argazkia (hautazkoa, dokumentuan sartzen bada)',
+
+    'privacidad_seccion1_sub3_titulo' => '1.3 Erabilpen eta Datu Teknikoak',
+    'privacidad_seccion1_sub3_li1' => 'IP helbidea, nabigatzailea, sistema eragilea',
+    'privacidad_seccion1_sub3_li2' => 'Bisitatutako orrialdeak, saioaren iraupena, klikak',
+    'privacidad_seccion1_sub3_li3' => 'Dokumentuen balidazio-erregistroak (nork balidatu duen, noiz eta nondik)',
+    'privacidad_seccion1_sub3_li4' => 'Atariaren erabilpen-metriak (deskargak, sarrerak, etab.)',
+
+    'privacidad_seccion2_titulo' => '2. Nola Erabiltzen Dugun Zure Informazioa',
+    'privacidad_seccion2_p1' => 'Bildutako datuak honetarako erabiltzen ditugu:',
+    'privacidad_seccion2_li1_strong' => 'Zerbitzua Hornitzea:',
+    'privacidad_seccion2_li1_texto' => 'Dokumentu digitalak sortu, gorde eta kudeatzea',
+    'privacidad_seccion2_li2_strong' => 'Balidazioa:',
+    'privacidad_seccion2_li2_texto' => 'QR kodeen bidez dokumentuen egiazkotasuna egiaztatzea',
+    'privacidad_seccion2_li3_strong' => 'Jakinarazpenak:',
+    'privacidad_seccion2_li3_texto' => 'Igorritako dokumentuei buruzko posta elektronikoak bidaltzea, zerbitzuaren eguneraketak',
+    'privacidad_seccion2_li4_strong' => 'Fakturazioa:',
+    'privacidad_seccion2_li4_texto' => 'Ordainketak prozesatzea eta fakturak igortzea',
+    'privacidad_seccion2_li5_strong' => 'Zerbitzuaren Hobekuntza:',
+    'privacidad_seccion2_li5_texto' => 'Erabilpen-metriak aztertzea funtzionalitateak hobetzeko',
+    'privacidad_seccion2_li6_strong' => 'Laguntza Teknikoa:',
+    'privacidad_seccion2_li6_texto' => 'Kontsultak eta arazo teknikoak ebaztea',
+    'privacidad_seccion2_li7_strong' => 'Betekoa Legez:',
+    'privacidad_seccion2_li7_texto' => 'Legezko eta erregulatzaile-beteketak betetzea',
+
+    'privacidad_seccion3_titulo' => '3. Hirugarrenekin Partekatutako Informazioa',
+    'privacidad_seccion3_p1_antes_strong' => '',
+    'privacidad_seccion3_p1_strong' => 'Ez dugu salten ezta alokatzen',
+    'privacidad_seccion3_p1_despues_strong' => ' zure datu pertsonalak hirugarrenei. Soilik kasu mugatuetan partekatzen dugu informazioa:',
+    'privacidad_seccion3_sub1_titulo' => '3.1 Zerbitzu-Hornitzaileak',
+    'privacidad_seccion3_sub1_p1' => 'Zerbitzua funtzionatzeko laguntzen diguten hornitzaile fidagarriekin lan egiten dugu:',
+    'privacidad_seccion3_sub1_li1' => 'Hodeiko ostatua eta biltegia (zerbitzari seguruak)',
+    'privacidad_seccion3_sub1_li2' => 'Ordainketa-prozesatzaileak (PCI-DSS ziurtagiria)',
+    'privacidad_seccion3_sub1_li3' => 'Transakzio-posta elektroniko zerbitzuak',
+    'privacidad_seccion3_sub1_li4' => 'Inprimatze eta bidalketa-zerbitzuak (eskatutako dokumentu fisikoentzat soilik)',
+    'privacidad_seccion3_sub1_p2' => 'Hornitzaile guztiak kontratuzko moduan derrigorrezkoak dira zure datuak babesteko eta ezin dituzte beste helburuetarako erabili.',
+
+    'privacidad_seccion3_sub2_titulo' => '3.2 Legezko Beteketak',
+    'privacidad_seccion3_sub2_p1' => 'Norbaitek eskatzen badu (epaiketa-agondua, prozedura legala) edo gure eskubide legalak babesteko behar izanez gero, informazioa eztabaidatu dezakegu.',
+
+    'privacidad_seccion3_sub3_titulo' => '3.3 Balidazio Publikoa',
+    'privacidad_seccion3_sub3_p1' => 'Igorritako dokumentuak publikoki balidatu daitezke QR kodearen bidez. Balidazioan erakutsitako informazioa (onbenefizariaren izena, igorleen erakundea, dokumentuaren datuak) kodea eskaneatzen duen edonorentzat ikusgai egongo da.',
+
+    'privacidad_seccion4_titulo' => '4. Datuen Segurtasuna',
+    'privacidad_seccion4_p1' => 'Enpresa-mailako segurtasun-neurriak inplementatzen ditugu:',
+    'privacidad_seccion4_li1_strong' => 'SSL/TLS 256-bit Enkriptazioa:',
+    'privacidad_seccion4_li1_texto' => 'Komunikazio guztiak enkriptatuak daude',
+    'privacidad_seccion4_li2_strong' => 'Pasahitzak babestuta:',
+    'privacidad_seccion4_li2_texto' => 'Hash eta salt (bcrypt) bidez gordeta',
+    'privacidad_seccion4_li3_strong' => 'Eguneroko babeskopia automatikoak:',
+    'privacidad_seccion4_li3_texto' => 'Enkriptatzea eta biltegi erredundantea erabilita',
+    'privacidad_seccion4_li4_strong' => 'Suebakia eta 24/7 monitorizazioa:',
+    'privacidad_seccion4_li4_texto' => 'Baimenik gabeko sarbideetatik babestea',
+    'privacidad_seccion4_li5_strong' => 'Segurtasun-auditoretzak:',
+    'privacidad_seccion4_li5_texto' => 'Ahultasunen ebaluazio periodikoak',
+    'privacidad_seccion4_li6_strong' => 'Sarbide mugatua:',
+    'privacidad_seccion4_li6_texto' => 'Langile baimenduek soilik atzitu ditzakete datu sentikorrak',
+    'privacidad_seccion4_p2' => 'Neurri horiek ere badira ere, ez dago %100 segurua den sistamarik. Pasahitz sendoak erabiltzea gomendatzen dizugu eta ez dituzu zure kredentzialak partekatu behar.',
+
+    'privacidad_seccion5_titulo' => '5. Datuen Atxikapena',
+    'privacidad_seccion5_p1' => 'Zure datuak kontu aktibo bat mantentzen duzun bitartean edo legez beharrezkoa den artean biltzen ditugu:',
+    'privacidad_seccion5_li1_strong' => 'Kontuaren datuak:',
+    'privacidad_seccion5_li1_texto' => 'Zure kontua bertan behera utzi arte + gutxieneko epe legala (normalean 10 urte zerga-helburuetarako)',
+    'privacidad_seccion5_li2_strong' => 'Igorritako dokumentuak:',
+    'privacidad_seccion5_li2_texto' => 'Betirako, erregistro historikoa eta balidazio gisa zerbitzari guztietan',
+    'privacidad_seccion5_li3_strong' => 'Balidazio-erregistroak:',
+    'privacidad_seccion5_li3_texto' => '5 urte auditoretarako eta iruzurren prebentziorako',
+    'privacidad_seccion5_li4_strong' => 'Fakturazioko datuak:',
+    'privacidad_seccion5_li4_texto' => '10 urte kontabilitate-arauen arabera',
+    'privacidad_seccion5_p2' => 'Zure kontua bertan behera uztean, behar ez diren datuak modu seguruan ezabatzen ditugu, baina betiere legezko beteketak diren bitartean historiako erregistroak mantentzen ditugu.',
+
+    'privacidad_seccion6_titulo' => '6. Zure Eskubideak',
+    'privacidad_seccion6_p1' => 'Datuen babesari buruzko legeen arabera, honako eskubide hauek dituzu:',
+    'privacidad_seccion6_li1_strong' => 'Sarbidea:',
+    'privacidad_seccion6_li1_texto' => 'Gurekin gordeta daukazun zure datu pertsonalen kopia bat eskatzea',
+    'privacidad_seccion6_li2_strong' => 'Zuzenketa:',
+    'privacidad_seccion6_li2_texto' => 'Baliogabeak edo osatu gabeak dauden datuak zuzentzea',
+    'privacidad_seccion6_li3_strong' => 'Ezabaketa:',
+    'privacidad_seccion6_li3_texto' => 'Zure datuak ezabatzea eskatzea (legezko beteketen mende)',
+    'privacidad_seccion6_li4_strong' => 'Mugaketa:',
+    'privacidad_seccion6_li4_texto' => 'Zure datuen erabilera jakin batzuk mugatzea',
+    'privacidad_seccion6_li5_strong' => 'Eramangarritasuna:',
+    'privacidad_seccion6_li5_texto' => 'Zure datuak formatu egituratuan eta transferigarrian jasotzea',
+    'privacidad_seccion6_li6_strong' => 'Auzipena:',
+    'privacidad_seccion6_li6_texto' => 'Zure datuen tratamenduari dagokionez auzitea egin ahal izatea egoera jakin batzuetan',
+    'privacidad_seccion6_li7_strong' => 'Baimenaren ezeztapena:',
+    'privacidad_seccion6_li7_texto' => 'Emandako baimena edozein unetan kentzea',
+    'privacidad_seccion6_p2_antes_email' => 'Eskubide horiek arikatzeko, jar zaitez gurekin harremanetan',
+    'privacidad_seccion6_p2_despues_email' => '15 egun baino lehenago erantzuten dizugu',
+
+    'privacidad_seccion7_titulo' => '7. Cookie-ak eta Antzeko Teknologiak',
+    'privacidad_seccion7_p1' => 'Cookie-ak eta antzeko teknologiak erabiltzen ditugu honetarako:',
+    'privacidad_seccion7_li1_strong' => 'Beharrezko cookie-ak:',
+    'privacidad_seccion7_li1_texto' => 'Atariaren funtzionamendurako (saioa, autentifikazioa)',
+    'privacidad_seccion7_li2_strong' => 'Analitikako cookie-ak:',
+    'privacidad_seccion7_li2_texto' => 'Zerbitzua nola erabiltzen den ulertzeko eta hobetzeko (anonimoak)',
+    'privacidad_seccion7_li3_strong' => 'Hobespenetarako cookie-ak:',
+    'privacidad_seccion7_li3_texto' => 'Zure konfigurazioak gogoratzeko (hizkuntza, gaia, etab.)',
+    'privacidad_seccion7_p2' => 'Zure nabigatzailea konfiguratu dezakezu cookie-ak ukatzeko, nahiz eta horrek Zerbitzuaren funtzionalitatea eragina izan dezakeen.',
+
+    'privacidad_seccion8_titulo' => '8. Nazioarteko Transferentziak',
+    'privacidad_seccion8_p1' => 'Zure datuak, normalean, Espainiako zerbitzarietan gordetzen dira. Zenbait kasutan, zerbitzu-hornitzaileek datuak beste herrialdeetan prozesatu ditzakete datu-babes maila egokia duten tokietan (adibidez: Ameriketako Estatu Batuak Data Privacy Framework-en arabera, Europar Batasuna GDPR-ren arabera).',
+
+    'privacidad_seccion9_titulo' => '9. Umeen Pribatutasuna',
+    'privacidad_seccion9_p1' => 'Gure Zerbitzua ez dago 13 urte baino gazteagoak direnentzat pentsatuta. Haurrentzako baimenik gabe daturik bildu dugunean, berehalakoan ezabatuko dugu informazio hori.',
+    'privacidad_seccion9_p2' => 'Hamahiru urte baino gazteagoak diren onbenefizarien dokumentuak hezkuntza-erakundeek igotzen dituztenean, baimena erakundeak emandakoan ulertzen da, zuzendaritza delegatuaren edo hezkuntza-tutelaren eraginez.',
+
+    'privacidad_seccion10_titulo' => '10. Politika Honen Aldaketak',
+    'privacidad_seccion10_p1' => 'Aldi baterako Pribatutasun-politika hau eguneratu dezakegu. Aldaketa esanguratsuak posta elektroniko bidez edo atarian ohar nabarmena jarrita jakinaraziko dizugu. Goiko \"Azken eguneraketa\" datak erakusten du noiz egin zen azken aldaketa.',
+
+    'privacidad_seccion11_titulo' => '11. Harremana',
+    'privacidad_seccion11_p1' => 'Kontsultak egiteko, eskubideak arikatzeko edo pribatutasun-arazoak salatzeko:',
+    'privacidad_seccion11_email_label' => 'Posta elektroniko orokorra:',
+
+    'privacidad_seccion12_titulo' => '12. Aplikazio-Erabaki Emateko Erakundea',
+    'privacidad_seccion12_p1_antes_strong' => 'Espainian, datu pertsonalen babesari dagokionez',
+    'privacidad_seccion12_p1_strong' => 'Aurreneko Erakundea Datuen Babesaren Esku-hartzearen',
+    'privacidad_seccion12_p1_despues_strong' => 'Agenzia Estatuko Datu Pertsonalen Babeserako Erakundea (AEPD) da. Zure eskubideak urratu egin direla uste baduzu, erakunde horretan salatu ahal duzu.',
+    'privacidad_seccion12_aaip_label' => 'AEPD:',
+    'privacidad_seccion12_aaip_url' => 'www.aepd.es',
+
+    // === ACADÉMICO PAGE ===
+
+    // Navigation
+    'acad_nav_beneficios' => 'Abantailak',
+    'acad_nav_funcionalidades' => 'Funtzionalitateak',
+    'acad_nav_casos_exito' => 'Arrakasten Kasuak',
+    'acad_nav_faq' => 'FAQ',
+    'acad_nav_solicitar_demo' => 'Eskatu Demoa',
+    'acad_nav_academico' => 'Akademikoa',
+
+    // Hero Section
+    'acad_hero_badge' => '✓ Soluzio Akademiko Osoa',
+    'acad_hero_title' => 'Akreditazio Akademikoak',
+    'acad_hero_title_highlight' => 'Digital Profesionalak',
+    'acad_hero_subtitle' => 'Soluzio osoa honentzat',
+    'acad_hero_instituciones' => 'hezkuntza-erakundeak',
+    'acad_hero_centros_formacion' => 'formazio-zentroak',
+    'acad_hero_academias' => 'akademiatuak',
+    'acad_hero_formadores' => 'irakasle partikularrak',
+    'acad_cta_solicitar_demo' => 'Eskatu Demo Pertsonalizatua',
+    'acad_cta_ver_como_funciona' => 'Ikusi Nola Funtzionatzen Duen',
+
+    // Hero Stats
+    'acad_hero_stat_tiempo' => 'Administrazio-denboraren murrizketa',
+    'acad_hero_stat_portal' => 'Ikaslearen ataria',
+    'acad_hero_stat_falsificaciones' => 'Posible diren faltsuketak',
+
+    // Problemas Section
+    'acad_problemas_titulo' => 'Ezaguna al zaizu?',
+    'acad_problemas_subtitulo' => 'Hauek dira OriginalisDoc-ek konpontzen dituen buruhausteak',
+    'acad_problema_trabajo_manual' => 'Eskuzko Lan-Orduak',
+    'acad_problema_trabajo_manual_desc' => 'Ziurtagiri bakoitza banan-banan diseinatzeak eta igortzeak denbora baliotsua hartzen du, irakaskuntzarako dedikatu ahal zenukeena.',
+    'acad_problema_perdidos' => 'Galdutako Ziurtagiriak',
+    'acad_problema_perdidos_desc' => 'Dokumentuak galtzea edo hondatzea eta berriro emateko eskaerak etengabe egitea.',
+    'acad_problema_falsificaciones' => 'Faltsuketak',
+    'acad_problema_falsificaciones_desc' => 'Titulu eta ziurtagiri faltsuak zirkulatzen ari dira, haien autentikotasuna egiaztatzeko modurik ezarekin.',
+    'acad_problema_trazabilidad' => 'Trazabilitaterik Ez',
+    'acad_problema_trazabilidad_desc' => 'Ikasle bakoitzaren historia akademiko oso eta egiaztagarria falta da.',
+    'acad_problema_costos' => 'Inprimaketa-Kostuak',
+    'acad_problema_costos_desc' => 'Paper bereziaren, inprimaketaren, tonerrearen eta biltegiratze fisikoaren gastu handiak.',
+    'acad_problema_archivos' => 'Kaotikoak diren Artxibo Fisikoak',
+    'acad_problema_archivos_desc' => 'Paper pilak espazio baliotsua okupatzen ari dira eta informazioa bilatzea zailtzen dute.',
+
+    // Cómo Funciona Section
+    'acad_como_funciona_titulo' => 'Hain erraza nola 1, 2, 3',
+    'acad_como_funciona_subtitulo' => 'Berehalako inplementazioa, burutia zailtasunik gabe',
+    'acad_como_funciona_paso1_titulo' => 'Konfiguratu Zure Erakundea',
+    'acad_como_funciona_paso1_desc' => 'Pertsonalizatu zure logoa, erakundearen koloreak eta zehaztu igorriko dituzun ziurtagiri motak.',
+    'acad_como_funciona_paso2_titulo' => 'Kargatu Ikasleak eta Ikastaroak',
+    'acad_como_funciona_paso2_desc' => 'Inportatu datuak pilaka Excel edo CSV bidez. Banan-banan kargatu dezakezu ere bai.',
+    'acad_como_funciona_paso3_titulo' => 'Igorri eta Balidatu',
+    'acad_como_funciona_paso3_desc' => 'QR bakuneko sortze automatikoa. Jakinarazpena posta elektroniko bidez eta ikasleentzako sarbide berehalakoa.',
+
+    // Tipos de Documentos
+    'acad_documentos_titulo' => 'Dokumentu Akademikoen Motak',
+    'acad_documentos_subtitulo' => 'Zure erakundeak igorri behar dituen dokumentu guztiak',
+    'acad_documentos_principales' => 'Dokumentu Nagusiak',
+    'acad_doc_certificado_aprobacion' => 'Onarpen-Ziurtagiriak',
+    'acad_doc_certificado_aprobacion_desc' => 'Ikastaro, gaia edo programa oso baten gaineko onarpena ziurtatzen duen ziurtagiri ofiziala.',
+    'acad_doc_diplomas' => 'Bukaerako Diplomak',
+    'acad_doc_diplomas_desc' => 'Programa akademiko oso baten ongi bukatutako titulu edo diploma formala.',
+    'acad_doc_analiticos' => 'Akademikoen Analisiak / Erregistroak',
+    'acad_doc_analiticos_desc' => 'Hartutako gai guztien historia osoa, kalifikazioak, asistentziak eta eskuratutako gaitasunak.',
+    'acad_doc_constancia_regular' => 'Ikasle Arrunta dela frogatzen duten Egiaztagiriak',
+    'acad_doc_constancia_regular_desc' => 'Dokumentu honek ikaslea une honetan erakundean ikasten ari dela frogatzen du.',
+    'acad_doc_constancia_inscripcion' => 'Matrikulazio-Egiaztagiriak',
+    'acad_doc_constancia_inscripcion_desc' => 'Ikastaro jakin batean, gai batean edo programa akademiko batean matrikulatuta zaudela frogatzen duen agiria.',
+    'acad_doc_constancia_finalizacion' => 'Ikasturtea Bukatutako Egiaztagiriak',
+    'acad_doc_constancia_finalizacion_desc' => 'Ebaluazio amaieran egin baino lehen ikasturtea bukatu duela frogatzen duen ziurtagiria.',
+
+    // Documentos Complementarios
+    'acad_documentos_complementarios' => 'Osagarritako Dokumentuak',
+    'acad_doc_asistencia' => 'Asistentzia-Ziurtagiriak',
+    'acad_doc_asistencia_desc' => 'Tailerrak, mintegiak, webinarrak edo ekitaldi hezigarri puntualekikoak.',
+    'acad_doc_reconocimientos' => 'Sariak eta Aipamenak',
+    'acad_doc_reconocimientos_desc' => 'Sari bereziak, aipamen ofizioak edo ebaluazio aparta izanaren aitortza.',
+    'acad_doc_competencias' => 'Gaitasun-Ziurtagiriak',
+    'acad_doc_competencias_desc' => 'Formazioan lortutako gaitasun eta ezaugarri zehatzak ziurtatzen dituzte.',
+    'acad_doc_practica' => 'Lan-Praktiken Egiaztagiriak',
+    'acad_doc_practica_desc' => 'Praktikak, lan-esperientzia edo zuzeneko gainbegiralekuak dokumentatzen ditu.',
+    'acad_doc_congresos' => 'Kongresuetan Hartutako Partearen Ziurtagiriak',
+    'acad_doc_congresos_desc' => 'Kongresuetan, ekitaldi akademikoetan eta hitzaldietan parte hartzeko edo mintzamendurako.',
+
+    // Portal del Estudiante
+    'acad_portal_badge' => '★ Nabarmendutako Ezaugarria',
+    'acad_portal_titulo' => 'Ikaslearen 24/7 Ataria',
+    'acad_portal_subtitulo' => 'Ikasle bakoitzak zure erakundearen marka-irudia duen atari pertsonalizatua dauka.',
+    'acad_portal_acceso_titulo' => 'Bere ibilbide osoa 24/7 atzitu',
+    'acad_portal_acceso_desc' => 'Ikasleek edozein gailutik eta edozein unetan atzitu dezakete.',
+    'acad_portal_descarga_titulo' => 'Dokumentu guztiak deskargatu',
+    'acad_portal_descarga_desc' => 'Diplomak, egiaztagiriak, ziurtagiriak, analisiak - dena leku bakarrean.',
+    'acad_portal_timeline_titulo' => 'Denbora-lerro akademikoa',
+    'acad_portal_timeline_desc' => 'Bere hezkuntza-ibilbidearen kronologia osoa bistaratzen du.',
+    'acad_portal_qr_titulo' => 'Dokumentu bakoitzeko QR indibiduala',
+    'acad_portal_qr_desc' => 'Dokumentu bakoitzak bere balidazio-kode bakuna dauka.',
+    'acad_portal_linkedin_titulo' => 'LinkedIn-en klik bakarreko partekatzea',
+    'acad_portal_linkedin_desc' => 'Lorpen akademikoak argitaratzeko integrazio zuzena.',
+
+    // Portal Demo Data
+    'acad_portal_demo_nombre' => 'Juan Pérez',
+    'acad_portal_demo_dni' => 'DNI: 12.345.678',
+    'acad_portal_demo_progreso' => '4 ikastaritako 4 osatuta',
+    'acad_portal_demo_diploma' => 'Justizia Berrezartzaileko Diploma',
+    'acad_portal_demo_diploma_fecha' => 'Bukatuta: 2024ko martxoaren 15a',
+    'acad_portal_demo_certificado' => 'Mediazioaren Ziurtagiria',
+    'acad_portal_demo_certificado_fecha' => 'Bukatuta: 2024ko urtarrilaren 20a',
+    'acad_portal_demo_curso_progreso' => 'Ikastaroa Abian',
+    'acad_portal_demo_curso_nombre' => 'Gatazkak Ebaztea',
+
+    // Casos de Uso
+    'acad_casos_uso_titulo' => 'Norentzat da OriginalisDoc Akademikoa?',
+    'acad_casos_uso_subtitulo' => 'Gure plataforman konfiantza duten erakunde eta profesionalak',
+    'acad_caso_universidades' => 'Unibertsitateak eta Hezkuntza Hirugarren Mailakoak',
+    'acad_caso_universidades_desc' => 'Gradu-hirune, diplomak eta analisiak ehunka ikaslerentzat banan-banan kudeatzea.',
+    'acad_caso_centros' => 'Formazio-Zentroak',
+    'acad_caso_centros_desc' => 'SAJuR eta Liberté bezalako erakundeak ziurtagiri profesionalak igortzen dituztenak.',
+    'acad_caso_idiomas' => 'Hizkuntza-Akademiatuak',
+    'acad_caso_idiomas_desc' => 'Osatutako mailen ziurtagiriak nazioarteko balidazioarekin.',
+    'acad_caso_tecnicos' => 'Instituto Teknikoak',
+    'acad_caso_tecnicos_desc' => 'Lanbide-heziketa eta trebetasunak trazabilitate osoarekin ziurtatzea.',
+    'acad_caso_laboral' => 'Laneko Prestakuntza',
+    'acad_caso_laboral_desc' => 'Etengabeko formazio-zentroak eta garapen profesionala.',
+    'acad_caso_continua' => 'Hezkuntza Etengabea',
+    'acad_caso_continua_desc' => 'Lanbide-eguneraketarako programak eta masterrekin loturikoak.',
+    'acad_caso_organizadores' => 'Ikastaroen Antolatzaileak',
+    'acad_caso_organizadores_desc' => 'Tailerrak, ikastaroak eta programa berezietarako diplomek eta ziurtagiriekin loturikoak.',
+    'acad_caso_particulares' => 'Irakasle Partikularrak',
+    'acad_caso_particulares_desc' => 'Doktore independenteak ziurtagiri profesionalak igortzen dituztenak.',
+
+    // Funcionalidades
+    'acad_func_titulo' => 'Erakundeentzat Pentsatutako Funtzionalitateak',
+    'acad_func_subtitulo' => 'Akreditazio akademikoak kudeatzeko behar duzun guztia',
+    'acad_func_cohortes' => 'Taldeen Kudeaketa',
+    'acad_func_cohortes_desc' => 'Ikasleak taldekatu mailaren, urtearen edo taldearen arabera. Dokumentuak talde osoarentzat banan-banan igorri.',
+    'acad_func_emision_masiva' => 'Emate Masiboa',
+    'acad_func_emision_masiva_desc' => '100 ikasle baino gehiagorentzako ziurtagiriak minutuetan sortu. Klik bakarra promozio osoarentzat.',
+    'acad_func_notificaciones' => 'Posta Elektroniko Bidezko Jakinarazpen Automatikoak',
+    'acad_func_notificaciones_desc' => 'Ikasle bakoitzak dokumentu bat igortzen denean jakinarazpen automatikoa jasotzen du.',
+    'acad_func_branding' => 'Erakundearen Marka duen Ataria',
+    'acad_func_branding_desc' => 'Zure logoa, koloreak eta domeinua. Erakunde bakoitzak bere nortasuna proiektatzen du.',
+    'acad_func_trayectoria' => 'Ibilbide Akademiko Osoa',
+    'acad_func_trayectoria_desc' => 'Ikaslearen ikastetxe guztiak, kalifikazioak eta lorpenak dituen ibilbide egiaztagarria.',
+    'acad_func_validacion' => 'Balidazio Publiko Berehalakoa',
+    'acad_func_validacion_desc' => 'Enpleatzaileek QR kodea eskaneatu eta autentikotasuna berehalakoan egiaztatzen dute.',
+
+    // Beneficios
+    'acad_beneficios_titulo' => 'Neurtutako Emaitzak',
+    'acad_beneficios_subtitulo' => 'Zure erakundean egiazko eragina zure erakundean egunero',
+    'acad_beneficio_tiempo_titulo' => 'Administrazio-Denboraren Murrizketa',
+    'acad_beneficio_tiempo_desc' => 'Orain orduak beharrean minutuak behar dira',
+    'acad_beneficio_ahorro_titulo' => 'Kostu-Aurreztea',
+    'acad_beneficio_ahorro_desc' => 'Inprimaketa eta paper-lanaren murrizketa handia',
+    'acad_beneficio_falsificaciones_titulo' => 'Posible Diren Faltsuketak',
+    'acad_beneficio_falsificaciones_desc' => 'Ezin dira QR kode bakunak klonatu',
+    'acad_beneficio_acceso_titulo' => 'Ikasleentzako Sarbidea',
+    'acad_beneficio_acceso_desc' => 'Ataria beti eskuragarri',
+    'acad_beneficio_trazabilidad_titulo' => '%100 Trazabilitatea eta Auditoretza',
+    'acad_beneficio_trazabilidad_desc' => 'Ekintza bakoitza erregistratzen da. Zein dokumentu, noiz eta norentzat igorri duen nor zehazki badakizu. Auditoretzarako eta betekin normatiborako aproposa.',
+
+    // Casos de Éxito
+    'acad_casos_exito_titulo' => 'Arrakasten Kasuak',
+    'acad_casos_exito_subtitulo' => 'Bere kudeaketa akademikoa eraldatu zuten erakundeak',
+    'acad_caso_sajur_nombre' => 'Justizia Berrezartzaileko Gizarte Elkartea',
+    'acad_caso_sajur_tipo' => 'Hezkuntza-espezializatuko zentroa',
+    'acad_caso_sajur_testimonio' => '"Eskuz ziurtagiri bakoitza prozesatzetik hamarreka ematera pasatu ginen minutu gutxitan. Gure ikasleek euren ibilbide osoa 24/7 atzitu ahal izatea baloratzen dute, eta enpleatzaileek QR balidazioan konfiantza dute. Administrazio-denboraren aurreztea %90koa izan da."',
+    'acad_caso_liberte_nombre' => 'Liberté Lan Taldeko Kooperatiba',
+    'acad_caso_liberte_tipo' => 'Hezkuntza profesionala eta prestakuntza',
+    'acad_caso_liberte_testimonio' => '"Inplementazioa berehalakoa izan zen. 24 ordur baino gutxiagoan ziurtagiriak jada gure markarekin ari ginen ematen. Pertsonalizatuko atariak irudi profesionala ematen dio gure irteerari, ikasleek harrotziaz partekatzen dutena. Premium inprimaketa aukera bikaina da."',
+
+    // Antes vs Después
+    'acad_antes_despues_titulo' => 'Lehen vs Ondoren OriginalisDoc',
+    'acad_antes_despues_subtitulo' => 'Zure kudeaketa akademikoaren eraldatze digitala',
+    'acad_antes_titulo' => 'Lehen (Tradizionala)',
+    'acad_antes_trabajo_manual' => 'Ziurtagiri bakoitzeko eskuzko lan-orduak',
+    'acad_antes_costos' => 'Inprimaketa eta paper-lanaren kostu handiak',
+    'acad_antes_falsificacion' => 'Balioztatzeko modurik ez duen faltsuketaren arriskua',
+    'acad_antes_presencial' => 'Ikasleek bertara joan behar dute jasotzeko',
+    'acad_antes_almacenamiento' => 'Desantolatutako biltegiratze fisikoa eta espazioa okupatzea',
+    'acad_antes_estadisticas' => 'Ez dago emate-estatistikarik ez metrikarik',
+    'acad_despues_titulo' => 'Ondoren (OriginalisDoc)',
+    'acad_despues_emision' => 'Segundu gutxitan emate masiboa',
+    'acad_despues_emision_highlight' => 'klik bakunarekin',
+    'acad_despues_ahorro' => '%85eko aurreztea',
+    'acad_despues_ahorro_highlight' => 'kostu operatiboetan',
+    'acad_despues_validacion' => 'Ezin da faltsutu QR balidazioa',
+    'acad_despues_acceso' => '24/7 Sarbidea',
+    'acad_despues_acceso_highlight' => 'edozein gailutik',
+    'acad_despues_digital' => 'Dena digitalean eta hodeian,',
+    'acad_despues_digital_highlight' => 'paperik edo espaziorik gabe',
+    'acad_despues_dashboards' => 'Denbora errealeko kontrol-panelak eta txostenak',
+
+    // Integraciones
+    'acad_integraciones_titulo' => 'Integrazioak eta Bateragarritasuna',
+    'acad_integraciones_subtitulo' => 'Zure lan-fluxu existenteari moldatzen zaio',
+    'acad_integ_excel' => 'Excel / CSV',
+    'acad_integ_excel_desc' => 'Excel fitxategien bidez ikasleak eta ikastaroak pilaka inportatzea.',
+    'acad_integ_api' => 'REST API',
+    'acad_integ_api_desc' => 'SIU, Moodle eta platafoma akademikoekin integratzea.',
+    'acad_integ_email' => 'Erakundearen Posta Elektronikoa',
+    'acad_integ_email_desc' => 'Jakinarazpenak zure erakundearen domeinutik (@zureerakundea.edu).',
+    'acad_integ_subdominios' => 'Azpidomeinuak',
+    'acad_integ_subdominios_desc' => 'Zure domeinu propioan dagoen ataria: ziurtagiriak.zureerakundea.edu',
+
+    // FAQ
+    'acad_faq_titulo' => 'Galdera Ohikoak',
+    'acad_faq_subtitulo' => 'OriginalisDoc Akademikoari buruz jakin beharreko guztia',
+    'acad_faq_cargo_titulo' => 'Nola kargatu ditzaket nire ikasleen informazioa?',
+    'acad_faq_cargo_resp' => 'Bi modutan karga ditzakezu ikasleak: administrazio-panelaren bidez banan-banan, edo Excel/CSV fitxategi bat inportatuz datu guztiekin. Txantiloi bat ematen dizugu prozesua errazteko.',
+    'acad_faq_validez_titulo' => 'Ziurtagiri digitalak balio juridikoa al dute?',
+    'acad_faq_validez_resp' => 'Bai, ziurtagiri digitalak balio juridiko bera dute Espainian ere bai. Gainera, paper bereziarekin eta segurtasun-elementuekin premium inprimaketa aukera eskaintzen dugu behar duten erakundeentzat.',
+    'acad_faq_diseno_titulo' => 'Diseinua erabat pertsonalizatu al dezaket?',
+    'acad_faq_diseno_resp' => 'Erabat. Konfiguratu ditzakezu zure logoa, erakundearen koloreak, sinadura digitalak eta marka guztia. Ziurtagiri bakoitza zure ikus-identitatearekin sortzen da.',
+    'acad_faq_acceso_titulo' => 'Zein da ikasle batek atarirako sarbidea galtzen badu?',
+    'acad_faq_acceso_resp' => 'Ikasleak bere DNIa erabiliz berreskuratu dezake sarbidea eta posta elektroniko bidezko egiaztaketa prozesuarekin. Gainera, erakundearen administratzaile bezala, edozein unetan birsortu ahal duzu sarbidea.',
+    'acad_faq_validacion_titulo' => 'Nola balioztatzen du enpleatzaile batek ziurtagiria?',
+    'acad_faq_validacion_resp' => 'Enpleatzaileak zihurtagiriaren QR kodea mugikorrean eskaneatzen du soilik. Orduan automatikoki birbidalia izango da ziurtagiriaren datu guztiak eta ikaslearen historia erakusten duen balidazio-orria.',
+    'acad_faq_retroactivos_titulo' => 'Ziurtagiri atzerakoak igor ditzaket?',
+    'acad_faq_retroactivos_resp' => 'Bai, aurreko promozioen ziurtagiriak karga eta igor ditzakezu arazo gabe. Sistemak aurreko datak adieraztea ahalbidetzen du.',
+    'acad_faq_limite_titulo' => 'Emate-mugarik ba al dago?',
+    'acad_faq_limite_resp' => 'Ez dago igorpen-mugarik. Behar adina ziurtagiri sor ditzakezu. Planean ikasle aktiboen kopuruaren arabera doitzen dira.',
+
+    // CTA Final
+    'acad_cta_final_titulo' => 'Bihurtu Zure Erakundearen Kudeaketa Akademikoa',
+    'acad_cta_final_desc' => 'Bat egin hezkuntza-erakundeen artean milaka ordu administrazioa aurreztu dutenekin eta ziurtagiri digitalen bidez irudi profesionala proiektatzen dutenekin.',
+    'acad_cta_final_demo' => 'Eskatu Demo Pertsonalizatua',
+    'acad_cta_final_contactar' => 'Harremanetan Jarri Salmentak',
+    'acad_cta_final_implementacion' => 'Inplementazioa',
+    'acad_cta_final_menos_tiempo' => 'Denbora gutxiago',
+    'acad_cta_final_certificados' => 'Ziurtagiriak',
+
+    // Footer
+    'acad_footer_tagline' => 'Ziurtagiri Digital Profesionalak',
+    'acad_footer_derechos' => '© 2025 OriginalisDoc. Eskubide guztiak erreserbatuta.',
+    'acad_footer_inicio' => 'Hasiera',
+    'acad_footer_terminos' => 'Terminoak',
+    'acad_footer_privacidad' => 'Pribatutasuna',
+
+    // === META TAGS === //
+
+    // Index.php Meta Tags
+    'meta_keywords' => 'ziurtagiri digitalak, QR balidazioa, ziurtagiri hezigarriak, egiaztagiri akademikoak, diploma on-lineak',
+    'meta_author' => 'OriginalisDoc',
+    'meta_og_title' => 'OriginalisDoc - Ziurtagiri Digital eta Fisikoen Segurtasuna',
+    'meta_og_description' => 'Faltsutu ezin diren ziurtagiriak igorri QR balidazioarekin eta ibilbide akademikoa osoa. Ikasleentzako 24/7 ataria eta premium inprimaketa aukera.',
+    'meta_twitter_title' => 'OriginalisDoc - Ziurtagiri Digital eta Fisikoen Segurtasuna',
+    'meta_twitter_description' => 'Faltsutu ezin diren ziurtagiriak igorri QR balidazioarekin eta ibilbide akademikoa osoa. Ikasleentzako 24/7 ataria eta premium inprimaketa aukera.',
+
+    // Academico.php Meta Tags
+    'acad_meta_title' => 'OriginalisDoc Akademikoa - Erakunde Hezigarrientzako Ziurtagiri Digitalak',
+    'acad_meta_description' => 'Hezkuntza-erakundeentzako, formazio-zentroentzako eta irakasle partikuluentzako ziurtagiri digitalen soluzio osoa. Emate masiboa, QR balidazioa eta ikaslearen ataria.',
+    'acad_meta_keywords' => 'ziurtagiri akademikoak, diploma digitalak, analisi digitalak, hezkuntza-erakundeak, prestakuntza profesionala',
+    'acad_meta_og_title' => 'OriginalisDoc Akademikoa - Hezkuntza-Erakundeentzako Ziurtagiriak',
+    'acad_meta_og_description' => 'Igorri ziurtagiriak, diplomek eta analitiko digitalak QR balidazioarekin. Ikaslearen 24/7 ataria eta automatizatutako emate masiboa.',
+    'acad_meta_twitter_title' => 'OriginalisDoc Akademikoa - Hezkuntza-Erakundeentzako Ziurtagiriak',
+    'acad_meta_twitter_description' => 'Igorri ziurtagiriak, diplomek eta analitiko digitalak QR balidazioarekin. Ikaslearen 24/7 ataria eta automatizatutako emate masiboa.',
+
+    // Privacidad.php Meta Tags
+    'privacidad_meta_description' => 'OriginalisDoc-en Pribatutasun-politika. Ikasi nola bildu, erabili eta babesten ditugun zure datu pertsonalak.',
+    'privacidad_meta_og_title' => 'Pribatutasun-politika - OriginalisDoc',
+    'privacidad_meta_og_description' => 'Xehetasunak nola OriginalisDoc-ek zure pribatutasuna babesten duen eta zure datu pertsonalak nola kudeatzen dituen.',
+    'privacidad_meta_twitter_title' => 'Pribatutasun-politika - OriginalisDoc',
+    'privacidad_meta_twitter_description' => 'Xehetasunak nola OriginalisDoc-ek zure pribatutasuna babesten duen eta zure datu pertsonalak nola kudeatzen dituen.',
+
+    // Terminos.php Meta Tags
+    'terminos_meta_description' => 'OriginalisDoc-en Zerbitzu-baldintzak. Ikasi gure ziurtagiri digitalen plataformaren erabilpen-baldintzak.',
+    'terminos_meta_og_title' => 'Zerbitzu-baldintzak - OriginalisDoc',
+    'terminos_meta_og_description' => 'Zure erabiliz OriginalisDoc-en eta bere ziurtagiri-zerbitzuen erabilera legalaren baldintzak.',
+    'terminos_meta_twitter_title' => 'Zerbitzu-baldintzak - OriginalisDoc',
+    'terminos_meta_twitter_description' => 'Zure erabiliz OriginalisDoc-en eta bere ziurtagiri-zerbitzuen erabilera legalaren baldintzak.',
+];

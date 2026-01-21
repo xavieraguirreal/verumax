@@ -1,0 +1,498 @@
+{
+  "projectMetadata": {
+    "title": "translator-en-us-inclusive Agent Specifications",
+    "agentIdentifier": "translator-en-us-inclusive",
+    "version": "1.0.0",
+    "createdDate": "2025-12-23",
+    "status": "FINAL - Ready for Implementation",
+    "purpose": "Translate Argentine Spanish (es_AR) educational content to United States English (en_US) with mandatory inclusive binary language"
+  },
+
+  "specifications": [
+    {
+      "documentName": "README.md",
+      "documentType": "Navigation & Executive Summary",
+      "filePath": "E:\\appVerumax\\agent-specifications\\README.md",
+      "fileSize": "~15KB",
+      "lineCount": "~450",
+      "keyPurpose": "Overall guide and navigation hub for all specification documents",
+      "mainSections": [
+        "Overview and agent identity",
+        "Document structure (5-document repository)",
+        "Quick start guide (for translators, QA, project managers)",
+        "Key features of the agent",
+        "Translation mapping reference",
+        "Implementation checklist",
+        "Success criteria",
+        "Quick reference guide",
+        "Support resources"
+      ],
+      "whenToUse": "START HERE - Read first to understand agent purpose and repository structure",
+      "audience": "All stakeholders (translators, QA, project managers, developers)"
+    },
+
+    {
+      "documentName": "translator-en-us-inclusive-spec.json",
+      "documentType": "Formal JSON Configuration",
+      "filePath": "E:\\appVerumax\\agent-specifications\\translator-en-us-inclusive-spec.json",
+      "fileSize": "~50KB",
+      "lineCount": "~950",
+      "keyPurpose": "Complete formal specification of agent behavior, requirements, and validation",
+      "mainSections": [
+        "Agent metadata and identifiers",
+        "Target language pair (es_AR → en_US)",
+        "Domain specialization (educational documents)",
+        "Core instructions and mandatory requirements",
+        "Source file configuration",
+        "Target file configuration",
+        "Inclusive language dictionary (20+ mappings)",
+        "Quality control checklist",
+        "Spanish-to-English translation guidelines",
+        "Inclusive binary language strategy (5 methods)",
+        "Linguistic patterns with examples",
+        "Complete translation examples (8 detailed examples)",
+        "Common challenges and solutions (7 scenarios)",
+        "Institutional considerations",
+        "Deliverable format and validation requirements",
+        "Success criteria (11 measurable items)"
+      ],
+      "keyContent": {
+        "inclusiveLanguageDictionary": "20+ Spanish-English term mappings with context and examples",
+        "translationExamples": "8 complete translations showing inclusive language implementation",
+        "commonChallenges": "7 common translation problems with detailed solutions",
+        "successCriteria": "11 specific measurable criteria for successful completion"
+      },
+      "whenToUse": "Need formal specification for system configuration, agent development, or formal reference",
+      "audience": "Developers, system architects, formal documentation requirements"
+    },
+
+    {
+      "documentName": "INCLUSIVE-LANGUAGE-PATTERNS-EN-US.md",
+      "documentType": "Detailed Linguistic Reference Guide",
+      "filePath": "E:\\appVerumax\\agent-specifications\\INCLUSIVE-LANGUAGE-PATTERNS-EN-US.md",
+      "fileSize": "~60KB",
+      "lineCount": "~600",
+      "keyPurpose": "Comprehensive guide to implementing inclusive binary language in United States English",
+      "mainSections": [
+        "1. Core philosophy of inclusive binary language (5 principles)",
+        "2. Pronoun substitution patterns (3 detailed patterns, 10+ examples)",
+        "3. Gender-neutral role terminology (comprehensive mapping table)",
+        "4. Compound institutional terms (7 examples)",
+        "5. Verb forms and passive voice (automatic gender-neutral patterns)",
+        "6. Mapped terminology for Verumax platform (role and document types)",
+        "7. Placeholder variable preservation rules (critical rules, examples)",
+        "8. Formal academic tone requirements (no contractions, formal vocabulary)",
+        "9. Argentine Spanish → United States English cultural adaptations",
+        "10. Common translation patterns for certificatum file",
+        "11. Challenging translation examples with solutions (5 detailed scenarios)",
+        "12. Academic style guides supporting singular they (APA, MLA, Chicago, CMOS)",
+        "13. Quality assurance verification steps (5 comprehensive steps)",
+        "14. Sample terminology log template",
+        "15. Emergency reference quick lookup table"
+      ],
+      "keyContent": {
+        "pronounPatterns": "Complete guide to pronoun conversion with examples for all cases",
+        "roleTerminology": "Mapping of Spanish gendered roles to English gender-neutral equivalents",
+        "formalTone": "Rules, examples, and vocabulary guidance for institutional tone",
+        "challengingExamples": "5 real-world translation challenges with detailed solutions"
+      },
+      "whenToUse": "During actual translation work, need linguistic guidance, uncertain about pronoun usage, want to understand inclusive philosophy",
+      "audience": "Translators, linguistics professionals, anyone doing the translation"
+    },
+
+    {
+      "documentName": "TRANSLATION-EXAMPLES-COMPLETE.md",
+      "documentType": "Practical Reference Examples",
+      "filePath": "E:\\appVerumax\\agent-specifications\\TRANSLATION-EXAMPLES-COMPLETE.md",
+      "fileSize": "~55KB",
+      "lineCount": "~550",
+      "keyPurpose": "Provide 33 fully-realized translation examples showing inclusive language in practice",
+      "mainSections": [
+        "Section 1: Page main section (2 examples)",
+        "Section 2: Course status and terminology (4 examples)",
+        "Section 3: Document type names (3 examples)",
+        "Section 4: Role names (6 examples with alternatives)",
+        "Section 5: Navigation and buttons (2 examples)",
+        "Section 6: Certificate text with placeholders (2 complex examples)",
+        "Section 7: Teacher participation certificates (4 examples)",
+        "Section 8: Attestations and constancies (3 examples)",
+        "Section 9: Academic transcript (2 examples)",
+        "Section 10: Competencies (11 term mappings)",
+        "Section 11: Complex plural scenarios (3 examples)",
+        "Section 12: Formal academic tone maintenance (1 example with WRONG/RIGHT)",
+        "Section 13: Placeholder preservation accuracy check (1 detailed verification)",
+        "Section 14: Summary of key inclusive translation principles"
+      ],
+      "exampleStructure": "Each major example includes: Spanish source, English translation, detailed analysis table, inclusive elements highlighted",
+      "totalExamples": 33,
+      "whenToUse": "Translating similar content, need concrete examples, unsure how to handle specific linguistic challenges, quality assurance verification",
+      "audience": "Translators (primary), QA personnel, training materials"
+    },
+
+    {
+      "documentName": "IMPLEMENTATION-GUIDE.md",
+      "documentType": "Step-by-Step Operational Procedures",
+      "filePath": "E:\\appVerumax\\agent-specifications\\IMPLEMENTATION-GUIDE.md",
+      "fileSize": "~70KB",
+      "lineCount": "~700",
+      "keyPurpose": "Complete procedural guide for executing translation from start to finish",
+      "mainSections": [
+        "1. Agent overview and service scope",
+        "2. Source file specification (structured breakdown of 193 keys)",
+        "3. Target file specification (structure requirements, validation)",
+        "4. Inclusive language implementation methods (3 primary methods)",
+        "5. Terminology consistency requirements (how to maintain)",
+        "6. Placeholder variable preservation (rules, verification)",
+        "7. Formal academic tone requirements (specifics with examples)",
+        "8. Quality assurance checklist (7 checkpoints, 30+ sub-items)",
+        "9. Special cases and edge cases (5 scenarios with solutions)",
+        "10. Common pitfalls to avoid (7 WRONG/RIGHT examples)",
+        "11. Testing and validation procedures (7 specific tests with code)",
+        "12. Submission and handoff procedures",
+        "13. Reference documentation guide",
+        "14. Support and troubleshooting",
+        "15. Final verification sign-off statement"
+      ],
+      "keyContent": {
+        "sourceFileBreakdown": "193 keys organized by category with detailed explanation",
+        "qaChecklist": "Comprehensive 7-checkpoint verification with sub-items for each",
+        "testingProcedures": "7 specific tests with PHP code examples, expected outputs",
+        "specialCases": "5 real-world edge cases with recommended solutions"
+      },
+      "estimatedTimeRequired": "6-9 hours total (setup: 30 min, translation: 4-6 hours, QA: 1-2 hours, revision: 30 min-1 hour)",
+      "whenToUse": "Executing translation, creating test procedures, verifying quality, troubleshooting, deploying to production",
+      "audience": "Translators (primary), QA personnel, project managers"
+    }
+  ],
+
+  "sourceAndTargetFiles": {
+    "sourceFile": {
+      "path": "E:\\appVerumax\\lang\\es_AR\\certificatum.php",
+      "language": "Spanish (Argentine)",
+      "languageCode": "es_AR",
+      "type": "PHP language resource file",
+      "format": "PHP array return statement",
+      "encoding": "UTF-8",
+      "keyCount": 193,
+      "categories": [
+        "Page main (12 keys)",
+        "Course list and status (17 keys)",
+        "Document types (8 keys)",
+        "Teacher roles (8 keys)",
+        "Navigation and buttons (6 keys)",
+        "Certificate text and phrases (35 keys)",
+        "Teacher certification (15 keys)",
+        "Constancies and attestations (15 keys)",
+        "Academic transcript (11 keys)",
+        "Validation (9 keys)",
+        "Teacher participation (6 keys)",
+        "Landing features (6 keys)",
+        "Competencies (11 keys)"
+      ]
+    },
+    "targetFile": {
+      "path": "E:\\appVerumax\\lang\\en_US\\certificatum.php",
+      "language": "English (United States)",
+      "languageCode": "en_US",
+      "type": "PHP language resource file",
+      "format": "PHP array return statement (identical structure to source)",
+      "encoding": "UTF-8",
+      "expectedKeyCount": 193,
+      "expectedPlaceholderCount": 47,
+      "identifiedPlaceholders": [
+        "{nombre} - 15 instances",
+        "{dni} - 8 instances",
+        "{fecha} - 12 instances",
+        "{carga_horaria} - 5 instances",
+        "{institucion} - 2 instances",
+        "{nombre_curso} - 5 instances",
+        "{rol} - 7 instances",
+        "{fecha_inicio} - 1 instance",
+        "{formador} - 2 instances",
+        "{inscripto} - 1 instance",
+        "{asignado} - 1 instance"
+      ]
+    }
+  },
+
+  "inclusiveLanguageImplementation": {
+    "philosophy": "Inclusive binary language recognizes and respects gender diversity by avoiding generic masculine defaults, using gender-neutral terms, and explicitly acknowledging multiple genders",
+    "threeMethods": {
+      "method1": {
+        "name": "Gender-Neutral Role Terminology (PRIMARY)",
+        "description": "Use gender-neutral English equivalents for Spanish gendered roles",
+        "mappings": [
+          "docente/educador → instructor",
+          "profesor/a → instructor / faculty member",
+          "facilitador/a → facilitator",
+          "instructor/a → instructor",
+          "estudiante → student",
+          "alumno/a → student / learner",
+          "orador/a → speaker",
+          "conferencista → lecturer",
+          "tutor/a → tutor",
+          "coordinador/a → coordinator",
+          "formador/a → trainer / training professional"
+        ]
+      },
+      "method2": {
+        "name": "Inclusive Pronouns (SECONDARY)",
+        "description": "Use gender-neutral or paired-form pronouns for gender-inclusive reference",
+        "examples": [
+          "su/sus → their (preferred: singular they)",
+          "él → he / they",
+          "ella → she / they",
+          "él o ella → he or she / they",
+          "ellos/ellas → they"
+        ]
+      },
+      "method3": {
+        "name": "Gender-Neutral Verb Forms (AUTOMATIC)",
+        "description": "English verbs and past participles are naturally gender-neutral",
+        "examples": [
+          "ha sido asignado/a → has been assigned",
+          "se encuentra inscripto/a → is enrolled",
+          "participó → participated",
+          "aprobado/a → approved"
+        ]
+      }
+    },
+    "styleSupportingDocuments": [
+      "APA 7th Edition - Explicitly supports singular they",
+      "MLA 9th Edition - Accepts singular they",
+      "Chicago Manual of Style 17th Edition - Permits singular they",
+      "CMOS (Council of Science Editors) - Accepts singular they in formal writing"
+    ]
+  },
+
+  "qualityAssuranceProcess": {
+    "preTranslationVerification": {
+      "items": 7,
+      "description": "Verify source file accessibility and structure"
+    },
+    "duringTranslationVerification": {
+      "items": 11,
+      "description": "Check each translation for correct implementation"
+    },
+    "postTranslationVerification": {
+      "items": 8,
+      "majorCategories": 30,
+      "description": "Comprehensive final verification before deployment"
+    },
+    "testingProcedures": {
+      "totalTests": 7,
+      "testList": [
+        "Test 1: PHP Syntax Validation (php -l command)",
+        "Test 2: File Import Simulation (include() test)",
+        "Test 3: Key Matching Verification (source vs target keys)",
+        "Test 4: Placeholder Verification (count and position check)",
+        "Test 5: Inclusive Language Spot Check (search for gendered terms)",
+        "Test 6: Formal Tone Verification (search for contractions)",
+        "Test 7: Consistency Verification (same term consistency)"
+      ]
+    }
+  },
+
+  "successCriteria": {
+    "totalCriteria": 11,
+    "categories": {
+      "structuralIntegrity": {
+        "count": 4,
+        "items": [
+          "All 193 keys present in target file (exact match to source)",
+          "All key names identical to source (no typos or modifications)",
+          "PHP syntax valid (php -l passes without errors)",
+          "File importable without errors"
+        ]
+      },
+      "inclusiveLanguage": {
+        "count": 3,
+        "items": [
+          "Zero instances of generic masculine language",
+          "All pronouns use inclusive forms (their, they)",
+          "All role terminology gender-neutral"
+        ]
+      },
+      "formalTone": {
+        "count": 2,
+        "items": [
+          "Zero contractions found (cannot, do not, etc.)",
+          "Professional vocabulary throughout"
+        ]
+      },
+      "fidelityToSource": {
+        "count": 2,
+        "items": [
+          "All placeholder variables preserved exactly (47 instances verified)",
+          "Terminology consistent throughout"
+        ]
+      }
+    }
+  },
+
+  "estimatedTimeline": {
+    "research_and_setup": {
+      "duration": "30 minutes",
+      "tasks": [
+        "Read README.md and core specifications",
+        "Review inclusive language patterns",
+        "Create translation log"
+      ]
+    },
+    "translation_execution": {
+      "duration": "4-6 hours",
+      "factors": [
+        "Depends on translator experience with inclusive language",
+        "Depends on familiarity with academic English terminology",
+        "Rate: approximately 30-40 key-value pairs per hour for experienced translators"
+      ]
+    },
+    "quality_assurance_and_testing": {
+      "duration": "1-2 hours",
+      "tasks": [
+        "Follow QA checklist (section 8 of IMPLEMENTATION-GUIDE.md)",
+        "Run all 7 validation tests",
+        "Spot check 20% of entries (39 entries)"
+      ]
+    },
+    "revision_and_final_verification": {
+      "duration": "30 minutes to 1 hour",
+      "tasks": [
+        "Address any QA findings",
+        "Complete final sign-off verification",
+        "Prepare submission package"
+      ]
+    },
+    "totalEstimatedTime": "6-9 hours",
+    "note": "Timeline assumes one translator working continuously; may be shorter with multiple reviewers or longer if learning inclusive language patterns during process"
+  },
+
+  "keyFeatures": [
+    "Mandatory inclusive binary language (non-negotiable requirement)",
+    "Formal academic tone (appropriate for institutional context)",
+    "Structural fidelity (all 193 keys and 47 placeholders preserved)",
+    "Comprehensive reference materials (5 detailed documents, 2,500+ lines)",
+    "33 complete translation examples with detailed analysis",
+    "7 automated validation tests with code examples",
+    "Detailed inclusive language dictionary (20+ term mappings)",
+    "Role-specific terminology guide (11 role terms mapped)",
+    "Common challenges and solutions (7 scenarios with fixes)",
+    "Complete quality assurance checklist (30+ verification items)",
+    "Support for APA, MLA, Chicago style guides",
+    "Special case handling for edge cases and complex scenarios"
+  ],
+
+  "documentationStatistics": {
+    "totalDocuments": 5,
+    "totalLineCount": "~2,500 lines",
+    "totalFileSize": "~250KB",
+    "translationExamples": 33,
+    "roleTerminologyMappings": 11,
+    "placeholderVariablesIdentified": 11,
+    "qualityAssuranceChecklistItems": 30,
+    "testingProcedures": 7,
+    "commonChallengesWithSolutions": 7,
+    "specialCasesWithSolutions": 5
+  },
+
+  "fileLocations": {
+    "specificationDirectory": "E:\\appVerumax\\agent-specifications\\",
+    "sourceLanguageFile": "E:\\appVerumax\\lang\\es_AR\\certificatum.php",
+    "targetLanguageFile": "E:\\appVerumax\\lang\\en_US\\certificatum.php",
+    "specifications": {
+      "readme": "E:\\appVerumax\\agent-specifications\\README.md",
+      "jsonSpec": "E:\\appVerumax\\agent-specifications\\translator-en-us-inclusive-spec.json",
+      "inclusivePatterns": "E:\\appVerumax\\agent-specifications\\INCLUSIVE-LANGUAGE-PATTERNS-EN-US.md",
+      "translationExamples": "E:\\appVerumax\\agent-specifications\\TRANSLATION-EXAMPLES-COMPLETE.md",
+      "implementationGuide": "E:\\appVerumax\\agent-specifications\\IMPLEMENTATION-GUIDE.md",
+      "index": "E:\\appVerumax\\agent-specifications\\INDEX.json"
+    }
+  },
+
+  "howToUse": {
+    "forTranslators": {
+      "step1": "Read README.md (15 minutes)",
+      "step2": "Read INCLUSIVE-LANGUAGE-PATTERNS-EN-US.md sections 1-3 (30 minutes)",
+      "step3": "Review TRANSLATION-EXAMPLES-COMPLETE.md sections 1-3 (20 minutes)",
+      "step4": "Read IMPLEMENTATION-GUIDE.md sections 1-7 (30 minutes)",
+      "step5": "Begin translation process, referencing documents as needed",
+      "step6": "Follow QA checklist and testing procedures before submission"
+    },
+    "forQA_Personnel": {
+      "step1": "Read README.md (15 minutes)",
+      "step2": "Read IMPLEMENTATION-GUIDE.md sections 8 and 11 (45 minutes)",
+      "step3": "Create test procedures from section 11",
+      "step4": "Prepare verification checklist",
+      "step5": "Perform spot check verification (20% of entries)",
+      "step6": "Run all 7 validation tests"
+    },
+    "forProjectManagers": {
+      "step1": "Read README.md (15 minutes)",
+      "step2": "Review IMPLEMENTATION-GUIDE.md sections 1-3, 12-15 (30 minutes)",
+      "step3": "Estimate timeline: 6-9 hours based on team experience",
+      "step4": "Assign translator and QA personnel",
+      "step5": "Track progress against success criteria checklist",
+      "step6": "Review final submission for sign-off"
+    },
+    "forDevelopers_ConfiguringAgent": {
+      "step1": "Read README.md (15 minutes)",
+      "step2": "Read entire translator-en-us-inclusive-spec.json (45 minutes)",
+      "step3": "Review sections 4 and 7 of IMPLEMENTATION-GUIDE.md (30 minutes)",
+      "step4": "Configure agent using JSON specification",
+      "step5": "Review success criteria and validation tests",
+      "step6": "Prepare agent for testing"
+    }
+  },
+
+  "keyReferences": {
+    "spanishTermsToEnglish": {
+      "description": "Comprehensive mapping of Spanish gendered terms to English gender-neutral equivalents",
+      "source": "translator-en-us-inclusive-spec.json - inclusiveLanguageDictionary section",
+      "itemCount": 20
+    },
+    "pronunciationGuide": {
+      "description": "Detailed patterns for pronoun conversion from Spanish to inclusive English",
+      "source": "INCLUSIVE-LANGUAGE-PATTERNS-EN-US.md - Section 2",
+      "patterns": 3
+    },
+    "translationExamples": {
+      "description": "Complete real-world examples from certificatum.php",
+      "source": "TRANSLATION-EXAMPLES-COMPLETE.md",
+      "examples": 33
+    },
+    "validationTests": {
+      "description": "PHP code and procedures for validating translation quality",
+      "source": "IMPLEMENTATION-GUIDE.md - Section 11",
+      "tests": 7
+    },
+    "qualityChecklist": {
+      "description": "Comprehensive verification items for quality assurance",
+      "source": "IMPLEMENTATION-GUIDE.md - Section 8",
+      "checklistItems": 30
+    }
+  },
+
+  "supportingMaterials": {
+    "academicStyleGuides": [
+      "APA 7th Edition (supports singular they)",
+      "MLA 9th Edition (accepts singular they)",
+      "Chicago Manual of Style 17th Edition (permits singular they)",
+      "CMOS - Council of Science Editors (accepts singular they)"
+    ],
+    "institutionalContext": {
+      "platform": "Verumax Educational Certificate Management System",
+      "targetInstitutions": "United States educational institutions (universities, community colleges, professional development centers)",
+      "compliance": "Aligns with Title IX gender equity principles and institutional nondiscrimination commitments"
+    }
+  },
+
+  "versionAndMetadata": {
+    "version": "1.0.0",
+    "status": "FINAL - Ready for Implementation",
+    "createdDate": "2025-12-23",
+    "lastUpdated": "2025-12-23",
+    "authorizedFor": "Verumax Platform Language File Deployment",
+    "documentationComplete": true,
+    "readyForProduction": true
+  }
+}

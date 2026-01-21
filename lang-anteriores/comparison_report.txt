@@ -1,0 +1,1934 @@
+=== REPORTE DE COMPARACIÓN ES_AR vs ES_EC ===
+
+CLAVES FALTANTES EN ES_EC: 221
+================================================================================
+
+Clave: nav_ecosistema
+Valor AR: Un Ecosistema de Soluciones a tu Disposición
+---
+
+Clave: nav_rapido_titulo
+Valor AR: ¿Qué estás buscando?
+---
+
+Clave: nav_rapido_sectores_titulo
+Valor AR: Soluciones por Sector
+---
+
+Clave: nav_rapido_sectores_desc
+Valor AR: Académico, Profesional, Eventos, Empresarial, etc.
+---
+
+Clave: nav_rapido_ecosistema_titulo
+Valor AR: Todas Nuestras Soluciones
+---
+
+Clave: nav_rapido_ecosistema_desc
+Valor AR: Tarjetas, Certificados, Vouchers, Landing Pages, IA y más
+---
+
+Clave: nav_productos_credenciales
+Valor AR: Credenciales y Documentos
+---
+
+Clave: nav_productos_landing_personales
+Valor AR: Landing Pages Personales
+---
+
+Clave: nav_productos_landing_institucionales
+Valor AR: Landing Pages Institucionales
+---
+
+Clave: nav_productos_portfolios
+Valor AR: Portfolios Evolucionados
+---
+
+Clave: nav_productos_cv
+Valor AR: CV Inteligentes
+---
+
+Clave: nav_productos_autenticidad
+Valor AR: Certificados de Autenticidad
+---
+
+Clave: nav_productos_ia
+Valor AR: Agentes de IA
+---
+
+Clave: nav_productos_impresion
+Valor AR: Impresión Premium
+---
+
+Clave: nav_productos_vouchers
+Valor AR: Vouchers y Cupones
+---
+
+Clave: nav_productos_portal_comunicacion
+Valor AR: Portal de Comunicación
+---
+
+Clave: nav_productos_encuestas
+Valor AR: Encuestas y Votaciones
+---
+
+Clave: hero_title_line1
+Valor AR: Crea, Gestiona y Valida
+---
+
+Clave: hero_title_line2
+Valor AR: tu Presencia Digital
+---
+
+Clave: equipo_titulo
+Valor AR: Pensado para Vos
+---
+
+Clave: equipo_subtitulo
+Valor AR: Sin Conocimientos Técnicos Requeridos
+---
+
+Clave: equipo_card1_titulo
+Valor AR: Equipo Humano Real
+---
+
+Clave: equipo_card1_desc
+Valor AR: No te dejamos solo con un software. Nuestro equipo humano se encarga de TODO: configuración, diseño, carga de información y soporte permanente. Vos solo enviás tu información y nosotros hacemos el resto.
+---
+
+Clave: equipo_card2_titulo
+Valor AR: Dashboard Moderno Incluido
+---
+
+Clave: equipo_card2_desc
+Valor AR: Si tenés conocimientos técnicos o querés aprender, contás con un dashboard intuitivo, moderno y seguro para gestionar todo vos mismo. Pero siempre podés pedirnos ayuda cuando la necesites.
+---
+
+Clave: equipo_card3_titulo
+Valor AR: Soporte 24/7
+---
+
+Clave: equipo_card3_desc
+Valor AR: Tenés acceso directo a personas reales que te ayudan cuando lo necesitás. Ya sea por dashboard o escribiéndonos directamente, siempre vas a tener respuesta rápida y humana.
+---
+
+Clave: ecosol_tarjeta_digital
+Valor AR: Tarjeta Digital
+---
+
+Clave: ecosol_tarjeta_digital_desc
+Valor AR: QR infalsificable con landing page personalizada
+---
+
+Clave: ecosol_certificados_academicos
+Valor AR: Certificados Académicos
+---
+
+Clave: ecosol_certificados_academicos_desc
+Valor AR: Diplomas y analíticos digitales verificables
+---
+
+Clave: ecosol_credenciales_documentos
+Valor AR: Credenciales y Documentos
+---
+
+Clave: ecosol_credenciales_documentos_desc
+Valor AR: Documentación profesional verificada
+---
+
+Clave: ecosol_landing_personales
+Valor AR: Landing Pages Personales
+---
+
+Clave: ecosol_landing_personales_desc
+Valor AR: Sitio web personal con tu identidad
+---
+
+Clave: ecosol_landing_institucionales
+Valor AR: Landing Pages Institucionales
+---
+
+Clave: ecosol_landing_institucionales_desc
+Valor AR: Presencia web profesional para tu institución
+---
+
+Clave: ecosol_portfolios
+Valor AR: Portfolios Evolucionados
+---
+
+Clave: ecosol_portfolios_desc
+Valor AR: Muestra tu trabajo con validación profesional
+---
+
+Clave: ecosol_cv_inteligentes
+Valor AR: CV Inteligentes
+---
+
+Clave: ecosol_cv_inteligentes_desc
+Valor AR: Currículum verificable y actualizable
+---
+
+Clave: ecosol_certificados_autenticidad
+Valor AR: Certificados de Autenticidad
+---
+
+Clave: ecosol_certificados_autenticidad_desc
+Valor AR: Para productos, obras de arte y más
+---
+
+Clave: ecosol_agentes_ia
+Valor AR: Agentes de IA Especializados
+---
+
+Clave: ecosol_agentes_ia_desc
+Valor AR: Asistentes inteligentes personalizados
+---
+
+Clave: ecosol_impresion_premium
+Valor AR: Impresión Premium
+---
+
+Clave: ecosol_impresion_premium_desc
+Valor AR: Documentos físicos de alta calidad
+---
+
+Clave: ecosol_vouchers
+Valor AR: Vouchers y Cupones Digitales
+---
+
+Clave: ecosol_vouchers_desc
+Valor AR: Cupones de un solo uso con QR verificable
+---
+
+Clave: ecosol_portal_comunicacion
+Valor AR: Portal de Comunicación
+---
+
+Clave: ecosol_portal_comunicacion_desc
+Valor AR: Cartelera de novedades y anuncios oficiales
+---
+
+Clave: ecosol_encuestas
+Valor AR: Encuestas y Votaciones
+---
+
+Clave: ecosol_encuestas_desc
+Valor AR: Participación activa y feedback de tu comunidad
+---
+
+Clave: veritas_chat_btn
+Valor AR: Chat con Veritas IA
+---
+
+Clave: veritas_titulo
+Valor AR: Veritas IA
+---
+
+Clave: veritas_subtitulo
+Valor AR: Nuestro Agente de Inteligencia Artificial Especializado
+---
+
+Clave: veritas_proximamente
+Valor AR: ¡Próximamente!
+---
+
+Clave: veritas_descripcion
+Valor AR: Veritas estará disponible muy pronto para ayudarte con consultas sobre certificados, validaciones y más.
+---
+
+Clave: veritas_entendido
+Valor AR: Entendido
+---
+
+Clave: privacidad_seccion3_p1_normal
+Valor AR: sus datos personales a terceros. Solo compartimos información en estos casos limitados:
+---
+
+Clave: privacidad_seccion6_p2_antes_link
+Valor AR: Para ejercer estos derechos, contáctenos en
+---
+
+Clave: privacidad_seccion6_p2_link_texto
+Valor AR: privacidad@validarcert.com
+---
+
+Clave: privacidad_seccion6_p2_normal
+Valor AR: Responderemos dentro de 15 días hábiles.
+---
+
+Clave: privacidad_seccion12_p1_normal
+Valor AR: . Si considerás que tus derechos han sido vulnerados, podés presentar una denuncia ante este organismo.
+---
+
+Clave: acad_nav_planes
+Valor AR: Planes
+---
+
+Clave: acad_hero_propuesta_valor
+Valor AR: El sistema hace todo. Usted solo carga los datos una vez.
+---
+
+Clave: acad_hero_benefit_1
+Valor AR: Generación automática
+---
+
+Clave: acad_hero_benefit_2
+Valor AR: Notificación por email
+---
+
+Clave: acad_hero_benefit_3
+Valor AR: QR infalsificable
+---
+
+Clave: acad_hero_benefit_4
+Valor AR: Descarga 24/7
+---
+
+Clave: acad_roi_titulo
+Valor AR: Retorno de Inversión Comprobado
+---
+
+Clave: acad_roi_subtitulo
+Valor AR: Resultados reales de instituciones que ya usan Certificatum
+---
+
+Clave: acad_roi_ahorro_impresion
+Valor AR: Ahorro mensual en impresión
+---
+
+Clave: acad_roi_ahorro_tiempo
+Valor AR: Ahorro en tiempo administrativo
+---
+
+Clave: acad_roi_reduccion_consultas
+Valor AR: Reducción de consultas telefónicas
+---
+
+Clave: acad_roi_payback
+Valor AR: Tiempo de Payback
+---
+
+Clave: acad_roi_stat_impresion
+Valor AR: $$$
+---
+
+Clave: acad_roi_stat_tiempo
+Valor AR: 40hs
+---
+
+Clave: acad_roi_stat_consultas
+Valor AR: 80%
+---
+
+Clave: acad_roi_stat_payback
+Valor AR: 2 meses
+---
+
+Clave: acad_vs_titulo
+Valor AR: Certificatum vs Alternativas
+---
+
+Clave: acad_vs_subtitulo
+Valor AR: Compare las opciones del mercado
+---
+
+Clave: acad_vs_aspecto
+Valor AR: Aspecto
+---
+
+Clave: acad_vs_papel
+Valor AR: Papel Tradicional
+---
+
+Clave: acad_vs_plataformas
+Valor AR: Plataformas Globales
+---
+
+Clave: acad_vs_certificatum
+Valor AR: Certificatum
+---
+
+Clave: acad_vs_costo_emision
+Valor AR: Costo de emisión
+---
+
+Clave: acad_vs_costo_alto
+Valor AR: Alto (impresión, firmas)
+---
+
+Clave: acad_vs_costo_porcentaje
+Valor AR: % de ventas
+---
+
+Clave: acad_vs_costo_cero
+Valor AR: Cero marginal
+---
+
+Clave: acad_vs_validacion
+Valor AR: Validación
+---
+
+Clave: acad_vs_validacion_tel
+Valor AR: Llamada telefónica
+---
+
+Clave: acad_vs_validacion_generica
+Valor AR: Genérica
+---
+
+Clave: acad_vs_validacion_qr
+Valor AR: QR Instantáneo 24/7
+---
+
+Clave: acad_vs_branding
+Valor AR: Branding
+---
+
+Clave: acad_vs_branding_suyo
+Valor AR: 100% suyo
+---
+
+Clave: acad_vs_branding_limitado
+Valor AR: Limitado
+---
+
+Clave: acad_vs_branding_total
+Valor AR: 100% personalizado
+---
+
+Clave: acad_vs_falsificacion
+Valor AR: Falsificación
+---
+
+Clave: acad_vs_falsificacion_facil
+Valor AR: Fácil
+---
+
+Clave: acad_vs_falsificacion_posible
+Valor AR: Posible
+---
+
+Clave: acad_vs_falsificacion_imposible
+Valor AR: Imposible
+---
+
+Clave: acad_vs_datos
+Valor AR: Datos
+---
+
+Clave: acad_vs_datos_fisico
+Valor AR: Archivo físico
+---
+
+Clave: acad_vs_datos_ellos
+Valor AR: Son de ellos
+---
+
+Clave: acad_vs_datos_suyos
+Valor AR: Son 100% suyos
+---
+
+Clave: acad_panel_titulo
+Valor AR: Panel de Administración Completo
+---
+
+Clave: acad_panel_subtitulo
+Valor AR: Todo lo que necesita para gestionar su institución
+---
+
+Clave: acad_panel_carga_masiva
+Valor AR: Carga masiva desde Excel/CSV
+---
+
+Clave: acad_panel_crud
+Valor AR: CRUD completo de estudiantes y cursos
+---
+
+Clave: acad_panel_dashboard
+Valor AR: Dashboard con analytics en tiempo real
+---
+
+Clave: acad_panel_multiusuario
+Valor AR: Gestión multi-usuario con roles
+---
+
+Clave: acad_como_funciona_paso2_alt
+Valor AR: O simplemente envíenos sus listados y nuestro equipo los importa por usted.
+---
+
+Clave: acad_como_funciona_paso3_alt
+Valor AR: También puede solicitar la emisión a nuestro equipo y solo encargarse de compartir.
+---
+
+Clave: acad_faq_tecnico_titulo
+Valor AR: ¿Necesito conocimientos técnicos?
+---
+
+Clave: acad_faq_tecnico_resp
+Valor AR: No. La plataforma es muy intuitiva, pero si prefiere no tocar nada, nuestro <strong class="text-metallic-green-light">Servicio Concierge</strong> se encarga de la configuración y carga de datos por usted. Solo nos envía la información y nosotros hacemos el resto.
+---
+
+Clave: acad_concierge_delegar
+Valor AR: ¿Prefiere delegar? Nuestro equipo se encarga de la configuración por usted.
+---
+
+Clave: acad_promo_titulo
+Valor AR: PROMO LANZAMIENTO
+---
+
+Clave: acad_promo_alta
+Valor AR: Alta:
+---
+
+Clave: acad_promo_alta_bonificada
+Valor AR: Alta Bonificada:
+---
+
+Clave: acad_promo_ahorro
+Valor AR: (Ahorrás
+---
+
+Clave: acad_descuento_banner
+Valor AR: DE DESCUENTO en planes - Solo por tiempo limitado
+---
+
+Clave: acad_plan_sin_suscripcion
+Valor AR: SIN SUSCRIPCIÓN
+---
+
+Clave: acad_cta_final_equipo
+Valor AR: Nuestro equipo de expertos y expertas se encarga de la configuración inicial para que pueda empezar a emitir certificados en minutos.
+---
+
+Clave: acad_cta_final_implementacion_desc
+Valor AR: Tiempo de implementación
+---
+
+Clave: prof_planes_promo
+Valor AR: 🔥 PROMO LANZAMIENTO
+---
+
+Clave: prof_planes_alta_texto
+Valor AR: Alta bonificada:
+---
+
+Clave: prof_planes_descuento
+Valor AR: 50% DE DESCUENTO - Solo por tiempo limitado
+---
+
+Clave: prof_plan_esencial_feat8
+Valor AR: Recepcionista Virtual Especializado (10 consultas/día)
+---
+
+Clave: prof_plan_esencial_feat9
+Valor AR: Sistema de Agendamiento de Citas
+---
+
+Clave: prof_plan_esencial_feat10
+Valor AR: Configuración por Equipo Humano
+---
+
+Clave: prof_plan_esencial_feat11
+Valor AR: Panel de Autoadministración Incluido
+---
+
+Clave: prof_plan_pro_feat9
+Valor AR: Soporte Prioritario 24/7
+---
+
+Clave: prof_plan_elite_feat9
+Valor AR: Sistema de Roles y Permisos Avanzado
+---
+
+Clave: prof_plan_elite_feat10
+Valor AR: Gerente de Cuenta Dedicado
+---
+
+Clave: acad_planes_titulo
+Valor AR: Planes Educativos
+---
+
+Clave: acad_planes_subtitulo
+Valor AR: Todos los planes incluyen Tarjeta Digital orientada a certificados + configuración completa + soporte permanente
+---
+
+Clave: acad_plan_singularis_titulo
+Valor AR: Singularis
+---
+
+Clave: acad_plan_singularis_desc
+Valor AR: Ideal para uso ocasional o pruebas. Pague solo por lo que emite.
+---
+
+Clave: acad_plan_singularis_precio_label
+Valor AR: por certificado
+---
+
+Clave: acad_plan_singularis_feat1
+Valor AR: Sin suscripción ni compromiso
+---
+
+Clave: acad_plan_singularis_feat2
+Valor AR: Pague solo cuando emita
+---
+
+Clave: acad_plan_singularis_feat3
+Valor AR: Certificados con QR verificable
+---
+
+Clave: acad_plan_singularis_feat4
+Valor AR: Validación instantánea
+---
+
+Clave: acad_plan_singularis_feat5
+Valor AR: Portal público de validación
+---
+
+Clave: acad_plan_singularis_cta
+Valor AR: Empezar sin suscripción
+---
+
+Clave: acad_plan_pago_mensual
+Valor AR: Pago mensual
+---
+
+Clave: acad_plan_essentialis_titulo
+Valor AR: Essentialis
+---
+
+Clave: acad_plan_essentialis_desc
+Valor AR: Ideal para instituciones pequeñas y formadores independientes
+---
+
+Clave: acad_plan_essentialis_feat1
+Valor AR: 10 Certificados Digitales/mes
+---
+
+Clave: acad_plan_essentialis_feat2
+Valor AR: Emisión Masiva de Certificados (CSV/Excel)
+---
+
+Clave: acad_plan_essentialis_feat3
+Valor AR: Tarjeta Digital Institucional con QR
+---
+
+Clave: acad_plan_essentialis_feat4
+Valor AR: Sitio Web Institucional (institucion.verumax.com)
+---
+
+Clave: acad_plan_essentialis_feat5
+Valor AR: Validación QR Infalsificable
+---
+
+Clave: acad_plan_essentialis_feat6
+Valor AR: Portal del Estudiante Básico
+---
+
+Clave: acad_plan_essentialis_feat7
+Valor AR: Branding Institucional Personalizado
+---
+
+Clave: acad_plan_essentialis_feat8
+Valor AR: Notificaciones Automáticas por Email
+---
+
+Clave: acad_plan_essentialis_feat9
+Valor AR: Panel de Administración Incluido
+---
+
+Clave: acad_plan_essentialis_feat10
+Valor AR: Configuración por Equipo Humano
+---
+
+Clave: acad_plan_essentialis_cta
+Valor AR: Comenzar con Essentialis
+---
+
+Clave: acad_plan_premium_badge
+Valor AR: Más Popular
+---
+
+Clave: acad_plan_premium_titulo
+Valor AR: Premium
+---
+
+Clave: acad_plan_premium_desc
+Valor AR: La elección ideal para centros de formación en crecimiento
+---
+
+Clave: acad_plan_premium_feat1_strong
+Valor AR: TODO lo de Essentialis +
+---
+
+Clave: acad_plan_premium_feat2
+Valor AR: 100 Certificados Digitales/mes
+---
+
+Clave: acad_plan_premium_feat3
+Valor AR: Histórico Académico Completo
+---
+
+Clave: acad_plan_premium_feat4
+Valor AR: Línea de Tiempo de Trayectoria Estudiantil
+---
+
+Clave: acad_plan_premium_feat5
+Valor AR: Gestión de Cohortes y Comisiones
+---
+
+Clave: acad_plan_premium_cta
+Valor AR: Solicitar Plan Premium
+---
+
+Clave: acad_plan_excellens_titulo
+Valor AR: Excellens
+---
+
+Clave: acad_plan_excellens_desc
+Valor AR: Para universidades y grandes instituciones educativas
+---
+
+Clave: acad_plan_excellens_feat1_strong
+Valor AR: TODO lo de Premium +
+---
+
+Clave: acad_plan_excellens_feat2
+Valor AR: 1000 Certificados Digitales/mes
+---
+
+Clave: acad_plan_excellens_feat3
+Valor AR: Sistema Multi-Sede (hasta 5 sedes)
+---
+
+Clave: acad_plan_excellens_feat4
+Valor AR: Roles y Permisos Avanzados
+---
+
+Clave: acad_plan_excellens_feat5
+Valor AR: Integración con Moodle/Canvas/Blackboard
+---
+
+Clave: acad_plan_excellens_feat6
+Valor AR: API REST Completa para Desarrolladores
+---
+
+Clave: acad_plan_excellens_feat7
+Valor AR: Dominio Personalizado (.edu.ar / .com)
+---
+
+Clave: acad_plan_excellens_cta
+Valor AR: Solicitar Plan Excellens
+---
+
+Clave: acad_plan_supremus_titulo
+Valor AR: Supremus
+---
+
+Clave: acad_plan_supremus_desc
+Valor AR: Solución enterprise para redes educativas y ministerios
+---
+
+Clave: acad_plan_supremus_feat1_strong
+Valor AR: TODO lo de Excellens +
+---
+
+Clave: acad_plan_supremus_feat2
+Valor AR: Certificados, Constancias y Diplomas ILIMITADOS
+---
+
+Clave: acad_plan_supremus_feat3
+Valor AR: Multi-Institución (Redes Educativas)
+---
+
+Clave: acad_plan_supremus_feat4
+Valor AR: Sistema Multi-Sede Ilimitado
+---
+
+Clave: acad_plan_supremus_feat5
+Valor AR: Blockchain para Registro Permanente
+---
+
+Clave: acad_plan_supremus_feat6
+Valor AR: Diseño 100% Personalizado a Medida
+---
+
+Clave: acad_plan_supremus_feat7
+Valor AR: Subdominios Ilimitados por Carrera/Facultad
+---
+
+Clave: acad_plan_supremus_feat8
+Valor AR: Gerente de Cuenta Educativo Dedicado
+---
+
+Clave: acad_plan_supremus_cta
+Valor AR: Contactar para Plan Supremus
+---
+
+Clave: mut_meta_title
+Valor AR: OriginalisDoc para Mutuales - Gestión Digital Integral
+---
+
+Clave: mut_meta_description
+Valor AR: Solución completa para mutuales y asociaciones mutualistas. Credenciales digitales, gestión de beneficios, portal del asociado y comunicación comunitaria.
+---
+
+Clave: mut_meta_keywords
+Valor AR: mutuales, asociaciones mutualistas, credenciales digitales, gestión de asociados, beneficios mutuales
+---
+
+Clave: mut_nav_beneficios
+Valor AR: Beneficios
+---
+
+Clave: mut_nav_pilares
+Valor AR: Pilares
+---
+
+Clave: mut_nav_planes
+Valor AR: Planes
+---
+
+Clave: mut_nav_faq
+Valor AR: FAQ
+---
+
+Clave: mut_nav_mutuales
+Valor AR: Mutuales
+---
+
+Clave: mut_hero_badge
+Valor AR: ✓ Solución Integral para Mutuales
+---
+
+Clave: mut_hero_title
+Valor AR: Gestión Digital
+---
+
+Clave: mut_hero_title_highlight
+Valor AR: para Mutuales
+---
+
+Clave: mut_hero_subtitle
+Valor AR: Un ecosistema completo para modernizar la gestión, potenciar los beneficios y fortalecer el sentido de comunidad de tu mutual
+---
+
+Clave: mut_cta_solicitar_demo
+Valor AR: Solicitar Demo Personalizada
+---
+
+Clave: mut_cta_ver_como_funciona
+Valor AR: Ver Cómo Funciona
+---
+
+Clave: mut_hero_stat_tiempo
+Valor AR: Menos tiempo administrativo
+---
+
+Clave: mut_hero_stat_portal
+Valor AR: Portal del asociado 24/7
+---
+
+Clave: mut_hero_stat_beneficios
+Valor AR: Gestión de beneficios en tiempo real
+---
+
+Clave: mut_problemas_titulo
+Valor AR: ¿Te suena familiar?
+---
+
+Clave: mut_problemas_subtitulo
+Valor AR: Los desafíos que enfrentan las mutuales tradicionales
+---
+
+Clave: mut_problema_credenciales
+Valor AR: Credenciales de Plástico Obsoletas
+---
+
+Clave: mut_problema_credenciales_desc
+Valor AR: Costos de impresión, extravíos constantes y dificultad para verificar el estado del asociado.
+---
+
+Clave: mut_problema_beneficios
+Valor AR: Gestión Manual de Beneficios
+---
+
+Clave: mut_problema_beneficios_desc
+Valor AR: Cupones de papel, fraudes por doble uso y comercios que no pueden verificar descuentos.
+---
+
+Clave: mut_problema_comunicacion
+Valor AR: Comunicación Ineficiente
+---
+
+Clave: mut_problema_comunicacion_desc
+Valor AR: Emails que no se leen, carteleras físicas desactualizadas y dificultad para llegar a todos los asociados.
+---
+
+Clave: mut_problema_participacion
+Valor AR: Baja Participación en Asambleas
+---
+
+Clave: mut_problema_participacion_desc
+Valor AR: Control manual de quórum, listados en papel y falta de herramientas para fomentar la participación.
+---
+
+Clave: mut_problema_crecimiento
+Valor AR: Gestión Administrativa Compleja
+---
+
+Clave: mut_problema_crecimiento_desc
+Valor AR: Planillas Excel, falta de trazabilidad y dificultad para generar reportes.
+---
+
+Clave: mut_problema_imagen
+Valor AR: Imagen Anticuada
+---
+
+Clave: mut_problema_imagen_desc
+Valor AR: Dificultad para atraer nuevos asociados jóvenes con procesos tradicionales y sin presencia digital.
+---
+
+
+
+CLAVES CON VALORES DIFERENTES: 207
+================================================================================
+
+Clave: meta_title
+AR: OriginalisDoc - Crea, Gestiona y Valida tu Presencia Digital
+EC: OriginalisDoc - Crea, Gestiona y Valida tu Prestigio Digital
+---
+
+Clave: meta_description
+AR: Ecosistema de herramientas para emitir credenciales infalsificables, construir tu presencia digital verificada e implementar asistentes de IA especializados.
+EC: Ecosistema de herramientas para emitir credenciales infalsificables, construir tu marca personal verificada e implementar asistentes de IA especializados.
+---
+
+Clave: meta_keywords
+AR: credenciales digitales, validación QR, presencia digital verificada, asistentes IA, presencia digital, certificaciones infalsificables
+EC: credenciales digitales, validación QR, marca personal verificada, asistentes IA, prestigio digital, certificaciones infalsificables
+---
+
+Clave: meta_og_title
+AR: OriginalisDoc - Crea, Gestiona y Valida tu Presencia Digital
+EC: OriginalisDoc - Crea, Gestiona y Valida tu Prestigio Digital
+---
+
+Clave: meta_og_description
+AR: Ecosistema de herramientas para emitir credenciales infalsificables, construir tu presencia digital verificada e implementar asistentes de IA especializados.
+EC: Ecosistema de herramientas para emitir credenciales infalsificables, construir tu marca personal verificada e implementar asistentes de IA especializados.
+---
+
+Clave: meta_twitter_title
+AR: OriginalisDoc - Tu Presencia Digital Verificada
+EC: OriginalisDoc - Tu Prestigio Digital Verificado
+---
+
+Clave: meta_twitter_description
+AR: Herramientas para emitir credenciales infalsificables, construir tu presencia digital y asistentes IA especializados.
+EC: Herramientas para emitir credenciales infalsificables, construir tu marca personal y asistentes IA especializados.
+---
+
+Clave: nav_productos
+AR: Soluciones
+EC: Productos
+---
+
+Clave: nav_faq
+AR: FAQ
+EC: Preguntas Frecuentes
+---
+
+Clave: hero_subtitle
+AR: Un ecosistema de herramientas para emitir <span class="text-gold font-bold">credenciales infalsificables</span>, construir tu <span class="text-gold font-bold">presencia digital verificada</span> e implementar <span class="text-gold font-bold">asistentes de IA</span> especializados.
+EC: Un ecosistema de herramientas para emitir credenciales infalsificables, construir tu marca personal verificada e implementar asistentes de IA especializados.
+---
+
+Clave: hero_cta_primary
+AR: ¿Qué estás buscando?
+EC: Explorar Soluciones
+---
+
+Clave: hero_mockup_estudiante
+AR: Juan Pérez - DNI 12345678
+EC: Juan Pérez - Cédula 12345678
+---
+
+Clave: cat_subtitle
+AR: Elegí tu sector para descubrir la solución perfecta diseñada para tus necesidades específicas
+EC: Elija su sector para descubrir la solución perfecta diseñada para sus necesidades específicas
+---
+
+Clave: productos_title
+AR: Un Ecosistema de Soluciones a tu Disposición
+EC: Un Ecosistema de Herramientas a su Disposición
+---
+
+Clave: productos_subtitle
+AR: Descubre nuestras soluciones especializadas. Cada una construida sobre nuestra tecnología de validación inalterable.
+EC: Descubre nuestros productos individuales. Cada uno construido sobre nuestra tecnología de validación inalterable.
+---
+
+Clave: cat_footer_link
+AR: Consultanos
+EC: Consultenos
+---
+
+Clave: cat_footer_text
+AR: si tu sector no está listado.
+EC: si su sector no está listado.
+---
+
+Clave: serv_branding_desc
+AR: Portal y documentos con tu logo, colores y diseño institucional único.
+EC: Portal y documentos con su logo, colores y diseño institucional único.
+---
+
+Clave: serv_validacion_desc
+AR: Cualquier persona puede verificar la autenticidad de tus documentos al instante.
+EC: Cualquier persona puede verificar la autenticidad de sus documentos al instante.
+---
+
+Clave: faq_subtitle
+AR: Todo lo que necesitas saber sobre OriginalisDoc
+EC: Todo lo que necesita saber sobre OriginalisDoc
+---
+
+Clave: faq_1_a
+AR: Menos de 24 horas. Solo necesitas configurar tu marca (logo y colores), cargar tus datos, y comenzar a emitir. Incluimos onboarding guiado paso a paso.
+EC: Menos de 24 horas. Solo necesita configurar su marca (logo y colores), cargar sus datos y comenzar a emitir. Incluimos onboarding guiado paso a paso.
+---
+
+Clave: faq_3_a
+AR: Ofrecemos un servicio premium de impresión HD con hologramas de seguridad y laminado, enviado por correo rastreado a toda Argentina. Puedes solicitarlo directamente desde tu portal y recibir seguimiento del envío.
+EC: Ofrecemos un servicio premium de impresión HD con hologramas de seguridad y laminado, enviado por correo rastreado a todo Ecuador. Puede solicitarlo directamente desde su portal y recibir seguimiento del envío.
+---
+
+Clave: faq_4_a
+AR: Cada documento incluye un código QR único que redirige a un portal de validación personalizado con tu marca. Allí se muestra toda la información del documento y su trayectoria completa. Es imposible de falsificar o alterar.
+EC: Cada documento incluye un código QR único que redirige a un portal de validación personalizado con su marca. Allí se muestra toda la información del documento y su trayectoria completa. Es imposible de falsificar o alterar.
+---
+
+Clave: faq_5_a
+AR: Sí, 100%. Cada institución o profesional tiene su portal completamente personalizado con su logo, colores y diseño de marca. Los documentos reflejan tu identidad visual única.
+EC: Sí, 100%. Cada institución o profesional tiene su portal completamente personalizado con su logo, colores y diseño de marca. Los documentos reflejan su identidad visual única.
+---
+
+Clave: faq_6_a
+AR: No. La plataforma está diseñada para ser extremadamente intuitiva. Si sabes navegar internet, puedes gestionar OriginalisDoc sin problemas. Además, ofrecemos soporte técnico completo.
+EC: No. La plataforma está diseñada para ser extremadamente intuitiva. Si sabe navegar internet, puede gestionar OriginalisDoc sin problemas. Además, ofrecemos soporte técnico completo.
+---
+
+Clave: faq_7_a
+AR: Absoluta seguridad. Usamos encriptación de nivel bancario, backups automáticos diarios, y cumplimos con las normativas de protección de datos personales. Tus datos están más seguros que en un archivo físico.
+EC: Absoluta seguridad. Usamos encriptación de nivel bancario, backups automáticos diarios y cumplimos con las normativas de protección de datos personales. Sus datos están más seguros que en un archivo físico.
+---
+
+Clave: validar_subtitle
+AR: Ingresá el código de validación que aparece en el documento (formato: VALID-XXXXXXXXXXXX)
+EC: Ingrese el código de validación que aparece en el documento (formato: VALID-XXXXXXXXXXXX)
+---
+
+Clave: contacto_title
+AR: Comenzá a Emitir Documentos Profesionales Hoy
+EC: Comience a Emitir Documentos Profesionales Hoy
+---
+
+Clave: contacto_subtitle
+AR: Contactanos para una demostración personalizada y descubrí cómo OriginalisDoc puede transformar tu gestión documental.
+EC: Contáctenos para una demostración personalizada y descubra cómo OriginalisDoc puede transformar su gestión documental.
+---
+
+Clave: contacto_mensaje
+AR: Contanos sobre tu necesidad...
+EC: Cuéntenos sobre su necesidad...
+---
+
+Clave: contacto_info
+AR: O escribinos directamente:
+EC: O escríbanos directamente:
+---
+
+Clave: footer_copyright
+AR: Todos los derechos reservados.
+EC: © 2025 OriginalisDoc. Todos los derechos reservados.
+---
+
+Clave: benefit_demo_desc
+AR: Prueba todas las funciones
+EC: Pruebe todas las funciones
+---
+
+Clave: benefit_implementacion_desc
+AR: Comienza a emitir mañana
+EC: Comience a emitir mañana
+---
+
+Clave: contacto_cta_email
+AR: O escríbenos a
+EC: O escríbanos a
+---
+
+Clave: footer_horario
+AR: Lun - Vie: 9:00 - 18:00
+EC: Lunes a viernes: 09:00 - 18:00
+---
+
+Clave: privacidad_meta_description
+AR: Política de Privacidad de OriginalisDoc. Conocé cómo recopilamos, usamos y protegemos tus datos personales.
+EC: Política de Privacidad de OriginalisDoc. Conozca cómo recopilamos, usamos y protegemos sus datos personales.
+---
+
+Clave: privacidad_meta_og_description
+AR: Información detallada sobre cómo OriginalisDoc protege tu privacidad y maneja tus datos personales.
+EC: Información detallada sobre cómo OriginalisDoc protege su privacidad y maneja sus datos personales.
+---
+
+Clave: privacidad_meta_twitter_description
+AR: Información detallada sobre cómo OriginalisDoc protege tu privacidad y maneja tus datos personales.
+EC: Información detallada sobre cómo OriginalisDoc protege su privacidad y maneja sus datos personales.
+---
+
+Clave: terminos_meta_description
+AR: Términos de Servicio de OriginalisDoc. Conocé las condiciones de uso de nuestra plataforma de certificaciones digitales.
+EC: Términos de Servicio de OriginalisDoc. Conozca las condiciones de uso de nuestra plataforma de certificaciones digitales.
+---
+
+Clave: privacidad_intro_p1
+AR: En OriginalisDoc, la privacidad y seguridad de sus datos es nuestra máxima prioridad. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos su información personal cuando utiliza nuestros servicios.
+EC: En OriginalisDoc, la privacidad y seguridad de sus datos constituye nuestra máxima prioridad. Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos su información personal cuando usted hace uso de nuestros servicios.
+---
+
+Clave: privacidad_intro_p2
+AR: Al utilizar OriginalisDoc, usted acepta las prácticas descritas en esta política. Si no está de acuerdo, no utilice nuestros servicios.
+EC: Al utilizar OriginalisDoc, usted acepta las prácticas descritas en esta política. Si no está de acuerdo con estas disposiciones, le solicitamos no utilizar nuestros servicios.
+---
+
+Clave: privacidad_seccion1_sub1_p1
+AR: Cuando crea una cuenta, recopilamos:
+EC: Cuando usted crea una cuenta, recopilamos:
+---
+
+Clave: privacidad_seccion1_sub1_li1
+AR: Nombre completo y datos de contacto (email, teléfono)
+EC: Nombre completo y datos de contacto (correo electrónico, teléfono)
+---
+
+Clave: privacidad_seccion1_sub2_p1
+AR: Al emitir documentos, recopilamos datos de los beneficiarios (estudiantes, clientes, empleados, socios, etc.):
+EC: Al emitir documentos, recopilamos datos de los beneficiarios (estudiantes, clientes, empleados, socios, entre otros):
+---
+
+Clave: privacidad_seccion1_sub2_li1
+AR: Nombre completo y número de identificación (DNI, CUIL, etc.)
+EC: Nombre completo y número de identificación (Cédula, RUC, entre otros)
+---
+
+Clave: privacidad_seccion1_sub2_li2
+AR: Email y teléfono (para notificaciones)
+EC: Correo electrónico y teléfono (para notificaciones)
+---
+
+Clave: privacidad_seccion1_sub3_li3
+AR: Logs de validación de documentos (quién validó, cuándo, desde dónde)
+EC: Registros de validación de documentos (quién validó, cuándo, desde dónde)
+---
+
+Clave: privacidad_seccion1_sub3_li4
+AR: Métricas de uso del portal (descargas, accesos, etc.)
+EC: Métricas de uso del portal (descargas, accesos, entre otros)
+---
+
+Clave: privacidad_seccion2_li3_texto
+AR: Enviar emails sobre documentos emitidos, actualizaciones del servicio
+EC: Enviar correos electrónicos sobre documentos emitidos, actualizaciones del servicio
+---
+
+Clave: privacidad_seccion3_p1_strong
+AR: No vendemos ni alquilamos
+EC: No vendemos ni arrendamos
+---
+
+Clave: privacidad_seccion3_sub1_p1
+AR: Trabajamos con proveedores confiables que nos ayudan a operar el Servicio:
+EC: Trabajamos con proveedores confiables que nos asisten en la operación del Servicio:
+---
+
+Clave: privacidad_seccion3_sub1_li3
+AR: Servicios de email transaccional
+EC: Servicios de correo electrónico transaccional
+---
+
+Clave: privacidad_seccion3_sub1_li4
+AR: Servicios de impresión y envío (solo para documentos físicos solicitados)
+EC: Servicios de impresión y envío (únicamente para documentos físicos solicitados)
+---
+
+Clave: privacidad_seccion3_sub1_p2
+AR: Todos los proveedores están contractualmente obligados a proteger sus datos y no pueden usarlos para otros fines.
+EC: Todos los proveedores están contractualmente obligados a proteger sus datos y no pueden utilizarlos para otros fines.
+---
+
+Clave: privacidad_seccion4_li3_strong
+AR: Backups automáticos diarios:
+EC: Respaldos automáticos diarios:
+---
+
+Clave: privacidad_seccion4_p2
+AR: A pesar de estas medidas, ningún sistema es 100% seguro. Le recomendamos usar contraseñas fuertes y no compartir sus credenciales.
+EC: A pesar de estas medidas, ningún sistema es 100% seguro. Le recomendamos utilizar contraseñas fuertes y no compartir sus credenciales.
+---
+
+Clave: privacidad_seccion5_p1
+AR: Conservamos sus datos mientras mantenga una cuenta activa o según lo requiera la ley:
+EC: Conservamos sus datos mientras usted mantenga una cuenta activa o según lo requiera la ley:
+---
+
+Clave: privacidad_seccion5_li1_texto
+AR: Hasta que cancele su cuenta + período legal mínimo (generalmente 10 años para fines fiscales)
+EC: Hasta que usted cancele su cuenta + período legal mínimo (generalmente 10 años para fines fiscales)
+---
+
+Clave: privacidad_seccion5_li3_strong
+AR: Logs de validación:
+EC: Registros de validación:
+---
+
+Clave: privacidad_seccion7_li3_texto
+AR: Para recordar sus configuraciones (idioma, tema, etc.)
+EC: Para recordar sus configuraciones (idioma, tema, entre otros)
+---
+
+Clave: privacidad_seccion8_p1
+AR: Sus datos se almacenan principalmente en servidores ubicados en Argentina. En algunos casos, proveedores de servicios pueden procesar datos en otros países con niveles adecuados de protección de datos (por ejemplo: Estados Unidos bajo el Data Privacy Framework, Unión Europea bajo GDPR).
+EC: Sus datos se almacenan principalmente en servidores ubicados en Ecuador. En algunos casos, proveedores de servicios pueden procesar datos en otros países con niveles adecuados de protección de datos (por ejemplo: Estados Unidos bajo el Data Privacy Framework, Unión Europea bajo GDPR).
+---
+
+Clave: privacidad_seccion10_p1
+AR: Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios significativos serán notificados por email o mediante aviso destacado en el portal. La fecha de "Última actualización" en la parte superior indica cuándo se realizó la última modificación.
+EC: Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios significativos serán notificados por correo electrónico o mediante aviso destacado en el portal. La fecha de "Última actualización" en la parte superior indica cuándo se realizó la última modificación.
+---
+
+Clave: privacidad_seccion11_email_general_label
+AR: Email general:
+EC: Correo electrónico general:
+---
+
+Clave: privacidad_seccion12_p1_antes_strong
+AR: En Argentina, la autoridad de aplicación en materia de protección de datos personales es la
+EC: En Ecuador, la autoridad de aplicación en materia de protección de datos personales es la
+---
+
+Clave: privacidad_seccion12_p1_strong
+AR: Agencia de Acceso a la Información Pública (AAIP)
+EC: Dirección Nacional de Registro de Datos Públicos
+---
+
+Clave: privacidad_seccion12_aaip_label
+AR: AAIP:
+EC: DINARDAP:
+---
+
+Clave: privacidad_seccion12_aaip_url
+AR: www.argentina.gob.ar/aaip
+EC: www.registrocivil.gob.ec
+---
+
+Clave: acad_nav_faq
+AR: FAQ
+EC: Preguntas Frecuentes
+---
+
+Clave: acad_hero_stat_falsificaciones
+AR: Falsificaciones posibles
+EC: Falsificaciones Imposibles
+---
+
+Clave: acad_problemas_titulo
+AR: ¿Te suena familiar?
+EC: ¿Le suena familiar?
+---
+
+Clave: acad_problemas_subtitulo
+AR: Estos son los dolores de cabeza que Certificatum elimina
+EC: Estos son los dolores de cabeza que OriginalisDoc elimina
+---
+
+Clave: acad_problema_trabajo_manual_desc
+AR: Diseñar y emitir cada certificado individualmente consume tiempo valioso que podrías dedicar a la enseñanza.
+EC: Diseñar y emitir cada certificado individualmente consume tiempo valioso que podría dedicar a la enseñanza.
+---
+
+Clave: acad_problema_perdidos_desc
+AR: Estudiantes que pierden o dañan documentos y solicitan reemisiones constantemente.
+EC: Alumnos que pierden o dañan documentos y solicitan reemisiones constantemente.
+---
+
+Clave: acad_como_funciona_paso3_desc
+AR: Generación automática con QR único. Notificación por email y acceso inmediato para estudiantes.
+EC: Generación automática con código QR único. Notificación por correo electrónico y acceso inmediato para estudiantes.
+---
+
+Clave: acad_doc_analiticos
+AR: Analíticos / Registros Académicos
+EC: Registros Académicos
+---
+
+Clave: acad_doc_constancia_regular
+AR: Constancias de Estudiante Regular
+EC: Constancias de Alumno Regular
+---
+
+Clave: acad_doc_constancia_inscripcion
+AR: Constancias de Inscripción
+EC: Constancias de Matriculación
+---
+
+Clave: acad_portal_badge
+AR: ★ Feature Destacado
+EC: ★ Característica Destacada
+---
+
+Clave: acad_portal_descarga_desc
+AR: Diplomas, constancias, certificados, analíticos - todo en un solo lugar.
+EC: Diplomas, constancias, certificados, registros académicos - todo en un solo lugar.
+---
+
+Clave: acad_portal_timeline_titulo
+AR: Vista de timeline académico
+EC: Vista de línea de tiempo académico
+---
+
+Clave: acad_portal_qr_titulo
+AR: QR individual por documento
+EC: Código QR individual por documento
+---
+
+Clave: acad_portal_demo_dni
+AR: DNI: 12.345.678
+EC: Identificación: 12.345.678
+---
+
+Clave: acad_casos_uso_titulo
+AR: ¿Para Quién es Certificatum?
+EC: ¿Para Quién es OriginalisDoc Académico?
+---
+
+Clave: acad_caso_universidades
+AR: Universidades y Terciarios
+EC: Universidades y Educación Superior
+---
+
+Clave: acad_caso_universidades_desc
+AR: Gestión masiva de títulos, diplomas y analíticos para cientos de graduados.
+EC: Gestión masiva de títulos, diplomas y registros académicos para cientos de graduados.
+---
+
+Clave: acad_caso_organizadores
+AR: Organizadores/as de Cursos
+EC: Organizadores de Cursos
+---
+
+Clave: acad_caso_particulares
+AR: Formadores/as Particulares
+EC: Formadores Particulares
+---
+
+Clave: acad_func_subtitulo
+AR: Todo lo que necesitas para gestionar certificaciones académicas
+EC: Todo lo que necesita para gestionar certificaciones académicas
+---
+
+Clave: acad_func_cohortes_desc
+AR: Organiza estudiantes por camada, año o grupo. Emite documentos masivamente por cohorte completa.
+EC: Organice estudiantes por cohorte, año o grupo. Emita documentos masivamente por cohorte completa.
+---
+
+Clave: acad_func_emision_masiva_desc
+AR: Genera certificados para 100+ estudiantes en minutos. Un solo clic para toda una promoción.
+EC: Genere certificados para 100+ alumnos en minutos. Un solo clic para toda una promoción.
+---
+
+Clave: acad_func_notificaciones
+AR: Notificaciones Automáticas por Email
+EC: Notificaciones Automáticas por Correo Electrónico
+---
+
+Clave: acad_func_branding
+AR: Portal con Branding Institucional
+EC: Portal con Marca Institucional
+---
+
+Clave: acad_func_validacion_desc
+AR: Empleadores/as escanean el QR y verifican autenticidad al instante.
+EC: Empleadores escanean el código QR y verifican autenticidad al instante.
+---
+
+Clave: acad_beneficio_falsificaciones_titulo
+AR: Falsificaciones Posibles
+EC: Falsificaciones Imposibles
+---
+
+Clave: acad_beneficio_trazabilidad_desc
+AR: Cada acción queda registrada. Sabe exactamente quién emitió qué documento, cuándo y para quién. Ideal para auditorías y cumplimiento normativo.
+EC: Cada acción queda registrada. Sabes exactamente quién emitió qué documento, cuándo y para quién. Ideal para auditorías y cumplimiento normativo.
+---
+
+Clave: acad_caso_sajur_testimonio
+AR: "Pasamos de procesar manualmente cada certificado a emitir decenas en minutos. Nuestros/as estudiantes valoran poder acceder a su trayectoria completa 24/7, y los/as empleadores/as confían en la validación QR. El ahorro en tiempo administrativo fue del 90%."
+EC: "Pasamos de procesar manualmente cada certificado a emitir decenas en minutos. Nuestros estudiantes valoran poder acceder a su trayectoria completa 24/7, y los empleadores confían en la validación QR. El ahorro en tiempo administrativo fue del 90%."
+---
+
+Clave: acad_caso_liberte_testimonio
+AR: "La implementación fue instantánea. En menos de 24 horas ya estábamos emitiendo certificados con nuestra marca. El portal personalizado proyecta una imagen profesional que nuestros/as estudiantes comparten con orgullo. La opción de impresión premium es el toque final perfecto."
+EC: "La implementación fue instantánea. En menos de 24 horas ya estábamos emitiendo certificados con nuestra marca. El portal personalizado proyecta una imagen profesional que nuestros estudiantes comparten con orgullo. La opción de impresión premium es el toque final perfecto."
+---
+
+Clave: acad_antes_despues_titulo
+AR: Antes vs Después de Certificatum
+EC: Antes vs Después de OriginalisDoc
+---
+
+Clave: acad_despues_titulo
+AR: Después (Certificatum)
+EC: Después (OriginalisDoc)
+---
+
+Clave: acad_despues_dashboards
+AR: Dashboards y reportes en tiempo real
+EC: Paneles de control y reportes en tiempo real
+---
+
+Clave: acad_integ_email
+AR: Email Institucional
+EC: Correo Electrónico Institucional
+---
+
+Clave: acad_integ_email_desc
+AR: Notificaciones desde su dominio institucional (@suinstituto.edu).
+EC: Notificaciones desde su dominio institucional (@tuinstituto.edu).
+---
+
+Clave: acad_integ_subdominios_desc
+AR: Portal en su propio dominio: certificados.suinstituto.edu
+EC: Portal en su propio dominio: certificados.tuinstituto.edu
+---
+
+Clave: acad_faq_subtitulo
+AR: Todo lo que necesita saber sobre Certificatum
+EC: Todo lo que necesita saber sobre OriginalisDoc Académico
+---
+
+Clave: acad_faq_cargo_resp
+AR: Puede cargar estudiantes de tres formas: individualmente desde el panel de administración, masivamente importando un archivo Excel/CSV, o copiando y pegando una lista directamente. Le proporcionamos plantillas para facilitar el proceso.
+EC: Puede cargar estudiantes de dos formas: individualmente desde el panel de administración, o masivamente importando un archivo Excel/CSV con todos los datos. Le proporcionamos una plantilla para facilitar el proceso.
+---
+
+Clave: acad_faq_validez_resp
+AR: Sí, los certificados digitales tienen la misma validez legal que los físicos. Además, ofrecemos opción de impresión premium con papel especial y elementos de seguridad para instituciones que lo requieran.
+EC: Sí, los certificados digitales tienen la misma validez legal que los físicos en Ecuador. Además, ofrecemos opción de impresión premium con papel especial y elementos de seguridad para instituciones que lo requieran.
+---
+
+Clave: acad_faq_acceso_resp
+AR: El estudiante puede recuperar su acceso usando su DNI y un proceso de verificación por email. Además, como administrador/a de la institución, puede regenerar el acceso en cualquier momento.
+EC: El estudiante puede recuperar su acceso usando su identificación y un proceso de verificación por correo electrónico. Además, como administrador de la institución, puede regenerar el acceso en cualquier momento.
+---
+
+Clave: acad_faq_validacion_resp
+AR: El/la empleador/a simplemente escanea el código QR del certificado con su celular. Será redirigido/a automáticamente a una página de validación que muestra todos los datos del certificado y la trayectoria académica del estudiante.
+EC: El empleador simplemente escanea el código QR del certificado con su celular. Será redirigido automáticamente a una página de validación que muestra todos los datos del certificado y la trayectoria académica del estudiante.
+---
+
+Clave: acad_cta_final_implementacion
+AR: 48hs
+EC: Implementación
+---
+
+Clave: acad_cta_final_menos_tiempo
+AR: Menos tiempo administrativo
+EC: Menos tiempo
+---
+
+Clave: acad_cta_final_certificados
+AR: Certificados ilimitados
+EC: Certificados
+---
+
+Clave: acad_footer_derechos
+AR: © 2025 Verumax. Todos los derechos reservados.
+EC: © 2025 OriginalisDoc. Todos los derechos reservados.
+---
+
+Clave: acad_meta_title
+AR: Certificatum - Certificados Digitales con Validación QR
+EC: OriginalisDoc Académico - Certificaciones Digitales para Instituciones Educativas
+---
+
+Clave: acad_meta_description
+AR: Emití certificados, diplomas y analíticos digitales con validación QR. Para instituciones educativas, centros de formación y formadores independientes.
+EC: Solución completa de certificaciones digitales para instituciones educativas, centros de formación y formadores particulares. Emisión masiva, validación QR y portal del estudiante.
+---
+
+Clave: acad_meta_keywords
+AR: certificados digitales, diplomas online, validación QR, certificados profesionales, formación, cursos
+EC: certificados académicos, diplomas digitales, registros académicos, instituciones educativas, formación profesional
+---
+
+Clave: acad_meta_og_title
+AR: Certificatum - Certificados Digitales Profesionales
+EC: OriginalisDoc Académico - Certificaciones para Instituciones Educativas
+---
+
+Clave: acad_meta_og_description
+AR: Emití certificados con validación QR infalsificable. Para instituciones, centros de formación y formadores independientes.
+EC: Emita certificados, diplomas y registros académicos digitales con validación QR. Portal del estudiante 24/7 y emisión masiva automatizada.
+---
+
+Clave: acad_meta_twitter_title
+AR: Certificatum - Certificados Digitales Profesionales
+EC: OriginalisDoc Académico - Certificaciones para Instituciones Educativas
+---
+
+Clave: acad_meta_twitter_description
+AR: Emití certificados con validación QR infalsificable. Para instituciones, centros de formación y formadores independientes.
+EC: Emita certificados, diplomas y registros académicos digitales con validación QR. Portal del estudiante 24/7 y emisión masiva automatizada.
+---
+
+Clave: prof_meta_title
+AR: Tarjeta Digital Profesional con QR Infalsificable | Verumax
+EC: Tarjeta Digital Profesional con QR Infalsificable | OriginalisDoc
+---
+
+Clave: prof_meta_twitter_title
+AR: Tarjeta Digital Profesional by Verumax
+EC: Tarjeta Digital Profesional by OriginalisDoc
+---
+
+Clave: prof_hero_badge
+AR: ✓ Todo lo que Necesitás en un Solo Producto
+EC: ✓ La Tarjeta de Visita del Siglo XXI
+---
+
+Clave: prof_hero_title
+AR: Tu Tarjeta Digital
+EC: Tu Tarjeta Digital Profesional
+---
+
+Clave: prof_hero_title_highlight
+AR: Configurada por<br>Nuestro Equipo Humano
+EC: Con QR Infalsificable
+---
+
+Clave: prof_hero_subtitle
+AR: La Tarjeta Digital es la suma de TODO: tarjeta en JPG para compartir + sitio web + gestor de clientes + email marketing + asistente virtual. Nuestro equipo humano lo configura TODO por vos. Vos solo enviás tu información y listo.
+EC: Olvidate del papel. Una tarjeta digital en formato JPG con QR dinámico que lleva a tu landing page personalizada. Actualizá tus datos al instante desde un panel seguro.
+---
+
+Clave: prof_hero_url_ejemplo_domain
+AR: .verumax.com
+EC: .originalisdoc.com
+---
+
+Clave: prof_stat_qr
+AR: Equipo Humano
+EC: QR Infalsificable
+---
+
+Clave: prof_stat_qr_desc
+AR: Nosotros configuramos todo
+EC: Tecnología blockchain
+---
+
+Clave: prof_stat_actualizacion
+AR: Dashboard Incluido
+EC: Actualización
+---
+
+Clave: prof_stat_actualizacion_desc
+AR: Para autoadministrar cuando quieras
+EC: En tiempo real
+---
+
+Clave: prof_stat_landing
+AR: Solución Completa
+EC: Tu Landing Page
+---
+
+Clave: prof_stat_landing_desc
+AR: Tarjeta + Web + Herramientas
+EC: Incluida en todos los planes
+---
+
+Clave: prof_que_es_subtitulo
+AR: La suma de TODO lo que necesitás para tu presencia digital
+EC: La evolución definitiva de la tarjeta de visita tradicional
+---
+
+Clave: prof_que_es_desc
+AR: La Tarjeta Digital NO es solo una tarjeta. Es la SUMA de múltiples servicios en uno: ① Tu tarjeta física en formato JPG con QR infalsificable para compartir o imprimir ② Tu sitio web (tunombre.verumax.com) ③ Gestor de clientes/contactos ④ Sistema de email marketing ⑤ Asistente virtual especializado 24/7. Todo esto lo configuramos NOSOTROS por vos. Un equipo humano real arma tu presencia digital completa. Vos solo nos enviás tu información (foto, servicios, horarios) y nosotros hacemos TODO el trabajo técnico. También tenés acceso a un dashboard para autoadministrar cuando quieras, pero nunca es obligatorio usarlo.
+EC: Una imagen JPG de alta calidad (formato tarjeta de visita) con un código QR único e infalsificable. Al escanear el QR, tus contactos acceden a tu landing page personalizada con toda tu información profesional: foto, datos de contacto, servicios, horarios y mucho más.
+---
+
+Clave: prof_tarjeta_feature1_titulo
+AR: ① Tu Tarjeta Física Digital
+EC: Imagen JPG Lista para Usar
+---
+
+Clave: prof_tarjeta_feature1_desc
+AR: Imagen JPG en alta resolución con tu diseño profesional y QR infalsificable. Compartila por WhatsApp, email, LinkedIn o imprimila en papel. Reemplaza las tarjetas de papel tradicionales.
+EC: Descargá tu tarjeta en alta resolución y compartila por WhatsApp, email, redes sociales o imprimila en papel de calidad.
+---
+
+Clave: prof_tarjeta_feature2_titulo
+AR: ② Tu Sitio Web Profesional Completo
+EC: QR Dinámico e Infalsificable
+---
+
+Clave: prof_tarjeta_feature2_desc
+AR: Dominio personalizado (tunombre.verumax.com) con diseño profesional, portfolio, servicios, horarios, formulario de contacto. No es solo una landing, es tu sitio web completo configurado por nuestro equipo.
+EC: El QR no se puede clonar ni copiar. Si alguien intenta replicar tu tarjeta, el código no funcionará. Tecnología de verificación única.
+---
+
+Clave: prof_tarjeta_feature3_titulo
+AR: ③ Herramientas de Gestión Incluidas
+EC: Landing Page Incluida
+---
+
+Clave: prof_tarjeta_feature3_desc
+AR: Gestor de clientes + Email marketing + Recepcionista Virtual Especializado . Todo integrado y funcionando. Son servicios que habitualmente contratarías por separado.
+EC: Tu URL personalizada (ej: juanperez.originalisdoc.com) con diseño profesional, tu foto, datos de contacto, servicios, horarios y más.
+---
+
+Clave: prof_tarjeta_feature4_titulo
+AR: ④ Equipo Humano + Dashboard Opcional
+EC: Panel de Administración
+---
+
+Clave: prof_tarjeta_feature4_desc
+AR: Nosotros configuramos TODO por vos. Un equipo humano real se encarga de armar tu presencia digital completa. También tenés acceso a un dashboard para hacer cambios cuando quieras, pero siempre podés pedirnos ayuda.
+EC: Actualizá tu información al instante. Cambios en tiempo real sin necesidad de reimprimir o reenviar tu tarjeta.
+---
+
+Clave: prof_como_titulo
+AR: Cómo Funciona en 3 Simples Pasos
+EC: Cómo Funciona en 3 Pasos
+---
+
+Clave: prof_como_subtitulo
+AR: Nosotros hacemos TODO el trabajo técnico por vos
+EC: De la contratación a tu tarjeta digital en minutos
+---
+
+Clave: prof_como_paso1
+AR: Paso 1: Elegís tu Plan y Enviás tu Info
+EC: Elegí tu Plan y Personalizá
+---
+
+Clave: prof_como_paso1_desc
+AR: Seleccionás el plan que mejor se adapte a vos y nos enviás tu información: nombre, foto, servicios que ofrecés, horarios, contacto. Nada más. No tenés que tocar nada técnico.
+EC: Seleccioná el plan que mejor se adapte a vos. Cargá tus datos (nombre, foto, contacto, servicios) y elegí tu paleta de colores entre nuestras opciones preestablecidas.
+---
+
+Clave: prof_como_paso2
+AR: Paso 2: Nuestro Equipo Configura TODO
+EC: Descargá tu Tarjeta JPG
+---
+
+Clave: prof_como_paso2_desc
+AR: Un equipo humano REAL arma tu sitio web completo, diseña tu tarjeta digital, configura tus herramientas (gestor de clientes, email marketing, asistente virtual). Vos no hacés nada. Nosotros hacemos TODO el trabajo técnico.
+EC: Tu tarjeta digital está lista en alta resolución con tu QR único e infalsificable. Descargala y compartila por donde quieras: WhatsApp, email, LinkedIn o imprimila.
+---
+
+Clave: prof_como_paso3
+AR: Paso 3: Empezás a Usar Todo Ya Funcionando
+EC: Actualizá Cuando Quieras
+---
+
+Clave: prof_como_paso3_desc
+AR: Recibís tu tarjeta para compartir, tu sitio web ya online, y todas las herramientas configuradas y listas. Podés usar el dashboard para hacer cambios vos mismo, o simplemente escribirnos y nosotros lo hacemos por vos. Siempre tenés soporte humano real.
+EC: Desde tu panel de administración seguro, modificá tus datos las veces que necesites. Los cambios son instantáneos y tu QR siempre apunta a la información actualizada.
+---
+
+Clave: prof_caracteristicas_titulo
+AR: Por Qué Elegir Nuestra Tarjeta Digital
+EC: Por Qué Nuestra Tarjeta Digital es Única
+---
+
+Clave: prof_caracteristicas_subtitulo
+AR: No es solo una tarjeta, es tu solución profesional completa con equipo humano incluido
+EC: Tecnología y diseño pensados para profesionales exigentes
+---
+
+Clave: prof_caract_qr_titulo
+AR: Equipo Humano que Hace Todo por Vos
+EC: QR Infalsificable y Dinámico
+---
+
+Clave: prof_caract_qr_desc
+AR: No te dejamos solo con un software. Un equipo humano REAL configura tu sitio web, diseña tu tarjeta, carga tu información, y te da soporte permanente. Podés usar el dashboard si querés, o simplemente escribirnos y nosotros hacemos los cambios. Siempre hay personas reales atrás.
+EC: No es un QR estático común. Es un código verificable que no puede ser clonado. Si alguien copia tu tarjeta, el QR no funcionará. Además, podés cambiar el destino del QR sin necesidad de regenerar la imagen.
+---
+
+Clave: prof_caract_panel_titulo
+AR: La Suma de Múltiples Servicios en Uno
+EC: Panel de Administración Intuitivo
+---
+
+Clave: prof_caract_panel_desc
+AR: No comprás solo una tarjeta. Comprás: tarjeta digital + sitio web completo + gestor de clientes + email marketing + asistente virtual. Son herramientas que habitualmente contratarías por separado en diferentes plataformas. Acá están todas integradas y funcionando.
+EC: Accedé desde cualquier dispositivo a tu panel seguro. Actualizá tu foto, datos de contacto, servicios, horarios y más. Sin conocimientos técnicos, 100% visual y amigable.
+---
+
+Clave: prof_caract_paletas_titulo
+AR: Dashboard Incluido pero Opcional
+EC: Paletas de Colores Profesionales
+---
+
+Clave: prof_caract_paletas_desc
+AR: Tenés acceso a un panel de administración para hacer cambios vos mismo cuando quieras: actualizar foto, modificar horarios, agregar servicios. Pero NUNCA es obligatorio usarlo. Siempre podés pedirnos que lo hagamos nosotros. El dashboard es una opción, no una obligación.
+EC: Elegí entre 12 combinaciones de colores preestablecidas diseñadas por profesionales. Desde elegantes y minimalistas hasta vibrantes y creativas. Tu marca, tu estilo.
+---
+
+Clave: prof_caract_landing_titulo
+AR: Sitio Web Profesional Completo
+EC: Landing Page Profesional Incluida
+---
+
+Clave: prof_caract_landing_desc
+AR: No es solo una "landing page". Es tu sitio web profesional completo (tunombre.verumax.com) con portfolio, servicios detallados, formulario de contacto, información de horarios. Todo optimizado para móviles y configurado por nuestro equipo.
+EC: Tu subdominio personalizado (tunombre.originalisdoc.com) con diseño responsivo, optimizado para móviles. Foto de perfil, información de contacto, descripción de servicios, horarios de atención y botones de acción directa (WhatsApp, email, teléfono).
+---
+
+Clave: prof_caract_formatos_titulo
+AR: Tu Presencia Digital Necesaria Hoy
+EC: Múltiples Formatos de Uso
+---
+
+Clave: prof_caract_formatos_desc
+AR: Tener presencia en internet ya no es opcional. Es necesario. La Tarjeta Digital te da TODO lo que necesitás: tarjeta para compartir + sitio web profesional + herramientas de gestión. Todo en un solo producto, configurado y listo para usar.
+EC: JPG en alta resolución para imprimir, PDF para enviar por email, y versión optimizada para redes sociales. Una sola tarjeta, todos los usos que necesites.
+---
+
+Clave: prof_caract_seguridad_titulo
+AR: Soporte Humano Permanente
+EC: Seguridad y Respaldo 24/7
+---
+
+Clave: prof_caract_seguridad_desc
+AR: Nunca quedás solo. Siempre hay personas reales del otro lado para ayudarte. ¿Querés cambiar algo? Escribinos. ¿No sabés cómo usar una herramienta? Te explicamos. ¿Necesitás agregar contenido? Lo hacemos por vos. Soporte humano real, no chatbots.
+EC: Tus datos están protegidos con encriptación de nivel bancario. Backups automáticos diarios. Tu información siempre segura y disponible.
+---
+
+Clave: prof_caso_arquitectos_desc
+AR: Compartí tu tarjeta y que tus prospectos vean tu portfolio visual en tu sitio web personalizada.
+EC: Compartí tu tarjeta y que tus prospectos vean tu portfolio visual en tu landing page personalizada.
+---
+
+Clave: prof_caso_coaches_desc
+AR: Mostrá tus servicios, testimonios, y permitiles a tus clientes agendar sesiones directamente desde tu web.
+EC: Mostrá tus servicios, testimonios, y permitiles a tus clientes agendar sesiones directamente desde tu landing.
+---
+
+Clave: prof_caso_trainers_desc
+AR: Tu tarjeta con especialidades, planes disponibles, horarios y sistema de agendamiento. Tus clientes reservan turnos directamente desde tu web.
+EC: Tu tarjeta con especialidades, planes disponibles, horarios y sistema de agendamiento. Tus clientes reservan turnos directamente desde tu landing.
+---
+
+Clave: prof_planes_subtitulo
+AR: Todos los planes incluyen configuración por equipo humano + soporte permanente + panel de autoadministración
+EC: Todos los planes incluyen tu Tarjeta Digital con QR infalsificable y landing page personalizada
+---
+
+Clave: prof_plan_esencial_titulo
+AR: Essentialis
+EC: Basicum
+---
+
+Clave: prof_plan_esencial_desc
+AR: Tu presencia digital profesional completa. Nosotros configuramos todo por vos.
+EC: Tu tarjeta digital profesional con lo esencial para comenzar a impresionar.
+---
+
+Clave: prof_plan_esencial_feat2
+AR: Sitio Web Personalizado (tunombre.verumax.com)
+EC: Subdominio Personalizado (tunombre.originalisdoc.com)
+---
+
+Clave: prof_plan_esencial_feat3
+AR: Portfolio de Proyectos (hasta 20 imágenes)
+EC: Panel de Administración Seguro
+---
+
+Clave: prof_plan_esencial_feat4
+AR: Sección de Servicios Detallada
+EC: 5 Paletas de Colores Preestablecidas
+---
+
+Clave: prof_plan_esencial_feat5
+AR: Formulario de Contacto Integrado
+EC: Datos de Contacto y Horarios
+---
+
+Clave: prof_plan_esencial_feat6
+AR: Gestor de Clientes (hasta 20 contactos)
+EC: Botones de Acción Directa (WhatsApp, Email, Tel)
+---
+
+Clave: prof_plan_esencial_feat7
+AR: Email Marketing (100 emails/mes)
+EC: Actualización Ilimitada de Información
+---
+
+Clave: prof_plan_esencial_cta
+AR: Comenzar con Essentialis
+EC: Comenzar con Esencial
+---
+
+Clave: prof_plan_plus_desc
+AR: Todo lo de Essentialis con límites ampliados y herramientas profesionales avanzadas.
+EC: Todo lo del plan Basicum más herramientas avanzadas para destacar y vender más.
+---
+
+Clave: prof_plan_plus_feat1_strong
+AR: Todo lo del plan Essentialis, más:
+EC: Todo lo del plan Basicum, más:
+---
+
+Clave: prof_plan_plus_feat2
+AR: Portfolio Ampliado (hasta 100 imágenes)
+EC: 12 Paletas de Colores Premium
+---
+
+Clave: prof_plan_plus_feat3
+AR: Gestor de Clientes (hasta 100 contactos)
+EC: Galería de Fotos de Servicios (hasta 100 imágenes HD)
+---
+
+Clave: prof_plan_plus_feat4
+AR: Email Marketing (1,000 emails/mes)
+EC: Sección de Servicios Detallada
+---
+
+Clave: prof_plan_plus_feat5
+AR: Recepcionista Virtual Especializado (50 consultas/día)
+EC: Video de Presentación Personal
+---
+
+Clave: prof_plan_plus_feat6
+AR: Video de Presentación Personal
+EC: Formulario de Contacto Integrado
+---
+
+Clave: prof_plan_plus_feat7
+AR: Estadísticas Avanzadas de Escaneos QR
+EC: Estadísticas de Escaneos del QR
+---
+
+Clave: prof_plan_plus_feat9
+AR: Sistema de Agendamiento de Citas
+EC: Sistema de Agendamiento de Citas (Calendly)
+---
+
+Clave: prof_plan_pro_desc
+AR: Solución profesional completa con herramientas de gestión empresarial y presencia digital ampliada.
+EC: Para profesionales que necesitan herramientas completas de gestión y presencia digital.
+---
+
+Clave: prof_plan_pro_feat2
+AR: Portfolio Empresarial (hasta 500 imágenes)
+EC: Portfolio de Proyectos Ilimitado
+---
+
+Clave: prof_plan_pro_feat3
+AR: Gestor de Clientes (hasta 1,000 contactos)
+EC: Múltiples Páginas Personalizadas
+---
+
+Clave: prof_plan_pro_feat4
+AR: Email Marketing (5,000 emails/mes)
+EC: Analíticas Avanzadas y Reportes
+---
+
+Clave: prof_plan_pro_feat5
+AR: Recepcionista Virtual Especializado (100 consultas/día)
+EC: Exportación de Contactos
+---
+
+Clave: prof_plan_pro_feat6
+AR: Múltiples Páginas Personalizadas
+EC: Integraciones API Personalizadas
+---
+
+Clave: prof_plan_pro_feat7
+AR: Analíticas Avanzadas y Reportes Detallados
+EC: Soporte Prioritario 24/7
+---
+
+Clave: prof_plan_pro_feat8
+AR: Integraciones API Personalizadas
+EC: Estadísticas y Métricas Avanzadas
+---
+
+Clave: prof_plan_elite_desc
+AR: La solución empresarial definitiva con recursos ampliados, dominio propio y personalización total.
+EC: La solución definitiva con dominio propio y personalización total para tu marca.
+---
+
+Clave: prof_plan_elite_feat2
+AR: Portfolio Corporativo (hasta 2000 imágenes)
+EC: Dominio Propio Incluido (tunombre.com)
+---
+
+Clave: prof_plan_elite_feat3
+AR: Gestor de Clientes (hasta 5,000 contactos)
+EC: SSL Premium y Certificados de Seguridad
+---
+
+Clave: prof_plan_elite_feat4
+AR: Email Marketing (10,000 emails/mes)
+EC: Diseño 100% Personalizado a Medida
+---
+
+Clave: prof_plan_elite_feat5
+AR: Recepcionista Virtual Especializado (1,000 consultas/día)
+EC: Integración con Tu Identidad Corporativa
+---
+
+Clave: prof_plan_elite_feat6
+AR: Dominio Propio Incluido (tunombre.com)
+EC: Subdominio Ilimitados para Tu Equipo
+---
+
+Clave: prof_plan_elite_feat7
+AR: Diseño 100% Personalizado a Medida
+EC: Sistema de Roles y Permisos Avanzado
+---
+
+Clave: prof_plan_elite_feat8
+AR: Subdominios Ilimitados para Tu Equipo
+EC: Gerente de Cuenta Dedicado
+---
+
+Clave: prof_cta_final_titulo
+AR: Tu Presencia Digital Completa, Configurada por Nosotros
+EC: Dejá Atrás las Tarjetas de Papel
+---
+
+Clave: prof_cta_final_desc
+AR: No te dejamos solo con un software. Un equipo humano real configura TODO por vos: tarjeta + sitio web + herramientas. Vos solo enviás tu info y listo.
+EC: Unite a miles de profesionales que ya impresionan con su Tarjeta Digital infalsificable.
+---
+
+Clave: prof_cta_final_btn
+AR: Ver Planes y Crear Mi Tarjeta Digital
+EC: Crear Mi Tarjeta Ahora
+---
+
+Clave: prof_cta_final_garantia
+AR: ✓ Equipo humano real incluido  •  ✓ Dashboard opcional, no obligatorio  •  ✓ Soporte permanente
+EC: ✓ Sin costos ocultos  •  ✓ Cancelación en cualquier momento  •  ✓ Soporte incluido
+---
+
+
+
+Archivo JSON generado: missing_keys.json
+Total de claves en AR: 922
+Total de claves en EC: 708

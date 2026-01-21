@@ -1,0 +1,14 @@
+# Admin Proxy - Redirige al admin central manteniendo contexto de institución
+RewriteEngine On
+
+# Establecer variable de entorno con la institución
+SetEnv ADMIN_INSTITUCION sajur
+
+# Si el archivo existe localmente (login.php, logout.php, index.php), usarlo
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Para todo lo demás, redirigir al admin central
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /admin/$1 [QSA,L]

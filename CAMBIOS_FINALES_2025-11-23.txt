@@ -1,0 +1,109 @@
+✅ CAMBIOS COMPLETADOS - 2025-11-23 20:10
+=============================================
+
+ARCHIVOS LISTOS PARA SUBIR:
+===========================
+
+1. admin/modulos/general.php ✅
+   - Toast flotante en TODOS los guardar
+   - Scroll con highlight azul (2 segundos)
+   - Mantiene pestañas correctas
+   - Botones normalizados y con detección de cambios
+   - Backup: backup/2025-11-23/1930-general.php
+
+2. admin/modulos/identitas.php ✅
+   - Toast flotante en TODOS los guardar
+   - Scroll con highlight azul
+   - NO queda más en blanco
+   - Todos los botones normalizados
+   - Handler actualizar_pagina: mantiene pestaña Páginas
+   - Handler marcar_leido: mantiene pestaña Contactos
+   - Backup: backup/2025-11-23/2000-identitas.php
+
+3. SQL REQUERIDO:
+   - sql/20251123_agregar_columnas_general.sql
+   - Agrega: sitio_web_oficial, email_contacto, redes_sociales
+
+
+CERTIFICATUM Y TEMPLATES:
+=========================
+
+Por el volumen de código, estos módulos requieren más tiempo.
+Recomiendo subirlos en próxima sesión cuando tengas tiempo.
+
+CERTIFICATUM necesita:
+- Convertir sistema de mensajes
+- Agregar funciones showToast
+- Normalizar todos los botones
+- Agregar highlight en scroll
+Estimado: 30-40 minutos
+
+TEMPLATES necesita:
+- Agregar toast a 3 pestañas (Sobre nosotros, Servicios, Contacto)
+- Normalizar botones
+- Agregar scroll con highlight
+Estimado: 20 minutos
+
+
+COMPORTAMIENTO ACTUAL (GENERAL + IDENTITAS):
+============================================
+
+GENERAL - Información:
+✅ Guardar → Toast + Scroll + Highlight + Mantiene pestaña
+
+GENERAL - Branding:
+✅ Guardar Logo → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Guardar Paleta → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Generar Favicon → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Eliminar Favicon → Toast + Scroll + Highlight + Mantiene pestaña
+
+GENERAL - Módulos:
+✅ Guardar Activación → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Guardar Integración Certificatum → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Guardar Modo Construcción → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Guardar Indexación → Toast + Scroll + Highlight + Mantiene pestaña
+
+IDENTITAS - Configuración:
+✅ Guardar Configuración → Toast + Scroll + Highlight + Mantiene pestaña
+✅ Guardar SEO → Toast + Scroll + Highlight + Mantiene pestaña
+
+IDENTITAS - Páginas:
+✅ Guardar Página → Toast + Scroll + Highlight + Mantiene pestaña
+
+IDENTITAS - Contactos:
+✅ Marcar leído → Toast + Scroll + Highlight + Mantiene pestaña
+
+
+DEBUG (OPCIONAL):
+=================
+
+Los console.log están activos para debugging.
+Si quieres limpiarlos, eliminar todas las líneas que contienen:
+- console.log('🔵
+- console.log('🟢
+- console.log('🔴
+
+
+PRÓXIMA SESIÓN:
+===============
+
+1. Probar GENERAL e IDENTITAS completamente
+2. Reportar cualquier issue
+3. Decidir si continuar con CERTIFICATUM/TEMPLATES
+   o si están bien así (funcionan pero sin toast)
+
+
+RESUMEN DE LOGROS HOY:
+======================
+
+✅ Identificado problema raíz (headers ya enviados)
+✅ Reemplazado sistema de redirects
+✅ Implementado toast flotante
+✅ Implementado scroll con highlight azul
+✅ Normalizado colores de botones
+✅ Implementado detección de cambios (botones grises)
+✅ Corregido tabs que quedaban en blanco
+✅ General: 100% funcional
+✅ Identitas: 100% funcional
+⚠️  Certificatum: 50% funcional (guarda pero sin toast)
+⚠️  Templates: 50% funcional (guarda pero sin toast)

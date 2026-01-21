@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================
+   VERUMAX - Estilos Personalizados
+   Compilar con: npm run build:css
+   ===================================================== */
+
+/* =====================================================
+   TIPOGRAFÍA
+   ===================================================== */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* =====================================================
+   GRADIENTES VERDES METALIZADOS (Certificatum)
+   ===================================================== */
+.green-gradient {
+    background: linear-gradient(135deg,
+        #1B5E20 0%,
+        #2E7D32 25%,
+        #66BB6A 50%,
+        #2E7D32 75%,
+        #1B5E20 100%);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.green-gradient-text {
+    background: linear-gradient(135deg,
+        #4CAF50 0%,
+        #81C784 30%,
+        #A5D6A7 50%,
+        #81C784 70%,
+        #4CAF50 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.5));
+}
+
+/* =====================================================
+   GRADIENTES DORADOS (Verumax principal)
+   ===================================================== */
+.gold-gradient {
+    background: linear-gradient(135deg,
+        #B8941E 0%,
+        #D4AF37 25%,
+        #F0D377 50%,
+        #D4AF37 75%,
+        #B8941E 100%);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.gold-gradient-text {
+    background: linear-gradient(135deg,
+        #D4AF37 0%,
+        #F0D377 30%,
+        #FFF8DC 50%,
+        #F0D377 70%,
+        #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+}
+
+/* =====================================================
+   EFECTOS DE TEXTO METALIZADO
+   ===================================================== */
+.text-metallic-green-light {
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.4),
+                 0 0 20px rgba(76, 175, 80, 0.2);
+}
+
+.text-metallic-gold-light {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4),
+                 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* =====================================================
+   BOTONES METALIZADOS
+   ===================================================== */
+.green-metallic-btn {
+    background: linear-gradient(180deg,
+        #66BB6A 0%,
+        #43A047 40%,
+        #2E7D32 60%,
+        #1B5E20 100%);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.5),
+                inset 0 2px 0 rgba(255, 255, 255, 0.25),
+                inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(102, 187, 106, 0.5);
+}
+
+.green-metallic-btn:hover {
+    background: linear-gradient(180deg,
+        #81C784 0%,
+        #66BB6A 40%,
+        #43A047 60%,
+        #2E7D32 100%);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.6),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3),
+                inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.gold-metallic-btn {
+    background: linear-gradient(180deg,
+        #F0D377 0%,
+        #D4AF37 40%,
+        #B8941E 60%,
+        #8B7513 100%);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5),
+                inset 0 2px 0 rgba(255, 255, 255, 0.25),
+                inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(240, 211, 119, 0.5);
+}
+
+.gold-metallic-btn:hover {
+    background: linear-gradient(180deg,
+        #FFF8DC 0%,
+        #F0D377 40%,
+        #D4AF37 60%,
+        #B8941E 100%);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3),
+                inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   EFECTO BRILLO METALIZADO
+   ===================================================== */
+.metallic-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.metallic-shine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.15) 45%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.15) 55%,
+        transparent 70%
+    );
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* =====================================================
+   BORDES CON BRILLO
+   ===================================================== */
+.border-metallic-glow {
+    border-color: rgba(76, 175, 80, 0.5);
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.3),
+                inset 0 0 10px rgba(46, 125, 50, 0.1);
+}
+
+.border-gold-glow {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3),
+                inset 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+/* =====================================================
+   FONDOS HERO
+   ===================================================== */
+.hero-bg {
+    background-image:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%),
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(46, 125, 50, 0.03) 10px, rgba(46, 125, 50, 0.03) 20px);
+}
+
+.hero-bg-gold {
+    background-image:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%),
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px);
+}
+
+/* =====================================================
+   LOADER / SPINNER
+   ===================================================== */
+@keyframes loading-bar {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-loading-bar {
+    animation: loading-bar 1.5s ease-in-out infinite;
+}
+
+.loader-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =====================================================
+   UTILIDADES ADICIONALES
+   ===================================================== */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Selection */
+::selection {
+    background-color: rgba(46, 125, 50, 0.3);
+    color: #fff;
+}

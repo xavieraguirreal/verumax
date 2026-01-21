@@ -1,0 +1,11 @@
+# Router para evaluationes
+# Redirige URLs como /evaluatio/EVAL-SAJUR-CORR-2025 a index.php
+
+RewriteEngine On
+
+# Si es un archivo real o directorio, no reescribir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo a index.php
+RewriteRule ^(.*)$ index.php [L,QSA]

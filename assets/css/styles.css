@@ -1,0 +1,475 @@
+/**
+ * OriginalisDoc - Estilos Compartidos
+ * Version: 1.0.0
+ *
+ * Estilos globales compartidos entre todas las páginas del sitio.
+ */
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Gradientes de marca */
+.gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D377 100%);
+}
+
+/* Fondo hero con patrón */
+.hero-bg {
+    background-image: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%),
+                      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px);
+}
+
+/* Sombra para mockups de tarjetas */
+.card-mockup {
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+/* Variables de tema */
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: rgba(212, 175, 55, 0.2);
+}
+
+body.light-mode {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-tertiary: #6b7280;
+    --border-color: rgba(212, 175, 55, 0.3);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Aplicar variables de tema a clases de Tailwind */
+.bg-black,
+body .bg-black,
+html body .bg-black {
+    background-color: var(--bg-primary) !important;
+}
+
+.bg-gray-950,
+body .bg-gray-950,
+html body .bg-gray-950 {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-gray-900,
+body .bg-gray-900,
+html body .bg-gray-900 {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.text-white,
+body .text-white,
+html body .text-white {
+    color: var(--text-primary) !important;
+}
+
+.text-gray-300,
+body .text-gray-300,
+html body .text-gray-300 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-400,
+body .text-gray-400,
+html body .text-gray-400 {
+    color: var(--text-tertiary) !important;
+}
+
+.border-gold\/20 {
+    border-color: var(--border-color) !important;
+}
+
+/* Iconos del modo oscuro/claro */
+body:not(.light-mode) .light-mode-icon {
+    display: block;
+}
+
+body:not(.light-mode) .dark-mode-icon {
+    display: none;
+}
+
+body.light-mode .light-mode-icon {
+    display: none;
+}
+
+body.light-mode .dark-mode-icon {
+    display: block;
+}
+
+/* ===== TOGGLE DESACTIVADO TEMPORALMENTE ===== */
+#themeToggle {
+    display: none !important;
+}
+
+/* =====================================
+   ESTILOS MODO CLARO (CERTIFICATUM)
+   ===================================== */
+
+/* Variables de colores metálicos para modo claro */
+:root {
+    --metallic-green-light-color: #4CAF50;
+    --metallic-green-color: #2E7D32;
+    --metallic-green-dark-color: #1B5E20;
+    --metallic-red-light-color: #E53935;
+}
+
+/* ===== FONDOS ADICIONALES (no cubiertos por variables) ===== */
+
+/* Hero section con gradiente */
+body.light-mode .hero-bg {
+    background-image: linear-gradient(135deg, rgba(249, 250, 251, 0.98) 0%, rgba(243, 244, 246, 0.95) 100%),
+                      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(27, 94, 32, 0.03) 10px, rgba(27, 94, 32, 0.03) 20px) !important;
+    background-color: #f9fafb !important;
+}
+
+/* Textos del hero en modo claro - mejor contraste */
+body.light-mode .hero-bg h1 {
+    color: #111827 !important;
+}
+
+body.light-mode .hero-bg p {
+    color: #374151 !important;
+}
+
+/* Badges/pills en hero */
+body.light-mode .hero-bg [class*="bg-metallic-green\\/"] {
+    background-color: rgba(27, 94, 32, 0.15) !important;
+    border-color: rgba(27, 94, 32, 0.3) !important;
+}
+
+/* Gradiente de bg-gradient-to-b */
+body.light-mode [class*="bg-gradient-to-b"] {
+    background: linear-gradient(to bottom, #f9fafb, #f3f4f6) !important;
+}
+
+body.light-mode .bg-gray-800 {
+    background-color: #f9fafb !important;
+}
+
+body.light-mode .bg-gray-900\/50,
+body.light-mode [class*="bg-gray-900\\/"] {
+    background-color: rgba(243, 244, 246, 0.9) !important;
+    border: 1px solid #e5e7eb;
+}
+
+/* Textos adicionales */
+body.light-mode .text-gray-200 {
+    color: #374151 !important;
+}
+
+/* Textos verdes - más oscuros para legibilidad en modo claro */
+body.light-mode .text-metallic-green-light {
+    color: #1B5E20 !important;
+}
+
+body.light-mode .text-metallic-green {
+    color: #1B5E20 !important;
+}
+
+/* Textos rojos - más oscuros para contraste */
+body.light-mode .text-metallic-red-light {
+    color: #B71C1C !important;
+}
+
+body.light-mode .text-metallic-red {
+    color: #B71C1C !important;
+}
+
+/* ===== BORDES ===== */
+body.light-mode [class*="border-metallic-green"] {
+    border-color: rgba(27, 94, 32, 0.4) !important;
+}
+
+body.light-mode .border-gray-700,
+body.light-mode .border-gray-800 {
+    border-color: #e5e7eb !important;
+}
+
+body.light-mode [class*="border-y"] {
+    border-color: #e5e7eb !important;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+body.light-mode header,
+body.light-mode nav {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid #e5e7eb;
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode header a,
+body.light-mode nav a {
+    color: #374151 !important;
+}
+
+body.light-mode header a:hover,
+body.light-mode nav a:hover {
+    color: #1B5E20 !important;
+}
+
+/* Botón toggle de tema en modo claro */
+body.light-mode #themeToggle {
+    border-color: #d1d5db !important;
+    color: #374151 !important;
+}
+
+body.light-mode #themeToggle:hover {
+    border-color: #1B5E20 !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* ===== GRADIENTES ===== */
+body.light-mode .green-gradient-text {
+    background: linear-gradient(135deg, #1B5E20, #2E7D32) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+body.light-mode .green-gradient {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50) !important;
+}
+
+/* Botones metálicos en modo claro */
+body.light-mode .green-metallic-btn {
+    background: linear-gradient(135deg, #2E7D32, #1B5E20) !important;
+}
+
+/* ===== FONDOS CON OPACIDAD ===== */
+body.light-mode [class*="bg-metallic-green\\/"] {
+    background-color: rgba(27, 94, 32, 0.1) !important;
+}
+
+body.light-mode [class*="bg-gradient-to"] {
+    background: linear-gradient(to bottom, #ffffff, #f9fafb) !important;
+}
+
+/* ===== SOMBRAS ===== */
+body.light-mode [class*="shadow-metallic-green"] {
+    box-shadow: 0 10px 30px rgba(27, 94, 32, 0.15) !important;
+}
+
+body.light-mode [class*="shadow-lg"] {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== SECCIONES ESPECÍFICAS ===== */
+/* Hero section */
+body.light-mode section {
+    background-color: inherit;
+}
+
+body.light-mode section.bg-black,
+body.light-mode section.bg-gray-950 {
+    background-color: #f9fafb !important;
+}
+
+/* Tarjetas de stats/ROI */
+body.light-mode .bg-gray-900\/50 {
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb;
+}
+
+/* Mockup del portal (tarjetas internas) */
+body.light-mode .rounded-xl.bg-gray-800,
+body.light-mode .rounded-lg.bg-gray-800 {
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb;
+}
+
+/* ===== LOADER ===== */
+body.light-mode #loadingScreen {
+    background-color: #ffffff !important;
+}
+
+/* ===== MENÚ MÓVIL ===== */
+body.light-mode #mobileMenu {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e5e7eb;
+}
+
+body.light-mode #mobileMenu a {
+    color: #374151 !important;
+}
+
+body.light-mode #mobileMenu a:hover {
+    color: #1B5E20 !important;
+}
+
+/* ===== FOOTER ===== */
+body.light-mode footer {
+    background-color: #f9fafb !important;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Tarjetas de seguridad del footer */
+body.light-mode footer .rounded-lg,
+body.light-mode footer .rounded-xl {
+    border: 1px solid #d1d5db !important;
+    background-color: #ffffff !important;
+}
+
+/* Líneas divisorias del footer */
+body.light-mode footer [class*="border-t"],
+body.light-mode footer [class*="border-b"] {
+    border-color: #d1d5db !important;
+}
+
+/* Textos del footer */
+body.light-mode footer .text-gold,
+body.light-mode footer .text-gold-light {
+    color: #B8941E !important;
+}
+
+body.light-mode footer h3,
+body.light-mode footer h4 {
+    color: #1B5E20 !important;
+}
+
+/* ===== EFECTO SHIMMER EN MODO CLARO ===== */
+body.light-mode .shimmer-text strong {
+    color: #1B5E20 !important;
+    text-shadow: none !important;
+}
+
+/* ===== ÍCONOS SVG ===== */
+body.light-mode svg.text-metallic-green-light {
+    color: #1B5E20 !important;
+}
+
+/* ===== TABLAS ===== */
+body.light-mode table {
+    background-color: #ffffff !important;
+}
+
+body.light-mode th,
+body.light-mode td {
+    border-color: #e5e7eb !important;
+}
+
+body.light-mode [class*="bg-metallic-green\\/10"] {
+    background-color: rgba(27, 94, 32, 0.08) !important;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Barra de progreso de lectura */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D377 100%);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Versión del sitio */
+.version-badge {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #D4AF37;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 40;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.version-badge:hover {
+    opacity: 1;
+}
+
+/* =====================================
+   EFECTO BRILLO ANIMADO
+   ===================================== */
+.shimmer-text {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.shimmer-text strong {
+    display: inline-block;
+    animation: text-glow 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.01);
+    }
+}
+
+@keyframes text-glow {
+    0%, 100% {
+        text-shadow: 0 0 2px rgba(74, 222, 128, 0.2);
+        color: #4ade80;
+    }
+    50% {
+        text-shadow:
+            0 0 10px rgba(74, 222, 128, 1),
+            0 0 20px rgba(74, 222, 128, 0.8),
+            0 0 40px rgba(74, 222, 128, 0.6),
+            0 0 60px rgba(74, 222, 128, 0.4);
+        color: #86efac;
+    }
+}
+
+/* =====================================
+   MENÚ MÓVIL HAMBURGER
+   ===================================== */
+#mobileMenuBtn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#mobileMenuBtn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+#mobileMenuBtn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#mobileMenu {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

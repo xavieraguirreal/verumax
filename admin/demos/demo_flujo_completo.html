@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Flujo Completo del Certificado - VERUMax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, sans-serif; }
+
+        /* Cursor animado */
+        .cursor {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            pointer-events: none;
+            z-index: 1000;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cursor svg {
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+        }
+
+        /* Click effect */
+        .click-ring {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #22c55e;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            pointer-events: none;
+            z-index: 999;
+        }
+        .click-ring.active {
+            animation: clickRing 0.5s ease-out;
+        }
+        @keyframes clickRing {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(2.5); opacity: 0; }
+        }
+
+        /* Input focus */
+        .sim-input.focused {
+            border-color: #22c55e !important;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15) !important;
+        }
+
+        /* Button states */
+        .sim-button.hovered {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .sim-button.clicked {
+            transform: scale(0.97);
+        }
+
+        /* Modal animation */
+        .modal-content {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-content.hidden-state {
+            opacity: 0;
+            transform: scale(0.95) translateY(-20px);
+        }
+        .modal-content.visible-state {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        /* View transitions */
+        .demo-view {
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .demo-view.hidden-view {
+            display: none;
+            opacity: 0;
+        }
+        .demo-view.active-view {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Tab active */
+        .tab-active {
+            color: #2563eb !important;
+            border-color: #2563eb !important;
+        }
+
+        /* New row animation */
+        .new-row-enter {
+            animation: newRowEnter 0.5s ease-out;
+            background-color: #dcfce7 !important;
+        }
+        @keyframes newRowEnter {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Toast */
+        .toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Progress dots */
+        .step-dot {
+            transition: all 0.3s ease;
+        }
+        .step-dot.active {
+            background-color: #22c55e;
+            transform: scale(1.4);
+        }
+        .step-dot.completed {
+            background-color: #22c55e;
+        }
+
+        /* Intro overlay */
+        .intro-overlay {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            transition: opacity 0.4s ease;
+        }
+        .intro-overlay.hidden-state {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Floating controls */
+        .floating-controls {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Keyboard hint */
+        .kbd {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            padding: 0 6px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        /* Pulse animation */
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+        }
+        .pulse-animate {
+            animation: pulse-green 2s infinite;
+        }
+
+        /* Tooltip system */
+        .demo-tooltip {
+            position: absolute;
+            max-width: 260px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.5;
+            z-index: 1001;
+            opacity: 0;
+            transform: translateY(8px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .demo-tooltip.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .demo-tooltip::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            top: -5px;
+            left: 20px;
+        }
+
+        /* Tooltip types */
+        .demo-tooltip.tooltip-info {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid #f59e0b;
+            color: #92400e;
+        }
+        .demo-tooltip.tooltip-info::before {
+            background: #fde68a;
+            border-top: 2px solid #f59e0b;
+            border-left: 2px solid #f59e0b;
+        }
+
+        .demo-tooltip.tooltip-tip {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+            border: 2px solid #22c55e;
+            color: #166534;
+        }
+        .demo-tooltip.tooltip-tip::before {
+            background: #bbf7d0;
+            border-top: 2px solid #22c55e;
+            border-left: 2px solid #22c55e;
+        }
+
+        .demo-tooltip.tooltip-action {
+            background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+            border: 2px solid #a855f7;
+            color: #6b21a8;
+        }
+        .demo-tooltip.tooltip-action::before {
+            background: #e9d5ff;
+            border-top: 2px solid #a855f7;
+            border-left: 2px solid #a855f7;
+        }
+
+        .demo-tooltip.tooltip-success {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border: 2px solid #10b981;
+            color: #065f46;
+        }
+        .demo-tooltip.tooltip-success::before {
+            background: #a7f3d0;
+            border-top: 2px solid #10b981;
+            border-left: 2px solid #10b981;
+        }
+
+        .tooltip-label {
+            font-weight: 700;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+            opacity: 0.7;
+        }
+
+        /* Scene transition */
+        .scene-transition {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        .scene-transition.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Email notification animation */
+        @keyframes emailBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .email-bounce {
+            animation: emailBounce 0.5s ease;
+        }
+
+        /* Unread email pulse */
+        .unread-dot {
+            animation: pulseDot 1.5s infinite;
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        /* Certificate preview */
+        .cert-preview {
+            background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+            border: 3px solid #ca8a04;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .floating-controls {
+                bottom: 16px;
+                padding: 10px 12px;
+                gap: 8px;
+                width: calc(100% - 32px);
+                justify-content: center;
+            }
+            .hide-mobile { display: none !important; }
+            .demo-tooltip { max-width: 200px; font-size: 11px; }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+    <!-- ========== INTRO OVERLAY ========== -->
+    <div id="intro-overlay" class="intro-overlay fixed inset-0 z-[200] flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden">
+            <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-6 text-white text-center">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <i data-lucide="award" class="w-10 h-10"></i>
+                </div>
+                <h1 class="text-xl font-bold mb-2">Flujo Completo del Certificado</h1>
+                <p class="text-blue-100 text-sm">Desde agregar estudiante hasta que recibe su certificado</p>
+            </div>
+
+            <div class="p-5">
+                <p class="text-gray-600 text-center mb-4 text-sm">
+                    Este demo muestra el proceso completo en 12 pasos, incluyendo la perspectiva del estudiante recibiendo su certificado.
+                </p>
+
+                <!-- Timeline preview -->
+                <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-700 font-bold">1</span>
+                            </div>
+                            <span class="text-gray-600">Agregar estudiante</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-700 font-bold">2</span>
+                            </div>
+                            <span class="text-gray-600">Seleccionar curso</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-blue-700 font-bold">3</span>
+                            </div>
+                            <span class="text-gray-600">Inscribir al curso</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-blue-700 font-bold">4</span>
+                            </div>
+                            <span class="text-gray-600">Registrar aprobacion</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span class="text-purple-700 font-bold">5</span>
+                            </div>
+                            <span class="text-gray-600">Enviar certificado</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span class="text-purple-700 font-bold">6</span>
+                            </div>
+                            <span class="text-gray-600">Estudiante recibe email</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 p-3 bg-amber-50 rounded-xl text-xs">
+                    <i data-lucide="clock" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
+                    <span class="text-amber-800">Duracion aproximada: <strong>2-3 minutos</strong></span>
+                </div>
+            </div>
+
+            <div class="p-5 pt-0">
+                <button id="btn-start-demo" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:from-blue-700 hover:to-purple-700 transition shadow-lg">
+                    <i data-lucide="play" class="w-5 h-5"></i>
+                    Iniciar Demo Completo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Header -->
+    <div class="bg-white border-b shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-3 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="p-2 hover:bg-gray-100 rounded-lg transition">
+                    <i data-lucide="arrow-left" class="w-5 h-5 text-gray-600"></i>
+                </a>
+                <div class="w-9 h-9 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="award" class="w-5 h-5 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-gray-900 text-sm">Flujo Completo del Certificado</h1>
+                    <p class="text-[10px] text-gray-500" id="current-phase">Fase 1: Panel Admin</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <span id="step-label" class="text-xs text-gray-500">Paso 1 de 12</span>
+                <div class="flex gap-1" id="step-dots">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+        </div>
+        <div class="h-1 bg-gray-100">
+            <div id="progress-bar" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300" style="width: 0%"></div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto p-3 pb-28">
+
+        <!-- Demo Container -->
+        <div id="demo-container" class="relative bg-white rounded-xl shadow-xl overflow-hidden border" style="min-height: 500px;">
+
+            <!-- Tooltip container (position absolute for correct tooltip placement) -->
+            <div id="tooltip-container" class="absolute inset-0 pointer-events-none z-[1001]"></div>
+
+            <!-- Scene transition overlay -->
+            <div id="scene-transition" class="scene-transition">
+                <i data-lucide="mail" class="w-16 h-16 text-white mb-4"></i>
+                <p class="text-white text-xl font-bold" id="transition-text">Cambiando a vista del estudiante...</p>
+            </div>
+
+            <!-- ========== VIEW 1: ADMIN PANEL ========== -->
+            <div id="view-admin" class="demo-view active-view">
+
+                <!-- Admin Header -->
+                <div class="bg-white border-b px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-gray-900">VERUMax Admin</h1>
+                            <p class="text-xs text-gray-500">SAJuR - Demo</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gray-500 hide-mobile">admin@sajur.com</span>
+                </div>
+
+                <!-- Module tabs -->
+                <div class="bg-gray-50 border-b px-4">
+                    <nav class="flex gap-1">
+                        <button class="px-4 py-2 text-xs text-gray-500 border-b-2 border-transparent">General</button>
+                        <button id="tab-certificatum" class="px-4 py-2 text-xs text-blue-600 border-b-2 border-blue-600 font-medium">Certificatum</button>
+                        <button class="px-4 py-2 text-xs text-gray-500 border-b-2 border-transparent">Actividad</button>
+                    </nav>
+                </div>
+
+                <!-- Content area -->
+                <div class="p-4">
+
+                    <!-- Inner tabs -->
+                    <div class="bg-white rounded-lg border mb-4">
+                        <div class="border-b px-3 overflow-x-auto">
+                            <nav class="flex gap-4">
+                                <button class="admin-tab py-2 text-xs text-gray-500 border-b-2 border-transparent">Config</button>
+                                <button id="tab-personas" class="admin-tab py-2 text-xs text-gray-500 border-b-2 border-transparent">Personas</button>
+                                <button id="tab-cursos" class="admin-tab py-2 text-xs text-gray-500 border-b-2 border-transparent">Cursos</button>
+                                <button id="tab-matriculas" class="admin-tab py-2 text-xs text-gray-500 border-b-2 border-transparent">Matriculas</button>
+                                <button class="admin-tab py-2 text-xs text-gray-500 border-b-2 border-transparent hide-mobile">Evaluaciones</button>
+                            </nav>
+                        </div>
+
+                        <!-- Tab content: Stats (default) -->
+                        <div id="content-stats" class="p-4">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="p-3 rounded-lg border-2 border-green-200 bg-green-50">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i data-lucide="users" class="w-4 h-4 text-green-600"></i>
+                                        <span class="text-xs text-gray-600">Estudiantes</span>
+                                    </div>
+                                    <p id="stat-estudiantes" class="text-xl font-bold text-green-700">156</p>
+                                </div>
+                                <div class="p-3 rounded-lg border-2 border-blue-200 bg-blue-50">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-600"></i>
+                                        <span class="text-xs text-gray-600">Docentes</span>
+                                    </div>
+                                    <p class="text-xl font-bold text-blue-700">12</p>
+                                </div>
+                                <div class="p-3 rounded-lg border-2 border-purple-200 bg-purple-50">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i data-lucide="book-open" class="w-4 h-4 text-purple-600"></i>
+                                        <span class="text-xs text-gray-600">Cursos</span>
+                                    </div>
+                                    <p class="text-xl font-bold text-purple-700">8</p>
+                                </div>
+                                <div class="p-3 rounded-lg border-2 border-amber-200 bg-amber-50">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i data-lucide="file-check" class="w-4 h-4 text-amber-600"></i>
+                                        <span class="text-xs text-gray-600">Matriculas</span>
+                                    </div>
+                                    <p id="stat-matriculas" class="text-xl font-bold text-amber-700">243</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab content: Personas -->
+                        <div id="content-personas" class="p-4 hidden">
+                            <div class="flex justify-between items-center mb-3">
+                                <h3 class="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                                    <i data-lucide="users" class="w-4 h-4 text-green-600"></i>
+                                    Estudiantes
+                                </h3>
+                                <button id="btn-nuevo-estudiante" class="sim-button bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1 hover:bg-green-700 transition">
+                                    <i data-lucide="user-plus" class="w-3 h-3"></i>
+                                    Nuevo
+                                </button>
+                            </div>
+                            <div class="border rounded-lg overflow-hidden">
+                                <table class="w-full text-xs">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-3 py-2 text-left font-semibold text-gray-600">Estudiante</th>
+                                            <th class="px-3 py-2 text-center font-semibold text-gray-600 hide-mobile">Cursos</th>
+                                            <th class="px-3 py-2 text-center font-semibold text-gray-600">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-estudiantes" class="divide-y">
+                                        <tr>
+                                            <td class="px-3 py-2">
+                                                <div class="flex items-center gap-2">
+                                                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center">
+                                                        <span class="text-green-700 font-semibold text-[10px]">JP</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-gray-900">JUAN PEREZ</div>
+                                                        <div class="text-gray-500 font-mono text-[10px]">30456789</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-3 py-2 text-center hide-mobile">
+                                                <span class="px-2 py-0.5 bg-gray-100 rounded-full">2</span>
+                                            </td>
+                                            <td class="px-3 py-2">
+                                                <div class="flex justify-center gap-1">
+                                                    <button class="p-1 text-blue-600 hover:bg-blue-50 rounded"><i data-lucide="pencil" class="w-3 h-3"></i></button>
+                                                    <button class="p-1 text-purple-600 hover:bg-purple-50 rounded"><i data-lucide="book-open" class="w-3 h-3"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3 py-2">
+                                                <div class="flex items-center gap-2">
+                                                    <div class="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center">
+                                                        <span class="text-green-700 font-semibold text-[10px]">MG</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-gray-900">MARIA GARCIA</div>
+                                                        <div class="text-gray-500 font-mono text-[10px]">28765432</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-3 py-2 text-center hide-mobile">
+                                                <span class="px-2 py-0.5 bg-gray-100 rounded-full">1</span>
+                                            </td>
+                                            <td class="px-3 py-2">
+                                                <div class="flex justify-center gap-1">
+                                                    <button class="p-1 text-blue-600 hover:bg-blue-50 rounded"><i data-lucide="pencil" class="w-3 h-3"></i></button>
+                                                    <button class="p-1 text-purple-600 hover:bg-purple-50 rounded"><i data-lucide="book-open" class="w-3 h-3"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tab content: Cursos -->
+                        <div id="content-cursos" class="p-4 hidden">
+                            <div class="flex justify-between items-center mb-3">
+                                <h3 class="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                                    <i data-lucide="book-open" class="w-4 h-4 text-purple-600"></i>
+                                    Cursos Disponibles
+                                </h3>
+                            </div>
+                            <div class="grid gap-3">
+                                <div id="curso-jr" class="border rounded-lg p-3 hover:border-purple-300 hover:bg-purple-50/50 cursor-pointer transition">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 text-sm">Introduccion a la Justicia Restaurativa</h4>
+                                            <p class="text-xs text-gray-500 mt-0.5">SA-CUR-2025-001 | 40 horas</p>
+                                        </div>
+                                        <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px] font-medium">Activo</span>
+                                    </div>
+                                    <div class="flex gap-4 mt-2 text-[10px] text-gray-500">
+                                        <span><strong>32</strong> inscriptos</span>
+                                        <span><strong>28</strong> aprobados</span>
+                                    </div>
+                                </div>
+                                <div class="border rounded-lg p-3 hover:border-purple-300 cursor-pointer transition opacity-60">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 text-sm">Mediacion Penal</h4>
+                                            <p class="text-xs text-gray-500 mt-0.5">SA-CUR-2025-002 | 60 horas</p>
+                                        </div>
+                                        <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-medium">En curso</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab content: Matriculas (Inscripciones) -->
+                        <div id="content-matriculas" class="p-4 hidden">
+                            <div class="flex justify-between items-center mb-3">
+                                <h3 class="font-semibold text-gray-900 text-sm flex items-center gap-2">
+                                    <i data-lucide="file-check" class="w-4 h-4 text-amber-600"></i>
+                                    Gestionar Inscripciones
+                                </h3>
+                                <div class="flex gap-2">
+                                    <select class="border rounded px-2 py-1 text-[10px]">
+                                        <option>Todos los estados</option>
+                                    </select>
+                                    <button id="btn-nueva-inscripcion" class="sim-button bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1 hover:bg-green-700 transition">
+                                        <i data-lucide="plus" class="w-3 h-3"></i>
+                                        Nueva Inscripción
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="border rounded-lg overflow-hidden">
+                                <table class="w-full text-xs">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-3 py-2 text-left font-semibold text-gray-600">Estudiante</th>
+                                            <th class="px-3 py-2 text-left font-semibold text-gray-600 hide-mobile">Curso</th>
+                                            <th class="px-3 py-2 text-center font-semibold text-gray-600">Estado</th>
+                                            <th class="px-3 py-2 text-center font-semibold text-gray-600">Nota</th>
+                                            <th class="px-3 py-2 text-center font-semibold text-gray-600">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-inscripciones" class="divide-y">
+                                        <tr>
+                                            <td class="px-3 py-2">
+                                                <div class="font-medium text-gray-900">JUAN PEREZ</div>
+                                                <div class="text-gray-500 font-mono text-[10px]">30456789</div>
+                                            </td>
+                                            <td class="px-3 py-2 hide-mobile">
+                                                <div class="text-gray-900 text-[10px]">Intro. Justicia Restaurativa</div>
+                                            </td>
+                                            <td class="px-3 py-2 text-center">
+                                                <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px]">Aprobado</span>
+                                            </td>
+                                            <td class="px-3 py-2 text-center font-bold">9</td>
+                                            <td class="px-3 py-2">
+                                                <div class="flex justify-center gap-1">
+                                                    <button class="p-1 text-green-600 hover:bg-green-50 rounded" title="Enviar certificado"><i data-lucide="send" class="w-3 h-3"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-3 py-2">
+                                                <div class="font-medium text-gray-900">MARIA GARCIA</div>
+                                                <div class="text-gray-500 font-mono text-[10px]">28765432</div>
+                                            </td>
+                                            <td class="px-3 py-2 hide-mobile">
+                                                <div class="text-gray-900 text-[10px]">Mediación Penal</div>
+                                            </td>
+                                            <td class="px-3 py-2 text-center">
+                                                <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px]">En curso</span>
+                                            </td>
+                                            <td class="px-3 py-2 text-center text-gray-400">-</td>
+                                            <td class="px-3 py-2">
+                                                <div class="flex justify-center gap-1">
+                                                    <button class="p-1 text-blue-600 hover:bg-blue-50 rounded"><i data-lucide="pencil" class="w-3 h-3"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== VIEW 2: EMAIL INBOX (Student) ========== -->
+            <div id="view-email" class="demo-view hidden-view">
+                <div class="bg-white border-b px-4 py-3 flex items-center gap-3">
+                    <div class="w-9 h-9 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-gray-900">Bandeja de Entrada</h1>
+                        <p class="text-xs text-gray-500">ana.martinez@email.com</p>
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    <div class="mb-3 flex items-center gap-2 text-xs text-gray-500">
+                        <i data-lucide="inbox" class="w-4 h-4"></i>
+                        <span>Principal</span>
+                        <span class="ml-auto bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">1 nuevo</span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <!-- New email from VERUMax -->
+                        <div id="email-verumax" class="border-2 border-blue-300 bg-blue-50 rounded-lg p-3 cursor-pointer hover:bg-blue-100 transition">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 unread-dot"></div>
+                                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="award" class="w-5 h-5 text-white"></i>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-start">
+                                        <p class="font-bold text-gray-900 text-sm">SAJuR - Certificados</p>
+                                        <span class="text-[10px] text-gray-500">Ahora</span>
+                                    </div>
+                                    <p class="font-semibold text-gray-800 text-xs mt-0.5">Tu certificado esta disponible</p>
+                                    <p class="text-xs text-gray-600 mt-0.5 truncate">Felicitaciones ANA! Has aprobado el curso "Introduccion a la Justicia Restaurativa"...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other emails (dimmed) -->
+                        <div class="border rounded-lg p-3 opacity-50">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2"></div>
+                                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                <div class="flex-1">
+                                    <p class="font-medium text-gray-700 text-sm">Newsletter Semanal</p>
+                                    <p class="text-xs text-gray-500">Las ultimas novedades de la semana...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3 opacity-50">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2"></div>
+                                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                                <div class="flex-1">
+                                    <p class="font-medium text-gray-700 text-sm">Promociones</p>
+                                    <p class="text-xs text-gray-500">Ofertas especiales para ti...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== VIEW 3: EMAIL CONTENT ========== -->
+            <div id="view-email-content" class="demo-view hidden-view">
+                <div class="bg-white border-b px-4 py-3 flex items-center gap-3">
+                    <button class="p-1 hover:bg-gray-100 rounded">
+                        <i data-lucide="arrow-left" class="w-5 h-5 text-gray-600"></i>
+                    </button>
+                    <div class="flex-1">
+                        <h1 class="font-bold text-gray-900 text-sm">Tu certificado esta disponible</h1>
+                        <p class="text-xs text-gray-500">De: SAJuR - Certificados &lt;certificados@sajur.com&gt;</p>
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    <div class="max-w-lg mx-auto">
+                        <!-- Email header -->
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl mx-auto mb-3 flex items-center justify-center">
+                                <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900">Felicitaciones, ANA!</h2>
+                            <p class="text-gray-600 text-sm mt-1">Has completado exitosamente el curso</p>
+                        </div>
+
+                        <!-- Course info -->
+                        <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                            <h3 class="font-bold text-gray-900 text-center">Introduccion a la Justicia Restaurativa</h3>
+                            <div class="flex justify-center gap-6 mt-3 text-xs text-gray-600">
+                                <div class="text-center">
+                                    <p class="font-bold text-lg text-green-600">10</p>
+                                    <p>Nota Final</p>
+                                </div>
+                                <div class="text-center">
+                                    <p class="font-bold text-lg text-blue-600">40hs</p>
+                                    <p>Carga Horaria</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <button id="btn-ver-certificado" class="sim-button w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:from-green-600 hover:to-emerald-700 transition shadow-lg">
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                            Ver mi Certificado
+                        </button>
+
+                        <p class="text-center text-xs text-gray-500 mt-4">
+                            Si el boton no funciona, copia este enlace:<br>
+                            <span class="text-blue-600">https://sajur.verumax.com/cursus?d=40123456</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== VIEW 4: STUDENT PORTAL ========== -->
+            <div id="view-portal" class="demo-view hidden-view">
+                <div class="bg-gradient-to-r from-green-600 to-emerald-600 px-4 py-4 text-white">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h1 class="font-bold">SAJuR</h1>
+                            <p class="text-xs text-green-100">Portal de Certificados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    <!-- Student info -->
+                    <div class="bg-white rounded-xl border p-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-700 font-bold">AM</span>
+                            </div>
+                            <div>
+                                <h2 class="font-bold text-gray-900">ANA MARTINEZ</h2>
+                                <p class="text-xs text-gray-500">DNI: 40123456</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate card -->
+                    <div class="bg-white rounded-xl border overflow-hidden">
+                        <div class="p-4 border-b bg-gradient-to-r from-green-50 to-emerald-50">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px] font-medium">APROBADO</span>
+                                    <h3 class="font-bold text-gray-900 mt-2">Introduccion a la Justicia Restaurativa</h3>
+                                    <p class="text-xs text-gray-500 mt-1">Finalizado: 15/01/2026</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-2xl font-bold text-green-600">10</p>
+                                    <p class="text-[10px] text-gray-500">Nota Final</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <p class="text-xs text-gray-600 mb-3">Documentos disponibles:</p>
+                            <div class="space-y-2">
+                                <button id="btn-download-cert" class="sim-button w-full p-3 border-2 border-green-200 bg-green-50 rounded-lg flex items-center gap-3 hover:bg-green-100 hover:border-green-300 transition text-left">
+                                    <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="award" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-semibold text-gray-900 text-sm">Certificado de Aprobacion</p>
+                                        <p class="text-[10px] text-gray-500">PDF | Documento oficial con firma</p>
+                                    </div>
+                                    <i data-lucide="download" class="w-5 h-5 text-green-600"></i>
+                                </button>
+
+                                <button class="w-full p-3 border rounded-lg flex items-center gap-3 hover:bg-gray-50 transition text-left opacity-60">
+                                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-semibold text-gray-900 text-sm">Analitico Academico</p>
+                                        <p class="text-[10px] text-gray-500">PDF | Detalle de notas y competencias</p>
+                                    </div>
+                                    <i data-lucide="download" class="w-5 h-5 text-gray-400"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== VIEW 5: CERTIFICATE PREVIEW ========== -->
+            <div id="view-certificate" class="demo-view hidden-view bg-gray-100">
+                <div class="bg-white border-b px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="file-text" class="w-5 h-5 text-gray-600"></i>
+                        <span class="font-medium text-gray-900 text-sm">Certificado_ANA_MARTINEZ.pdf</span>
+                    </div>
+                    <button class="flex items-center gap-1 px-3 py-1.5 bg-green-600 text-white rounded-lg text-xs font-medium">
+                        <i data-lucide="download" class="w-3 h-3"></i>
+                        Descargar
+                    </button>
+                </div>
+
+                <div class="p-4 flex items-center justify-center" style="min-height: 380px;">
+                    <div class="cert-preview rounded-lg p-6 max-w-md w-full shadow-xl">
+                        <div class="text-center">
+                            <div class="flex justify-center mb-3">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+                                    <i data-lucide="award" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-amber-700 uppercase tracking-widest mb-1">Sociedad Argentina de Justicia Restaurativa</p>
+                            <h2 class="text-lg font-bold text-amber-900 mb-4">CERTIFICADO DE APROBACION</h2>
+
+                            <p class="text-xs text-amber-800 mb-2">Se certifica que</p>
+                            <p class="text-xl font-bold text-amber-900 mb-2" style="font-family: Georgia, serif;">ANA MARTINEZ</p>
+                            <p class="text-xs text-amber-800 mb-3">DNI 40.123.456</p>
+
+                            <p class="text-xs text-amber-800 mb-1">ha aprobado satisfactoriamente el curso</p>
+                            <p class="font-bold text-amber-900 text-sm mb-3">"Introduccion a la Justicia Restaurativa"</p>
+
+                            <div class="flex justify-center gap-6 text-xs text-amber-800 mb-4">
+                                <div>
+                                    <p class="font-bold">40 horas</p>
+                                    <p class="text-[10px]">Carga horaria</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold">10 (Diez)</p>
+                                    <p class="text-[10px]">Calificacion</p>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-amber-300 pt-3 flex justify-between items-end">
+                                <div class="text-left">
+                                    <div class="w-16 h-8 border-b border-amber-700"></div>
+                                    <p class="text-[8px] text-amber-700 mt-1">Dra. Diana Marquez</p>
+                                    <p class="text-[8px] text-amber-600">Presidenta SAJuR</p>
+                                </div>
+                                <div class="w-12 h-12 border-2 border-amber-400 rounded flex items-center justify-center">
+                                    <i data-lucide="qr-code" class="w-8 h-8 text-amber-600"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== MODALS ========== -->
+
+            <!-- Modal: Nuevo Estudiante -->
+            <div id="modal-estudiante" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4 overflow-y-auto">
+                <div id="modal-estudiante-content" class="modal-content hidden-state bg-white rounded-xl shadow-2xl w-full max-w-lg my-4">
+                    <div class="p-4 border-b bg-gradient-to-r from-green-50 to-blue-50 rounded-t-xl">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-gray-900">Nuevo Estudiante</h3>
+                                <p class="text-xs text-gray-500">Los campos con * son obligatorios</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-4 max-h-[60vh] overflow-y-auto">
+                        <!-- Sección: Identificación -->
+                        <div>
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1">
+                                <i data-lucide="id-card" class="w-3 h-3"></i> Identificación
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">DNI *</label>
+                                    <input type="text" id="input-dni" class="sim-input w-full px-3 py-2 border rounded-lg text-sm" placeholder="40123456">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Estado</label>
+                                    <select id="input-estado-est" class="w-full px-3 py-2 border rounded-lg text-sm">
+                                        <option value="Activo">Activo</option>
+                                        <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sección: Datos Personales -->
+                        <div>
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1">
+                                <i data-lucide="user" class="w-3 h-3"></i> Datos Personales
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Nombre *</label>
+                                    <input type="text" id="input-nombre" class="sim-input w-full px-3 py-2 border rounded-lg text-sm uppercase" placeholder="ANA">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Apellido *</label>
+                                    <input type="text" id="input-apellido" class="sim-input w-full px-3 py-2 border rounded-lg text-sm uppercase" placeholder="MARTINEZ">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sección: Contacto -->
+                        <div>
+                            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1">
+                                <i data-lucide="mail" class="w-3 h-3"></i> Contacto
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="input-email" class="sim-input w-full px-3 py-2 border rounded-lg text-sm" placeholder="ana@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Teléfono</label>
+                                    <input type="tel" id="input-telefono" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="+54 11 1234-5678">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sección: Información Adicional (colapsable) -->
+                        <div>
+                            <button type="button" id="btn-toggle-adicional" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1 hover:text-gray-700">
+                                <i data-lucide="chevron-down" id="icon-adicional" class="w-3 h-3 transition-transform"></i>
+                                Información Adicional (opcional)
+                            </button>
+                            <div id="info-adicional" class="hidden space-y-3">
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Fecha Nac.</label>
+                                        <input type="date" id="input-fecha-nac" class="w-full px-2 py-2 border rounded-lg text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Género</label>
+                                        <select id="input-genero" class="sim-input w-full px-2 py-2 border rounded-lg text-sm">
+                                            <option value="Prefiero no especificar">No especificar</option>
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Femenino">Femenino</option>
+                                            <option value="No binario">No binario</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Ciudad</label>
+                                        <input type="text" id="input-ciudad" class="w-full px-2 py-2 border rounded-lg text-sm" placeholder="Buenos Aires">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Provincia</label>
+                                        <input type="text" id="input-provincia" class="w-full px-2 py-2 border rounded-lg text-sm" placeholder="Buenos Aires">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">Código Postal</label>
+                                        <input type="text" id="input-cp" class="w-full px-2 py-2 border rounded-lg text-sm" placeholder="C1425">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-gray-700 mb-1">País</label>
+                                        <select id="input-pais" class="w-full px-2 py-2 border rounded-lg text-sm">
+                                            <option value="AR" selected>Argentina</option>
+                                            <option value="BR">Brasil</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="UY">Uruguay</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border-t bg-gray-50 rounded-b-xl flex justify-end gap-2">
+                        <button class="px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Cancelar</button>
+                        <button id="btn-guardar-estudiante" class="sim-button px-4 py-1.5 text-sm bg-green-600 text-white rounded-lg font-medium flex items-center gap-1">
+                            <i data-lucide="save" class="w-4 h-4"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal: Nueva Inscripción (como el real) -->
+            <div id="modal-inscripcion" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4 overflow-y-auto">
+                <div id="modal-inscripcion-content" class="modal-content hidden-state bg-white rounded-xl shadow-2xl w-full max-w-lg my-4">
+                    <div class="p-4 border-b bg-gradient-to-r from-green-50 to-blue-50 rounded-t-xl">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-gray-900">Nueva Inscripción</h3>
+                            <button class="text-gray-400 hover:text-gray-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-4 max-h-[60vh] overflow-y-auto">
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- Estudiante -->
+                            <div class="col-span-2">
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Estudiante *</label>
+                                <select id="select-estudiante-insc" class="sim-input w-full px-3 py-2 border rounded-lg text-sm">
+                                    <option value="">-- Seleccionar estudiante --</option>
+                                    <option value="jp">30456789 - JUAN PEREZ</option>
+                                    <option value="mg">28765432 - MARIA GARCIA</option>
+                                    <option value="ana">40123456 - ANA MARTINEZ</option>
+                                </select>
+                            </div>
+                            <!-- Curso -->
+                            <div class="col-span-2">
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Curso *</label>
+                                <select id="select-curso-insc" class="sim-input w-full px-3 py-2 border rounded-lg text-sm">
+                                    <option value="">-- Seleccionar curso --</option>
+                                    <option value="jr">SA-CUR-2025-001 - Intro. Justicia Restaurativa</option>
+                                    <option value="mp">SA-CUR-2025-002 - Mediación Penal</option>
+                                </select>
+                            </div>
+                            <!-- Estado -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Estado *</label>
+                                <select id="select-estado-insc" class="sim-input w-full px-3 py-2 border rounded-lg text-sm">
+                                    <option value="Inscrito">Inscrito</option>
+                                    <option value="En Curso">En Curso</option>
+                                    <option value="Finalizado">Finalizado</option>
+                                    <option value="Aprobado">Aprobado</option>
+                                    <option value="Desaprobado">Desaprobado</option>
+                                </select>
+                            </div>
+                            <!-- Estado Pago -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Estado Pago</label>
+                                <select id="select-pago-insc" class="w-full px-3 py-2 border rounded-lg text-sm">
+                                    <option value="Pendiente">Pendiente</option>
+                                    <option value="Pagado">Pagado</option>
+                                    <option value="Becado">Becado</option>
+                                </select>
+                            </div>
+                            <!-- Fecha Inicio -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Fecha Inicio</label>
+                                <input type="date" id="input-fecha-inicio" class="w-full px-3 py-2 border rounded-lg text-sm" value="2026-01-15">
+                            </div>
+                            <!-- Fecha Fin -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Fecha Finalización</label>
+                                <input type="date" id="input-fecha-fin" class="w-full px-3 py-2 border rounded-lg text-sm">
+                            </div>
+                            <!-- Nota Final -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Nota Final</label>
+                                <input type="number" id="input-nota-insc" class="sim-input w-full px-3 py-2 border rounded-lg text-sm" min="0" max="10" step="0.01" placeholder="0.00 - 10.00">
+                            </div>
+                            <!-- Asistencia -->
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Asistencia</label>
+                                <input type="text" id="input-asistencia" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="ej: 95%">
+                            </div>
+                            <!-- Observaciones -->
+                            <div class="col-span-2">
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Observaciones</label>
+                                <textarea id="input-observaciones" rows="2" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="Notas adicionales..."></textarea>
+                            </div>
+                            <!-- Notificación por email -->
+                            <div class="col-span-2 bg-blue-50 border border-blue-200 rounded-lg p-3">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" id="check-notificar" class="w-5 h-5 text-blue-600 border-gray-300 rounded" checked>
+                                    <div>
+                                        <span class="font-medium text-blue-900 text-sm">Notificar al estudiante por email</span>
+                                        <p class="text-xs text-blue-700 mt-0.5">Se enviará email informando que su certificado está disponible</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border-t bg-gray-50 rounded-b-xl flex justify-end gap-2">
+                        <button class="px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Cancelar</button>
+                        <button id="btn-guardar-inscripcion" class="sim-button px-4 py-1.5 text-sm bg-green-600 text-white rounded-lg font-medium flex items-center gap-1">
+                            <i data-lucide="save" class="w-4 h-4"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal: Enviar Certificado (legacy, por si se necesita) -->
+            <div id="modal-enviar" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4">
+                <div id="modal-enviar-content" class="modal-content hidden-state bg-white rounded-xl shadow-2xl w-full max-w-md">
+                    <div class="p-4 border-b bg-gradient-to-r from-green-50 to-emerald-50 rounded-t-xl">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-gray-900">Enviar Certificado</h3>
+                            <button class="text-gray-400 hover:text-gray-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+                                <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Se enviara un email a:</p>
+                            <p class="font-bold text-gray-900">ana.martinez@email.com</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3 text-xs text-gray-600">
+                            <p class="font-semibold mb-1">El email incluira:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Felicitacion por aprobar el curso</li>
+                                <li>Enlace para ver y descargar el certificado</li>
+                                <li>Codigo QR de validacion</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-4 border-t bg-gray-50 rounded-b-xl flex justify-end gap-2">
+                        <button class="px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Cancelar</button>
+                        <button id="btn-confirmar-envio" class="sim-button px-4 py-1.5 text-sm bg-green-600 text-white rounded-lg font-medium flex items-center gap-1">
+                            <i data-lucide="send" class="w-4 h-4"></i> Enviar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cursor -->
+            <div id="cursor" class="cursor" style="left: 50%; top: 50%; opacity: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87c.48 0 .72-.58.38-.92L6.35 2.85a.5.5 0 0 0-.85.36Z" fill="#1e293b" stroke="#fff" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <!-- Click ring -->
+            <div id="click-ring" class="click-ring"></div>
+
+            <!-- Toast -->
+            <div id="toast" class="toast fixed bottom-20 left-4 right-4 sm:left-auto sm:right-6 sm:w-auto bg-green-600 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 z-50">
+                <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <p id="toast-title" class="font-medium text-sm">Exito</p>
+                    <p id="toast-message" class="text-xs text-green-100">Operacion completada</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description panel -->
+        <div class="bg-white rounded-xl shadow-sm border p-4 mt-3">
+            <div class="flex items-start gap-3">
+                <div id="step-icon-container" class="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="info" class="w-5 h-5 text-green-600"></i>
+                </div>
+                <div>
+                    <h3 id="step-title" class="font-semibold text-gray-900 text-sm mb-1">Bienvenido al demo</h3>
+                    <p id="step-description" class="text-xs text-gray-600 leading-relaxed">
+                        Este demo te mostrara el flujo completo desde agregar un estudiante hasta que recibe su certificado por email.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating controls -->
+    <div class="floating-controls">
+        <button id="btn-prev" class="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200 disabled:opacity-40" disabled>
+            <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+        </button>
+        <div class="h-6 w-px bg-gray-200 hide-mobile"></div>
+        <button id="btn-play" class="px-5 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg flex items-center gap-2 font-semibold shadow-lg pulse-animate">
+            <i data-lucide="play" class="w-5 h-5" id="icon-play"></i>
+            <span id="btn-play-text">Iniciar</span>
+        </button>
+        <div class="h-6 w-px bg-gray-200 hide-mobile"></div>
+        <button id="btn-next" class="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200 disabled:opacity-40" disabled>
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+        <div class="hidden md:flex items-center gap-1 ml-2 text-gray-400">
+            <span class="kbd"><i data-lucide="arrow-left" class="w-3 h-3"></i></span>
+            <span class="kbd"><i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+            <span class="kbd text-[10px]">Espacio</span>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // State
+        let currentStep = 0;
+        let isPlaying = false;
+        let animationTimeout = null;
+        let introShown = true;
+        const totalSteps = 12;
+
+        // Elements
+        const cursor = document.getElementById('cursor');
+        const clickRing = document.getElementById('click-ring');
+        const progressBar = document.getElementById('progress-bar');
+        const toast = document.getElementById('toast');
+        const demoContainer = document.getElementById('demo-container');
+        const tooltipContainer = document.getElementById('tooltip-container');
+
+        // Generate step dots
+        const dotsContainer = document.getElementById('step-dots');
+        for (let i = 0; i < totalSteps; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'step-dot w-2 h-2 rounded-full bg-gray-300';
+            dot.dataset.step = i + 1;
+            dotsContainer.appendChild(dot);
+        }
+
+        // Helper functions
+        function sleep(ms) {
+            return new Promise(resolve => {
+                animationTimeout = setTimeout(resolve, ms);
+            });
+        }
+
+        function getElementCenter(el) {
+            if (typeof el === 'string') el = document.getElementById(el);
+            if (!el) return { x: 0, y: 0 };
+            const rect = el.getBoundingClientRect();
+            const container = demoContainer.getBoundingClientRect();
+            // Offset para que la punta del cursor (no el centro del SVG) quede en el centro del elemento
+            // La punta está aproximadamente en (5, 3) dentro del SVG de 24x24
+            return {
+                x: rect.left + rect.width / 2 - container.left - 5,
+                y: rect.top + rect.height / 2 - container.top - 3
+            };
+        }
+
+        async function moveCursorTo(elementId) {
+            const pos = getElementCenter(elementId);
+            cursor.style.left = pos.x + 'px';
+            cursor.style.top = pos.y + 'px';
+            await sleep(500);
+        }
+
+        async function click() {
+            const cursorRect = cursor.getBoundingClientRect();
+            const container = demoContainer.getBoundingClientRect();
+            clickRing.style.left = (cursorRect.left - container.left - 3) + 'px';
+            clickRing.style.top = (cursorRect.top - container.top - 3) + 'px';
+            clickRing.classList.add('active');
+            await sleep(400);
+            clickRing.classList.remove('active');
+        }
+
+        async function typeText(inputId, text) {
+            const input = document.getElementById(inputId);
+            input.value = '';
+            for (let i = 0; i < text.length; i++) {
+                input.value += text[i];
+                await sleep(30 + Math.random() * 30);
+            }
+            await sleep(100);
+        }
+
+        function showToast(title, message) {
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        function showTooltip(elementId, text, type = 'info') {
+            hideTooltip();
+            const el = document.getElementById(elementId);
+            if (!el) return;
+
+            const rect = el.getBoundingClientRect();
+            const containerRect = demoContainer.getBoundingClientRect();
+
+            const tooltip = document.createElement('div');
+            tooltip.className = `demo-tooltip tooltip-${type}`;
+            tooltip.id = 'active-tooltip';
+
+            const labels = { info: 'Info', tip: 'Tip', action: 'Accion', success: 'Exito' };
+            tooltip.innerHTML = `<div class="tooltip-label">${labels[type]}</div>${text}`;
+
+            tooltipContainer.appendChild(tooltip);
+
+            // Calcular posición relativa al contenedor
+            let left = rect.left - containerRect.left + (rect.width / 2) - 60;
+            let top = rect.bottom - containerRect.top + 8;
+
+            // Ajustar si sale del contenedor
+            const tooltipWidth = 220;
+            if (left + tooltipWidth > containerRect.width - 10) {
+                left = containerRect.width - tooltipWidth - 10;
+            }
+            if (left < 10) left = 10;
+
+            // Si el tooltip quedaría muy abajo, mostrarlo arriba del elemento
+            if (top + 80 > containerRect.height) {
+                top = rect.top - containerRect.top - 80;
+                tooltip.style.setProperty('--arrow-position', 'bottom');
+            }
+
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+
+            requestAnimationFrame(() => tooltip.classList.add('show'));
+        }
+
+        function hideTooltip() {
+            const existing = document.getElementById('active-tooltip');
+            if (existing) {
+                existing.classList.remove('show');
+                setTimeout(() => existing.remove(), 200);
+            }
+        }
+
+        function showView(viewId) {
+            document.querySelectorAll('.demo-view').forEach(v => {
+                v.classList.remove('active-view');
+                v.classList.add('hidden-view');
+            });
+            const view = document.getElementById(viewId);
+            view.classList.remove('hidden-view');
+            view.classList.add('active-view');
+        }
+
+        async function showSceneTransition(text) {
+            const transition = document.getElementById('scene-transition');
+            document.getElementById('transition-text').textContent = text;
+            transition.classList.add('active');
+            await sleep(1500);
+            transition.classList.remove('active');
+        }
+
+        function setAdminTab(tabId) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('tab-active'));
+            document.getElementById(tabId)?.classList.add('tab-active');
+
+            ['content-stats', 'content-personas', 'content-cursos', 'content-matriculas'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+        }
+
+        async function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = document.getElementById(modalId + '-content');
+            modal.classList.remove('hidden');
+            await sleep(50);
+            content.classList.remove('hidden-state');
+            content.classList.add('visible-state');
+            await sleep(300);
+            lucide.createIcons();
+        }
+
+        async function hideModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = document.getElementById(modalId + '-content');
+            content.classList.remove('visible-state');
+            content.classList.add('hidden-state');
+            await sleep(300);
+            modal.classList.add('hidden');
+        }
+
+        function setPhase(phase) {
+            document.getElementById('current-phase').textContent = phase;
+        }
+
+        // Steps definition
+        const steps = [
+            {
+                title: 'Ir a la pestana Personas',
+                description: 'Primero navegamos a la seccion de Personas para agregar un nuevo estudiante al sistema.',
+                icon: 'users',
+                iconBg: 'bg-green-100',
+                iconColor: 'text-green-600',
+                action: async () => {
+                    setPhase('Fase 1: Panel Admin');
+                    cursor.style.opacity = '1';
+                    showTooltip('tab-personas', 'Aca gestionamos estudiantes y docentes', 'info');
+                    await sleep(1200);
+                    await moveCursorTo('tab-personas');
+                    hideTooltip();
+                    await click();
+
+                    setAdminTab('tab-personas');
+                    document.getElementById('content-personas').classList.remove('hidden');
+                    await sleep(300);
+                    lucide.createIcons();
+                }
+            },
+            {
+                title: 'Agregar nuevo estudiante',
+                description: 'Hacemos clic en "Nuevo" para abrir el formulario y registrar a Ana Martinez.',
+                icon: 'user-plus',
+                iconBg: 'bg-green-100',
+                iconColor: 'text-green-600',
+                action: async () => {
+                    showTooltip('btn-nuevo-estudiante', 'Abre el formulario de registro', 'action');
+                    await sleep(1000);
+                    await moveCursorTo('btn-nuevo-estudiante');
+                    hideTooltip();
+                    await click();
+
+                    await showModal('modal-estudiante');
+
+                    // Fill form
+                    showTooltip('input-dni', 'El DNI debe ser único para cada estudiante', 'tip');
+                    await sleep(800);
+                    await moveCursorTo('input-dni');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('input-dni').classList.add('focused');
+                    await typeText('input-dni', '40123456');
+                    document.getElementById('input-dni').classList.remove('focused');
+
+                    await moveCursorTo('input-nombre');
+                    await click();
+                    document.getElementById('input-nombre').classList.add('focused');
+                    await typeText('input-nombre', 'ANA');
+                    document.getElementById('input-nombre').classList.remove('focused');
+
+                    await moveCursorTo('input-apellido');
+                    await click();
+                    document.getElementById('input-apellido').classList.add('focused');
+                    await typeText('input-apellido', 'MARTINEZ');
+                    document.getElementById('input-apellido').classList.remove('focused');
+
+                    showTooltip('input-email', 'El email es importante para enviar el certificado', 'tip');
+                    await sleep(800);
+                    await moveCursorTo('input-email');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('input-email').classList.add('focused');
+                    await typeText('input-email', 'ana.martinez@email.com');
+                    document.getElementById('input-email').classList.remove('focused');
+
+                    // Abrir información adicional
+                    showTooltip('btn-toggle-adicional', 'Acá podés agregar datos opcionales', 'info');
+                    await sleep(1000);
+                    await moveCursorTo('btn-toggle-adicional');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('info-adicional').classList.remove('hidden');
+                    document.getElementById('icon-adicional').style.transform = 'rotate(180deg)';
+                    await sleep(400);
+
+                    // Seleccionar género
+                    showTooltip('input-genero', 'El género personaliza los textos en certificados', 'tip');
+                    await sleep(800);
+                    await moveCursorTo('input-genero');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('input-genero').classList.add('focused');
+                    document.getElementById('input-genero').value = 'Femenino';
+                    await sleep(300);
+                    document.getElementById('input-genero').classList.remove('focused');
+
+                    await sleep(300);
+                    await moveCursorTo('btn-guardar-estudiante');
+                    await click();
+
+                    await hideModal('modal-estudiante');
+
+                    // Add to table
+                    const tbody = document.getElementById('tbody-estudiantes');
+                    const newRow = document.createElement('tr');
+                    newRow.className = 'new-row-enter';
+                    newRow.innerHTML = `
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-2">
+                                <div class="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center">
+                                    <span class="text-white font-semibold text-[10px]">AM</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900">ANA MARTINEZ <span class="text-[9px] bg-green-100 text-green-700 px-1 rounded">Nuevo</span></div>
+                                    <div class="text-gray-500 font-mono text-[10px]">40123456</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-3 py-2 text-center hide-mobile"><span class="px-2 py-0.5 bg-gray-100 rounded-full">0</span></td>
+                        <td class="px-3 py-2">
+                            <div class="flex justify-center gap-1">
+                                <button class="p-1 text-blue-600 hover:bg-blue-50 rounded"><i data-lucide="pencil" class="w-3 h-3"></i></button>
+                                <button id="btn-inscribir-ana" class="p-1 text-purple-600 hover:bg-purple-50 rounded"><i data-lucide="book-open" class="w-3 h-3"></i></button>
+                            </div>
+                        </td>
+                    `;
+                    tbody.insertBefore(newRow, tbody.firstChild);
+                    lucide.createIcons();
+
+                    document.getElementById('stat-estudiantes').textContent = '157';
+                    showToast('Estudiante agregado', 'ANA MARTINEZ registrada correctamente');
+                }
+            },
+            {
+                title: 'Ir a Matriculas',
+                description: 'Ahora vamos a la seccion de Matriculas para inscribir a Ana en un curso.',
+                icon: 'file-check',
+                iconBg: 'bg-amber-100',
+                iconColor: 'text-amber-600',
+                action: async () => {
+                    showTooltip('tab-matriculas', 'Gestionar inscripciones de estudiantes a cursos', 'info');
+                    await sleep(1000);
+                    await moveCursorTo('tab-matriculas');
+                    hideTooltip();
+                    await click();
+
+                    setAdminTab('tab-matriculas');
+                    document.getElementById('content-matriculas').classList.remove('hidden');
+                    await sleep(300);
+                    lucide.createIcons();
+                }
+            },
+            {
+                title: 'Nueva Inscripcion',
+                description: 'Hacemos clic en "Nueva Inscripcion" para abrir el formulario completo.',
+                icon: 'plus',
+                iconBg: 'bg-green-100',
+                iconColor: 'text-green-600',
+                action: async () => {
+                    showTooltip('btn-nueva-inscripcion', 'Crear una nueva inscripcion de estudiante a curso', 'action');
+                    await sleep(1200);
+                    await moveCursorTo('btn-nueva-inscripcion');
+                    hideTooltip();
+                    await click();
+
+                    await showModal('modal-inscripcion');
+                    await sleep(300);
+                    lucide.createIcons();
+                }
+            },
+            {
+                title: 'Completar inscripcion',
+                description: 'Seleccionamos estudiante, curso, estado Aprobado, nota 10 y marcamos notificar por email.',
+                icon: 'clipboard-check',
+                iconBg: 'bg-blue-100',
+                iconColor: 'text-blue-600',
+                action: async () => {
+                    // Seleccionar estudiante
+                    showTooltip('select-estudiante-insc', 'Buscamos a Ana en la lista', 'info');
+                    await sleep(800);
+                    await moveCursorTo('select-estudiante-insc');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('select-estudiante-insc').classList.add('focused');
+                    document.getElementById('select-estudiante-insc').value = 'ana';
+                    await sleep(400);
+                    document.getElementById('select-estudiante-insc').classList.remove('focused');
+
+                    // Seleccionar curso
+                    showTooltip('select-curso-insc', 'Seleccionamos el curso de Justicia Restaurativa', 'info');
+                    await sleep(800);
+                    await moveCursorTo('select-curso-insc');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('select-curso-insc').classList.add('focused');
+                    document.getElementById('select-curso-insc').value = 'jr';
+                    await sleep(400);
+                    document.getElementById('select-curso-insc').classList.remove('focused');
+
+                    // Seleccionar estado Aprobado
+                    showTooltip('select-estado-insc', 'Marcamos directamente como <strong>Aprobado</strong>', 'tip');
+                    await sleep(1000);
+                    await moveCursorTo('select-estado-insc');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('select-estado-insc').classList.add('focused');
+                    document.getElementById('select-estado-insc').value = 'Aprobado';
+                    await sleep(400);
+                    document.getElementById('select-estado-insc').classList.remove('focused');
+
+                    // Ingresar nota
+                    showTooltip('input-nota-insc', 'Ana obtuvo la nota maxima: <strong>10</strong>', 'tip');
+                    await sleep(1000);
+                    await moveCursorTo('input-nota-insc');
+                    hideTooltip();
+                    await click();
+                    document.getElementById('input-nota-insc').classList.add('focused');
+                    await typeText('input-nota-insc', '10');
+                    document.getElementById('input-nota-insc').classList.remove('focused');
+
+                    // Verificar checkbox notificar
+                    showTooltip('check-notificar', 'Con esto, Ana recibira un email con su certificado', 'success');
+                    await sleep(1200);
+                    await moveCursorTo('check-notificar');
+                    hideTooltip();
+                    // El checkbox ya está checked por defecto
+                    await sleep(500);
+                }
+            },
+            {
+                title: 'Guardar y notificar',
+                description: 'Al guardar, se crea la inscripcion y se envia automaticamente el email a Ana.',
+                icon: 'send',
+                iconBg: 'bg-green-100',
+                iconColor: 'text-green-600',
+                action: async () => {
+                    showTooltip('btn-guardar-inscripcion', 'Al guardar se enviara el email automaticamente', 'action');
+                    await sleep(1200);
+                    await moveCursorTo('btn-guardar-inscripcion');
+                    hideTooltip();
+                    await click();
+
+                    await hideModal('modal-inscripcion');
+
+                    // Add to inscripciones table
+                    const tbody = document.getElementById('tbody-inscripciones');
+                    const newRow = document.createElement('tr');
+                    newRow.className = 'new-row-enter';
+                    newRow.id = 'row-ana-inscripcion';
+                    newRow.innerHTML = `
+                        <td class="px-3 py-2">
+                            <div class="font-medium text-gray-900">ANA MARTINEZ</div>
+                            <div class="text-gray-500 font-mono text-[10px]">40123456</div>
+                        </td>
+                        <td class="px-3 py-2 hide-mobile">
+                            <div class="text-gray-900 text-[10px]">Intro. Justicia Restaurativa</div>
+                        </td>
+                        <td class="px-3 py-2 text-center">
+                            <span class="px-2 py-0.5 bg-green-100 text-green-700 rounded text-[10px]">Aprobado</span>
+                        </td>
+                        <td class="px-3 py-2 text-center font-bold">10</td>
+                        <td class="px-3 py-2">
+                            <div class="flex justify-center gap-1">
+                                <button class="p-1 text-green-600 hover:bg-green-50 rounded"><i data-lucide="send" class="w-3 h-3"></i></button>
+                                <button class="p-1 text-blue-600 hover:bg-blue-50 rounded"><i data-lucide="pencil" class="w-3 h-3"></i></button>
+                            </div>
+                        </td>
+                    `;
+                    tbody.insertBefore(newRow, tbody.firstChild);
+                    lucide.createIcons();
+
+                    document.getElementById('stat-matriculas').textContent = '244';
+                    showToast('Inscripcion creada', 'Email enviado a ana.martinez@email.com');
+                    await sleep(1500);
+                }
+            },
+            {
+                title: 'Cambio de perspectiva',
+                description: 'Ahora veremos la experiencia desde el lado de Ana, como estudiante que recibe su certificado.',
+                icon: 'repeat',
+                iconBg: 'bg-purple-100',
+                iconColor: 'text-purple-600',
+                action: async () => {
+                    cursor.style.opacity = '0';
+                    await showSceneTransition('Cambiando a la vista del estudiante...');
+                    setPhase('Fase 2: Vista del Estudiante');
+                    showView('view-email');
+                    await sleep(500);
+                    cursor.style.opacity = '1';
+                    lucide.createIcons();
+
+                    showTooltip('email-verumax', 'Ana recibio un email de SAJuR!', 'success');
+                    await sleep(2000);
+                    hideTooltip();
+                }
+            },
+            {
+                title: 'Ana abre el email',
+                description: 'Ana ve el email de SAJuR en su bandeja de entrada y hace clic para abrirlo.',
+                icon: 'mail-open',
+                iconBg: 'bg-red-100',
+                iconColor: 'text-red-600',
+                action: async () => {
+                    await moveCursorTo('email-verumax');
+                    await click();
+
+                    await sleep(300);
+                    showView('view-email-content');
+                    await sleep(300);
+                    lucide.createIcons();
+
+                    showTooltip('btn-ver-certificado', 'El boton lleva al portal de certificados', 'info');
+                    await sleep(1500);
+                    hideTooltip();
+                }
+            },
+            {
+                title: 'Acceder al portal',
+                description: 'Ana hace clic en "Ver mi Certificado" y accede a su portal personal en VERUMax.',
+                icon: 'external-link',
+                iconBg: 'bg-blue-100',
+                iconColor: 'text-blue-600',
+                action: async () => {
+                    await moveCursorTo('btn-ver-certificado');
+                    document.getElementById('btn-ver-certificado').classList.add('hovered');
+                    await sleep(400);
+                    await click();
+                    document.getElementById('btn-ver-certificado').classList.remove('hovered');
+
+                    await sleep(300);
+                    showView('view-portal');
+                    await sleep(300);
+                    lucide.createIcons();
+
+                    showTooltip('btn-download-cert', 'Desde aca puede descargar su certificado oficial', 'tip');
+                    await sleep(2000);
+                    hideTooltip();
+                }
+            },
+            {
+                title: 'Descargar certificado',
+                description: 'Ana hace clic en "Certificado de Aprobacion" para ver y descargar su documento.',
+                icon: 'download',
+                iconBg: 'bg-green-100',
+                iconColor: 'text-green-600',
+                action: async () => {
+                    await moveCursorTo('btn-download-cert');
+                    document.getElementById('btn-download-cert').classList.add('hovered');
+                    await sleep(400);
+                    await click();
+                    document.getElementById('btn-download-cert').classList.remove('hovered');
+
+                    await sleep(300);
+                    showView('view-certificate');
+                    await sleep(300);
+                    lucide.createIcons();
+                }
+            },
+            {
+                title: 'Certificado listo!',
+                description: 'Ana puede ver su certificado oficial con codigo QR de validacion y descargarlo en PDF.',
+                icon: 'award',
+                iconBg: 'bg-amber-100',
+                iconColor: 'text-amber-600',
+                action: async () => {
+                    cursor.style.opacity = '0';
+                    showTooltip('demo-container', '<strong>Proceso completado!</strong><br>El certificado tiene codigo QR para validacion online.', 'success');
+                    await sleep(4000);
+                    hideTooltip();
+                }
+            }
+        ];
+
+        function updateUI() {
+            document.getElementById('step-label').textContent = `Paso ${currentStep + 1} de ${totalSteps}`;
+            progressBar.style.width = ((currentStep + 1) / totalSteps * 100) + '%';
+
+            document.querySelectorAll('.step-dot').forEach((dot, index) => {
+                dot.classList.remove('active', 'completed');
+                if (index < currentStep) dot.classList.add('completed');
+                else if (index === currentStep) dot.classList.add('active');
+            });
+
+            if (steps[currentStep]) {
+                document.getElementById('step-title').textContent = steps[currentStep].title;
+                document.getElementById('step-description').textContent = steps[currentStep].description;
+
+                const iconContainer = document.getElementById('step-icon-container');
+                iconContainer.className = `w-9 h-9 ${steps[currentStep].iconBg} rounded-lg flex items-center justify-center flex-shrink-0`;
+                iconContainer.innerHTML = `<i data-lucide="${steps[currentStep].icon}" class="w-5 h-5 ${steps[currentStep].iconColor}"></i>`;
+                lucide.createIcons();
+            }
+
+            document.getElementById('btn-prev').disabled = currentStep === 0 && !isPlaying;
+            document.getElementById('btn-next').disabled = currentStep >= totalSteps - 1;
+        }
+
+        async function playStep() {
+            if (currentStep < totalSteps && isPlaying) {
+                updateUI();
+                await steps[currentStep].action();
+
+                if (isPlaying && currentStep < totalSteps - 1) {
+                    currentStep++;
+                    await sleep(600);
+                    await playStep();
+                } else {
+                    stopDemo();
+                }
+            }
+        }
+
+        function startDemo() {
+            isPlaying = true;
+            document.getElementById('btn-play').classList.remove('pulse-animate');
+            document.getElementById('btn-play-text').textContent = 'Pausar';
+            document.getElementById('icon-play').setAttribute('data-lucide', 'pause');
+            lucide.createIcons();
+            playStep();
+        }
+
+        function pauseDemo() {
+            isPlaying = false;
+            clearTimeout(animationTimeout);
+            hideTooltip();
+            document.getElementById('btn-play-text').textContent = 'Continuar';
+            document.getElementById('icon-play').setAttribute('data-lucide', 'play');
+            lucide.createIcons();
+        }
+
+        function stopDemo() {
+            isPlaying = false;
+            document.getElementById('btn-play-text').textContent = 'Repetir';
+            document.getElementById('icon-play').setAttribute('data-lucide', 'rotate-ccw');
+            lucide.createIcons();
+            document.querySelectorAll('.step-dot').forEach(dot => {
+                dot.classList.add('completed');
+                dot.classList.remove('active');
+            });
+        }
+
+        function resetDemo() {
+            currentStep = 0;
+            isPlaying = false;
+            clearTimeout(animationTimeout);
+            hideTooltip();
+            setPhase('Fase 1: Panel Admin');
+
+            document.getElementById('btn-play-text').textContent = 'Iniciar';
+            document.getElementById('icon-play').setAttribute('data-lucide', 'play');
+            document.getElementById('btn-play').classList.add('pulse-animate');
+            lucide.createIcons();
+
+            // Reset views
+            showView('view-admin');
+
+            // Reset tabs
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('tab-active'));
+            ['content-personas', 'content-cursos', 'content-matriculas'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById('content-stats').classList.remove('hidden');
+
+            // Reset modals
+            ['modal-estudiante', 'modal-inscripcion', 'modal-enviar'].forEach(id => {
+                const modal = document.getElementById(id);
+                if (modal) modal.classList.add('hidden');
+                const content = document.getElementById(id + '-content');
+                if (content) {
+                    content.classList.remove('visible-state');
+                    content.classList.add('hidden-state');
+                }
+            });
+
+            // Reset inputs (estudiante modal)
+            ['input-dni', 'input-nombre', 'input-apellido', 'input-email', 'input-telefono', 'input-fecha-nac', 'input-ciudad', 'input-provincia', 'input-cp'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = '';
+            });
+            // Reset inputs (inscripcion modal)
+            ['input-nota-insc', 'input-asistencia', 'input-observaciones'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = '';
+            });
+            // Reset selects (estudiante modal)
+            const generoSelect = document.getElementById('input-genero');
+            if (generoSelect) generoSelect.selectedIndex = 0;
+            const paisSelect = document.getElementById('input-pais');
+            if (paisSelect) paisSelect.selectedIndex = 0;
+            // Reset selects (inscripcion modal)
+            const selectEstInsc = document.getElementById('select-estudiante-insc');
+            if (selectEstInsc) selectEstInsc.value = '';
+            const selectCursoInsc = document.getElementById('select-curso-insc');
+            if (selectCursoInsc) selectCursoInsc.value = '';
+            const selectEstadoInsc = document.getElementById('select-estado-insc');
+            if (selectEstadoInsc) selectEstadoInsc.value = 'Inscrito';
+            const selectPagoInsc = document.getElementById('select-pago-insc');
+            if (selectPagoInsc) selectPagoInsc.value = 'Pendiente';
+            const checkNotificar = document.getElementById('check-notificar');
+            if (checkNotificar) checkNotificar.checked = true;
+            // Collapse info adicional
+            const infoAdicional = document.getElementById('info-adicional');
+            if (infoAdicional) infoAdicional.classList.add('hidden');
+            const iconAdicional = document.getElementById('icon-adicional');
+            if (iconAdicional) iconAdicional.style.transform = '';
+
+            // Remove added rows
+            document.querySelectorAll('.new-row-enter').forEach(row => row.remove());
+
+            // Reset stats
+            document.getElementById('stat-estudiantes').textContent = '156';
+            document.getElementById('stat-matriculas').textContent = '243';
+
+            // Reset curso highlight
+            const cursoJr = document.getElementById('curso-jr');
+            if (cursoJr) cursoJr.classList.remove('border-purple-500', 'bg-purple-50');
+
+            // Reset cursor
+            cursor.style.left = '50%';
+            cursor.style.top = '50%';
+            cursor.style.opacity = '0';
+
+            toast.classList.remove('show');
+            updateUI();
+        }
+
+        function hideIntro() {
+            const intro = document.getElementById('intro-overlay');
+            intro.classList.add('hidden-state');
+            introShown = false;
+            setTimeout(() => intro.style.display = 'none', 400);
+        }
+
+        // Event listeners
+        document.getElementById('btn-start-demo').addEventListener('click', () => {
+            hideIntro();
+            setTimeout(startDemo, 300);
+        });
+
+        document.getElementById('btn-play').addEventListener('click', () => {
+            const btnText = document.getElementById('btn-play-text').textContent;
+            if (btnText === 'Repetir') {
+                resetDemo();
+                setTimeout(startDemo, 100);
+            } else if (isPlaying) {
+                pauseDemo();
+            } else {
+                startDemo();
+            }
+        });
+
+        document.getElementById('btn-prev').addEventListener('click', resetDemo);
+
+        document.getElementById('btn-next').addEventListener('click', async () => {
+            if (currentStep < totalSteps - 1) {
+                pauseDemo();
+                currentStep++;
+                updateUI();
+                isPlaying = true;
+                await steps[currentStep].action();
+                isPlaying = false;
+                if (currentStep >= totalSteps - 1) stopDemo();
+            }
+        });
+
+        // Keyboard
+        document.addEventListener('keydown', (e) => {
+            if (introShown) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    hideIntro();
+                    setTimeout(startDemo, 300);
+                }
+                return;
+            }
+
+            switch(e.key) {
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    resetDemo();
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    if (currentStep < totalSteps - 1) {
+                        document.getElementById('btn-next').click();
+                    }
+                    break;
+                case ' ':
+                    e.preventDefault();
+                    document.getElementById('btn-play').click();
+                    break;
+            }
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        demoContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        demoContainer.addEventListener('touchend', (e) => {
+            if (introShown) return;
+            const diff = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(diff) > 80) {
+                if (diff > 0 && currentStep < totalSteps - 1) {
+                    document.getElementById('btn-next').click();
+                } else if (diff < 0) {
+                    resetDemo();
+                }
+            }
+        }, { passive: true });
+
+        // Init
+        updateUI();
+    </script>
+</body>
+</html>

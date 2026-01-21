@@ -1,0 +1,684 @@
+"Eskuz ziurtagiri bakoitza prozesatzetik hamarreka ematera pasatu ginen minutu gutxitan. Gure ikasleek euren ibilbide osoa 24/7 atzitu ahal izatea baloratzen dute, eta enpleatzaileek QR balidazioan konfiantza dute. Administrazio-denboraren aurreztea %90koa izan da."
+"Eskuz ziurtagiri bakoitza prozesatzetik hamarreka ematera pasatu ginen minutu gutxitan. Gure ikasleek euren ibilbide osoa 24/7 atzitu ahal izatea baloratzen dute, eta enpleatzaileek QR balidazioan konfiantza dute. Administrazio-denboraren aurreztea %90koa izan da."
+"Inplementazioa berehalakoa izan zen. 24 ordur baino gutxiagoan ziurtagiriak jada gure markarekin ari ginen ematen. Pertsonalizatuko atariak irudi profesionala ematen dio gure irteerari, ikasleek harrotziaz partekatzen dutena. Premium inprimaketa aukera bikaina da."
+"Inplementazioa berehalakoa izan zen. 24 ordur baino gutxiagoan ziurtagiriak jada gure markarekin ari ginen ematen. Pertsonalizatuko atariak irudi profesionala ematen dio gure irteerari, ikasleek harrotziaz partekatzen dutena. Premium inprimaketa aukera bikaina da."
+"Orain nire nutrizio-planek QR kodea dute nire pazienteek balioztatu ahal izateko. Honek konfiantza handiagoa sortu du eta autentifikazioari buruzko galderak murriztu ditu. Gainera, bidalketa fisikoa premiuma bikaina da nahi izaten dutenentzat inprimatuta izateko."
+"Verumax erabiltzen dugu gure produktuen bermeak QR bidez egiaztatu daitezkeelarik. Gure bezeroek egiazkotasuna berehala baliozta dezakete eta informazio teknikoa guztia atzitu. Faltsutzeen inguruko erreklamazioen murrizketa %95ekoa izan da."
+%100 Pertsonalizagarria
+%100 Trazabilitatea eta Auditoretza
+%85eko aurreztea
++ erakunde eta profesional gehiago
+© 2025 Verumax. Eskubide guztiak erreserbatuta.
+© 2025 Verumax. Eskubide guztiak erreserbatuta.
+★ Nabarmendutako Ezaugarria
+✓ Egiaztatua
+✓ Soluzio Akademiko Osoa
+100 ikasle baino gehiagorentzako ziurtagiriak minutuetan sortu. Klik bakarra promozio osoarentzat.
+2026 arte baliozkoa
+24 orduko inplementazioa
+24/7 Ataria
+24/7 Ataria
+24/7 Sarbidea
+256-bit Enkriptazioa
+4 ikastaritako 4 osatuta
+Abantailak
+Abantailak
+Abantailak
+acad_antes_almacenamiento
+acad_antes_costos
+acad_antes_despues_subtitulo
+acad_antes_despues_titulo
+acad_antes_estadisticas
+acad_antes_falsificacion
+acad_antes_presencial
+acad_antes_titulo
+acad_antes_trabajo_manual
+acad_beneficio_acceso_desc
+acad_beneficio_acceso_titulo
+acad_beneficio_ahorro_desc
+acad_beneficio_ahorro_titulo
+acad_beneficio_falsificaciones_desc
+acad_beneficio_falsificaciones_titulo
+acad_beneficio_tiempo_desc
+acad_beneficio_tiempo_titulo
+acad_beneficio_trazabilidad_desc
+acad_beneficio_trazabilidad_titulo
+acad_beneficios_subtitulo
+acad_beneficios_titulo
+acad_caso_centros
+acad_caso_centros_desc
+acad_caso_continua
+acad_caso_continua_desc
+acad_caso_idiomas
+acad_caso_idiomas_desc
+acad_caso_laboral
+acad_caso_laboral_desc
+acad_caso_liberte_nombre
+acad_caso_liberte_testimonio
+acad_caso_liberte_tipo
+acad_caso_organizadores
+acad_caso_organizadores_desc
+acad_caso_particulares
+acad_caso_particulares_desc
+acad_caso_sajur_nombre
+acad_caso_sajur_testimonio
+acad_caso_sajur_tipo
+acad_caso_tecnicos
+acad_caso_tecnicos_desc
+acad_caso_universidades
+acad_caso_universidades_desc
+acad_casos_exito_subtitulo
+acad_casos_exito_titulo
+acad_casos_uso_subtitulo
+acad_casos_uso_titulo
+acad_como_funciona_subtitulo
+acad_como_funciona_titulo
+acad_cta_final_certificados
+acad_cta_final_contactar
+acad_cta_final_demo
+acad_cta_final_desc
+acad_cta_final_implementacion
+acad_cta_final_menos_tiempo
+acad_cta_final_titulo
+acad_cta_solicitar_demo
+acad_cta_ver_como_funciona
+acad_despues_acceso
+acad_despues_acceso_highlight
+acad_despues_ahorro
+acad_despues_ahorro_highlight
+acad_despues_dashboards
+acad_despues_digital
+acad_despues_digital_highlight
+acad_despues_emision
+acad_despues_emision_highlight
+acad_despues_titulo
+acad_despues_validacion
+acad_doc_analiticos
+acad_doc_analiticos_desc
+acad_doc_asistencia
+acad_doc_asistencia_desc
+acad_doc_certificado_aprobacion
+acad_doc_certificado_aprobacion_desc
+acad_doc_competencias
+acad_doc_competencias_desc
+acad_doc_congresos
+acad_doc_congresos_desc
+acad_doc_constancia_finalizacion
+acad_doc_constancia_finalizacion_desc
+acad_doc_constancia_inscripcion
+acad_doc_constancia_inscripcion_desc
+acad_doc_constancia_regular
+acad_doc_constancia_regular_desc
+acad_doc_diplomas
+acad_doc_diplomas_desc
+acad_doc_practica
+acad_doc_practica_desc
+acad_doc_reconocimientos
+acad_doc_reconocimientos_desc
+acad_documentos_complementarios
+acad_documentos_principales
+acad_documentos_subtitulo
+acad_documentos_titulo
+acad_faq_acceso_resp
+acad_faq_acceso_titulo
+acad_faq_cargo_resp
+acad_faq_cargo_titulo
+acad_faq_diseno_resp
+acad_faq_diseno_titulo
+acad_faq_limite_resp
+acad_faq_limite_titulo
+acad_faq_retroactivos_resp
+acad_faq_retroactivos_titulo
+acad_faq_subtitulo
+acad_faq_titulo
+acad_faq_validacion_resp
+acad_faq_validacion_titulo
+acad_faq_validez_resp
+acad_faq_validez_titulo
+acad_footer_derechos
+acad_footer_inicio
+acad_footer_privacidad
+acad_footer_tagline
+acad_footer_terminos
+acad_func_branding
+acad_func_branding_desc
+acad_func_cohortes
+acad_func_cohortes_desc
+acad_func_emision_masiva
+acad_func_emision_masiva_desc
+acad_func_notificaciones
+acad_func_notificaciones_desc
+acad_func_subtitulo
+acad_func_titulo
+acad_func_trayectoria
+acad_func_trayectoria_desc
+acad_func_validacion
+acad_func_validacion_desc
+acad_hero_academias
+acad_hero_badge
+acad_hero_centros_formacion
+acad_hero_formadores
+acad_hero_instituciones
+acad_hero_stat_falsificaciones
+acad_hero_stat_portal
+acad_hero_stat_tiempo
+acad_hero_subtitle
+acad_hero_title
+acad_hero_title_highlight
+acad_integ_api
+acad_integ_api_desc
+acad_integ_email
+acad_integ_email_desc
+acad_integ_excel
+acad_integ_excel_desc
+acad_integ_subdominios
+acad_integ_subdominios_desc
+acad_integraciones_subtitulo
+acad_integraciones_titulo
+acad_meta_description
+acad_meta_keywords
+acad_meta_og_description
+acad_meta_og_title
+acad_meta_title
+acad_meta_twitter_description
+acad_meta_twitter_title
+acad_nav_academico
+acad_nav_beneficios
+acad_nav_casos_exito
+acad_nav_faq
+acad_nav_funcionalidades
+acad_nav_solicitar_demo
+acad_portal_acceso_desc
+acad_portal_acceso_titulo
+acad_portal_badge
+acad_portal_demo_certificado
+acad_portal_demo_certificado_fecha
+acad_portal_demo_curso_nombre
+acad_portal_demo_curso_progreso
+acad_portal_demo_diploma
+acad_portal_demo_diploma_fecha
+acad_portal_demo_dni
+acad_portal_demo_nombre
+acad_portal_demo_progreso
+acad_portal_descarga_desc
+acad_portal_descarga_titulo
+acad_portal_linkedin_desc
+acad_portal_linkedin_titulo
+acad_portal_qr_desc
+acad_portal_qr_titulo
+acad_portal_subtitulo
+acad_portal_timeline_desc
+acad_portal_timeline_titulo
+acad_portal_titulo
+acad_problema_archivos
+acad_problema_archivos_desc
+acad_problema_costos
+acad_problema_costos_desc
+acad_problema_falsificaciones
+acad_problema_falsificaciones_desc
+acad_problema_perdidos
+acad_problema_perdidos_desc
+acad_problema_trabajo_manual
+acad_problema_trabajo_manual_desc
+acad_problema_trazabilidad
+acad_problema_trazabilidad_desc
+acad_problemas_subtitulo
+acad_problemas_titulo
+Adibidea: VALID-A1B2C3D4E5F6
+Administrazio-denboraren murrizketa
+Administrazio-Denboraren Murrizketa
+Administrazio-kostenetan aurreztea
+akademiatuak
+Akademikoa
+Akademikoa
+Akademikoen Analisiak / Erregistroak
+Akreditazio Akademikoak
+Akreditazio akademikoak kudeatzeko behar duzun guztia
+Al - Ol: 9:00 - 18:00
+Arakatu Soluzioak
+Arrakasten Kasuak
+Arrakasten Kasuak
+Arrakasten Kasuak
+Artistak
+Asistentzia-Ziurtagiriak
+Ataria beti eskuragarri
+Ataria eta dokumentuak zure logoa, koloreak eta diseinu instituzional bakana dituztenak.
+Aukeratu zure sektorea bere beharretarako egokitutako soluzio perfektua aurkitzeko
+Azken eguneraketa
+Azken eguneraketa
+Azpidomeinuak
+Babeskopia
+Babestutako Datuak
+badge_backup
+badge_backup_desc
+badge_https
+badge_https_desc
+badge_privacidad
+badge_privacidad_desc
+badge_soporte
+badge_soporte_desc
+badge_ssl
+badge_ssl_desc
+badge_uptime
+badge_uptime_desc
+Bai, aurreko promozioen ziurtagiriak karga eta igor ditzakezu arazo gabe. Sistemak aurreko datak adieraztea ahalbidetzen du.
+Bai, ziurtagiri digitalak balio juridiko bera dute Espainian ere bai. Gainera, paper bereziarekin eta segurtasun-elementuekin premium inprimaketa aukera eskaintzen dugu behar duten erakundeentzat.
+Balidatu
+Balidatu Dokumentua
+Balidatu Dokumentua
+Balidatu Orain
+Balidazio Publiko Berehalakoa
+Balidazio-Ataria
+Balioztatzeko modurik ez duen faltsuketaren arriskua
+Bat egin hezkuntza-erakundeen artean milaka ordu administrazioa aurreztu dutenekin eta ziurtagiri digitalen bidez irudi profesionala proiektatzen dutenekin.
+benefit_demo
+benefit_demo_desc
+benefit_implementacion
+benefit_implementacion_desc
+benefit_soporte
+benefit_soporte_desc
+Bere hezkuntza-ibilbidearen kronologia osoa bistaratzen du.
+Bere ibilbide osoa 24/7 atzitu
+Bere kudeaketa akademikoa eraldatu zuten erakundeak
+Berehalako inplementazioa, burutia zailtasunik gabe
+Bi modutan karga ditzakezu ikasleak: administrazio-panelaren bidez banan-banan, edo Excel/CSV fitxategi bat inportatuz datu guztiekin. Txantiloi bat ematen dizugu prozesua errazteko.
+Bihurtu Zure Erakundearen Kudeaketa Akademikoa
+Bukaerako Diplomak
+Bukatuta: 2024ko martxoaren 15a
+Bukatuta: 2024ko urtarrilaren 20a
+caso_empresa_org
+caso_empresa_texto
+caso_empresa_tipo
+caso_liberte_org
+caso_liberte_texto
+caso_liberte_tipo
+caso_nutricion_org
+caso_nutricion_texto
+caso_nutricion_tipo
+caso_sajur_org
+caso_sajur_texto
+caso_sajur_tipo
+casos_subtitle
+casos_title
+cat_academico
+cat_academico_cta
+cat_artistas
+cat_cooperativas
+cat_empresarial
+cat_eventos
+cat_footer
+cat_footer_link
+cat_footer_text
+cat_mutuales
+cat_profesional
+cat_proximamente
+cat_subtitle
+cat_title
+contacto_btn
+contacto_cta_btn
+contacto_cta_email
+contacto_email
+contacto_info
+contacto_institucion
+contacto_mensaje
+contacto_nombre
+contacto_subtitle
+contacto_title
+Dena digitalean eta hodeian,
+Denbora errealeko kontrol-panelak eta txostenak
+Denbora gutxiago
+Denbora-lerro akademikoa
+Desantolatutako biltegiratze fisikoa eta espazioa okupatzea
+Digital Profesionalak
+Diplomak, egiaztagiriak, ziurtagiriak, analisiak - dena leku bakarrean.
+Diseinua erabat pertsonalizatu al dezaket?
+DNI: 12.345.678
+Doako demoa konpromisorik gabe
+Doktore independenteak ziurtagiri profesionalak igortzen dituztenak.
+Dokumentu Akademikoen Motak
+Dokumentu bakoitzak bere balidazio-kode bakuna dauka.
+Dokumentu bakoitzeko QR indibiduala
+Dokumentu bat balidatu
+Dokumentu guztiak deskargatu
+Dokumentu honek ikaslea une honetan erakundean ikasten ari dela frogatzen du.
+Dokumentu Nagusiak
+Dokumentuak galtzea edo hondatzea eta berriro emateko eskaerak etengabe egitea.
+Ebaluazio amaieran egin baino lehen ikasturtea bukatu duela frogatzen duen ziurtagiria.
+Edo idatzi iezaguzu hona
+Edo idatzi iezaguzu zuzenean:
+Edonor balioztatu dezake zure dokumentuen egiazkotasuna berehala.
+edozein gailutik
+Egin ehunka dokumentu bat-batean jakinarazpen berehalakoa izanda.
+Eguneroko Automatikoa
+Ekintza bakoitza erregistratzen da. Zein dokumentu, noiz eta norentzat igorri duen nor zehazki badakizu. Auditoretzarako eta betekin normatiborako aproposa.
+Ekitaldiak
+Elkarteak
+Emate Masiboa
+Emate Masiboa
+Emate-mugarik ba al dago?
+Emititako dokumentuak
+Enpleatzaileak zihurtagiriaren QR kodea mugikorrean eskaneatzen du soilik. Orduan automatikoki birbidalia izango da ziurtagiriaren datu guztiak eta ikaslearen historia erakusten duen balidazio-orria.
+Enpleatzaileek QR kodea eskaneatu eta autentikotasuna berehalakoan egiaztatzen dute.
+Enpresa Mailako Teknologia eta Segurtasuna
+Enpresariala
+Erabat. Konfiguratu ditzakezu zure logoa, erakundearen koloreak, sinadura digitalak eta marka guztia. Ziurtagiri bakoitza zure ikus-identitatearekin sortzen da.
+Erabilgarritasuna
+Erabilgarritasuna
+Erabilgarritasuna %99,9
+Erakundea/Antolaketa
+Erakundearen Marka duen Ataria
+Erakundearen Posta Elektronikoa
+Erakundeentzat Pentsatutako Funtzionalitateak
+Esaiguzu zure beharrari buruz...
+Eskatu Demo Pertsonalizatua
+Eskatu Demo Pertsonalizatua
+Eskatu Demoa
+Eskatu Demoa
+Eskatu Demoa
+Eskatu Demoa
+Eskatu Doako Demoa
+Eskuzko Lan-Orduak
+Esteka Azkarrak
+Etengabeko formazio-zentroak eta garapen profesionala.
+Excel / CSV
+Excel fitxategien bidez ikasleak eta ikastaroak pilaka inportatzea.
+Ez dago emate-estatistikarik ez metrikarik
+Ez dago igorpen-mugarik. Behar adina ziurtagiri sor ditzakezu. Planean ikasle aktiboen kopuruaren arabera doitzen dira.
+Ezaguna al zaizu?
+Ezaugarriak
+Ezin da faltsutu QR balidazioa
+Ezin dira QR kode bakunak klonatu
+Faltsuketak
+Faltsutu ezin diren ziurtagiriak igorri QR balidazioarekin eta ibilbide akademikoa osoa. Ikasleentzako 24/7 ataria eta premium inprimaketa aukera.
+Faltsutu ezin diren ziurtagiriak igorri QR balidazioarekin eta ibilbide akademikoa osoa. Ikasleentzako 24/7 ataria eta premium inprimaketa aukera.
+FAQ
+FAQ
+faq_subtitle
+faq_title
+footer_caracteristicas
+footer_contacto
+footer_copyright
+footer_descripcion
+footer_enlaces
+footer_feat_impresion
+footer_feat_personalizable
+footer_feat_portal
+footer_feat_qr
+footer_horario
+footer_link_beneficios
+footer_link_como
+footer_link_demo
+footer_link_validar
+footer_privacidad
+footer_seguridad
+footer_terminos
+Formazioan lortutako gaitasun eta ezaugarri zehatzak ziurtatzen dituzte.
+formazio-zentroak
+Formazio-Zentroak
+Funtzionalitateak
+Gaitasun-Ziurtagiriak
+Galdera Ohikoak
+Galdera Ohikoak
+Galdetu iezaguzu
+Galdutako Ziurtagiriak
+Gatazkak Ebaztea
+Gradu-hirune, diplomak eta analisiak ehunka ikaslerentzat banan-banan kudeatzea.
+Gure erakunde guztiek dituzten funtzionalitate esentzialak, zein sektoretan dauden ez du axola
+Gure plataforman konfiantza duten erakunde eta profesionalak
+Gure Zerbitzu Nagusiak
+Hain erraza nola 1, 2, 3
+Harremana
+Harremanetan Jarri Salmentak
+Hartutako gai guztien historia osoa, kalifikazioak, asistentziak eta eskuratutako gaitasunak.
+Hasi bihar ematen
+Hasi Gaur Bertan Dokumentu Profesionalak Erosten
+Hasiera
+Hasiera
+Hauek dira Verumax-ek konpontzen dituen buruhausteak
+hero_badge
+hero_cta_primary
+hero_cta_secondary
+hero_mockup_certificado
+hero_mockup_certificados
+hero_mockup_curso
+hero_mockup_en_curso
+hero_mockup_estudiante
+hero_mockup_valido
+hero_mockup_ver_detalles
+hero_mockup_verificado
+hero_subtitle
+hero_title
+Hezkuntza Etengabea
+Hezkuntza profesionala eta prestakuntza
+Hezkuntza profesionala eta prestakuntza
+hezkuntza-erakundeak
+Hezkuntza-erakundeentzako, formazio-zentroentzako eta irakasle partikuluentzako ziurtagiri digitalen soluzio osoa. Emate masiboa, QR balidazioa eta ikaslearen ataria.
+Hezkuntza-erakundeentzat, profesional independenteentzat, ekitaldi-antolatzaileentzat, enpresentzat, kooperatibentzat eta elkarteentzat dokumentu digitalak emititzeko eta balidatzeko soluzioak. QR balidazio faltsutegaitza eta atari pertsonalizatua.
+Hezkuntza-erakundeentzat, profesionalentzat, ekitaldientzat, enpresentzat, kooperatibentzat eta elkarteentzat dokumentu digitalak emititzeko eta balidatzeko soluzioak.
+Hezkuntza-espezializatuko erakundea
+Hezkuntza-espezializatuko zentroa
+Hizkuntza-Akademiatuak
+HTTPS
+Ibilbide Akademiko Osoa
+Igorri ziurtagiriak, diplomek eta analitiko digitalak QR balidazioarekin. Ikaslearen 24/7 ataria eta automatizatutako emate masiboa.
+Igorri ziurtagiriak, diplomek eta analitiko digitalak QR balidazioarekin. Ikaslearen 24/7 ataria eta automatizatutako emate masiboa.
+Ikasle Arrunta dela frogatzen duten Egiaztagiriak
+Ikasle bakoitzak bere atari propioa du, bere erakundearen ikus-nortasunarekin eta logoarekin pertsonalizatua. Bertatik, beren aurrerapenak ikusi eta dokumentu guztiak deskargatu ditzakete.
+Ikasle bakoitzak dokumentu bat igortzen denean jakinarazpen automatikoa jasotzen du.
+Ikasle bakoitzaren historia akademiko oso eta egiaztagarria falta da.
+Ikasleak bere DNIa erabiliz berreskuratu dezake sarbidea eta posta elektroniko bidezko egiaztaketa prozesuarekin. Gainera, erakundearen administratzaile bezala, edozein unetan birsortu ahal duzu sarbidea.
+Ikasleak taldekatu mailaren, urtearen edo taldearen arabera. Dokumentuak talde osoarentzat banan-banan igorri.
+Ikaslearen 24/7 Ataria
+Ikaslearen ataria
+Ikaslearen ikastetxe guztiak, kalifikazioak eta lorpenak dituen ibilbide egiaztagarria.
+Ikasleek bertara joan behar dute jasotzeko
+Ikasleek edozein gailutik eta edozein unetan atzitu dezakete.
+Ikasleentzako Sarbidea
+Ikastaro jakin batean, gai batean edo programa akademiko batean matrikulatuta zaudela frogatzen duen agiria.
+Ikastaro, gaia edo programa oso baten gaineko onarpena ziurtatzen duen ziurtagiri ofiziala.
+Ikastaroa Abian
+Ikastaroen Antolatzaileak
+Ikasten
+Ikasturtea Bukatutako Egiaztagiriak
+Ikusi Nola Funtzionatzen Duen
+Ikusi Soluzioa →
+Industriarako Soluzioak
+Inplementazioa
+Inprimaketa eta paper-lanaren kostu handiak
+Inprimaketa eta paper-lanaren murrizketa handia
+Inprimaketa-Kostuak
+Instituto Teknikoak
+Integrazioak eta Bateragarritasuna
+irakasle partikularrak
+Irakasle Partikularrak
+Izen Osoa
+Jakinarazpenak zure erakundearen domeinutik (@zureerakundea.edu).
+Jar zaitez gurekin harremanetan demo pertsonalizatu batengatik eta ikusi nola alda dezakeen Verumax-ek zure dokumentuen kudeaketa.
+Juan Pérez
+Juan Pérez - DI 12345678
+Justizia Berrezartzailea
+Justizia Berrezartzaileko Diploma
+Justizia Berrezartzaileko Gizarte Elkartea
+Justizia Berrezartzaileko Gizarte Elkartea
+Kalitate handiko dokumentu fisikoak hologramak eta laminazioa dituztenak, etxera bidalia.
+Kaotikoak diren Artxibo Fisikoak
+Kategoria gehiago laster.
+Kategoriak
+klik bakunarekin
+Konexio Segurua
+Kongresuetan Hartutako Partearen Ziurtagiriak
+Kongresuetan, ekitaldi akademikoetan eta hitzaldietan parte hartzeko edo mintzamendurako.
+Kooperatibak
+kostu operatiboetan
+Kostu-Aurreztea
+Laguntza
+Laguntza 24/7
+Laguntza osoa
+Lanbide-eguneraketarako programak eta masterrekin loturikoak.
+Lanbide-heziketa eta trebetasunak trazabilitate osoarekin ziurtatzea.
+Laneko Prestakuntza
+Lan-Praktiken Egiaztagiriak
+Laster
+Lehen (Tradizionala)
+Lehen vs Ondoren Verumax
+Liberté Lan Taldeko Kooperatiba
+Liberté Lan Taldeko Kooperatiba
+LinkedIn-en klik bakarreko partekatzea
+Lorpen akademikoak argitaratzeko integrazio zuzena.
+Maria Gonzalez Lizentziatua
+Matrikulazio-Egiaztagiriak
+Mediazioaren Ziurtagiria
+meta_author
+meta_description
+meta_keywords
+meta_og_description
+meta_og_title
+meta_title
+meta_twitter_description
+meta_twitter_title
+Mundu osoko erakunde eta profesionalen konfiantza irabazita
+nav_beneficios
+nav_categorias
+nav_demo
+nav_faq
+nav_inicio
+nav_validar
+Neurtutako Emaitzak
+Nola balioztatzen du enpleatzaile batek ziurtagiria?
+Nola Funtzionatzen Du
+Nola kargatu ditzaket nire ikasleen informazioa?
+Norentzat da Verumax Akademikoa?
+Nutrizionista profesional independentea
+Onarpen-Ziurtagiriak
+Ondoren (Verumax)
+Orain orduak beharrean minutuak behar dira
+Osagarritako Dokumentuak
+Osatutako mailen ziurtagiriak nazioarteko balidazioarekin.
+Paper bereziaren, inprimaketaren, tonerrearen eta biltegiratze fisikoaren gastu handiak.
+Paper pilak espazio baliotsua okupatzen ari dira eta informazioa bilatzea zailtzen dute.
+paperik edo espaziorik gabe
+Pertsonalizatuko Branding-a
+Posible diren faltsuketak
+Posible Diren Faltsuketak
+Posta Elektroniko Bidezko Jakinarazpen Automatikoak
+Posta elektronikoa
+Praktikak, lan-esperientzia edo zuzeneko gainbegiralekuak dokumentatzen ditu.
+Premium Inprimaketa
+Premium Inprimaketa
+Pribatutasuna
+Pribatutasuna
+Pribatutasun-politika
+Pribatutasun-politika
+Pribatutasun-politika - Verumax
+Pribatutasun-politika - Verumax
+privacidad_intro_titulo
+privacidad_meta_description
+privacidad_meta_og_description
+privacidad_meta_og_title
+privacidad_meta_twitter_description
+privacidad_meta_twitter_title
+privacidad_title
+privacidad_updated
+Probatu funtzio guztiak
+Profesionala
+Programa akademiko oso baten ongi bukatutako titulu edo diploma formala.
+QR Balidazioa
+QR Balidazioa duen Dokumentazioa
+QR balidazioa duten dokumentu digital eta fisikoen plataforma definitiboa.
+QR kode bakunak eta faltsutu ezinak zeinak dokumentu bakoitzaren egiazkotasuna bermatzen dutenak.
+REST API
+SAJuR eta Liberté bezalako erakundeak ziurtagiri profesionalak igortzen dituztenak.
+Sarbide iraunkorra ikasleentzat, bezeroentzat, kideentzat edo langileentzat edozein gailutik.
+Sari bereziak, aipamen ofizioak edo ebaluazio aparta izanaren aitortza.
+Sariak eta Aipamenak
+Sarrera
+Sarrera erabilgarri
+Sartu dokumentuan agertzen den balidazio-kodea (formatua: VALID-XXXXXXXXXXXX)
+Sartutako laguntza teknikoa
+Segundu gutxitan emate masiboa
+Segurtasun Anti-Frode Osoa
+serv_antifraude
+serv_antifraude_desc
+serv_branding
+serv_branding_desc
+serv_emision
+serv_emision_desc
+serv_impresion
+serv_impresion_desc
+serv_portal
+serv_portal_desc
+serv_validacion
+serv_validacion_desc
+servicios_subtitle
+servicios_title
+SIU, Moodle eta platafoma akademikoekin integratzea.
+social_confianza
+social_mas
+Soluzio osoa honentzat
+SSL
+stat_acceso
+stat_ahorro
+stat_documentos
+stat_uptime
+Tailerrak, ikastaroak eta programa berezietarako diplomek eta ziurtagiriekin loturikoak.
+Tailerrak, mintegiak, webinarrak edo ekitaldi hezigarri puntualekikoak.
+Taldeen Kudeaketa
+TechVision S.A.
+Teknologia-enpresa
+Terminoak
+terminos_meta_description
+terminos_meta_og_description
+terminos_meta_og_title
+terminos_meta_twitter_description
+terminos_meta_twitter_title
+terminos_title
+terminos_updated
+Titulu eta ziurtagiri faltsuak zirkulatzen ari dira, haien autentikotasuna egiaztatzeko modurik ezarekin.
+Trazabilitaterik Ez
+Unibertsitateak eta Hezkuntza Hirugarren Mailakoak
+validar_btn
+validar_ejemplo
+validar_placeholder
+validar_subtitle
+validar_title
+VALID-XXXXXXXXXXXX
+Verumax
+Verumax - QR Balidazioarekin Dokumentazioa Sektorerako
+Verumax - Ziurtagiri Digital eta Fisikoen Segurtasuna
+Verumax - Ziurtagiri Digital eta Fisikoen Segurtasuna
+Verumax Akademikoa - Erakunde Hezigarrientzako Ziurtagiri Digitalak
+Verumax Akademikoa - Hezkuntza-Erakundeentzako Ziurtagiriak
+Verumax Akademikoa - Hezkuntza-Erakundeentzako Ziurtagiriak
+Verumax Akademikoari buruz jakin beharreko guztia
+Verumax-en konfiantza duten erakunde eta profesionalak
+Verumax-en konfiantza duten erakundeak eta profesionalak
+Verumax-en Pribatutasun-politika. Ikasi nola bildu, erabili eta babesten ditugun zure datu pertsonalak.
+Verumax-en Zerbitzu-baldintzak. Ikasi gure ziurtagiri digitalen plataformaren erabilpen-baldintzak.
+Verumax-i buruz jakin beharreko guztia
+Xehetasunak Ikusi
+Xehetasunak nola Verumax-ek zure pribatutasuna babesten duen eta zure datu pertsonalak nola kudeatzen dituen.
+Xehetasunak nola Verumax-ek zure pribatutasuna babesten duen eta zure datu pertsonalak nola kudeatzen dituen.
+Zein da ikasle batek atarirako sarbidea galtzen badu?
+Zerbitzu-baldintzak
+Zerbitzu-baldintzak
+Zerbitzu-baldintzak - Verumax
+Zerbitzu-baldintzak - Verumax
+ziurtagiri akademikoak, diploma digitalak, analisi digitalak, hezkuntza-erakundeak, prestakuntza profesionala
+Ziurtagiri atzerakoak igor ditzaket?
+Ziurtagiri bakoitza banan-banan diseinatzeak eta igortzeak denbora baliotsua hartzen du, irakaskuntzarako dedikatu ahal zenukeena.
+Ziurtagiri bakoitzeko eskuzko lan-orduak
+Ziurtagiri Digital Profesionalak
+Ziurtagiri digitalak balio juridikoa al dute?
+ziurtagiri digitalak, QR balidazioa, ziurtagiri hezigarriak, egiaztagiri akademikoak, diploma on-lineak
+Ziurtagiria
+Ziurtagiriak
+Ziurtagiriak
+Zure domeinu propioan dagoen ataria: ziurtagiriak.zureerakundea.edu
+Zure erabiliz Verumax-en eta bere ziurtagiri-zerbitzuen erabilera legalaren baldintzak.
+Zure erabiliz Verumax-en eta bere ziurtagiri-zerbitzuen erabilera legalaren baldintzak.
+Zure erakundeak igorri behar dituen dokumentu guztiak
+Zure erakundean egiazko eragina zure erakundean egunero
+Zure kudeaketa akademikoaren eraldatze digitala
+Zure lan-fluxu existenteari moldatzen zaio
+Zure logoa, koloreak eta domeinua. Erakunde bakoitzak bere nortasuna proiektatzen du.
+zure sektorea zerrendan ez badago.

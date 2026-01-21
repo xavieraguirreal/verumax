@@ -1,0 +1,579 @@
+# Comparación de archivos de idioma es_AR.php y es_ES.php
+
+## 1. Entradas que están en es_AR.php pero faltan completamente en es_ES.php
+
+1. `'nav_volver_inicio' => 'Volver al Inicio'`
+2. `'nav_tema_claro' => 'Cambiar a modo claro'`
+3. `'nav_tema_oscuro' => 'Cambiar a modo oscuro'`
+4. `'nav_soluciones' => 'Soluciones Especializadas por Sector'`
+5. `'nav_soluciones_academico' => 'Académico'`
+6. `'nav_soluciones_profesional' => 'Profesional'`
+7. `'nav_soluciones_eventos' => 'Eventos'`
+8. `'nav_soluciones_empresarial' => 'Empresarial'`
+9. `'nav_soluciones_cooperativas' => 'Cooperativas'`
+10. `'nav_soluciones_mutuales' => 'Mutuales'`
+11. `'nav_productos' => 'Productos'`
+12. `'nav_productos_tarjeta_digital' => 'Tarjeta Digital'`
+13. `'cat_tarjeta_digital' => 'Tarjeta Digital'`
+14. `'cat_tarjeta_digital_1' => 'QR Infalsificable'`
+15. `'cat_tarjeta_digital_2' => 'Landing Page Incluida'`
+16. `'cat_tarjeta_digital_3' => 'Actualización Instantánea'`
+17. `'cat_tarjeta_digital_cta' => 'Ver Planes →'`
+18. `'productos_title' => 'Un Ecosistema de Herramientas a tu Disposición'`
+19. `'productos_subtitle' => 'Descubre nuestros productos individuales. Cada uno construido sobre nuestra tecnología de validación inalterable.'`
+20. `'contacto_cta_btn' => 'Solicitar Demo Gratis'`
+21. `'contacto_cta_email' => 'O escríbenos a'`
+22. `'footer_link_beneficios' => 'Beneficios'`
+23. `'footer_link_como' => 'Cómo Funciona'`
+24. `'footer_link_validar' => 'Validar Documento'`
+25.. `'footer_link_demo' => 'Solicitar Demo'`
+26. `'footer_feat_qr' => 'Validación QR'`
+27. `'footer_feat_portal' => 'Portal 24/7'`
+28. `'footer_feat_impresion' => 'Impresión Premium'`
+29. `'footer_feat_personalizable' => '100% Personalizable'`
+30. `'terminos_seccion3_sub1_li5' => 'Opción de impresión premium de documentos físicos'`
+31. `'privacidad_seccion6_p2_antes_link' => 'Para ejercer estos derechos, contáctenos en'`
+32. `'privacidad_seccion6_p2_link_texto' => 'privacidad@validarcert.com'`
+33. `'privacidad_seccion6_p2_normal' => 'Responderemos dentro de 15 días hábiles.'`
+34. `'privacidad_seccion11_email_privacidad' => 'privacidad@validarcert.com'`
+35. `'privacidad_seccion12_p1_antes_strong' => 'En Argentina, la autoridad de aplicación en materia de protección de datos personales es la'`
+36. `'privacidad_seccion12_p1_strong' => 'Agencia de Acceso a la Información Pública (AAIP)'`
+37. `'privacidad_seccion12_p1_normal' => '. Si considerás que tus derechos han sido vulnerados, podés presentar una denuncia ante este organismo.'`
+38. `'privacidad_seccion12_aaip_url' => 'www.argentina.gob.ar/aaip'`
+39. `'acad_hero_stat_tiempo' => 'Menos tiempo administrativo'`
+40. `'acad_hero_stat_portal' => 'Portal del estudiante'`
+41. `'acad_hero_stat_falsificaciones' => 'Falsificaciones posibles'`
+42. `'acad_problemas_titulo' => '¿Te suena familiar?'`
+43. `'acad_problema_trabajo_manual' => 'Horas de Trabajo Manual'`
+44. `'acad_problema_trabajo_manual_desc' => 'Diseñar y emitir cada certificado individualmente consume tiempo valioso que podrías dedicar a la enseñanza.'`
+45. `'acad_problema_perdidos' => 'Certificados Perdidos'`
+46. `'acad_problema_perdidos_desc' => 'Alumnos que pierden o dañan documentos y solicitan reemisiones constantemente.'`
+47. `'acad_problema_falsificaciones' => 'Falsificaciones'`
+48. `'acad_problema_falsificaciones_desc' => 'Títulos y certificados falsos circulando sin forma efectiva de verificar su autenticidad.'`
+49. `'acad_problema_trazabilidad' => 'Sin Trazabilidad'`
+50. `'acad_problema_trazabilidad_desc' => 'Falta de historial académico completo y verificable de cada estudiante.'`
+51. `'acad_problema_costos' => 'Costos de Impresión'`
+52. `'acad_problema_costos_desc' => 'Gastos elevados en papel especial, impresión, tóner y almacenamiento físico.'`
+53. `'acad_problema_archivos' => 'Archivos Físicos Caóticos'`
+54. `'acad_problema_archivos_desc' => 'Montañas de papeles ocupando espacio valioso y dificultando la búsqueda de información.'`
+55. `'acad_como_funciona_paso1_titulo' => 'Configura tu Institución'`
+56. `'acad_como_funciona_paso1_desc' => 'Personaliza con tu logo, colores institucionales y define los tipos de certificados que emitirás.'`
+57. `'acad_como_funciona_paso2_titulo' => 'Carga Estudiantes y Cursos'`
+58. `'acad_como_funciona_paso2_desc' => 'Importa datos masivamente desde Excel o CSV. También puedes cargar uno por uno.'`
+59. `'acad_como_funciona_paso3_titulo' => 'Emite y Valida'`
+60. `'acad_como_funciona_paso3_desc' => 'Generación automática con QR único. Notificación por email y acceso inmediato para estudiantes.'`
+61. `'acad_documentos_titulo' => 'Tipos de Documentos Académicos'`
+62. `'acad_documentos_subtitulo' => 'Todos los documentos que tu institución necesita emitir'`
+63. `'acad_documentos_principales' => 'Documentos Principales'`
+64. `'acad_doc_certificado_aprobacion' => 'Certificados de Aprobación'`
+65. `'acad_doc_certificado_aprobacion_desc' => 'Certificado oficial que acredita la aprobación de un curso, materia o programa completo.'`
+66. `'acad_doc_diplomas' => 'Diplomas de Finalización'`
+67. `'acad_doc_diplomas_desc' => 'Título o diploma formal que certifica la culminación exitosa de un programa académico completo.'`
+68. `'acad_doc_analiticos' => 'Analíticos / Registros Académicos'`
+69. `'acad_doc_analiticos_desc' => 'Historial completo con todas las materias cursadas, calificaciones, asistencias y competencias adquiridas.'`
+70. `'acad_doc_constancia_regular' => 'Constancias de Alumno Regular'`
+71. `'acad_doc_constancia_regular_desc' => 'Documento que acredita que el estudiante está actualmente cursando en la institución.'`
+72. `'acad_doc_constancia_inscripcion' => 'Constancias de Inscripción'`
+73. `'acad_doc_constancia_inscripcion_desc' => 'Comprobante de inscripción a un curso, materia o programa académico específico.'`
+74. `'acad_doc_constancia_finalizacion' => 'Constancias de Finalización de Cursada'`
+75. `'acad_doc_constancia_finalizacion_desc' => 'Certificado que acredita haber completado la cursada, previo a la evaluación final.'`
+76. `'acad_documentos_complementarios' => 'Documentos Complementarios'`
+77. `'acad_doc_asistencia' => 'Certificados de Asistencia'`
+78. `'acad_doc_asistencia_desc' => 'Para talleres, seminarios, webinars o eventos educativos puntuales.'`
+79. `'acad_doc_reconocimientos' => 'Reconocimientos y Menciones'`
+80. `'acad_doc_reconocimientos_desc' => 'Premios especiales, menciones honoríficas o reconocimientos por desempeño destacado.'`
+81. `'acad_doc_competencias' => 'Certificados de Competencias'`
+82. `'acad_doc_competencias_desc' => 'Acreditan habilidades y competencias específicas adquiridas durante la formación.'`
+83. `'acad_doc_practica' => 'Constancias de Práctica Profesional'`
+84. `'acad_doc_practica_desc' => 'Documentan pasantías, prácticas profesionales o experiencia laboral supervisada.'`
+85. `'acad_doc_congresos' => 'Certificados de Participación en Congresos'`
+86. `'acad_doc_congresos_desc' => 'Para asistencia o ponencias en congresos, jornadas académicas y conferencias.'`
+87. `'acad_portal_badge' => '★ Feature Destacado'`
+88. `'acad_portal_acceso_titulo' => 'Acceso 24/7 a su trayectoria completa'`
+89. `'acad_portal_acceso_desc' => 'Estudiantes acceden desde cualquier dispositivo, en cualquier momento.'`
+90. `'acad_portal_descarga_titulo' => 'Descarga de todos sus documentos'`
+91. `'acad_portal_descarga_desc' => 'Diplomas, constancias, certificados, analíticos - todo en un solo lugar.'`
+92. `'acad_portal_timeline_titulo' => 'Vista de timeline académico'`
+93. `'acad_portal_timeline_desc' => 'Visualización cronológica de toda su trayectoria educativa.'`
+94. `'acad_portal_qr_titulo' => 'QR individual por documento'`
+95. `'acad_portal_qr_desc' => 'Cada documento tiene su código único de validación.'`
+96. `'acad_portal_linkedin_titulo' => 'Compartir en LinkedIn con un clic'`
+97. `'acad_portal_linkedin_desc' => 'Integración directa para publicar logros académicos.'`
+98. `'acad_portal_demo_nombre' => 'Juan Pérez'`
+99. `'acad_portal_demo_dni' => 'DNI: 12.345.678'`
+100. `'acad_portal_demo_progreso' => 'de 4 cursos completados'`
+101. `'acad_portal_demo_diploma' => 'Diploma - Justicia Restaurativa'`
+102. `'acad_portal_demo_diploma_fecha' => 'Finalizado: 15/03/2024'`
+103. `'acad_portal_demo_certificado' => 'Certificado - Mediación'`
+104. `'acad_portal_demo_certificado_fecha' => 'Finalizado: 20/01/2024'`
+105. `'acad_portal_demo_curso_progreso' => 'Curso en Progreso'`
+106. `'acad_portal_demo_curso_nombre' => 'Resolución de Conflictos'`
+107. `'acad_casos_uso_titulo' => '¿Para Quién es OriginalisDoc Académico?'`
+108. `'acad_casos_uso_subtitulo' => 'Instituciones y profesionales que confían en nuestra plataforma'`
+109. `'acad_caso_universidades' => 'Universidades y Terciarios'`
+110. `'acad_caso_universidades_desc' => 'Gestión masiva de títulos, diplomas y analíticos para cientos de graduados.'`
+111. `'acad_caso_centros' => 'Centros de Formación'`
+112. `'acad_caso_centros_desc' => 'Instituciones como SAJuR y Liberté que emiten certificaciones profesionales.'`
+113. `'acad_caso_idiomas' => 'Academias de Idiomas'`
+114. `'acad_caso_idiomas_desc' => 'Certificados de niveles completados con validación internacional.'`
+115. `'acad_caso_tecnicos' => 'Institutos Técnicos'`
+116. `'acad_caso_tecnicos_desc' => 'Certificaciones técnicas y oficios con trazabilidad completa.'`
+117. `'acad_caso_laboral' => 'Capacitación Laboral'`
+118. `'acad_caso_laboral_desc' => 'Centros de formación continua y desarrollo profesional.'`
+119. `'acad_caso_continua' => 'Educación Continua'`
+120. `'acad_caso_continua_desc' => 'Programas de actualización profesional y posgrados.'`
+121. `'acad_caso_organizadores' => 'Organizadores de Cursos'`
+122. `'acad_caso_organizadores_desc' => 'Diplomas y certificados para cursos, talleres y programas especiales.'`
+123. `'acad_caso_particulares' => 'Formadores Particulares'`
+124. `'acad_caso_particulares_desc' => 'Docentes independientes que emiten certificaciones profesionales.'`
+125. `'acad_func_titulo' => 'Funcionalidades Pensadas para Instituciones'`
+126. `'acad_func_subtitulo' => 'Todo lo que necesitas para gestionar certificaciones académicas'`
+127. `'acad_func_cohortes' => 'Gestión de Cohortes'`
+128. `'acad_func_cohortes_desc' => 'Organiza estudiantes por camada, año o grupo. Emite documentos masivamente por cohorte completa.'`
+129. `'acad_func_emision_masiva' => 'Emisión Masiva'`
+130. `'acad_func_emision_masiva_desc' => 'Genera certificados para 100+ alumnos en minutos. Un solo clic para toda una promoción.'`
+131. `'acad_func_notificaciones' => 'Notificaciones Automáticas por Email'`
+132. `'acad_func_notificaciones_desc' => 'Cada estudiante recibe notificación automática cuando se emite un documento.'`
+133. `'acad_func_branding' => 'Portal con Branding Institucional'`
+134. `'acad_func_branding_desc' => 'Tu logo, colores y dominio. Cada institución proyecta su propia identidad.'`
+135. `'acad_func_trayectoria' => 'Trayectoria Académica Completa'`
+136. `'acad_func_trayectoria_desc' => 'Historial verificable con todos los cursos, calificaciones y logros del estudiante.'`
+137. `'acad_func_validacion' => 'Validación Pública Instantánea'`
+138. `'acad_func_validacion_desc' => 'Empleadores escanean el QR y verifican autenticidad al instante.'`
+139. `'acad_beneficios_titulo' => 'Resultados Medibles'`
+140. `'acad_beneficios_subtitulo' => 'Impacto real en tu institución desde el primer día'`
+141. `'acad_beneficio_tiempo_titulo' => 'Menos Tiempo Administrativo'`
+142. `'acad_beneficio_tiempo_desc' => 'Lo que tomaba horas ahora toma minutos'`
+143. `'acad_beneficio_ahorro_titulo' => 'Ahorro en Costos'`
+144. `'acad_beneficio_ahorro_desc' => 'Reducción drástica en impresión y papelería'`
+145. `'acad_beneficio_falsificaciones_titulo' => 'Falsificaciones Posibles'`
+146. `'acad_beneficio_falsificaciones_desc' => 'Imposible clonar códigos QR únicos'`
+147. `'acad_beneficio_acceso_titulo' => 'Acceso para Estudiantes'`
+148. `'acad_beneficio_acceso_desc' => 'Portal disponible en todo momento'`
+149. `'acad_beneficio_trazabilidad_titulo' => '100% Trazabilidad y Auditoría'`
+150. `'acad_beneficio_trazabilidad_desc' => 'Cada acción queda registrada. Sabés exactamente quién emitió qué documento, cuándo y para quién. Ideal para auditorías y cumplimiento normativo.'`
+151. `'acad_caso_sajur_nombre' => 'Sociedad Argentina de Justicia Restaurativa'`
+152. `'acad_caso_liberte_nombre' => 'Cooperativa de Trabajo Liberté'`
+153. `'acad_antes_despues_titulo' => 'Antes vs Después de OriginalisDoc'`
+154. `'acad_antes_despues_subtitulo' => 'La transformación digital de tu gestión académica'`
+155. `'acad_antes_titulo' => 'Antes (Tradicional)'`
+156. `'acad_antes_trabajo_manual' => 'Horas de trabajo manual por cada certificado'`
+157. `'acad_antes_costos' => 'Costos elevados de impresión y papelería'`
+158. `'acad_antes_falsificacion' => 'Riesgo de falsificación sin forma de verificar'`
+159. `'acad_antes_presencial' => 'Estudiantes deben venir presencialmente a retirar'`
+160. `'acad_antes_almacenamiento' => 'Almacenamiento físico caótico y espacio ocupado'`
+161. `'acad_antes_estadisticas' => 'Sin estadísticas ni métricas de emisión'`
+162. `'acad_despues_titulo' => 'Después (OriginalisDoc)'`
+163. `'acad_despues_emision' => 'Emisión masiva en segundos'`
+164. `'acad_despues_emision_highlight' => 'con un solo clic'`
+165. `'acad_despues_ahorro' => 'Ahorro del 85%'`
+166. `'acad_despues_ahorro_highlight' => 'en costos operativos'`
+167. `'acad_despues_validacion' => 'Validación QR imposible de falsificar'`
+168. `'acad_despues_acceso' => 'Acceso 24/7'`
+169. `'acad_despues_acceso_highlight' => 'desde cualquier dispositivo'`
+170. `'acad_despues_digital' => 'Todo digital y en la nube,'`
+171. `'acad_despues_digital_highlight' => 'sin papeles ni espacio'`
+172. `'acad_despues_dashboards' => 'Dashboards y reportes en tiempo real'`
+173. `'acad_integraciones_titulo' => 'Integraciones y Compatibilidad'`
+174. `'acad_integraciones_subtitulo' => 'Se adapta a tu flujo de trabajo existente'`
+175. `'acad_integ_excel' => 'Excel / CSV'`
+176. `'acad_integ_excel_desc' => 'Importación masiva de estudiantes y cursos desde archivos Excel.'`
+177. `'acad_integ_api' => 'API REST'`
+178. `'acad_integ_api_desc' => 'Integración con sistemas SIU, Moodle y plataformas académicas.'`
+179. `'acad_integ_email' => 'Email Institucional'`
+180. `'acad_integ_email_desc' => 'Notificaciones desde tu dominio institucional (@tuinstituto.edu).'`
+181. `'acad_integ_subdominios' => 'Subdominios'`
+182. `'acad_integ_subdominios_desc' => 'Portal en tu propio dominio: certificados.tuinstituto.edu'`
+183. `'acad_faq_titulo' => 'Preguntas Frecuentes'`
+184. `'acad_faq_subtitulo' => 'Todo lo que necesitas saber sobre OriginalisDoc Académico'`
+185. `'acad_faq_cargo_titulo' => '¿Cómo cargo la información de mis estudiantes?'`
+186. `'acad_faq_cargo_resp' => 'Podés cargar estudiantes de dos formas: individualmente desde el panel de administración, o masivamente importando un archivo Excel/CSV con todos los datos. Te proporcionamos una plantilla para facilitar el proceso.'`
+187. `'acad_faq_validez_titulo' => '¿Los certificados digitales tienen validez legal?'`
+188. `'acad_faq_validez_resp' => 'Sí, los certificados digitales tienen la misma validez legal que los físicos en Argentina. Además, ofrecemos opción de impresión premium con papel especial y elementos de seguridad para instituciones que lo requieran.'`
+189. `'acad_faq_diseno_titulo' => '¿Puedo personalizar completamente el diseño?'`
+190. `'acad_faq_diseno_resp' => 'Absolutamente. Podés configurar tu logo, colores institucionales, firmas digitales y todo el branding. Cada certificado se genera con tu identidad visual.'`
+191. `'acad_faq_acceso_titulo' => '¿Qué pasa si un estudiante pierde el acceso a su portal?'`
+192. `'acad_faq_acceso_resp' => 'El estudiante puede recuperar su acceso usando su DNI y un proceso de verificación por email. Además, como administrador de la institución, podés regenerar el acceso en cualquier momento.'`
+193. `'acad_faq_validacion_titulo' => '¿Cómo valida un empleador el certificado?'`
+194. `'acad_faq_validacion_resp' => 'El empleador simplemente escanea el código QR del certificado con su celular. Será redirigido automáticamente a una página de validación que muestra todos los datos del certificado y la trayectoria académica del estudiante.'`
+195. `'acad_faq_retroactivos_titulo' => '¿Puedo emitir certificados retroactivos?'`
+196. `'acad_faq_retroactivos_resp' => 'Sí, podés cargar y emitir certificados de promociones anteriores sin ningún problema. El sistema permite indicar fechas pasadas de emisión.'`
+197. `'acad_faq_limite_titulo' => '¿Hay límite de emisiones?'`
+198. `'acad_faq_limite_resp' => 'No hay límite de emisiones. Podés generar tantos certificados como necesites. Los planes se ajustan según la cantidad de estudiantes activos en tu institución.'`
+199. `'acad_cta_final_titulo' => 'Transforma la Gestión Académica de tu Institución'`
+200. `'acad_cta_final_desc' => 'Unite a las instituciones que ya ahorraron miles de horas administrativas y proyectan una imagen profesional con certificaciones digitales.'`
+201. `'acad_cta_final_demo' => 'Solicitar Demo Personalizada'`
+202. `'acad_cta_final_contactar' => 'Contactar Ventas'`
+203. `'acad_cta_final_implementacion' => 'Implementación'`
+204. `'acad_cta_final_menos_tiempo' => 'Menos tiempo'`
+205. `'acad_cta_final_certificados' => 'Certificados'`
+206. `'acad_footer_tagline' => 'Certificaciones Digitales Profesionales'`
+207. `'acad_meta_og_title' => 'OriginalisDoc Académico - Certificaciones para Instituciones Educativas'`
+208. `'acad_meta_og_description' => 'Emite certificados, diplomas y analíticos digitales con validación QR. Portal del estudiante 24/7 y emisión masiva automatizada.'`
+209. `'acad_meta_twitter_title' => 'OriginalisDoc Académico - Certificaciones para Instituciones Educativas'`
+210. `'acad_meta_twitter_description' => 'Emite certificados, diplomas y analíticos digitales con validación QR. Portal del estudiante 24/7 y emisión masiva automatizada.'`
+211. `'meta_keywords' => 'credenciales digitales, validación QR, marca personal verificada, asistentes IA, prestigio digital, certificaciones infalsificables'`
+212. `'meta_author' => 'OriginalisDoc'`
+213. `'meta_og_title' => 'OriginalisDoc - Crea, Gestiona y Valida tu Prestigio Digital'`
+214. `'meta_og_description' => 'Ecosistema de herramientas para emitir credenciales infalsificables, construir tu marca personal verificada e implementar asistentes de IA especializados.'`
+215. `'meta_twitter_title' => 'OriginalisDoc - Tu Prestigio Digital Verificado'`
+216. `'meta_twitter_description' => 'Herramientas para emitir credenciales infalsificables, construir tu marca personal y asistentes IA especializados.'`
+217. `'acad_meta_title' => 'OriginalisDoc Académico - Certificaciones Digitales para Instituciones Educativas'`
+218. `'acad_meta_description' => 'Solución completa de certificaciones digitales para instituciones educativas, centros de formación y formadores particulares. Emisión masiva, validación QR y portal del estudiante.'`
+219. `'acad_meta_keywords' => 'certificados académicos, diplomas digitales, analíticos digitales, instituciones educativas, formación profesional'`
+220. `'prof_meta_title' => 'Tarjeta Digital Profesional con QR Infalsificable | OriginalisDoc'`
+221. `'prof_meta_description' => 'Tu tarjeta de contacto digital profesional con QR dinámico e infalsificable. Landing page personalizada, panel de administración seguro y actualización instantánea.'`
+222. `'prof_meta_keywords' => 'tarjeta digital, qr infalsificable, tarjeta de contacto digital, landing page profesional, networking digital'`
+223. `'prof_meta_og_title' => 'Tarjeta Digital: La Evolución de tu Tarjeta de Visita'`
+224. `'prof_meta_og_description' => 'Olvidate de las tarjetas de papel. Tu identidad profesional en una tarjeta digital con QR verificable, landing page personalizada y gestión en tiempo real.'`
+225. `'prof_meta_twitter_title' => 'Tarjeta Digital Profesional by OriginalisDoc'`
+226. `'prof_meta_twitter_description' => 'La tarjeta de visita del futuro. QR infalsificable, landing page incluida y actualización instantánea.'`
+227. `'prof_nav_perfiles' => 'Tarjeta Digital'`
+228. `'prof_nav_como_funciona' => 'Cómo Funciona'`
+229. `'prof_nav_caracteristicas' => 'Características'`
+230. `'prof_nav_planes' => 'Planes'`
+231. `'prof_nav_empezar' => 'Crear Mi Tarjeta'`
+232. `'prof_hero_badge' => '✓ La Tarjeta de Visita del Siglo XXI'`
+233. `'prof_hero_title' => 'Tu Tarjeta Digital Profesional'`
+234. `'prof_hero_title_highlight' => 'Con QR Infalsificable'`
+235. `'prof_hero_subtitle' => 'Olvidate del papel. Una tarjeta digital en formato JPG con QR dinámico que lleva a tu landing page personalizada. Actualizá tus datos al instante desde un panel seguro.'`
+236. `'prof_hero_url_ejemplo' => 'Tu URL personalizada:'`
+237. `'prof_hero_url_ejemplo_subdomain' => 'tunombre'`
+238. `'prof_hero_url_ejemplo_domain' => '.originalisdoc.com'`
+239. `'prof_cta_empezar' => 'Ver Planes y Crear Mi Tarjeta'`
+240. `'prof_cta_secundario' => 'Ver Cómo Funciona'`
+241. `'prof_stat_qr' => 'QR Infalsificable'`
+242. `'prof_stat_qr_desc' => 'Tecnología blockchain'`
+243. `'prof_stat_actualizacion' => 'Actualización'`
+244. `'prof_stat_actualizacion_desc' => 'En tiempo real'`
+245. `'prof_stat_landing' => 'Tu Landing Page'`
+246. `'prof_stat_landing_desc' => 'Incluida en todos los planes'`
+247. `'prof_que_es_titulo' => '¿Qué es la Tarjeta Digital?'`
+248. `'prof_que_es_subtitulo' => 'La evolución definitiva de la tarjeta de visita tradicional'`
+249. `'prof_que_es_desc' => 'Una imagen JPG de alta calidad (formato tarjeta de visita) con un código QR único e infalsificable. Al escanear el QR, tus contactos acceden a tu landing page personalizada con toda tu información profesional: foto, datos de contacto, servicios, horarios y mucho más.'`
+250. `'prof_tarjeta_feature1_titulo' => 'Imagen JPG Lista para Usar'`
+251. `'prof_tarjeta_feature1_desc' => 'Descargá tu tarjeta en alta resolución y compartila por WhatsApp, email, redes sociales o imprimila en papel de calidad.'`
+252. `'prof_tarjeta_feature2_titulo' => 'QR Dinámico e Infalsificable'`
+253. `'prof_tarjeta_feature2_desc' => 'El QR no se puede clonar ni copiar. Si alguien intenta replicar tu tarjeta, el código no funcionará. Tecnología de verificación única.'`
+254. `'prof_tarjeta_feature3_titulo' => 'Landing Page Incluida'`
+255. `'prof_tarjeta_feature3_desc' => 'Tu URL personalizada (ej: juanperez.originalisdoc.com) con diseño profesional, tu foto, datos de contacto, servicios, horarios y más.'`
+256. `'prof_tarjeta_feature4_titulo' => 'Panel de Administración'`
+257. `'prof_tarjeta_feature4_desc' => 'Actualizá tu información al instante. Cambios en tiempo real sin necesidad de reimprimir o reenviar tu tarjeta.'`
+258. `'prof_como_titulo' => 'Cómo Funciona en 3 Pasos'`
+259. `'prof_como_subtitulo' => 'De la contratación a tu tarjeta digital en minutos'`
+260. `'prof_como_paso1' => 'Elegí tu Plan y Personalizá'`
+261. `'prof_como_paso1_desc' => 'Seleccioná el plan que mejor se adapte a vos. Cargá tus datos (nombre, foto, contacto, servicios) y elegí tu paleta de colores entre nuestras opciones preestablecidas.'`
+262. `'prof_como_paso2' => 'Descargá tu Tarjeta JPG'`
+263. `'prof_como_paso2_desc' => 'Tu tarjeta digital está lista en alta resolución con tu QR único e infalsificable. Descargala y compartila por donde quieras: WhatsApp, email, LinkedIn o imprimila.'`
+264. `'prof_como_paso3' => 'Actualizá Cuando Quieras'`
+265. `'prof_como_paso3_desc' => 'Desde tu panel de administración seguro, modificá tus datos las veces que necesites. Los cambios son instantáneos y tu QR siempre apunta a la información actualizada.'`
+266. `'prof_caracteristicas_titulo' => 'Por Qué Nuestra Tarjeta Digital es Única'`
+267. `'prof_caracteristicas_subtitulo' => 'Tecnología y diseño pensados para profesionales exigentes'`
+268. `'prof_caract_qr_titulo' => 'QR Infalsificable y Dinámico'`
+269. `'prof_caract_qr_desc' => 'No es un QR estático común. Es un código verificable que no puede ser clonado. Si alguien copia tu tarjeta, el QR no funcionará. Además, podés cambiar el destino del QR sin necesidad de regenerar la imagen.'`
+270. `'prof_caract_panel_titulo' => 'Panel de Administración Intuitivo'`
+271. `'prof_caract_panel_desc' => 'Accedé desde cualquier dispositivo a tu panel seguro. Actualizá tu foto, datos de contacto, servicios, horarios y más. Sin conocimientos técnicos, 100% visual y amigable.'`
+272. `'prof_caract_paletas_titulo' => 'Paletas de Colores Profesionales'`
+273. `'prof_caract_paletas_desc' => 'Elegí entre 12 combinaciones de colores preestablecidas diseñadas por profesionales. Desde elegantes y minimalistas hasta vibrantes y creativas. Tu marca, tu estilo.'`
+274. `'prof_caract_landing_titulo' => 'Landing Page Profesional Incluida'`
+275. `'prof_caract_landing_desc' => 'Tu subdominio personalizado (tunombre.originalisdoc.com) con diseño responsivo, optimizado para móviles. Foto de perfil, información de contacto, descripción de servicios, horarios de atención y botones de acción directa (WhatsApp, email, teléfono).'`
+276. `'prof_caract_formatos_titulo' => 'Múltiples Formatos de Uso'`
+277. `'prof_caract_formatos_desc' => 'JPG en alta resolución para imprimir, PDF para enviar por email, y versión optimizada para redes sociales. Una sola tarjeta, todos los usos que necesites.'`
+278. `'prof_caract_seguridad_titulo' => 'Seguridad y Respaldo 24/7'`
+279. `'prof_caract_seguridad_desc' => 'Tus datos están protegidos con encriptación de nivel bancario. Backups automáticos diarios. Tu información siempre segura y disponible.'`
+280. `'prof_casos_titulo' => '¿Para Quién es la Tarjeta Digital?'`
+281. `'prof_casos_subtitulo' => 'Profesionales de todas las industrias que valoran la primera impresión'`
+282. `'prof_caso_abogados' => 'Abogados y Consultores'`
+283. `'prof_caso_abogados_desc' => 'Entregá tu tarjeta con QR a tus clientes. Ellos escanean y acceden a tus áreas de práctica, horarios de atención y formulario de consulta.'`
+284. `'prof_caso_medicos' => 'Médicos y Profesionales de la Salud'`
+285. `'prof_caso_medicos_desc' => 'Tu tarjeta con especialidades, horarios de consultorio, obras sociales que aceptás y botón directo para agendar turnos.'`
+286. `'prof_caso_arquitectos' => 'Arquitectos y Diseñadores'`
+287. `'prof_caso_arquitectos_desc' => 'Compartí tu tarjeta y que tus prospectos vean tu portfolio visual en tu landing page personalizada.'`
+288. `'prof_caso_comercios' => 'Comercios y Emprendedores'`
+289. `'prof_caso_comercios_desc' => 'Tu tarjeta comercial con horarios, ubicación, catálogo de productos/servicios y botón de WhatsApp para consultas.'`
+290. `'prof_caso_coaches' => 'Coaches y Capacitadores'`
+291. `'prof_caso_coaches_desc' => 'Mostrá tus servicios, testimonios, y permitiles a tus clientes agendar sesiones directamente desde tu landing.'`
+292. `'prof_caso_freelancers' => 'Freelancers y Creativos'`
+293. `'prof_caso_freelancers_desc' => 'Tu tarjeta digital con enlaces a tu portfolio, redes sociales y tarifas. Impresión profesional garantizada.'`
+294. `'prof_caso_productores' => 'Productores de Alimentos'`
+295. `'prof_caso_productores_desc' => 'Compartí tu tarjeta con certificaciones de calidad, trazabilidad de productos y catálogo. El QR lleva a tus clientes a toda tu información verificada.'`
+296. `'prof_caso_artesanos' => 'Artesanos y Manualidades'`
+297. `'prof_caso_artesanos_desc' => 'Mostrá tu trabajo artesanal con galería de fotos, precios y contacto directo. Perfecta para ferias, mercados y clientes particulares.'`
+298. `'prof_caso_trainers' => 'Personal Trainers y Nutricionistas'`
+299. `'prof_caso_trainers_desc' => 'Tu tarjeta con especialidades, planes disponibles, horarios y sistema de agendamiento. Tus clientes reservan turnos directamente desde tu landing.'`
+300. `'prof_planes_titulo' => 'Elegí el Plan que Mejor se Adapta a Vos'`
+301. `'prof_planes_subtitulo' => 'Todos los planes incluyen tu Tarjeta Digital con QR infalsificable y landing page personalizada'`
+302. `'prof_plan_esencial_titulo' => 'Basicum'`
+303. `'prof_plan_esencial_desc' => 'Tu tarjeta digital profesional con lo esencial para comenzar a impresionar.'`
+304. `'prof_plan_esencial_precio' => '$9 USD'`
+305. `'prof_plan_esencial_periodo' => '/ Anual'`
+306. `'prof_plan_esencial_feat1' => 'Tarjeta Digital JPG con QR Infalsificable'`
+307. `'prof_plan_esencial_feat2' => 'Subdominio Personalizado (tunombre.originalisdoc.com)'`
+308. `'prof_plan_esencial_feat3' => 'Panel de Administración Seguro'`
+309. `'prof_plan_esencial_feat4' => '5 Paletas de Colores Preestablecidas'`
+310. `'prof_plan_esencial_feat5' => 'Datos de Contacto y Horarios'`
+311. `'prof_plan_esencial_feat6' => 'Botones de Acción Directa (WhatsApp, Email, Tel)'`
+312. `'prof_plan_esencial_feat7' => 'Actualización Ilimitada de Información'`
+313. `'prof_plan_esencial_cta' => 'Comenzar con Esencial'`
+314. `'prof_plan_plus_badge' => 'Más Popular'`
+315. `'prof_plan_plus_titulo' => 'Premium'`
+316. `'prof_plan_plus_desc' => 'Todo lo del plan Basicum más herramientas avanzadas para destacar y vender más.'`
+317. `'prof_plan_plus_precio' => '$19 USD'`
+318. `'prof_plan_plus_periodo' => '/ Anual'`
+319. `'prof_plan_plus_feat1_strong' => 'Todo lo del plan Basicum, más:'`
+320. `'prof_plan_plus_feat2' => '12 Paletas de Colores Premium'`
+321. `'prof_plan_plus_feat3' => 'Galería de Fotos de Servicios (hasta 100 imágenes HD)'`
+322. `'prof_plan_plus_feat4' => 'Sección de Servicios Detallada'`
+323. `'prof_plan_plus_feat5' => 'Video de Presentación Personal'`
+324. `'prof_plan_plus_feat6' => 'Formulario de Contacto Integrado'`
+325. `'prof_plan_plus_feat7' => 'Estadísticas de Escaneos del QR'`
+326. `'prof_plan_plus_feat8' => 'Generador de CV Inteligente (PDF y Web)'`
+327. `'prof_plan_plus_feat9' => 'Sistema de Agendamiento de Citas (Calendly)'`
+328. `'prof_plan_plus_feat10' => 'Integración con Credenciales Verificadas'`
+329. `'prof_plan_plus_cta' => 'Obtener Plan Premium'`
+330. `'prof_plan_pro_badge' => 'Profesional'`
+331. `'prof_plan_pro_titulo' => 'Excellens'`
+332. `'prof_plan_pro_desc' => 'Para profesionales que necesitan herramientas completas de gestión y presencia digital.'`
+333. `'prof_plan_pro_precio' => '$49 USD'`
+334. `'prof_plan_pro_periodo' => '/ Anual'`
+335. `'prof_plan_pro_feat1_strong' => 'Todo lo del plan Premium, más:'`
+336. `'prof_plan_pro_feat2' => 'Portfolio de Proyectos Ilimitado'`
+337. `'prof_plan_pro_feat3' => 'Múltiples Páginas Personalizadas'`
+338. `'prof_plan_pro_feat4' => 'Analíticas Avanzadas y Reportes'`
+339. `'prof_plan_pro_feat5' => 'Exportación de Contactos'`
+340. `'prof_plan_pro_feat6' => 'Integraciones API Personalizadas'`
+341. `'prof_plan_pro_feat7' => 'Soporte Prioritario 24/7'`
+342. `'prof_plan_pro_feat8' => 'Estadísticas y Métricas Avanzadas'`
+343. `'prof_plan_pro_cta' => 'Obtener Plan Excellens'`
+344. `'prof_plan_elite_badge' => 'Empresarial'`
+345. `'prof_plan_elite_titulo' => 'Supremus'`
+346. `'prof_plan_elite_desc' => 'La solución definitiva con dominio propio y personalización total para tu marca.'`
+347. `'prof_plan_elite_precio' => '$99 USD'`
+348. `'prof_plan_elite_periodo' => '/ Anual'`
+349. `'prof_plan_elite_feat1_strong' => 'Todo lo del plan Excellens, más:'`
+350. `'prof_plan_elite_feat2' => 'Dominio Propio Incluido (tunombre.com)'`
+351. `'prof_plan_elite_feat3' => 'SSL Premium y Certificados de Seguridad'`
+352. `'prof_plan_elite_feat4' => 'Diseño 100% Personalizado a Medida'`
+353. `'prof_plan_elite_feat5' => 'Integración con Tu Identidad Corporativa'`
+354. `'prof_plan_elite_feat6' => 'Subdominio Ilimitados para Tu Equipo'`
+355. `'prof_plan_elite_feat7' => 'Sistema de Roles y Permisos Avanzado'`
+356. `'prof_plan_elite_feat8' => 'Gerente de Cuenta Dedicado'`
+357. `'prof_plan_elite_cta' => 'Obtener Plan Supremus'`
+358. `'prof_cta_final_titulo' => 'Dejá Atrás las Tarjetas de Papel'`
+359. `'prof_cta_final_desc' => 'Unite a miles de profesionales que ya impresionan con su Tarjeta Digital infalsificable.'`
+360. `'prof_cta_final_btn' => 'Crear Mi Tarjeta Ahora'`
+361. `'prof_cta_final_garantia' => '✓ Sin costos ocultos  •  ✓ Cancelación en cualquier momento  •  ✓ Soporte incluido'`
+362. `'prof_pagos_titulo' => 'Formas de Pago'`
+363. `'prof_pagos_subtitulo' => 'Métodos seguros y convenientes para tu país'`
+364. `'prof_pagos_argentina' => 'Métodos de Pago en Argentina'`
+365. `'prof_pagos_internacional' => 'Pago Internacional'`
+366. `'prof_pago_mercadopago' => 'MercadoPago'`
+367. `'prof_pago_mercadopago_desc' => 'Tarjeta de crédito, débito y efectivo'`
+368. `'prof_pago_pagofacil' => 'PagoFácil'`
+369. `'prof_pago_pagofacil_desc' => 'Pago en efectivo en cualquier sucursal'`
+370. `'prof_pago_transferencia' => 'Transferencia Bancaria'`
+371. `'prof_pago_transferencia_desc' => 'CBU/CVU para pesos argentinos'`
+372. `'prof_pago_paypal' => 'PayPal'`
+373. `'prof_pago_paypal_desc' => 'Tarjetas y moneda local en todo el mundo'`
+
+## 2. Entradas que existen en ambos archivos pero tienen valores diferentes
+
+1. `'meta_title'`:
+   - es_AR: `'OriginalisDoc - Crea, Gestiona y Valida tu Prestigio Digital'`
+   - es_ES: `'OriginalisDoc - Documentación con Validación QR para Cada Sector'`
+
+2. `'meta_description'`:
+   - es_AR: `'Ecosistema de herramientas para emitir credenciales infalsificables, construir tu marca personal verificada e implementar asistentes de IA especializados.'`
+   - es_ES: `'Soluciones de validación y emisión de documentos digitales para instituciones educativas, profesionales, eventos, empresas, cooperativas y mutuales.'`
+
+3. `'cat_title'`:
+   - es_AR: `'Soluciones por Sector'`
+   - es_ES: `'Soluciones por Industria'`
+
+4. `'cat_subtitle'`:
+   - es_AR: `'Elegí tu sector para descubrir la solución perfecta diseñada para tus necesidades específicas'`
+   - es_ES: `'Elige tu sector para descubrir la solución perfecta diseñada para tus necesidades específicas'`
+
+5. `'serv_antifraude_desc'`:
+   - es_AR: `'Códigos QR únicos e imposibles de falsificar que garantizan la autenticidad de cada documento.'`
+   - es_ES: `'Códigos QR únicos e imposibles de falsificar que garantizan la autenticidad de cada documento.'`
+   (Son iguales)
+
+6. `'serv_branding_desc'`:
+   - es_AR: `'Portal y documentos con tu logo, colores y diseño institucional único.'`
+   - es_ES: `'Portal y documentos con tu logotipo, colores y diseño institucional único.'`
+
+7. `'faq_1_a'`:
+   - es_AR: `'Menos de 24 horas. Solo necesitas configurar tu marca (logo y colores), cargar tus datos, y comenzar a emitir. Incluimos onboarding guiado paso a paso.'`
+   - es_ES: `'Menos de 24 horas. Solo necesitas configurar tu marca (logotipo y colores), cargar tus datos, y comenzar a emitir. Incluimos onboarding guiado paso a paso.'`
+
+8. `'faq_3_a'`:
+   - es_AR: `'Ofrecemos un servicio premium de impresión HD con hologramas de seguridad y laminado, enviado por correo rastreado a toda Argentina. Puedes solicitarlo directamente desde tu portal y recibir seguimiento del envío.'`
+   - es_ES: `'Ofrecemos un servicio premium de impresión HD con hologramas de seguridad y laminado, enviado por correo certificado a toda España. Puedes solicitarlo directamente desde tu portal y recibir seguimiento del envío.'`
+
+9. `'contacto_title'`:
+   - es_AR: `'Comenzá a Emitir Documentos Profesionales Hoy'`
+   - es_ES: `'Comience a Emitir Documentos Profesionales Hoy'`
+
+10. `'contacto_mensaje'`:
+   - es_AR: `'Contanos sobre tu necesidad...'`
+   - es_ES: `'Contáctenos sobre su necesidad...'`
+
+11. `'contacto_info'`:
+   - es_AR: `'O escribinos directamente:'`
+   - es_ES: `'O escríbanos directamente:'`
+
+12. `'stat_ahorro'`:
+   - es_AR: `'Ahorro en costos administrativos'`
+   - es_ES: `'Ahorro en costes administrativos'`
+
+13. `'benefit_implementacion'`:
+   - es_AR: `'Implementación en 24hs'`
+   - es_ES: `'Implementación en 24hs'`
+   (Son iguales)
+
+14. `'contacto_cta_email'`:
+   - es_AR: `'O escríbenos a'`
+   - es_ES: `'O escríbanos a'`
+
+15. `'caso_empresa_texto'`:
+   - es_AR: `'\"Usamos OriginalisDoc para emitir garantías de nuestros productos con QR verificable. Nuestros clientes pueden validar la autenticidad al instante y acceder a toda la información técnica. La reducción en reclamos por falsificaciones fue del 95%.\"'`
+   - es_ES: `'\"Usamos OriginalisDoc para emitir garantías de nuestros productos con QR verificable. Nuestros clientes pueden validar la autenticidad al instante y acceder a toda la información técnica. La reducción en reclamaciones por falsificaciones fue del 95%.\"'`
+
+16. `'privacidad_seccion1_sub1_li1'`:
+   - es_AR: `'Nombre completo y datos de contacto (email, teléfono)'`
+   - es_ES: `'Nombre completo y datos de contacto (correo electrónico, teléfono)'`
+
+17. `'privacidad_seccion1_sub2_li2'`:
+   - es_AR: `'Email y teléfono (para notificaciones)'`
+   - es_ES: `'Correo electrónico y teléfono (para notificaciones)'`
+
+18. `'privacidad_seccion2_li3_texto'`:
+   - es_AR: `'Enviar emails sobre documentos emitidos, actualizaciones del servicio'`
+   - es_ES: `'Enviar correos electrónicos sobre documentos emitidos, actualizaciones del servicio'`
+
+19. `'privacidad_seccion3_sub1_li3'`:
+   - es_AR: `'Servicios de email transaccional'`
+   - es_ES: `'Servicios de correo electrónico transaccional'`
+
+20. `'privacidad_seccion4_li3_texto'`:
+   - es_AR: `'Con encriptación y almacenamiento redundante'`
+   - es_ES: `'Con encriptación y almacenamiento redundante'`
+   (Son iguales)
+
+21. `'privacidad_seccion8_p1'`:
+   - es_AR: `'Sus datos se almacenan principalmente en servidores ubicados en Argentina. En algunos casos, proveedores de servicios pueden procesar datos en otros países con niveles adecuados de protección de datos (por ejemplo: Estados Unidos bajo el Data Privacy Framework, Unión Europea bajo GDPR).'`
+   - es_ES: `'Sus datos se almacenan principalmente en servidores ubicados en España. En algunos casos, proveedores de servicios pueden procesar datos en otros países con niveles adecuados de protección de datos (por ejemplo: Estados Unidos bajo el Data Privacy Framework, Unión Europea bajo GDPR).'`
+
+22. `'privacidad_seccion12_p1_antes_strong'`:
+   - es_AR: `'En Argentina, la autoridad de aplicación en materia de protección de datos personales es la'`
+   - es_ES: `'En España, la autoridad de aplicación en materia de protección de datos personales es la'`
+
+23. `'privacidad_seccion12_p1_strong'`:
+   - es_AR: `'Agencia de Acceso a la Información Pública (AAIP)'`
+   - es_ES: `'Agencia Española de Protección de Datos (AEPD)'`
+
+24. `'privacidad_seccion12_p1_despues_strong'`:
+   - es_AR: `'. Si considerás que tus derechos han sido vulnerados, podés presentar una denuncia ante este organismo.'`
+   - es_ES: `'. Si considera que sus derechos han sido vulnerados, puede presentar una denuncia ante este organismo.'`
+
+25. `'privacidad_seccion12_aaip_url'`:
+   - es_AR: `'www.argentina.gob.ar/aaip'`
+   - es_ES: `'www.aepd.es'`
+
+26. `'acad_problemas_subtitulo'`:
+   - es_AR: `'Estos son los dolores de cabeza que OriginalisDoc elimina'`
+   - es_ES: `'Estos son los dolores de cabeza que OriginalisDoc elimina'`
+   (Son iguales)
+
+27. `'acad_problemas_titulo'`:
+   - es_AR: `'¿Te suena familiar?'`
+   - es_ES: `'¿Le suena familiar?'`
+
+28. `'acad_problema_costos_desc'`:
+   - es_AR: `'Gastos elevados en papel especial, impresión, tóner y almacenamiento físico.'`
+   - es_ES: `'Gastos elevados en papel especial, impresión, tóner y almacenamiento físico.'`
+   (Son iguales)
+
+29. `'acad_como_funciona_paso1_titulo'`:
+   - es_AR: `'Configura tu Institución'`
+   - es_ES: `'Configura tu Institución'`
+   (Son iguales)
+
+30. `'acad_como_funciona_paso2_titulo'`:
+   - es_AR: `'Carga Estudiantes y Cursos'`
+   - es_ES: `'Carga Estudiantes y Cursos'`
+   (Son iguales)
+
+31. `'acad_como_funciona_paso2_desc'`:
+   - es_AR: `'Importa datos masivamente desde Excel o CSV. También puedes cargar uno por uno.'`
+   - es_ES: `'Importa datos masivamente desde Excel o CSV. También puede cargar uno por uno.'`
+
+32. `'acad_como_funciona_paso3_desc'`:
+   - es_AR: `'Generación automática con QR único. Notificación por email y acceso inmediato para estudiantes.'`
+   - es_ES: `'Generación automática con QR único. Notificación por correo electrónico y acceso inmediato para estudiantes.'`
+
+33. `'acad_faq_cargo_resp'`:
+   - es_AR: `'Podés cargar estudiantes de dos formas: individualmente desde el panel de administración, o masivamente importando un archivo Excel/CSV con todos los datos. Te proporcionamos una plantilla para facilitar el proceso.'`
+   - es_ES: `'Podés cargar estudiantes de dos formas: individualmente desde el panel de administración, o masivamente importando un archivo Excel/CSV con todos los datos. Te proporcionamos una plantilla para facilitar el proceso.'`
+   (Son iguales)
+
+34. `'acad_faq_validez_resp'`:
+   - es_AR: `'Sí, los certificados digitales tienen la misma validez legal que los físicos en Argentina. Además, ofrecemos opción de impresión premium con papel especial y elementos de seguridad para instituciones que lo requieran.'`
+   - es_ES: `'Sí, los certificados digitales tienen la misma validez legal que los físicos en España. Además, ofrecemos opción de impresión premium con papel especial y elementos de seguridad para instituciones que lo requieran.'`
+
+35. `'acad_faq_diseno_resp'`:
+   - es_AR: `'Absolutamente. Podés configurar tu logo, colores institucionales, firmas digitales y todo el branding. Cada certificado se genera con tu identidad visual.'`
+   - es_ES: `'Absolutamente. Podés configurar tu logo, colores institucionales, firmas digitales y todo el branding. Cada certificado se genera con tu identidad visual.'`
+   (Son iguales)
+
+36. `'acad_faq_acceso_resp'`:
+   - es_AR: `'El estudiante puede recuperar su acceso usando su DNI y un proceso de verificación por email. Además, como administrador de la institución, podés regenerar el acceso en cualquier momento.'`
+   - es_ES: `'El estudiante puede recuperar su acceso usando su DNI y un proceso de verificación por correo electrónico. Además, como administrador de la institución, puede regenerar el acceso en cualquier momento.'`
+
+37. `'acad_faq_retroactivos_resp'`:
+   - es_AR: `'Sí, podés cargar y emitir certificados de promociones anteriores sin ningún problema. El sistema permite indicar fechas pasadas de emisión.'`
+   - es_ES: `'Sí, puede cargar y emitir certificados de promociones anteriores sin ningún problema. El sistema permite indicar fechas pasadas de emisión.'`
+
+38. `'acad_faq_limite_resp'`:
+   - es_AR: `'No hay límite de emisiones. Podés generar tantos certificados como necesites. Los planes se ajustan según la cantidad de estudiantes activos en tu institución.'`
+   - es_ES: `'No hay límite de emisiones. Puede generar tantos certificados como necesite. Los planes se ajustan según la cantidad de estudiantes activos en su institución.'`
+
+## 3. Adaptaciones lingüísticas necesarias para convertir el español argentino en español de España formal
+
+### Voseo vs Tuteo
+- **es_AR**: Uso de "vos" y formas verbales como "Podés", "Validar", "Contanos"
+- **es_ES**: Uso de "usted" y formas verbales como "Puede", "Validar", "Contáctenos"
+
+Ejemplos de adaptación:
+1. `'faq_cargo_resp'`: "Podés cargar estudiantes" → "Puede cargar estudiantes"
+2. `'faq_acceso_resp'`: "podés regenerar el acceso" → "puede regenerar el acceso"
+3. `'faq_retroactivos_resp'`: "podés cargar y emitir" → "puede cargar y emitir"
+4. `'faq_limite_resp'`: "Podés generar tantos" → "Puede generar tantos"
+5. `'como_funciona_paso2_desc'`: "puedes cargar uno por uno" → "puede cargar uno por uno"
+
+### Términos específicos del español argentino
+Algunos términos usados en Argentina necesitan adaptación al contexto español:
+1. `'acad_faq_validez_resp'`: "en Argentina" → "en España"
+2. `'faq_3_a'`: "correo rastreado a toda Argentina" → "correo certificado a toda España"
+3. `'privacidad_seccion8_p1'`: "servidores ubicados en Argentina" → "servidores ubicados en España"
+4. `'privacidad_seccion12_p1_antes_strong'`: "En Argentina" → "En España"
+5. `'privacidad_seccion12_p1_strong'`: "Agencia de Acceso a la Información Pública (AAIP)" → "Agencia Española de Protección de Datos (AEPD)"
+6. `'privacidad_seccion12_aaip_url'`: "www.argentina.gob.ar/aaip" → "www.aepd.es"
+
+### Diferencias léxicas
+1. `'privacidad_seccion1_sub1_li1'`: "email" → "correo electrónico"
+2. `'privacidad_seccion1_sub2_li2'`: "Email" → "Correo electrónico"
+3. `'privacidad_seccion2_li3_texto'`: "emails" → "correos electrónicos"
+4. `'privacidad_seccion3_sub1_li3'`: "email transaccional" → "correo electrónico transaccional"
+5. `'como_funciona_paso3_desc'`: "email" → "correo electrónico"
+6. `'faq_acceso_resp'`: "email" → "correo electrónico"
+7. `'stat_ahorro'`: "costos" → "costes"
+
+### Adaptaciones de formalidad
+El español de España tiende a ser más formal en contextos institucionales:
+1. `'contacto_title'`: "Comenzá a Emitir" → "Comience a Emitir"
+2. `'contacto_mensaje'`: "Contanos sobre tu necesidad" → "Contáctenos sobre su necesidad"
+3. `'contacto_info'`: "escribinos directamente" → "escribanos directamente"
+4. `'contacto_cta_email'`: "escribenos a" → "escribanos a"
+5. `'privacidad_seccion12_p1_despues_strong'`: "considerás...podés" → "considera...puede"

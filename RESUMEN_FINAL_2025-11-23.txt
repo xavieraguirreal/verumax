@@ -1,0 +1,83 @@
+✅ CORRECCIONES COMPLETADAS - 2025-11-23 19:30
+================================================
+
+PROBLEMA RAÍZ IDENTIFICADO:
+---------------------------
+Los archivos general.php e identitas.php son INCLUIDOS por index.php, por lo que
+los header("Location: ...") NO FUNCIONAN (headers ya enviados).
+
+SOLUCIÓN APLICADA:
+------------------
+Reemplazamos TODOS los redirects con asignación directa de variables:
+- $mensaje
+- $tipo_mensaje
+- $scroll_to
+- $active_tab
+
+ARCHIVOS A SUBIR CON FILEZILLA:
+================================
+
+1. admin/modulos/general.php
+   ✅ Toast flotante en TODOS los guardar
+   ✅ Scroll con highlight azul en TODOS los guardar
+   ✅ Mantiene pestaña correcta después de guardar
+   ✅ Botones con detección de cambios (grises hasta que hay cambios)
+
+2. admin/modulos/identitas.php
+   ✅ Toast flotante
+   ✅ Scroll con highlight azul
+   ✅ Ya NO queda en blanco después de guardar
+   ✅ Mantiene pestaña Configuración
+
+BACKUPS CREADOS:
+================
+- backup/2025-11-23/1930-general.php
+- backup/2025-11-23/1930-identitas.php
+
+SQL REQUERIDO (phpMyAdmin):
+===========================
+Ejecutar: sql/20251123_agregar_columnas_general.sql
+
+Agrega 3 columnas a verumax_general.instances:
+- sitio_web_oficial (VARCHAR 255)
+- email_contacto (VARCHAR 255)
+- redes_sociales (TEXT)
+
+COMPORTAMIENTO ESPERADO:
+========================
+
+GENERAL - Todas las pestañas:
+✅ Toast verde flotante arriba a la derecha
+✅ Scroll al centro de la sección guardada
+✅ Highlight azul durante 2 segundos en la sección
+✅ Mantiene la pestaña donde guardaste
+✅ Botones grises hasta que cambies algo
+
+IDENTITAS - Pestaña Configuración:
+✅ Toast verde flotante
+✅ Scroll con highlight azul
+✅ Mantiene la pestaña visible (no queda en blanco)
+
+CONSOLA DEL NAVEGADOR:
+======================
+Verás mensajes con emojis (para debugging):
+🔵 DOMContentLoaded ejecutado
+🔵 URL tab param: null
+🔵 Tab activo: [nombre_del_tab]
+🔵 generalPageMessage: {objeto}
+🟢 Mostrando toast: [mensaje]
+🟢 Ejecutando showToast...
+🟢 Scroll to: [id_elemento]
+🟢 Elemento encontrado, haciendo scroll
+
+LIMPIEZA POSTERIOR:
+===================
+Una vez que confirmes que todo funciona correctamente,
+puedes eliminar los console.log del código para limpiar la consola.
+
+PENDIENTE (Para próxima sesión):
+================================
+- Templates module: agregar toast y scroll
+- Certificatum module: agregar toast
+- Limpiar código $_GET['success'] que ya no se usa
+- Eliminar console.log de debugging

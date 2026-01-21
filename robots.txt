@@ -1,0 +1,34 @@
+# Verumax - Plataforma de Soluciones Digitales
+# robots.txt - Producción
+# Actualizado: 2025-12-20
+
+User-agent: *
+Allow: /
+
+# Páginas públicas permitidas
+Allow: /certificatum/
+Allow: /sajur/
+
+# Directorios restringidos
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /cache/
+Disallow: /backup/
+Disallow: /src/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /lang/
+Disallow: /viejo/
+
+# Archivos de configuración
+Disallow: /config.php
+Disallow: /config_local.php
+Disallow: /*.sql$
+Disallow: /*.log$
+
+# Parámetros de sesión/tracking
+Disallow: /*?*debug=
+Disallow: /*?*token=
+
+# Sitemap
+Sitemap: https://verumax.com/sitemap.xml

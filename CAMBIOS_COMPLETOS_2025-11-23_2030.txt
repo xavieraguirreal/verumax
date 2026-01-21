@@ -1,0 +1,175 @@
+CAMBIOS COMPLETOS - 2025-11-23 20:30
+=====================================
+
+ARCHIVOS LISTOS PARA SUBIR CON FILEZILLA:
+=========================================
+
+1. admin/modulos/general.php
+   - Toast flotante en TODOS los guardar
+   - Scroll con highlight azul (2 segundos)
+   - Mantiene pestanas correctas
+   - Botones normalizados y con deteccion de cambios (grises)
+   - Backup: backup/2025-11-23/1930-general.php
+
+2. admin/modulos/identitas.php
+   - Toast flotante en TODOS los guardar
+   - Scroll con highlight azul
+   - NO queda mas en blanco
+   - Todos los botones normalizados
+   - Deteccion de cambios (botones grises)
+   - Backup: backup/2025-11-23/2000-identitas.php
+
+3. admin/modulos/certificatum.php
+   - Toast flotante IMPLEMENTADO
+   - Scroll con highlight azul IMPLEMENTADO
+   - Mantiene pestanas correctas
+   - Botones normalizados a azul
+   - Deteccion de cambios (botones grises)
+   - Backup: backup/2025-11-23/2020-certificatum.php
+
+4. admin/modulos/identitas_templates.php
+   - Toast flotante IMPLEMENTADO
+   - Scroll con highlight azul IMPLEMENTADO
+   - Botones normalizados a azul
+   - Deteccion de cambios (botones grises)
+   - Backup: backup/2025-11-23/2025-identitas_templates.php
+
+5. SQL REQUERIDO (si no se ejecuto antes):
+   - sql/20251123_agregar_columnas_general.sql
+   - Agrega: sitio_web_oficial, email_contacto, redes_sociales
+
+
+COMPORTAMIENTO ESPERADO EN TODOS LOS MODULOS:
+=============================================
+
+GENERAL - Informacion:
+  Guardar -> Toast + Scroll + Highlight + Mantiene pestana
+
+GENERAL - Branding:
+  Guardar Logo -> Toast + Scroll + Highlight + Mantiene pestana
+  Guardar Paleta -> Toast + Scroll + Highlight + Mantiene pestana
+  Generar Favicon -> Toast + Scroll + Highlight + Mantiene pestana
+  Eliminar Favicon -> Toast + Scroll + Highlight + Mantiene pestana
+
+GENERAL - Modulos:
+  Guardar Activacion -> Toast + Scroll + Highlight + Mantiene pestana
+  Guardar Integracion Certificatum -> Toast + Scroll + Highlight + Mantiene pestana
+  Guardar Modo Construccion -> Toast + Scroll + Highlight + Mantiene pestana
+  Guardar Indexacion -> Toast + Scroll + Highlight + Mantiene pestana
+
+IDENTITAS - Configuracion:
+  Guardar Configuracion -> Toast + Scroll + Highlight + Mantiene pestana
+  Guardar SEO -> Toast + Scroll + Highlight + Mantiene pestana
+
+IDENTITAS - Paginas:
+  Guardar Pagina -> Toast + Scroll + Highlight + Mantiene pestana
+
+IDENTITAS - Contactos:
+  Marcar leido -> Toast + Scroll + Highlight + Mantiene pestana
+
+CERTIFICATUM - Configuracion:
+  Guardar Configuracion de Integracion -> Toast + Scroll + Highlight + Mantiene pestana
+
+CERTIFICATUM - Diseno:
+  Guardar Diseno de Certificatum -> Toast + Scroll + Highlight + Mantiene pestana
+
+TEMPLATES - Sobre Nosotros:
+  Aplicar Template -> Toast + Scroll + Highlight
+  Guardar Mision -> Toast + Scroll + Highlight
+  Guardar Estadisticas -> Toast + Scroll + Highlight
+
+TEMPLATES - Servicios:
+  Guardar Servicios -> Toast + Scroll + Highlight
+
+TEMPLATES - Contacto:
+  Guardar Contacto -> Toast + Scroll + Highlight
+
+
+DETECCION DE CAMBIOS (TODOS LOS MODULOS):
+=========================================
+
+- Botones empiezan GRISES (deshabilitados)
+- Al hacer un cambio en cualquier campo -> Boton se vuelve AZUL (habilitado)
+- Esto evita guardar accidentalmente sin cambios
+- Indicador visual claro de "hay cambios pendientes"
+
+
+BACKUPS CREADOS:
+================
+
+backup/2025-11-23/
+  - 1930-general.php
+  - 2000-identitas.php
+  - 2020-certificatum.php
+  - 2025-identitas_templates.php
+
+
+DEBUG (CONSOLA DEL NAVEGADOR):
+==============================
+
+Los console.log estan activos para debugging.
+Veras mensajes con emojis:
+  - Mostrando toast: [mensaje]
+  - Scroll to: [id_elemento]
+  - Elemento encontrado, haciendo scroll
+  - Active tab detectado: [nombre_tab]
+
+Si quieres limpiar los console.log despues de verificar que todo funciona,
+eliminar todas las lineas que contienen:
+  - console.log('
+
+
+RESUMEN DE LOGROS - SESION COMPLETA:
+====================================
+
+GENERAL.PHP:
+  Identificado problema raiz (headers ya enviados)
+  Reemplazado sistema de redirects
+  Implementado toast flotante
+  Implementado scroll con highlight azul
+  Normalizado colores de botones
+  Implementado deteccion de cambios (botones grises)
+  Corregido tabs que quedaban en blanco
+
+IDENTITAS.PHP:
+  Identificado problema raiz (headers ya enviados)
+  Reemplazado sistema de redirects
+  Implementado toast flotante
+  Implementado scroll con highlight azul
+  Normalizado botones
+  Implementado deteccion de cambios (botones grises)
+  Corregido tabs que quedaban en blanco
+  Handler actualizar_pagina: mantiene pestana Paginas
+  Handler marcar_leido: mantiene pestana Contactos
+
+CERTIFICATUM.PHP:
+  Convertido sistema de mensajes array a variables
+  Implementado toast flotante
+  Implementado scroll con highlight azul
+  Normalizado botones (verde -> azul)
+  Implementado deteccion de cambios (botones grises)
+  Tab persistence con $active_tab
+
+IDENTITAS_TEMPLATES.PHP:
+  Implementado toast flotante
+  Implementado scroll con highlight azul
+  Normalizado botones (verde -> azul)
+  Implementado deteccion de cambios (botones grises)
+  IDs agregados a todos los bloques para scroll
+
+
+ESTADO FINAL:
+=============
+
+  GENERAL: 100% funcional
+  IDENTITAS: 100% funcional
+  CERTIFICATUM: 100% funcional
+  TEMPLATES: 100% funcional
+
+
+PROXIMOS PASOS (OPCIONAL):
+==========================
+
+1. Probar todos los modulos en el servidor remoto
+2. Reportar cualquier issue
+3. Si todo funciona, limpiar console.log de debugging

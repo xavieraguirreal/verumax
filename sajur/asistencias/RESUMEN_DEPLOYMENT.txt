@@ -1,0 +1,188 @@
+═══════════════════════════════════════════════════════════════════
+   SISTEMA DE ASISTENCIAS SAJUR - RESUMEN DE DEPLOYMENT
+   Arquitectura Multi-Dominio: VERUMAX + SAJUR
+═══════════════════════════════════════════════════════════════════
+
+📌 CONFIGURACIÓN ESPECIAL
+─────────────────────────────────────────────────────────────────────
+Este sistema tiene una arquitectura ESPECIAL:
+
+✅ Los archivos PHP están en:     VERUMAX (www.verumax.com.ar)
+✅ La base de datos está en:      SAJUR (sajurorg_formac)
+✅ El email sale desde:           SAJUR (formacion@sajur.org)
+
+═══════════════════════════════════════════════════════════════════
+   PASO 1: EJECUTAR SQL EN SAJUR
+═══════════════════════════════════════════════════════════════════
+
+1. Abre phpMyAdmin de SAJUR
+2. Selecciona base de datos: sajurorg_formac
+3. Ve a pestaña "SQL"
+4. Abre el archivo: sql_asistencias.sql
+5. Copia TODO el contenido
+6. Pégalo en phpMyAdmin
+7. Haz clic en "Continuar"
+
+✅ VERIFICACIÓN: Deberías ver la tabla "asistencias_formaciones"
+
+═══════════════════════════════════════════════════════════════════
+   PASO 2: SUBIR ARCHIVOS A VERUMAX CON FILEZILLA
+═══════════════════════════════════════════════════════════════════
+
+Conecta a VERUMAX y sube a la carpeta que decidas (ej: /asistencias/):
+
+📁 Archivos a subir:
+   ├── config.php
+   ├── asistencia.php
+   ├── gestion_asistencias.php
+   └── PHPMailer/ (TODA la carpeta con su contenido)
+
+❌ NO SUBIR:
+   - README.md
+   - INSTRUCCIONES.md
+   - CONFIGURACION_VERUMAX.md
+   - RESUMEN_DEPLOYMENT.txt
+   - CHECKLIST_DEPLOYMENT.md
+   - sql_asistencias.sql
+
+═══════════════════════════════════════════════════════════════════
+   PASO 3: AJUSTAR URL EN config.php
+═══════════════════════════════════════════════════════════════════
+
+Edita config.php en el servidor VERUMAX y cambia la línea 45:
+
+ANTES:
+define('ASISTENCIAS_BASE_URL', 'https://www.verumax.com.ar/asistencias/');
+
+DESPUÉS (ajustar según tu ruta real):
+define('ASISTENCIAS_BASE_URL', 'https://TU_URL_REAL_AQUI/');
+
+Ejemplos:
+- Si está en raíz:       https://www.verumax.com.ar/
+- Si está en carpeta:    https://www.verumax.com.ar/asistencias/
+- Si es subdominio:      https://asistencias.verumax.com.ar/
+
+═══════════════════════════════════════════════════════════════════
+   PASO 4: VERIFICAR CONEXIÓN A BASE DE DATOS
+═══════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE: Verifica si SAJUR y VERUMAX están en el mismo servidor
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CASO A: MISMO SERVIDOR                                         │
+│ → No necesitas hacer nada, config.php ya está configurado     │
+│   con 'localhost'                                              │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CASO B: SERVIDORES DIFERENTES                                  │
+│                                                                 │
+│ 1. En config.php (VERUMAX), línea 12, cambiar:                │
+│    define('DB_HOST', 'IP_O_DOMINIO_DE_SAJUR');                 │
+│                                                                 │
+│ 2. En phpMyAdmin de SAJUR, ejecutar:                           │
+│    GRANT ALL PRIVILEGES ON sajurorg_formac.*                   │
+│    TO 'sajurorg_formac'@'IP_DE_VERUMAX'                        │
+│    IDENTIFIED BY 'zYg*HZg0xA';                                 │
+│    FLUSH PRIVILEGES;                                           │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+   PASO 5: PROBAR EL SISTEMA
+═══════════════════════════════════════════════════════════════════
+
+1️⃣ Accede al gestor:
+   https://www.verumax.com.ar/asistencias/gestion_asistencias.php
+
+   ✅ Deberías ver:
+   - Lista de formaciones de SAJUR
+   - Botones para generar enlaces
+   - Estadísticas
+
+2️⃣ Copia un enlace de asistencia:
+   - Haz clic en el recuadro morado del enlace
+   - Se copiará automáticamente
+
+3️⃣ Prueba el formulario:
+   - Pega el enlace copiado en el navegador
+   - Verifica que se vea el formulario
+   - Verifica datos de la formación
+
+4️⃣ Registra asistencia de prueba:
+   ⚠️ SOLO si la formación está en ventana de tiempo permitida
+   - Completa el formulario
+   - Registra asistencia
+   - Verifica email de confirmación
+
+5️⃣ Exporta CSV:
+   - Vuelve al gestor
+   - Haz clic en "Ver Asistencias"
+   - Haz clic en "Exportar CSV"
+   - Abre en Excel para verificar
+
+═══════════════════════════════════════════════════════════════════
+   CREDENCIALES CONFIGURADAS
+═══════════════════════════════════════════════════════════════════
+
+Base de Datos SAJUR:
+   Host: localhost (o IP si remoto)
+   Usuario: sajurorg_formac
+   Password: zYg*HZg0xA
+   Base de datos: sajurorg_formac
+
+Email SAJUR:
+   Host: vps-5361869-x.dattaweb.com
+   Puerto: 465
+   Usuario: formacion@sajur.org
+   Password: 37Dq**T6fY
+   From: formacion@sajur.org
+
+═══════════════════════════════════════════════════════════════════
+   PROBLEMAS COMUNES
+═══════════════════════════════════════════════════════════════════
+
+❌ "Access denied for user"
+   → El usuario no tiene permisos de conexión remota
+   → Ejecuta el GRANT en phpMyAdmin de SAJUR (ver Paso 4, Caso B)
+
+❌ "Unknown database"
+   → La base de datos no existe
+   → Verifica que sajurorg_formac existe en SAJUR
+
+❌ "Table 'asistencias_formaciones' doesn't exist"
+   → No se ejecutó el SQL
+   → Ejecuta sql_asistencias.sql en phpMyAdmin de SAJUR
+
+❌ "Connection timeout"
+   → Firewall bloqueando o MySQL no acepta conexiones remotas
+   → Contacta al administrador del servidor SAJUR
+
+❌ Email no llega
+   → Verifica carpeta SPAM
+   → Verifica credenciales SMTP en config.php
+   → Verifica que VERUMAX puede conectar al puerto 465
+
+═══════════════════════════════════════════════════════════════════
+   URLs FINALES
+═══════════════════════════════════════════════════════════════════
+
+Gestor Administrativo:
+   https://www.verumax.com.ar/asistencias/gestion_asistencias.php
+
+Formulario Público:
+   https://www.verumax.com.ar/asistencias/asistencia.php?formacion=CODIGO
+
+═══════════════════════════════════════════════════════════════════
+   DOCUMENTACIÓN ADICIONAL
+═══════════════════════════════════════════════════════════════════
+
+📄 README.md                     - Documentación técnica completa
+📄 INSTRUCCIONES.md              - Guía de uso para administradores
+📄 CONFIGURACION_VERUMAX.md      - Detalles de configuración
+📄 CHECKLIST_DEPLOYMENT.md       - Lista de verificación detallada
+
+═══════════════════════════════════════════════════════════════════
+
+Sistema: Gestión de Asistencias SAJUR v1.0.0
+Fecha: 14/11/2025
+Arquitectura: Multi-Dominio (VERUMAX + SAJUR)

@@ -1,0 +1,117 @@
+<?php
+/**
+ * EN_US - Common
+ * Keys: 85
+ * Formal language for institutional/educational context
+ * Inclusive binary language implementation
+ */
+
+return [
+    'nav_inicio' => 'Home',
+    'nav_volver_inicio' => 'Back to Home',
+    'nav_cerrar' => 'Close',
+    'nav_tema_claro' => 'Switch to light mode',
+    'nav_tema_oscuro' => 'Switch to dark mode',
+    'nav_soluciones' => 'Specialized Solutions by Sector',
+    'nav_ecosistema' => 'An Ecosystem of Solutions at Your Disposal',
+    'nav_rapido_titulo' => 'What are you looking for?',
+    'nav_rapido_sectores_titulo' => 'Solutions by Sector',
+    'nav_rapido_sectores_desc' => 'Academic, Professional, Events, Corporate, etc.',
+    'nav_rapido_ecosistema_titulo' => 'All Our Solutions',
+    'nav_rapido_ecosistema_desc' => 'Cards, Certificates, Vouchers, Landing Pages, AI and more',
+    'nav_soluciones_academico' => 'Academic',
+    'nav_soluciones_profesional' => 'Professional',
+    'nav_soluciones_eventos' => 'Events',
+    'nav_soluciones_empresarial' => 'Corporate',
+    'nav_soluciones_cooperativas' => 'Cooperatives',
+    'nav_soluciones_mutuales' => 'Mutual Associations',
+    'nav_productos' => 'Solutions',
+    'nav_productos_tarjeta_digital' => 'Digital Card',
+    'nav_productos_certificados' => 'Academic Certificates',
+    'nav_productos_credenciales' => 'Credentials and Documents',
+    'nav_productos_landing_personales' => 'Personal Landing Pages',
+    'nav_productos_landing_institucionales' => 'Institutional Landing Pages',
+    'nav_productos_portfolios' => 'Enhanced Portfolios',
+    'nav_productos_cv' => 'Intelligent Resumes',
+    'nav_productos_autenticidad' => 'Certificates of Authenticity',
+    'nav_productos_ia' => 'AI Agents',
+    'nav_productos_impresion' => 'Premium Printing',
+    'nav_productos_vouchers' => 'Vouchers and Coupons',
+    'nav_productos_portal_comunicacion' => 'Communication Portal',
+    'nav_productos_encuestas' => 'Surveys and Voting',
+    'nav_categorias' => 'Categories',
+    'nav_beneficios' => 'Benefits',
+    'nav_faq' => 'FAQ',
+    'nav_validar' => 'Validate',
+    'nav_demo' => 'Request Demo',
+    'footer_descripcion' => 'The definitive platform for secure digital and physical documents with QR validation.',
+    'footer_enlaces' => 'Quick Links',
+    'footer_inicio' => 'Home',
+    'footer_legal' => 'Legal',
+    'footer_caracteristicas' => 'Features',
+    'footer_contacto' => 'Contact',
+    'footer_seguridad' => 'Enterprise-Level Technology and Security',
+    'footer_copyright' => 'All rights reserved.',
+    'footer_terminos' => 'Terms of Service',
+    'footer_privacidad' => 'Privacy Policy',
+    'badge_ssl' => 'SSL',
+    'badge_ssl_desc' => '256-bit Encryption',
+    'badge_https' => 'HTTPS',
+    'badge_https_desc' => 'Secure Connection',
+    'badge_privacidad' => 'Privacy',
+    'badge_privacidad_desc' => 'Protected Data',
+    'badge_backup' => 'Backup',
+    'badge_backup_desc' => 'Automatic Daily',
+    'badge_uptime' => 'Uptime 99.9%',
+    'badge_uptime_desc' => 'Availability',
+    'badge_soporte' => 'Support',
+    'badge_soporte_desc' => '24/7 Technical',
+    'stat_uptime' => 'Availability',
+    'stat_documentos' => 'Documents issued',
+    'stat_acceso' => 'Available access',
+    'stat_ahorro' => 'Administrative cost savings',
+    'social_confianza' => 'Institutions and professionals who already trust Verumax',
+    'social_mas' => '+ more organizations and professionals',
+    'benefit_demo' => 'Free demo with no commitment',
+    'benefit_demo_desc' => 'Try all features',
+    'benefit_implementacion' => 'Implementation in 24 hours',
+    'benefit_implementacion_desc' => 'Start issuing tomorrow',
+    'benefit_soporte' => 'Included technical support',
+    'benefit_soporte_desc' => 'Complete assistance',
+    'footer_link_beneficios' => 'Benefits',
+    'footer_link_como' => 'How It Works',
+    'footer_link_validar' => 'Validate Document',
+    'footer_link_demo' => 'Request Demo',
+    'footer_feat_qr' => 'QR Validation',
+    'footer_feat_portal' => '24/7 Portal',
+    'footer_feat_impresion' => 'Premium Printing',
+    'footer_feat_personalizable' => '100% Customizable',
+    'footer_horario' => 'Monday - Friday: 9:00 AM - 6:00 PM',
+
+    // Veritas AI
+    'veritas_chat_btn' => 'Chat with Veritas AI',
+    'veritas_titulo' => 'Veritas AI',
+    'veritas_subtitulo' => 'Our Specialized Artificial Intelligence Agent',
+    'veritas_proximamente' => 'Coming Soon!',
+    'veritas_descripcion' => 'Veritas will be available very soon to assist you with inquiries about certificates, validations, and more.',
+    'veritas_entendido' => 'Understood',
+
+    // Cookie Banner
+    'cookies_message' => 'We use cookies to remember your language and theme preferences.',
+    'cookies_more_info' => 'Learn more',
+    'cookies_accept' => 'Got it',
+
+    // Footer - Branding
+    'footer_powered_by' => 'Powered by',
+    'footer_solution_verumax' => 'a VERUMax solution',
+    'footer_all_rights' => 'All rights reserved',
+
+    // Months and days for date formatting
+    'months' => [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ],
+    'days' => [
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+    ],
+];

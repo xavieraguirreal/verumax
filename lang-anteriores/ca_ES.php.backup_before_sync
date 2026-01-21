@@ -1,0 +1,676 @@
+<?php
+declare(encoding='UTF-8');
+// Català - ca_ES
+$lang = [
+    // Meta
+    'meta_title' => 'OriginalisDoc - Documentació amb Validació QR per a Cada Sector',
+    'meta_description' => 'Solucions de validació i emissió de documents digitals per a institucions educatives, professionals, esdeveniments, empreses, cooperatives i mutuals.',
+
+    // Header/Navigation
+    'nav_inicio' => 'Inici',
+    'nav_categorias' => 'Categories',
+    'nav_beneficios' => 'Beneficis',
+    'nav_faq' => 'FAQ',
+    'nav_validar' => 'Validar',
+    'nav_demo' => 'Sol·licitar Demo',
+
+    // Hero Section
+    'hero_badge' => 'Confiat per institucions i professionals globalment',
+    'hero_title' => 'Documentació amb Validació QR',
+    'hero_subtitle' => 'Solucions de validació i emissió de documents digitals per a institucions educatives, professionals independents, organitzadors d\'esdeveniments, empreses, cooperatives i mutuals. Validació QR infalsificable i portal personalitzat.',
+    'hero_cta_primary' => 'Explorar Solucions',
+    'hero_cta_secondary' => 'Validar Document',
+
+    // Hero Mockup Mobile
+    'hero_mockup_certificado' => 'Certificat',
+    'hero_mockup_curso' => 'Justícia Restaurativa',
+    'hero_mockup_estudiante' => 'Juan Pérez - DNI 12345678',
+    'hero_mockup_verificado' => '✓ Verificat',
+    'hero_mockup_valido' => 'Vàlid fins al 2026',
+    'hero_mockup_ver_detalles' => 'Veure Detalls',
+    'hero_mockup_certificados' => 'Certificats',
+    'hero_mockup_en_curso' => 'En curs',
+
+    // Categorías Section
+    'cat_title' => 'Solucions per Indústria',
+    'cat_subtitle' => 'Tria el teu sector per descobrir la solució perfecta dissenyada per a les teves necessitats específiques',
+
+    'cat_academico' => 'Acadèmic',
+    'cat_academico_1' => 'Institucions Educatives',
+    'cat_academico_2' => 'Centres de Formació',
+    'cat_academico_3' => 'Formadors Particulars',
+    'cat_academico_cta' => 'Veure Solució →',
+
+    'cat_profesional' => 'Professional',
+    'cat_profesional_1' => 'Salut i Benestar',
+    'cat_profesional_2' => 'Enginyeria i Arquitectura',
+    'cat_profesional_3' => 'Tots els Professionals',
+
+    'cat_eventos' => 'Esdeveniments',
+    'cat_eventos_1' => 'Congresos i Conferències',
+    'cat_eventos_2' => 'Festivals i Concerts',
+    'cat_eventos_3' => 'Control d\'Accés',
+
+    'cat_empresarial' => 'Empresarial',
+    'cat_empresarial_1' => 'Garanties i Autenticitat',
+    'cat_empresarial_2' => 'Certificats de Qualitat',
+    'cat_empresarial_3' => 'Rebuts Validats',
+
+    'cat_cooperativas' => 'Cooperatives',
+    'cat_cooperativas_1' => 'Credencials de Soci',
+    'cat_cooperativas_2' => 'Certificats de Participació',
+    'cat_cooperativas_3' => 'Constàncies d\'Activitats',
+
+    'cat_mutuales' => 'Mutuals',
+    'cat_mutuales_1' => 'Credencials d\'Afiliats',
+    'cat_mutuales_2' => 'Comprovants de Serveis',
+    'cat_mutuales_3' => 'Llibretes de Beneficis',
+
+    'cat_proximamente' => 'Properament',
+    'cat_footer' => 'Més categories properament.',
+    'cat_footer_link' => 'Consulteu-nos',
+    'cat_footer_text' => 'si el vostre sector no està llistat.',
+
+    'cat_artistas' => 'Artistes',
+    'cat_artistas_1' => 'Pintors/es',
+    'cat_artistas_2' => 'Artesans/es',
+    'cat_artistas_3' => 'Fotògrafs/es',
+
+    // Servicios Principales
+    'servicios_title' => 'Els Nostres Serveis Principal',
+    'servicios_subtitle' => 'Funcionalitats essencials que totes les nostres organitzacions gaudeixen, sense importar el seu sector',
+
+    'serv_antifraude' => 'Seguretat Anti-Frau Total',
+    'serv_antifraude_desc' => 'Codis QR únics i impossibles de falsificar que garanteixen l\'autenticitat de cada document.',
+
+    'serv_portal' => 'Portal 24/7',
+    'serv_portal_desc' => 'Accés permanent per a estudiants, clients, socis o empleats des de qualsevol dispositiu.',
+
+    'serv_impresion' => 'Impressió Premium',
+    'serv_impresion_desc' => 'Documents físics d\'alta qualitat amb hologrames i laminat, enviats a domicili.',
+
+    'serv_branding' => 'Branding Personalitzat',
+    'serv_branding_desc' => 'Portal i documents amb el vostre logotip, colors i disseny institucional únic.',
+
+    'serv_emision' => 'Emissió Massiva',
+    'serv_emision_desc' => 'Genereu centenars de documents automàticament amb notificació instantània.',
+
+    'serv_validacion' => 'Portal de Validació',
+    'serv_validacion_desc' => 'Qualsevol persona pot verificar l\'autenticitat dels vostres documents al instant.',
+
+    // Casos de Éxito
+    'casos_title' => 'Casos d\'Èxit',
+    'casos_subtitle' => 'Institucions i professionals que confien en OriginalisDoc',
+
+    'caso_sajur_org' => 'Sociedad Argentina de Justicia Restaurativa',
+    'caso_sajur_tipo' => 'Organització educativa especialitzada',
+    'caso_sajur_texto' => '"Vam passar de processar manualment cada certificat a emetre desenes en minuts. Els nostres estudiants valoren poder accedir a la seva trajectòria completa 24/7, i els empleadors confien en la validació QR. L\'estalvi en temps administratiu va ser del 90%."',
+
+    'caso_liberte_org' => 'Cooperativa de Treball Liberté',
+    'caso_liberte_tipo' => 'Formació professional i capacitació',
+    'caso_liberte_texto' => '"La implementació va ser instantània. En menys de 24 hores ja estàvem emetent certificats amb la nostra marca. El portal personalitzat projecta una imatge professional que els nostres estudiants comparteixen amb orgull. L\'opció d\'impressió premium és el toc final perfecte."',
+
+    'caso_nutricion_org' => 'Lic. María González',
+    'caso_nutricion_tipo' => 'Nutricionista professional independent',
+    'caso_nutricion_texto' => '"Els meus plans nutricionals ara tenen un codi QR que els meus pacients poden validar. Això va augmentar significativament la confiança i va reduir les consultes sobre autenticitat. A més, l\'enviament físic premium és perfecte per als qui el volen imprès."',
+
+    'caso_empresa_org' => 'TechVision S.A.',
+    'caso_empresa_tipo' => 'Empresa de tecnologia',
+    'caso_empresa_texto' => '"Utilitzem OriginalisDoc per emetre garanties dels nostres productes amb QR verificable. Els nostres clients poden validar l\'autenticitat al instant i accedir a tota la informació tècnica. La reducció en reclamacions per falsificacions va ser del 95%."',
+
+    // FAQ
+    'faq_title' => 'Preguntes Freqüents',
+    'faq_subtitle' => 'Tot el que necessiteu saber sobre OriginalisDoc',
+
+    'faq_1_q' => 'Quant de temps triga implementar OriginalisDoc?',
+    'faq_1_a' => 'Menys de 24 hores. Només heu de configurar la vostra marca (logotip i colors), carregar les dades, i començar a emetre. Incloum orientació guiada pas a pas.',
+
+    'faq_2_q' => 'Els documents digitals tenen la mateixa validesa que els físics?',
+    'faq_2_a' => 'Sí. Els documents digitals tenen plena validesa legal. A més, el nostre sistema QR permet verificar l\'autenticitat al instant, alguna cosa impossible amb documents físics tradicionals.',
+
+    'faq_3_q' => 'Què passa si necessito una versió física del document?',
+    'faq_3_a' => 'Oferim un servei premium d\'impressió HD amb hologrames de seguretat i laminat, enviat per correu certificat a tota Espanya. Podeu sol·licitar-ho directament des del vostre portal i rebre seguiment de l\'enviament.',
+
+    'faq_4_q' => 'Com funciona la validació amb QR?',
+    'faq_4_a' => 'Cada document inclou un codi QR únic que redirigeix a un portal de validació personalitzat amb la vostra marca. Allí es mostra tota la informació del document i la seva trajectòria completa. És impossible de falsificar o alterar.',
+
+    'faq_5_q' => 'Puc personalitzar el disseny dels documents?',
+    'faq_5_a' => 'Sí, 100%. Cada institució o professional té el seu portal completament personalitzat amb el logotip, colors i disseny de marca. Els documents reflecteixen la vostra identitat visual única.',
+
+    'faq_6_q' => 'Necessito coneixements tècnics per utilitzar la plataforma?',
+    'faq_6_a' => 'No. La plataforma està dissenyada per ser extremadament intuïtiva. Si sabeu navegar per internet, podeu gestionar OriginalisDoc sense problemes. A més, oferim suport tècnic complet.',
+
+    'faq_7_q' => 'Què passa amb les meves dades? Són segures?',
+    'faq_7_a' => 'Seguretat absoluta. Utilitzem encriptació de nivell bancari, còpies de seguretat automàtiques diàries, i complim amb les normatives de protecció de dades personals. Les vostres dades estan més segures que en un arxiu físic.',
+
+    // Validar Documento Section
+    'validar_title' => 'Validar un Document',
+    'validar_subtitle' => 'Introduïu el codi de validació que apareix al document (format: VALID-XXXXXXXXXXXX)',
+    'validar_placeholder' => 'VALID-XXXXXXXXXXXX',
+    'validar_btn' => 'Validar Ara',
+    'validar_ejemplo' => 'Exemple: VALID-A1B2C3D4E5F6',
+
+    // Contacto Section
+    'contacto_title' => 'Comenceu a Emetre Documents Professionals Avui',
+    'contacto_subtitle' => 'Contacteu amb nosaltres per una demostració personalitzada i descobriu com OriginalisDoc pot transformar la vostra gestió documental.',
+    'contacto_nombre' => 'Nom Complet',
+    'contacto_email' => 'Correu Electrònic',
+    'contacto_institucion' => 'Institució/Organització',
+    'contacto_mensaje' => 'Contacteu-nos sobre la vostra necessitat...',
+    'contacto_btn' => 'Sol·licitar Demostració',
+    'contacto_info' => 'O escriviu-nos directament:',
+
+    // Footer
+    'footer_descripcion' => 'La plataforma definitiva per a documents digitals i físics segurs amb validació QR.',
+    'footer_enlaces' => 'Enllaços Ràpids',
+    'footer_caracteristicas' => 'Característiques',
+    'footer_contacto' => 'Contacte',
+    'footer_seguridad' => 'Tecnologia i Seguretat de Nivell Empresarial',
+    'footer_copyright' => '© 2025 OriginalisDoc. Tots els drets reservats.',
+    'footer_terminos' => 'Termes de Servei',
+    'footer_privacidad' => 'Política de Privacitat',
+
+    // Badges de Seguretat
+    'badge_ssl' => 'SSL',
+    'badge_ssl_desc' => 'Encriptació 256-bit',
+    'badge_https' => 'HTTPS',
+    'badge_https_desc' => 'Connexió Segura',
+    'badge_privacidad' => 'Privacitat',
+    'badge_privacidad_desc' => 'Dades Protegides',
+    'badge_backup' => 'Backup',
+    'badge_backup_desc' => 'Automàtic Diari',
+    'badge_uptime' => 'Uptime 99.9%',
+    'badge_uptime_desc' => 'Disponibilitat',
+    'badge_soporte' => 'Suport',
+    'badge_soporte_desc' => 'Tècnic 24/7',
+
+    // Estadístiques Hero
+    'stat_uptime' => 'Disponibilitat',
+    'stat_documentos' => 'Documents emesos',
+    'stat_acceso' => 'Accés disponible',
+    'stat_ahorro' => 'Estalvi en costos administratius',
+
+    // Social Proof Contacto
+    'social_confianza' => 'Institucions i professionals que ja confien en OriginalisDoc',
+    'social_mas' => '+ més organitzacions i professionals',
+
+    // Beneficios Contacto
+    'benefit_demo' => 'Demo gratis sense compromís',
+    'benefit_demo_desc' => 'Proveu totes les funcions',
+    'benefit_implementacion' => 'Implementació en 24h',
+    'benefit_implementacion_desc' => 'Comenceu a emetre demà',
+    'benefit_soporte' => 'Suport tècnic inclòs',
+    'benefit_soporte_desc' => 'Assistència completa',
+
+    // CTA Contacto
+    'contacto_cta_btn' => 'Sol·licitar Demo Gratis',
+    'contacto_cta_email' => 'O escriviu-nos a',
+
+    // Footer - Enlaces rápidos
+    'footer_link_beneficios' => 'Beneficis',
+    'footer_link_como' => 'Com Funciona',
+    'footer_link_validar' => 'Validar Document',
+    'footer_link_demo' => 'Sol·licitar Demo',
+
+    // Footer - Característiques
+    'footer_feat_qr' => 'Validació QR',
+    'footer_feat_portal' => 'Portal 24/7',
+    'footer_feat_impresion' => 'Impressió Premium',
+    'footer_feat_personalizable' => '100% Personalitzable',
+
+    // Footer - Contacto
+    'footer_horario' => 'Dl - Dv: 9:00 - 18:00',
+
+    // Página de Privacidad
+    'privacidad_title' => 'Política de Privacitat',
+    'privacidad_updated' => 'Darrera actualització',
+
+    // Términos de Servicio
+    'terminos_title' => 'Termes de Servei',
+    'terminos_updated' => 'Darrera actualització',
+
+    // Términos de Servicio - Contenido
+    'terminos_seccion1_titulo' => '1. Acceptació dels Termes',
+    'terminos_seccion1_p1' => 'En accedir i utilitzar la plataforma OriginalisDoc ("el Servei"), esteu legalment vinculat per aquests Termes de Servei. Si no esteu d\'acord amb aquests termes, no utilitzeu el Servei.',
+    'terminos_seccion1_p2' => 'OriginalisDoc es reserva el dret de modificar aquests termes en qualsevol moment. Els canvis entraran en vigor immediatament després de la seva publicació al lloc web.',
+
+    'terminos_seccion2_titulo' => '2. Descripció del Servei',
+    'terminos_seccion2_p1' => 'OriginalisDoc és una plataforma que permet a institucions educatives, professionals independents, organitzadors d\'esdeveniments, empreses, cooperatives i mutuals emetre, gestionar i validar documents digitals amb codis QR de verificació.',
+    'terminos_seccion2_p2' => 'Els serveis inclouen, però no es limiten a:',
+    'terminos_seccion2_li1' => 'Emissió de documents digitals personalitzats',
+    'terminos_seccion2_li2' => 'Portal personalitzat per a cada institució/professional',
+    'terminos_seccion2_li3' => 'Sistema de validació amb codis QR únics',
+    'terminos_seccion2_li4' => 'Emmagatzematge segur al núvol',
+    'terminos_seccion2_li5' => 'Opció d\'impressió premium de documents físics',
+    'terminos_seccion2_li6' => 'Emissió massiva de documents',
+
+    'terminos_seccion3_titulo' => '3. Registre i Compte d\'Usuari',
+    'terminos_seccion3_p1' => 'Per utilitzar el Servei, heu de crear un compte proporcionant informació precisa, completa i actualitzada. Esteu responsable de:',
+    'terminos_seccion3_li1' => 'Mantenir la confidencialitat de la vostra contrasenya i credencials d\'accés',
+    'terminos_seccion3_li2' => 'Totes les activitats que ocorrin sota el vostre compte',
+    'terminos_seccion3_li3' => 'Notificar immediatament qualsevol ús no autoritzat del vostre compte',
+    'terminos_seccion3_li4' => 'Proporcionar dades veraces de la vostra institució o organització',
+    'terminos_seccion3_p2' => 'OriginalisDoc es reserva el dret de suspendre o cancel·lar comptes que violin aquests termes o que proporcionin informació falsa.',
+
+    'terminos_seccion4_titulo' => '4. Ús Permès',
+    'terminos_seccion4_p1' => 'El Servei només es pot utilitzar amb finalitats legítimes i d\'acord amb aquests Termes. No està permès utilitzar OriginalisDoc per activitats fraudulentes, il·legals o que infringeixin drets de tercers.',
+
+    'terminos_seccion5_titulo' => '5. Propietat Intelectual',
+    'terminos_seccion5_p1' => 'Tot el contingut, disseny, logotips i tecnologia d\'OriginalisDoc són propietat exclusiva de la plataforma i estan protegits per lleis de propietat intel·lectual.',
+
+    'terminos_seccion6_titulo' => '6. Limitació de Responsabilitat',
+    'terminos_seccion6_p1' => 'OriginalisDoc no serà responsable de danys indirectos, incidents o consecüencials derivats de l\'ús o impossibilitat d\'ús del Servei.',
+
+    'terminos_seccion7_titulo' => '7. Contacte',
+    'terminos_seccion7_p1' => 'Per consultes sobre aquests Termes de Servei, contacteu-nos a:',
+
+    // Política de Privacitat - Contenido
+    'privacidad_intro_titulo' => 'Introducció',
+    'privacidad_intro_p1' => 'A OriginalisDoc, la privacitat i seguretat de les vostres dades és la nostra màxima prioritat. Aquesta Política de Privacitat descriu com recopilem, utilitzem, emmagatzemem i protegim la vostra informació personal quan utilitzeu els nostres serveis.',
+    'privacidad_intro_p2' => 'En utilitzar OriginalisDoc, esteu d\'acord amb les pràctiques descrites en aquesta política. Si no esteu d\'acord, no utilitzeu els nostres serveis.',
+
+    'privacidad_seccion1_titulo' => '1. Informació que Recopilem',
+    'privacidad_seccion1_sub1_titulo' => '1.1 Informació del Compte',
+    'privacidad_seccion1_sub1_p1' => 'Quan creeu un compte, recopilem:',
+    'privacidad_seccion1_sub1_li1' => 'Nom complet i dades de contacte (correu electrònic, telèfon)',
+    'privacidad_seccion1_sub1_li2' => 'Nom de la institució, organització o professional independent',
+    'privacidad_seccion1_sub1_li3' => 'Adreça física i fiscal',
+    'privacidad_seccion1_sub1_li4' => 'Informació de facturació i pagament',
+    'privacidad_seccion1_sub1_li5' => 'Credencials d\'accés (usuari/contrasenya encriptada)',
+
+    'privacidad_seccion1_sub2_titulo' => '1.2 Dades de Documents i Beneficiaris',
+    'privacidad_seccion1_sub2_p1' => 'En emetre documents, recopilem dades dels beneficiaris (estudiants, clients, empleats, socis, etc.):',
+    'privacidad_seccion1_sub2_li1' => 'Nom complet i número d\'identificació (DNI, NIF, etc.)',
+    'privacidad_seccion1_sub2_li2' => 'Correu electrònic i telèfon (per a notificacions)',
+    'privacidad_seccion1_sub2_li3' => 'Dades acadèmiques, professionals o laborals relacionades amb el document emès',
+    'privacidad_seccion1_sub2_li4' => 'Fotografia (opcional, si s\'inclou al document)',
+
+    'privacidad_seccion1_sub3_titulo' => '1.3 Dades d\'Ús i Tècniques',
+    'privacidad_seccion1_sub3_li1' => 'Adreça IP, navegador, sistema operatiu',
+    'privacidad_seccion1_sub3_li2' => 'Pàgines visitades, temps de sessió, clics',
+    'privacidad_seccion1_sub3_li3' => 'Registres de validació de documents (qui va validar, quan, des d\'on)',
+    'privacidad_seccion1_sub3_li4' => 'Mètriques d\'ús del portal (descàrregues, accés, etc.)',
+
+    'privacidad_seccion2_titulo' => '2. Com Utilitzem la Vostra Informació',
+    'privacidad_seccion2_p1' => 'Utilitzem les dades recopilades per a:',
+    'privacidad_seccion2_li1_strong' => 'Proveir el Servei:',
+    'privacidad_seccion2_li1_texto' => 'Generar, emmagatzemar i gestionar documents digitals',
+    'privacidad_seccion2_li2_strong' => 'Validació:',
+    'privacidad_seccion2_li2_texto' => 'Verificar l\'autenticitat dels documents mitjançant codis QR',
+    'privacidad_seccion2_li3_strong' => 'Notificacions:',
+    'privacidad_seccion2_li3_texto' => 'Enviar correus electrònics sobre documents emesos, actualitzacions del servei',
+    'privacidad_seccion2_li4_strong' => 'Facturació:',
+    'privacidad_seccion2_li4_texto' => 'Processar pagaments i emetre factures',
+    'privacidad_seccion2_li5_strong' => 'Millora del Servei:',
+    'privacidad_seccion2_li5_texto' => 'Analitzar mètriques d\'ús per optimitzar funcionalitats',
+    'privacidad_seccion2_li6_strong' => 'Suport Tècnic:',
+    'privacidad_seccion2_li6_texto' => 'Resoldre consultes i problemes tècnics',
+    'privacidad_seccion2_li7_strong' => 'Compliment Legal:',
+    'privacidad_seccion2_li7_texto' => 'Complir amb obligacions legals i reglamentàries',
+
+    'privacidad_seccion3_titulo' => '3. Compartir Informació amb Tercers',
+    'privacidad_seccion3_p1_antes_strong' => '',
+    'privacidad_seccion3_p1_strong' => 'No venem ni lloguem',
+    'privacidad_seccion3_p1_despues_strong' => ' les vostres dades personals a tercers. Només compartim informació en aquests casos limitats:',
+    'privacidad_seccion3_sub1_titulo' => '3.1 Proveïdors de Serveis',
+    'privacidad_seccion3_sub1_p1' => 'Treballem amb proveïdors fiables que ens ajuden a operar el Servei:',
+    'privacidad_seccion3_sub1_li1' => 'Hosting i emmagatzematge al núvol (servidors segurs)',
+    'privacidad_seccion3_sub1_li2' => 'Processadors de pagaments (amb certificació PCI-DSS)',
+    'privacidad_seccion3_sub1_li3' => 'Serveis de correu electrònic transaccional',
+    'privacidad_seccion3_sub1_li4' => 'Serveis d\'impressió i enviament (només per a documents físics sol·licitats)',
+    'privacidad_seccion3_sub1_p2' => 'Tots els proveïdors estan contractualment obligats a protegir les vostres dades i no poden utilitzar-les per a altres finalitats.',
+
+    'privacidad_seccion3_sub2_titulo' => '3.2 Requeriments Legals',
+    'privacidad_seccion3_sub2_p1' => 'Podem revelar informació si la llei ho requereix (ordre judicial, procés legal) o per protegir els nostres drets legals.',
+
+    'privacidad_seccion3_sub3_titulo' => '3.3 Validació Pública',
+    'privacidad_seccion3_sub3_p1' => 'Els documents emesos són validables públicament mitjançant codi QR. La informació mostrada en la validació (nom del beneficiari, institució emissora, dades del document) serà visible per a qualsevol persona que escanegi el codi.',
+
+    'privacidad_seccion4_titulo' => '4. Seguretat de les Dades',
+    'privacidad_seccion4_p1' => 'Implementem mesures de seguretat de nivell empresarial:',
+    'privacidad_seccion4_li1_strong' => 'Encriptació SSL/TLS 256-bit:',
+    'privacidad_seccion4_li1_texto' => 'Totes les comunicacions estan encriptades',
+    'privacidad_seccion4_li2_strong' => 'Contrasenyes protegides:',
+    'privacidad_seccion4_li2_texto' => 'Emmagatzemades amb hash i salt (bcrypt)',
+    'privacidad_seccion4_li3_strong' => 'Còpies de seguretat automàtiques diàries:',
+    'privacidad_seccion4_li3_texto' => 'Amb encriptació i emmagatzematge redundant',
+    'privacidad_seccion4_li4_strong' => 'Firewall i monitoratge 24/7:',
+    'privacidad_seccion4_li4_texto' => 'Protecció contra accessos no autoritzats',
+    'privacidad_seccion4_li5_strong' => 'Auditories de seguretat:',
+    'privacidad_seccion4_li5_texto' => 'Revisions periòdiques de vulnerabilitats',
+    'privacidad_seccion4_li6_strong' => 'Accés restringit:',
+    'privacidad_seccion4_li6_texto' => 'Només personal autoritzat pot accedir a dades sensibles',
+    'privacidad_seccion4_p2' => 'Malgrat aquestes mesures, cap sistema és 100% segur. Us recomanem utilitzar contrasenyes fortes i no compartir les vostres credencials.',
+
+    'privacidad_seccion5_titulo' => '5. Retenció de Dades',
+    'privacidad_seccion5_p1' => 'Conservem les vostres dades mentre mantingueu un compte actiu o segons ho requereixi la llei:',
+    'privacidad_seccion5_li1_strong' => 'Dades del compte:',
+    'privacidad_seccion5_li1_texto' => 'Fins que cancel·leu el vostre compte + període legal mínim (generalment 10 anys per a finals fiscals)',
+    'privacidad_seccion5_li2_strong' => 'Documents emesos:',
+    'privacidad_seccion5_li2_texto' => 'Permanentment, ja que serveixen com a registre històric i validació',
+    'privacidad_seccion5_li3_strong' => 'Registres de validació:',
+    'privacidad_seccion5_li3_texto' => '5 anys per a auditoria i prevenció de frau',
+    'privacidad_seccion5_li4_strong' => 'Dades de facturació:',
+    'privacidad_seccion5_li4_texto' => '10 anys segons normatives comptables',
+    'privacidad_seccion5_p2' => 'En cancel·lar el vostre compte, eliminem dades innecessàries de forma segura, però conservem registres històrics segons obligacions legals.',
+
+    'privacidad_seccion6_titulo' => '6. Els Vostres Drets',
+    'privacidad_seccion6_p1' => 'Segons les lleis de protecció de dades personals, teniu dret a:',
+    'privacidad_seccion6_li1_strong' => 'Accés:',
+    'privacidad_seccion6_li1_texto' => 'Sol·licitar una còpia de les vostres dades personals que tenim emmagatzemades',
+    'privacidad_seccion6_li2_strong' => 'Rectificació:',
+    'privacidad_seccion6_li2_texto' => 'Corregir dades inexactes o incompletes',
+    'privacidad_seccion6_li3_strong' => 'Supressió:',
+    'privacidad_seccion6_li3_texto' => 'Sol·licitar l\'eliminació de les vostres dades (sotmès a obligacions legals)',
+    'privacidad_seccion6_li4_strong' => 'Limitació:',
+    'privacidad_seccion6_li4_texto' => 'Restringir certs usos de les vostres dades',
+    'privacidad_seccion6_li5_strong' => 'Portabilitat:',
+    'privacidad_seccion6_li5_texto' => 'Rebre les vostres dades en format estructurat i transferible',
+    'privacidad_seccion6_li6_strong' => 'Oposició:',
+    'privacidad_seccion6_li6_texto' => 'Oposar-vos al tractament de les vostres dades en determinades circumstàncies',
+    'privacidad_seccion6_li7_strong' => 'Revocació de consentiment:',
+    'privacidad_seccion6_li7_texto' => 'Retirar el consentiment atorgat en qualsevol moment',
+    'privacidad_seccion6_p2_antes_email' => 'Per exercir aquests drets, contacteu-nos a',
+    'privacidad_seccion6_p2_despues_email' => 'Respondrem dins de 15 dies hàbils',
+
+    'privacidad_seccion7_titulo' => '7. Galetes i Tecnologies Similars',
+    'privacidad_seccion7_p1' => 'Utilitzem galetes i tecnologies similars per a:',
+    'privacidad_seccion7_li1_strong' => 'Galetes essencials:',
+    'privacidad_seccion7_li1_texto' => 'Per al funcionament del portal (sessió, autenticació)',
+    'privacidad_seccion7_li2_strong' => 'Galetes analítiques:',
+    'privacidad_seccion7_li2_texto' => 'Per entendre com utilitzeu el servei i millorar-lo (anònimes)',
+    'privacidad_seccion7_li3_strong' => 'Galetes de preferències:',
+    'privacidad_seccion7_li3_texto' => 'Per recordar les vostres configuracions (idioma, tema, etc.)',
+    'privacidad_seccion7_p2' => 'Podeu configurar el vostre navegador per rebutjar galetes, tot i que això podria afectar la funcionalitat del Servei.',
+
+    'privacidad_seccion8_titulo' => '8. Transferències Internacionals',
+    'privacidad_seccion8_p1' => 'Les vostres dades s\'emmagatzemen principalment en servidors ubicats a Espanya. En alguns casos, proveïdors de serveis poden processar dades en altres països amb nivells adequats de protecció de dades (per exemple: Estats Units sota el Data Privacy Framework, Unió Europea sota GDPR).',
+
+    'privacidad_seccion9_titulo' => '9. Privacitat de Menors',
+    'privacidad_seccion9_p1' => 'El nostre Servei no està dirigit a menors de 13 anys. Si descobrim que hem recopilat dades d\'un menor sense consentiment parental, eliminarem aquesta informació immediatament.',
+    'privacidad_seccion9_p2' => 'Per a beneficiaris menors d\'edat els documents dels quals són emesos per institucions educatives, el consentiment es presumeix atorgat per la institució que actua en exercici de la patria potestat delegada o tutela acadèmica.',
+
+    'privacidad_seccion10_titulo' => '10. Canvis en aquesta Política',
+    'privacidad_seccion10_p1' => 'Podem actualitzar aquesta Política de Privacitat ocasionalment. Els canvis significatius seran notificats per correu electrònic o mitjançant avís destacat al portal. La data de "Darrera actualització" a la part superior indica quan es va realitzar l\'última modificació.',
+
+    'privacidad_seccion11_titulo' => '11. Contacte',
+    'privacidad_seccion11_p1' => 'Per consultes, exercir els vostres drets, o informar de problemes de privacitat:',
+    'privacidad_seccion11_email_label' => 'Correu electrònic general:',
+
+    'privacidad_seccion12_titulo' => '12. Autoritat d\'Aplicació',
+    'privacidad_seccion12_p1_antes_strong' => 'A Espanya, l\'autoritat d\'aplicació en matèria de protecció de dades personals és la',
+    'privacidad_seccion12_p1_strong' => 'Agència Espanyola de Protecció de Dades (AEPD)',
+    'privacidad_seccion12_p1_despues_strong' => '. Si considereu que els vostres drets han estat vulnerats, podeu presentar una denúncia davant aquest organisme.',
+    'privacidad_seccion12_aaip_label' => 'AEPD:',
+    'privacidad_seccion12_aaip_url' => 'www.aepd.es',
+
+    // === ACADÈMIC PAGE ===
+
+    // Navigation
+    'acad_nav_beneficios' => 'Beneficis',
+    'acad_nav_funcionalidades' => 'Funcionalitats',
+    'acad_nav_casos_exito' => 'Casos d\'Èxit',
+    'acad_nav_faq' => 'FAQ',
+    'acad_nav_solicitar_demo' => 'Sol·licitar Demo',
+    'acad_nav_academico' => 'Acadèmic',
+
+    // Hero Section
+    'acad_hero_badge' => '✓ Solució Acadèmica Completa',
+    'acad_hero_title' => 'Certificacions Acadèmiques',
+    'acad_hero_title_highlight' => 'Digitals Professionals',
+    'acad_hero_subtitle' => 'Solució completa per a',
+    'acad_hero_instituciones' => 'institucions educatives',
+    'acad_hero_centros_formacion' => 'centres de formació',
+    'acad_hero_academias' => 'acadèmies',
+    'acad_hero_formadores' => 'formadors particulars',
+    'acad_cta_solicitar_demo' => 'Sol·licitar Demo Personalitzada',
+    'acad_cta_ver_como_funciona' => 'Veure Com Funciona',
+
+    // Hero Stats
+    'acad_hero_stat_tiempo' => 'Menys temps administratiu',
+    'acad_hero_stat_portal' => 'Portal de l\'estudiant',
+    'acad_hero_stat_falsificaciones' => 'Falsificacions possibles',
+
+    // Problemas Section
+    'acad_problemas_titulo' => 'Us sembla familiar?',
+    'acad_problemas_subtitulo' => 'Aquests són els dolents de cap que OriginalisDoc elimina',
+    'acad_problema_trabajo_manual' => 'Hores de Treball Manual',
+    'acad_problema_trabajo_manual_desc' => 'Dissenyar i emetre cada certificat individualment consumeix temps valuós que podria dedicar a l\'ensenyament.',
+    'acad_problema_perdidos' => 'Certificats Perduts',
+    'acad_problema_perdidos_desc' => 'Alumnes que perden o malmeten documents i sol·liciten reemissions constantment.',
+    'acad_problema_falsificaciones' => 'Falsificacions',
+    'acad_problema_falsificaciones_desc' => 'Títols i certificats falsos circulant sense forma efectiva de verificar la seva autenticitat.',
+    'acad_problema_trazabilidad' => 'Sense Traçabilitat',
+    'acad_problema_trazabilidad_desc' => 'Falta de registre acadèmic complet i verificable de cada estudiant.',
+    'acad_problema_costos' => 'Costos d\'Impressió',
+    'acad_problema_costos_desc' => 'Despeses elevades en paper especial, impressió, tòner i emmagatzematge físic.',
+    'acad_problema_archivos' => 'Arxius Físics Caòtics',
+    'acad_problema_archivos_desc' => 'Muntanyes de papers ocupant espai valuós i dificultant la cerca d\'informació.',
+
+    // Cómo Funciona Section
+    'acad_como_funciona_titulo' => 'Tan simple com 1, 2, 3',
+    'acad_como_funciona_subtitulo' => 'Implementació immediata, sense complicacions tècniques',
+    'acad_como_funciona_paso1_titulo' => 'Configureu la Vostra Institució',
+    'acad_como_funciona_paso1_desc' => 'Personalitzeu amb el vostre logotip, colors institucionals i definiu els tipus de certificats que emetreu.',
+    'acad_como_funciona_paso2_titulo' => 'Carregueu Estudiants i Cursos',
+    'acad_como_funciona_paso2_desc' => 'Importeu dades massivament des d\'Excel o CSV. També podeu carregar un per un.',
+    'acad_como_funciona_paso3_titulo' => 'Emetreu i Valideu',
+    'acad_como_funciona_paso3_desc' => 'Generació automàtica amb QR únic. Notificació per correu electrònic i accés immediat per als estudiants.',
+
+    // Tipos de Documentos
+    'acad_documentos_titulo' => 'Tipus de Documents Acadèmics',
+    'acad_documentos_subtitulo' => 'Tots els documents que la vostra institució necessita emetre',
+    'acad_documentos_principales' => 'Documents Principals',
+    'acad_doc_certificado_aprobacion' => 'Certificats d\'Aprovació',
+    'acad_doc_certificado_aprobacion_desc' => 'Certificat oficial que accredita l\'aprovació d\'un curs, matèria o programa complet.',
+    'acad_doc_diplomas' => 'Diplomes de Finalització',
+    'acad_doc_diplomas_desc' => 'Títol o diploma formal que certifica la culminació exitosa d\'un programa acadèmic complet.',
+    'acad_doc_analiticos' => 'Analítics / Registres Acadèmics',
+    'acad_doc_analiticos_desc' => 'Historial complet amb totes les matèries cursades, qualificacions, assistències i competències adquirides.',
+    'acad_doc_constancia_regular' => 'Constàncies d\'Alumne Regular',
+    'acad_doc_constancia_regular_desc' => 'Document que accredita que l\'estudiant està actualment cursant a la institució.',
+    'acad_doc_constancia_inscripcion' => 'Constàncies d\'Inscripció',
+    'acad_doc_constancia_inscripcion_desc' => 'Comprovant d\'inscripció a un curs, matèria o programa acadèmic específic.',
+    'acad_doc_constancia_finalizacion' => 'Constàncies de Finalització de Cursada',
+    'acad_doc_constancia_finalizacion_desc' => 'Certificat que accredita haver completat la cursada, prèvia a l\'avaluació final.',
+
+    // Documentos Complementarios
+    'acad_documentos_complementarios' => 'Documents Complementaris',
+    'acad_doc_asistencia' => 'Certificats d\'Assistència',
+    'acad_doc_asistencia_desc' => 'Per a tallers, seminaris, webinars o esdeveniments educatius puntuals.',
+    'acad_doc_reconocimientos' => 'Reconeixements i Mencions',
+    'acad_doc_reconocimientos_desc' => 'Premis especials, mencions honorífiques o reconeixements per rendiment destacat.',
+    'acad_doc_competencias' => 'Certificats de Competències',
+    'acad_doc_competencias_desc' => 'Acrediten habilitats i competències específiques adquirides durant la formació.',
+    'acad_doc_practica' => 'Constàncies de Pràctica Professional',
+    'acad_doc_practica_desc' => 'Documenten pràctiques, estades professionals o experiència laboral supervisada.',
+    'acad_doc_congresos' => 'Certificats de Participació en Congresos',
+    'acad_doc_congresos_desc' => 'Per a assistència o ponències en congressos, jornades acadèmiques i conferències.',
+
+    // Portal del Estudiante
+    'acad_portal_badge' => '★ Funcionalitat Destacada',
+    'acad_portal_titulo' => 'Portal de l\'Estudiant 24/7',
+    'acad_portal_subtitulo' => 'Cada estudiant té accés al seu propi portal personalitzat amb la imatge corporativa de la vostra institució.',
+    'acad_portal_acceso_titulo' => 'Accés 24/7 a la seva trajectòria completa',
+    'acad_portal_acceso_desc' => 'Els estudiants accedeixen des de qualsevol dispositiu, en qualsevol moment.',
+    'acad_portal_descarga_titulo' => 'Descàrrega de tots els seus documents',
+    'acad_portal_descarga_desc' => 'Diplomes, constàncies, certificats, analítics - tot en un sol lloc.',
+    'acad_portal_timeline_titulo' => 'Vista de línia temporal acadèmica',
+    'acad_portal_timeline_desc' => 'Visualització cronològica de tota la seva trajectòria educativa.',
+    'acad_portal_qr_titulo' => 'QR individual per document',
+    'acad_portal_qr_desc' => 'Cada document té el seu codi únic de validació.',
+    'acad_portal_linkedin_titulo' => 'Compartir a LinkedIn amb un clic',
+    'acad_portal_linkedin_desc' => 'Integració directa per publicar assoliments acadèmics.',
+
+    // Portal Demo Data
+    'acad_portal_demo_nombre' => 'Juan Pérez',
+    'acad_portal_demo_dni' => 'DNI: 12.345.678',
+    'acad_portal_demo_progreso' => 'de 4 cursos completats',
+    'acad_portal_demo_diploma' => 'Diploma - Justícia Restaurativa',
+    'acad_portal_demo_diploma_fecha' => 'Finalitzat: 15/03/2024',
+    'acad_portal_demo_certificado' => 'Certificat - Mediació',
+    'acad_portal_demo_certificado_fecha' => 'Finalitzat: 20/01/2024',
+    'acad_portal_demo_curso_progreso' => 'Curs en Progrés',
+    'acad_portal_demo_curso_nombre' => 'Resolució de Conflictes',
+
+    // Casos de Uso
+    'acad_casos_uso_titulo' => 'Per a Qui és OriginalisDoc Acadèmic?',
+    'acad_casos_uso_subtitulo' => 'Institucions i professionals que confien en la nostra plataforma',
+    'acad_caso_universidades' => 'Universitats i Tercers',
+    'acad_caso_universidades_desc' => 'Gestió massiva de títols, diplomes i analítics per a centenars de graduats.',
+    'acad_caso_centros' => 'Centres de Formació',
+    'acad_caso_centros_desc' => 'Institucions com SAJuR i Liberté que emeten certificacions professionals.',
+    'acad_caso_idiomas' => 'Acadèmies d\'Idiomes',
+    'acad_caso_idiomas_desc' => 'Certificats de nivells completats amb validació internacional.',
+    'acad_caso_tecnicos' => 'Instituts Tècnics',
+    'acad_caso_tecnicos_desc' => 'Certificacions tècniques i oficis amb traçabilitat completa.',
+    'acad_caso_laboral' => 'Formació Laboral',
+    'acad_caso_laboral_desc' => 'Centres de formació contínua i desenvolupament professional.',
+    'acad_caso_continua' => 'Educació Contínua',
+    'acad_caso_continua_desc' => 'Programes d\'actualització professional i postgraus.',
+    'acad_caso_organizadores' => 'Organitzadors de Cursos',
+    'acad_caso_organizadores_desc' => 'Diplomes i certificats per a cursos, tallers i programes especials.',
+    'acad_caso_particulares' => 'Formadors Particulars',
+    'acad_caso_particulares_desc' => 'Docents independents que emeten certificacions professionals.',
+
+    // Funcionalidades
+    'acad_func_titulo' => 'Funcionalitats Pensades per Institucions',
+    'acad_func_subtitulo' => 'Tot el que necessiteu per gestionar certificacions acadèmiques',
+    'acad_func_cohortes' => 'Gestió de Cohortes',
+    'acad_func_cohortes_desc' => 'Organitzeu estudiants per promoció, any o grup. Emeteu documents massivament per cohort completa.',
+    'acad_func_emision_masiva' => 'Emissió Massiva',
+    'acad_func_emision_masiva_desc' => 'Genereu certificats per a 100+ alumnes en minuts. Un sol clic per a tota una promoció.',
+    'acad_func_notificaciones' => 'Notificacions Automàtiques per Correu Electrònic',
+    'acad_func_notificaciones_desc' => 'Cada estudiant rep notificació automàtica quan s\'emet un document.',
+    'acad_func_branding' => 'Portal amb Branding Institucional',
+    'acad_func_branding_desc' => 'El vostre logotip, colors i domini. Cada institució projecta la seva pròpia identitat.',
+    'acad_func_trayectoria' => 'Trajectòria Acadèmica Completa',
+    'acad_func_trayectoria_desc' => 'Historial verificable amb tots els cursos, qualificacions i assoliments de l\'estudiant.',
+    'acad_func_validacion' => 'Validació Pública Instantània',
+    'acad_func_validacion_desc' => 'Els empleadors escanejen el QR i verifiquen autenticitat al instant.',
+
+    // Beneficios
+    'acad_beneficios_titulo' => 'Resultats Mesurables',
+    'acad_beneficios_subtitulo' => 'Impacte real a la vostra institució des del primer dia',
+    'acad_beneficio_tiempo_titulo' => 'Menys Temps Administratiu',
+    'acad_beneficio_tiempo_desc' => 'El que portava hores ara porta minuts',
+    'acad_beneficio_ahorro_titulo' => 'Estalvi en Costos',
+    'acad_beneficio_ahorro_desc' => 'Reducció dràstica en impressió i paperassa',
+    'acad_beneficio_falsificaciones_titulo' => 'Falsificacions Possibles',
+    'acad_beneficio_falsificaciones_desc' => 'Impossible clonar codis QR únics',
+    'acad_beneficio_acceso_titulo' => 'Accés per Estudiants',
+    'acad_beneficio_acceso_desc' => 'Portal disponible en tot moment',
+    'acad_beneficio_trazabilidad_titulo' => '100% Traçabilitat i Auditoria',
+    'acad_beneficio_trazabilidad_desc' => 'Cada acció queda registrada. Sabeu exactament qui va emetre quin document, quan i per a qui. Ideal per a auditories i compliment normatiu.',
+
+    // Casos de Éxito
+    'acad_casos_exito_titulo' => 'Casos d\'Èxit',
+    'acad_casos_exito_subtitulo' => 'Institucions que van transformar la seva gestió acadèmica',
+    'acad_caso_sajur_nombre' => 'Sociedad Argentina de Justicia Restaurativa',
+    'acad_caso_sajur_tipo' => 'Centre de formació especialitzada',
+    'acad_caso_sajur_testimonio' => '"Vam passar de processar manualment cada certificat a emetre desenes en minuts. Els nostres estudiants valoren poder accedir a la seva trajectòria completa 24/7, i els empleadors confien en la validació QR. L\'estalvi en temps administratiu va ser del 90%."',
+    'acad_caso_liberte_nombre' => 'Cooperativa de Treball Liberté',
+    'acad_caso_liberte_tipo' => 'Formació professional i capacitació',
+    'acad_caso_liberte_testimonio' => '"La implementació va ser instantània. En menys de 24 hores ja estàvem emetent certificats amb la nostra marca. El portal personalitzat projecta una imatge professional que els nostres estudiants comparteixen amb orgull. L\'opció d\'impressió premium és el toc final perfecte."',
+
+    // Antes vs Después
+    'acad_antes_despues_titulo' => 'Abans vs Després d\'OriginalisDoc',
+    'acad_antes_despues_subtitulo' => 'La transformació digital de la vostra gestió acadèmica',
+    'acad_antes_titulo' => 'Abans (Tradicional)',
+    'acad_antes_trabajo_manual' => 'Hores de treball manual per cada certificat',
+    'acad_antes_costos' => 'Costos elevats d\'impressió i paperassa',
+    'acad_antes_falsificacion' => 'Risc de falsificació sense forma de verificar',
+    'acad_antes_presencial' => 'Els estudiants han de venir presencialment a recollir',
+    'acad_antes_almacenamiento' => 'Emmagatzematge físic caòtic i espai ocupat',
+    'acad_antes_estadisticas' => 'Sense estadístiques ni mètriques d\'emissió',
+    'acad_despues_titulo' => 'Després (OriginalisDoc)',
+    'acad_despues_emision' => 'Emissió massiva en segons',
+    'acad_despues_emision_highlight' => 'amb un sol clic',
+    'acad_despues_ahorro' => 'Estalvi del 85%',
+    'acad_despues_ahorro_highlight' => 'en costos operatius',
+    'acad_despues_validacion' => 'Validació QR impossible de falsificar',
+    'acad_despues_acceso' => 'Accés 24/7',
+    'acad_despues_acceso_highlight' => 'des de qualsevol dispositiu',
+    'acad_despues_digital' => 'Tot digital i al núvol,',
+    'acad_despues_digital_highlight' => 'sense papers ni espai',
+    'acad_despues_dashboards' => 'Dashboards i informes en temps real',
+
+    // Integraciones
+    'acad_integraciones_titulo' => 'Integracions i Compatibilitat',
+    'acad_integraciones_subtitulo' => 'S\'adapta al vostre flux de treball existent',
+    'acad_integ_excel' => 'Excel / CSV',
+    'acad_integ_excel_desc' => 'Importació massiva d\'estudiants i cursos des d\'arxius Excel.',
+    'acad_integ_api' => 'API REST',
+    'acad_integ_api_desc' => 'Integració amb sistemes SIU, Moodle i plataformes acadèmiques.',
+    'acad_integ_email' => 'Correu Electrònic Institucional',
+    'acad_integ_email_desc' => 'Notificacions des del vostre domini institucional (@la vostra institució.edu).',
+    'acad_integ_subdominios' => 'Subdominis',
+    'acad_integ_subdominios_desc' => 'Portal al vostre propi domini: certificats.la vostra institució.edu',
+
+    // FAQ
+    'acad_faq_titulo' => 'Preguntes Freqüents',
+    'acad_faq_subtitulo' => 'Tot el que necessiteu saber sobre OriginalisDoc Acadèmic',
+    'acad_faq_cargo_titulo' => 'Com carrego la informació dels meus estudiants?',
+    'acad_faq_cargo_resp' => 'Podeu carregar estudiants de dues formes: individualment des del panell d\'administració, o massivament important un arxiu Excel/CSV amb totes les dades. Us proporcionem una plantilla per facilitar el procés.',
+    'acad_faq_validez_titulo' => 'Els certificats digitals tenen validesa legal?',
+    'acad_faq_validez_resp' => 'Sí, els certificats digitals tenen la mateixa validesa legal que els físics a Espanya. A més, oferim opció d\'impressió premium amb paper especial i elements de seguretat per a institucions que ho requereixin.',
+    'acad_faq_diseno_titulo' => 'Puc personalitzar completament el disseny?',
+    'acad_faq_diseno_resp' => 'Absolutament. Podeu configurar el vostre logotip, colors institucionals, signatures digitals i tot el branding. Cada certificat es genera amb la vostra identitat visual.',
+    'acad_faq_acceso_titulo' => 'Què passa si un estudiant perd l\'accés al seu portal?',
+    'acad_faq_acceso_resp' => 'L\'estudiant pot recuperar l\'accés utilitzant el seu DNI i un procés de verificació per correu electrònic. A més, com a administrador de la institució, podeu regenerar l\'accés en qualsevol moment.',
+    'acad_faq_validacion_titulo' => 'Com valida un empleador el certificat?',
+    'acad_faq_validacion_resp' => 'L\'empleador simplement escaneja el codi QR del certificat amb el seu mòbil. Serà redirigit automàticament a una pàgina de validació que mostra totes les dades del certificat i la trajectòria acadèmica de l\'estudiant.',
+    'acad_faq_retroactivos_titulo' => 'Puc emetre certificats retroactius?',
+    'acad_faq_retroactivos_resp' => 'Sí, podeu carregar i emetre certificats de promocions anteriors sense cap problema. El sistema permet indicar dates passades d\'emissió.',
+    'acad_faq_limite_titulo' => 'Hi ha límit d\'emissions?',
+    'acad_faq_limite_resp' => 'No hi ha límit d\'emissions. Podeu generar tants certificats com necessiteu. Els plans s\'ajusten segons la quantitat d\'estudiants actius a la vostra institució.',
+
+    // CTA Final
+    'acad_cta_final_titulo' => 'Transformeu la Gestió Acadèmica de la Vostra Institució',
+    'acad_cta_final_desc' => 'Uniu-vos a les institucions que ja han estalviat milers d\'hores administratives i projecten una imatge professional amb certificacions digitals.',
+    'acad_cta_final_demo' => 'Sol·licitar Demo Personalitzada',
+    'acad_cta_final_contactar' => 'Contactar Vendes',
+    'acad_cta_final_implementacion' => 'Implementació',
+    'acad_cta_final_menos_tiempo' => 'Menys temps',
+    'acad_cta_final_certificados' => 'Certificats',
+
+    // Footer
+    'acad_footer_tagline' => 'Certificacions Digitals Professionals',
+    'acad_footer_derechos' => '© 2025 OriginalisDoc. Tots els drets reservats.',
+    'acad_footer_inicio' => 'Inici',
+    'acad_footer_terminos' => 'Termes',
+    'acad_footer_privacidad' => 'Privacitat',
+
+    // === META TAGS === //
+
+    // Index.php Meta Tags
+    'meta_keywords' => 'certificats digitals, validació QR, certificacions educatives, constàncies acadèmiques, diplomes online',
+    'meta_author' => 'OriginalisDoc',
+    'meta_og_title' => 'OriginalisDoc - Certificacions Digitals i Físiques Segures',
+    'meta_og_description' => 'Emetreu certificats infalsificables amb validació QR i trajectòria acadèmica completa. Portal 24/7 per a estudiants i opció d\'impressió premium.',
+    'meta_twitter_title' => 'OriginalisDoc - Certificacions Digitals i Físiques Segures',
+    'meta_twitter_description' => 'Emetreu certificats infalsificables amb validació QR i trajectòria acadèmica completa. Portal 24/7 per a estudiants i opció d\'impressió premium.',
+
+    // Academico.php Meta Tags
+    'acad_meta_title' => 'OriginalisDoc Acadèmic - Certificacions Digitals per a Institucions Educatives',
+    'acad_meta_description' => 'Solució completa de certificacions digitals per a institucions educatives, centres de formació i formadors particulars. Emissió massiva, validació QR i portal de l\'estudiant.',
+    'acad_meta_keywords' => 'certificats acadèmics, diplomes digitals, analítics digitals, institucions educatives, formació professional',
+    'acad_meta_og_title' => 'OriginalisDoc Acadèmic - Certificacions per a Institucions Educatives',
+    'acad_meta_og_description' => 'Emetreu certificats, diplomes i analítics digitals amb validació QR. Portal de l\'estudiant 24/7 i emissió massiva automatitzada.',
+    'acad_meta_twitter_title' => 'OriginalisDoc Acadèmic - Certificacions per a Institucions Educatives',
+    'acad_meta_twitter_description' => 'Emetreu certificats, diplomes i analítics digitals amb validació QR. Portal de l\'estudiant 24/7 i emissió massiva automatitzada.',
+
+    // Privacidad.php Meta Tags
+    'privacidad_meta_description' => 'Política de Privacitat d\'OriginalisDoc. Conegueu com recopilem, utilitzem i protegim les vostres dades personals.',
+    'privacidad_meta_og_title' => 'Política de Privacitat - OriginalisDoc',
+    'privacidad_meta_og_description' => 'Informació detallada sobre com OriginalisDoc protegeix la vostra privacitat i gestiona les vostres dades personals.',
+    'privacidad_meta_twitter_title' => 'Política de Privacitat - OriginalisDoc',
+    'privacidad_meta_twitter_description' => 'Informació detallada sobre com OriginalisDoc protegeix la vostra privacitat i gestiona les vostres dades personals.',
+
+    // Terminos.php Meta Tags
+    'terminos_meta_description' => 'Termes de Servei d\'OriginalisDoc. Conegueu les condicions d\'ús de la nostra plataforma de certificacions digitals.',
+    'terminos_meta_og_title' => 'Termes de Servei - OriginalisDoc',
+    'terminos_meta_og_description' => 'Condicions legals per a l\'ús de la plataforma OriginalisDoc i els seus serveis de certificació digital.',
+    'terminos_meta_twitter_title' => 'Termes de Servei - OriginalisDoc',
+    'terminos_meta_twitter_description' => 'Condicions legals per a l\'ús de la plataforma OriginalisDoc i els seus serveis de certificació digital.',
+];
