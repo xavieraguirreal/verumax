@@ -292,9 +292,211 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $action === 'new') {
     }
 }
 
+// ============================================================================
+// Acción: Enviar email de bienvenida
+// ============================================================================
+if ($action === 'send_welcome') {
+    $id = (int)($_GET['id'] ?? 0);
+
+    // Obtener datos del cliente
+    $cliente = Database::queryOne(
+        "SELECT id_instancia as id, slug as codigo, nombre, nombre_completo,
+                email_contacto, admin_usuario, admin_password, admin_email,
+                plan as plan_codigo, modulo_certificatum, modulo_identitas
+         FROM instances
+         WHERE id_instancia = ?",
+        [$id]
+    );
+
+    if (!$cliente) {
+        flash('error', 'Cliente no encontrado');
+        redirect('clientes.php');
+    }
+
+    // Generar URLs
+    $base_url = "https://verumax.com/{$cliente['codigo']}";
+    $admin_url = "{$base_url}/admin/";
+    $estudiantes_url = "{$base_url}/certificatum/";
+    $manual_url = "{$base_url}/admin/manual.php";
+
+    // Procesar envío si es POST
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (!csrf_validate($_POST[CSRF_TOKEN_NAME] ?? '')) {
+            flash('error', 'Sesión expirada');
+            redirect("clientes.php?action=send_welcome&id={$id}");
+        }
+
+        $email_destino = trim($_POST['email_destino'] ?? '');
+        $password_plano = trim($_POST['password_plano'] ?? '');
+
+        if (empty($email_destino)) {
+            flash('error', 'Debe ingresar un email de destino');
+            redirect("clientes.php?action=send_welcome&id={$id}");
+        }
+
+        // Construir contenido del email
+        $asunto = "Bienvenido/a a VERUMax - Datos de acceso para {$cliente['nombre']}";
+
+        $contenido_html = "
+        <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;'>
+            <div style='background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 30px; text-align: center;'>
+                <h1 style='color: white; margin: 0;'>Bienvenido/a a VERUMax</h1>
+            </div>
+
+            <div style='padding: 30px; background: #f9fafb;'>
+                <p style='font-size: 16px; color: #374151;'>Hola,</p>
+
+                <p style='font-size: 16px; color: #374151;'>
+                    Tu cuenta de <strong>{$cliente['nombre']}</strong> en VERUMax está lista.
+                    A continuación encontrarás toda la información necesaria para comenzar:
+                </p>
+
+                <div style='background: white; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e5e7eb;'>
+                    <h3 style='color: #7c3aed; margin-top: 0;'>Datos de Acceso al Panel de Administración</h3>
+                    <table style='width: 100%;'>
+                        <tr>
+                            <td style='padding: 8px 0; color: #6b7280;'>URL Admin:</td>
+                            <td style='padding: 8px 0;'><a href='{$admin_url}' style='color: #7c3aed;'>{$admin_url}</a></td>
+                        </tr>
+                        <tr>
+                            <td style='padding: 8px 0; color: #6b7280;'>Usuario:</td>
+                            <td style='padding: 8px 0;'><strong>{$cliente['admin_usuario']}</strong></td>
+                        </tr>
+                        <tr>
+                            <td style='padding: 8px 0; color: #6b7280;'>Contraseña:</td>
+                            <td style='padding: 8px 0;'><strong>{$password_plano}</strong></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style='background: white; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e5e7eb;'>
+                    <h3 style='color: #7c3aed; margin-top: 0;'>Enlaces Importantes</h3>
+                    <ul style='list-style: none; padding: 0; margin: 0;'>
+                        <li style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
+                            <strong>Portal para Estudiantes:</strong><br>
+                            <a href='{$estudiantes_url}' style='color: #7c3aed;'>{$estudiantes_url}</a>
+                        </li>
+                        <li style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
+                            <strong>Manual de Usuario:</strong><br>
+                            <a href='{$manual_url}' style='color: #7c3aed;'>{$manual_url}</a>
+                        </li>
+                        <li style='padding: 10px 0;'>
+                            <strong>Soporte:</strong><br>
+                            <a href='mailto:soporte@verumax.com' style='color: #7c3aed;'>soporte@verumax.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style='background: #fef3c7; border-radius: 8px; padding: 15px; margin: 20px 0; border-left: 4px solid #f59e0b;'>
+                    <p style='margin: 0; color: #92400e; font-size: 14px;'>
+                        <strong>Importante:</strong> Te recomendamos cambiar la contraseña después del primer inicio de sesión.
+                    </p>
+                </div>
+
+                <p style='font-size: 16px; color: #374151;'>
+                    Si tenés alguna consulta, no dudes en contactarnos.
+                </p>
+
+                <p style='font-size: 16px; color: #374151;'>
+                    Saludos,<br>
+                    <strong>Equipo VERUMax</strong>
+                </p>
+            </div>
+
+            <div style='background: #1f2937; padding: 20px; text-align: center;'>
+                <p style='color: #9ca3af; margin: 0; font-size: 12px;'>
+                    VERUMax - Plataforma de Gestión de Certificados Académicos
+                </p>
+            </div>
+        </div>
+        ";
+
+        // Enviar email usando PHPMailer o función simple
+        $enviado = enviarEmailBienvenida($email_destino, $asunto, $contenido_html);
+
+        if ($enviado) {
+            // Registrar en audit_log
+            Database::execute(
+                "INSERT INTO audit_log (id_superadmin, accion, entidad, id_entidad, datos_nuevos, ip, created_at)
+                 VALUES (?, 'enviar_bienvenida', 'cliente', ?, ?, ?, NOW())",
+                [
+                    $_SESSION['superadmin_id'] ?? null,
+                    $id,
+                    json_encode(['email_destino' => $email_destino]),
+                    $_SERVER['REMOTE_ADDR'] ?? null
+                ]
+            );
+
+            flash('success', "Email de bienvenida enviado correctamente a {$email_destino}");
+        } else {
+            flash('error', 'Error al enviar el email. Verificá la configuración de SendGrid.');
+        }
+
+        redirect('clientes.php');
+    }
+}
+
+// Función para enviar email de bienvenida
+function enviarEmailBienvenida($to, $subject, $htmlContent) {
+    // Intentar usar SendGrid
+    $apiKey = getenv('SENDGRID_API_KEY');
+
+    if (!$apiKey) {
+        // Fallback: intentar leer de config
+        $configFile = VERUMAX_ROOT_PATH . '/config/sendgrid.php';
+        if (file_exists($configFile)) {
+            $config = include $configFile;
+            $apiKey = $config['api_key'] ?? null;
+        }
+    }
+
+    if (!$apiKey) {
+        error_log("enviarEmailBienvenida: No hay API key de SendGrid");
+        return false;
+    }
+
+    $payload = [
+        'personalizations' => [[
+            'to' => [['email' => $to]],
+            'subject' => $subject
+        ]],
+        'from' => [
+            'email' => 'notificaciones@verumax.com',
+            'name' => 'VERUMax'
+        ],
+        'content' => [
+            ['type' => 'text/html', 'value' => $htmlContent]
+        ]
+    ];
+
+    $ch = curl_init('https://api.sendgrid.com/v3/mail/send');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => json_encode($payload),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'Authorization: Bearer ' . $apiKey,
+            'Content-Type: application/json'
+        ],
+        CURLOPT_TIMEOUT => 30
+    ]);
+
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode === 202) {
+        return true;
+    }
+
+    error_log("SendGrid error [{$httpCode}]: {$response}");
+    return false;
+}
+
 // Obtener lista de clientes desde tabla instances
 $clientes = Database::query(
     "SELECT id_instancia as id, slug as codigo, nombre, nombre_completo, email_contacto,
+            admin_usuario, admin_email,
             plan as plan_codigo, activo, fecha_creacion as created_at,
             modulo_certificatum
      FROM instances
@@ -386,6 +588,9 @@ include VERUMAX_ADMIN_PATH . '/includes/header.php';
                     <?php endif; ?>
                 </td>
                 <td class="px-6 py-4 text-right space-x-3">
+                    <a href="?action=send_welcome&id=<?= $cliente['id'] ?>" class="text-green-600 hover:text-green-800 text-sm font-medium" title="Enviar email de bienvenida">
+                        Enviar
+                    </a>
                     <a href="?action=setup&id=<?= $cliente['id'] ?>" class="text-blue-600 hover:text-blue-800 text-sm font-medium" title="Ver instrucciones de configuración">
                         Setup
                     </a>
@@ -408,6 +613,162 @@ include VERUMAX_ADMIN_PATH . '/includes/header.php';
         </tbody>
     </table>
 </div>
+
+<?php elseif ($action === 'send_welcome'): ?>
+<!-- Enviar Email de Bienvenida -->
+<div class="max-w-3xl">
+    <div class="mb-6">
+        <a href="clientes.php" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            <span>Volver a la lista</span>
+        </a>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </div>
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800">Enviar Email de Bienvenida</h2>
+                <p class="text-sm text-gray-500">Cliente: <?= e($cliente['nombre']) ?> (<?= e($cliente['codigo']) ?>)</p>
+            </div>
+        </div>
+
+        <!-- Info del cliente -->
+        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <h3 class="text-sm font-medium text-gray-700 mb-3">Datos que se incluirán en el email:</h3>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                    <span class="text-gray-500">Usuario admin:</span>
+                    <span class="font-medium ml-2"><?= e($cliente['admin_usuario'] ?? 'admin') ?></span>
+                </div>
+                <div>
+                    <span class="text-gray-500">Email admin:</span>
+                    <span class="font-medium ml-2"><?= e($cliente['admin_email'] ?? '-') ?></span>
+                </div>
+                <div>
+                    <span class="text-gray-500">URL Admin:</span>
+                    <span class="font-mono text-purple-600 ml-2"><?= e($admin_url) ?></span>
+                </div>
+                <div>
+                    <span class="text-gray-500">URL Estudiantes:</span>
+                    <span class="font-mono text-purple-600 ml-2"><?= e($estudiantes_url) ?></span>
+                </div>
+            </div>
+        </div>
+
+        <form method="POST" class="space-y-6">
+            <?= csrf_field() ?>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email de destino *</label>
+                <input type="email" name="email_destino" required
+                       value="<?= e($cliente['email_contacto'] ?? $cliente['admin_email'] ?? '') ?>"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                       placeholder="cliente@ejemplo.com">
+                <p class="mt-1 text-xs text-gray-500">Email donde se enviará la información de acceso</p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Contraseña (texto plano) *</label>
+                <div class="relative">
+                    <input type="text" name="password_plano" required id="password_plano"
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent font-mono"
+                           placeholder="Ingresá la contraseña para incluir en el email">
+                    <button type="button" onclick="generarPassword()" class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm text-gray-600">
+                        Generar
+                    </button>
+                </div>
+                <p class="mt-1 text-xs text-gray-500">Esta contraseña se incluirá en el email. Si es un cliente nuevo, generá una nueva.</p>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                <div class="flex gap-3">
+                    <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    </svg>
+                    <div class="text-sm text-amber-800">
+                        <p class="font-medium">Importante:</p>
+                        <ul class="mt-1 list-disc list-inside space-y-1">
+                            <li>El email incluirá la contraseña en texto plano</li>
+                            <li>Si generás una nueva contraseña, asegurate de actualizarla en el sistema</li>
+                            <li>El cliente debería cambiar la contraseña después del primer acceso</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-4">
+                <button type="submit" class="flex-1 inline-flex justify-center items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition font-medium">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    Enviar Email de Bienvenida
+                </button>
+                <a href="clientes.php" class="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition font-medium">
+                    Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Preview del email -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 class="text-sm font-medium text-gray-700 mb-4">Vista previa del email:</h3>
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 20px; text-align: center;">
+                <h1 style="color: white; margin: 0; font-size: 1.25rem;">Bienvenido/a a VERUMax</h1>
+            </div>
+            <div class="p-6 bg-gray-50 text-sm">
+                <p class="text-gray-700">Hola,</p>
+                <p class="text-gray-700 mt-2">Tu cuenta de <strong><?= e($cliente['nombre']) ?></strong> en VERUMax está lista.</p>
+
+                <div class="bg-white rounded-lg p-4 my-4 border border-gray-200">
+                    <h4 class="text-purple-700 font-medium mb-2">Datos de Acceso al Panel de Administración</h4>
+                    <table class="w-full text-sm">
+                        <tr>
+                            <td class="py-1 text-gray-500">URL Admin:</td>
+                            <td class="py-1"><a href="<?= e($admin_url) ?>" class="text-purple-600"><?= e($admin_url) ?></a></td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 text-gray-500">Usuario:</td>
+                            <td class="py-1 font-medium"><?= e($cliente['admin_usuario'] ?? 'admin') ?></td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 text-gray-500">Contraseña:</td>
+                            <td class="py-1 font-medium text-gray-400">[La que ingreses arriba]</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="bg-white rounded-lg p-4 my-4 border border-gray-200">
+                    <h4 class="text-purple-700 font-medium mb-2">Enlaces Importantes</h4>
+                    <ul class="space-y-2">
+                        <li><strong>Portal Estudiantes:</strong> <a href="<?= e($estudiantes_url) ?>" class="text-purple-600"><?= e($estudiantes_url) ?></a></li>
+                        <li><strong>Manual:</strong> <a href="<?= e($manual_url) ?>" class="text-purple-600"><?= e($manual_url) ?></a></li>
+                        <li><strong>Soporte:</strong> <a href="mailto:soporte@verumax.com" class="text-purple-600">soporte@verumax.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function generarPassword() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%';
+    let password = '';
+    for (let i = 0; i < 12; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById('password_plano').value = password;
+}
+</script>
 
 <?php elseif ($action === 'new'): ?>
 <!-- Formulario Nuevo Cliente -->
