@@ -1,8 +1,34 @@
 # Roadmap: Super Admin de Verumax
 
 **Fecha de creación:** 25 de Diciembre de 2024
-**Última actualización:** 13 de Enero de 2026
-**Estado:** Pendiente de implementación
+**Última actualización:** 22 de Enero de 2026
+**Estado:** En desarrollo
+
+---
+
+## 🔄 En Progreso (Sesión 22-Ene-2026)
+
+### Email de Bienvenida a Clientes
+**Estado:** Funcional, pendiente revisión final
+
+**Completado:**
+- ✅ Botón "Enviar" en lista de clientes
+- ✅ Formulario con preview del email
+- ✅ Integración con SendGrid
+- ✅ Auto-carga de contraseña inicial desde `admin_password_plain`
+- ✅ Indicador si el cliente cambió su contraseña
+- ✅ URLs corregidas a formato subdominio (`codigo.verumax.com`)
+- ✅ Sección "Primeros Pasos" con guía paso a paso
+- ✅ Tip de F1 para ayuda contextual
+
+**Pendiente revisar en próxima sesión:**
+- [ ] Probar email completo y verificar formato visual
+- [ ] ¿Agregar más contenido? ¿Videos? ¿FAQ?
+- [ ] Ejecutar SQL en producción: `sql/20260121_agregar_password_inicial.sql`
+
+**Archivos modificados:**
+- `verumax-admin/clientes.php`
+- `sql/20260121_agregar_password_inicial.sql` (nuevo)
 
 ---
 
