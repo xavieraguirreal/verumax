@@ -350,7 +350,8 @@ if ($action === 'send_welcome') {
         $contenido_html = "
         <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;'>
             <div style='background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 30px; text-align: center;'>
-                <h1 style='color: white; margin: 0;'>Bienvenido/a a VERUMax</h1>
+                <h1 style='color: white; margin: 0;'>¡Bienvenido/a a VERUMax!</h1>
+                <p style='color: #e9d5ff; margin: 10px 0 0 0; font-size: 14px;'>Plataforma de Gestión de Certificados Académicos</p>
             </div>
 
             <div style='padding: 30px; background: #f9fafb;'>
@@ -358,14 +359,15 @@ if ($action === 'send_welcome') {
 
                 <p style='font-size: 16px; color: #374151;'>
                     Tu cuenta de <strong>{$cliente['nombre']}</strong> en VERUMax está lista.
-                    A continuación encontrarás toda la información necesaria para comenzar:
+                    A continuación encontrarás todo lo necesario para comenzar a emitir certificados digitales.
                 </p>
 
+                <!-- DATOS DE ACCESO -->
                 <div style='background: white; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e5e7eb;'>
-                    <h3 style='color: #7c3aed; margin-top: 0;'>Datos de Acceso al Panel de Administración</h3>
+                    <h3 style='color: #7c3aed; margin-top: 0;'>🔐 Datos de Acceso</h3>
                     <table style='width: 100%;'>
                         <tr>
-                            <td style='padding: 8px 0; color: #6b7280;'>URL Admin:</td>
+                            <td style='padding: 8px 0; color: #6b7280; width: 120px;'>URL Admin:</td>
                             <td style='padding: 8px 0;'><a href='{$admin_url}' style='color: #7c3aed;'>{$admin_url}</a></td>
                         </tr>
                         <tr>
@@ -374,37 +376,91 @@ if ($action === 'send_welcome') {
                         </tr>
                         <tr>
                             <td style='padding: 8px 0; color: #6b7280;'>Contraseña:</td>
-                            <td style='padding: 8px 0;'><strong>{$password_plano}</strong></td>
+                            <td style='padding: 8px 0;'><strong style='font-family: monospace; background: #f3f4f6; padding: 2px 8px; border-radius: 4px;'>{$password_plano}</strong></td>
                         </tr>
                     </table>
                 </div>
 
+                <!-- PRIMEROS PASOS -->
                 <div style='background: white; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e5e7eb;'>
-                    <h3 style='color: #7c3aed; margin-top: 0;'>Enlaces Importantes</h3>
-                    <ul style='list-style: none; padding: 0; margin: 0;'>
-                        <li style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
-                            <strong>Portal para Estudiantes:</strong><br>
-                            <a href='{$estudiantes_url}' style='color: #7c3aed;'>{$estudiantes_url}</a>
-                        </li>
-                        <li style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
-                            <strong>Manual de Usuario:</strong><br>
-                            <a href='{$manual_url}' style='color: #7c3aed;'>{$manual_url}</a>
-                        </li>
-                        <li style='padding: 10px 0;'>
-                            <strong>Soporte:</strong><br>
-                            <a href='mailto:soporte@verumax.com' style='color: #7c3aed;'>soporte@verumax.com</a>
-                        </li>
-                    </ul>
+                    <h3 style='color: #7c3aed; margin-top: 0;'>🚀 Primeros Pasos</h3>
+                    <p style='color: #6b7280; font-size: 14px; margin-bottom: 15px;'>Seguí estos pasos para configurar tu institución:</p>
+
+                    <div style='margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #7c3aed;'>
+                        <strong style='color: #374151;'>1. Ingresá al panel de administración</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>Usá las credenciales de arriba para acceder.</p>
+                    </div>
+
+                    <div style='margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #7c3aed;'>
+                        <strong style='color: #374151;'>2. Configurá los datos de tu institución</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>En la pestaña <em>General</em>, completá el nombre, descripción y datos de contacto.</p>
+                    </div>
+
+                    <div style='margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #7c3aed;'>
+                        <strong style='color: #374151;'>3. Subí tu logo</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>En <em>General → Apariencia</em>, cargá el logo de tu institución (recomendado: PNG transparente).</p>
+                    </div>
+
+                    <div style='margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #7c3aed;'>
+                        <strong style='color: #374151;'>4. Personalizá los colores</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>Elegí una paleta de colores o configurá los colores de tu marca.</p>
+                    </div>
+
+                    <div style='margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #7c3aed;'>
+                        <strong style='color: #374151;'>5. Configurá el firmante</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>En <em>General → Firmantes</em>, agregá nombre, cargo y firma digital de quien firma los certificados.</p>
+                    </div>
+
+                    <div style='padding-left: 10px; border-left: 3px solid #10b981;'>
+                        <strong style='color: #374151;'>6. ¡Listo para emitir!</strong>
+                        <p style='color: #6b7280; font-size: 13px; margin: 5px 0 0 0;'>Andá a <em>Certificatum</em> para crear cursos, agregar estudiantes y emitir tu primer certificado.</p>
+                    </div>
                 </div>
 
+                <!-- ENLACES -->
+                <div style='background: white; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e5e7eb;'>
+                    <h3 style='color: #7c3aed; margin-top: 0;'>🔗 Enlaces Importantes</h3>
+                    <table style='width: 100%;'>
+                        <tr>
+                            <td style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
+                                <strong style='color: #374151;'>Portal de Estudiantes</strong><br>
+                                <span style='color: #6b7280; font-size: 13px;'>Compartí este enlace con tus estudiantes para que accedan a sus certificados</span><br>
+                                <a href='{$estudiantes_url}' style='color: #7c3aed;'>{$estudiantes_url}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='padding: 10px 0; border-bottom: 1px solid #f3f4f6;'>
+                                <strong style='color: #374151;'>Manual de Usuario</strong><br>
+                                <span style='color: #6b7280; font-size: 13px;'>Guía completa con todas las funcionalidades del sistema</span><br>
+                                <a href='{$manual_url}' style='color: #7c3aed;'>{$manual_url}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style='padding: 10px 0;'>
+                                <strong style='color: #374151;'>Soporte Técnico</strong><br>
+                                <span style='color: #6b7280; font-size: 13px;'>¿Tenés dudas? Escribinos y te ayudamos</span><br>
+                                <a href='mailto:soporte@verumax.com' style='color: #7c3aed;'>soporte@verumax.com</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- ADVERTENCIA -->
                 <div style='background: #fef3c7; border-radius: 8px; padding: 15px; margin: 20px 0; border-left: 4px solid #f59e0b;'>
                     <p style='margin: 0; color: #92400e; font-size: 14px;'>
-                        <strong>Importante:</strong> Te recomendamos cambiar la contraseña después del primer inicio de sesión.
+                        <strong>🔒 Seguridad:</strong> Te recomendamos cambiar la contraseña después del primer inicio de sesión desde <em>General → Sistema</em>.
+                    </p>
+                </div>
+
+                <!-- TIP -->
+                <div style='background: #ecfdf5; border-radius: 8px; padding: 15px; margin: 20px 0; border-left: 4px solid #10b981;'>
+                    <p style='margin: 0; color: #065f46; font-size: 14px;'>
+                        <strong>💡 Tip:</strong> Presioná <strong>F1</strong> en cualquier pantalla del panel para abrir la ayuda contextual con información específica de esa sección.
                     </p>
                 </div>
 
                 <p style='font-size: 16px; color: #374151;'>
-                    Si tenés alguna consulta, no dudes en contactarnos.
+                    Si tenés alguna consulta, no dudes en contactarnos. ¡Estamos para ayudarte!
                 </p>
 
                 <p style='font-size: 16px; color: #374151;'>
@@ -415,7 +471,8 @@ if ($action === 'send_welcome') {
 
             <div style='background: #1f2937; padding: 20px; text-align: center;'>
                 <p style='color: #9ca3af; margin: 0; font-size: 12px;'>
-                    VERUMax - Plataforma de Gestión de Certificados Académicos
+                    VERUMax - Plataforma de Gestión de Certificados Académicos<br>
+                    <a href='https://verumax.com' style='color: #a78bfa;'>verumax.com</a>
                 </p>
             </div>
         </div>
