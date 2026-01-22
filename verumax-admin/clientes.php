@@ -323,9 +323,10 @@ if ($action === 'send_welcome') {
     }
 
     // Generar URLs
-    $base_url = "https://verumax.com/{$cliente['codigo']}";
+    // URLs con subdominio: https://codigo.verumax.com
+    $base_url = "https://{$cliente['codigo']}.verumax.com";
     $admin_url = "{$base_url}/admin/";
-    $estudiantes_url = "{$base_url}/certificatum/";
+    $estudiantes_url = $base_url;  // La raíz del subdominio es el portal de estudiantes
     $manual_url = "{$base_url}/admin/manual.php";
 
     // Procesar envío si es POST
