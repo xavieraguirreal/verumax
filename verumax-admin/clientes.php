@@ -304,7 +304,9 @@ if ($action === 'send_welcome') {
             "SELECT id_instancia as id, slug as codigo, nombre, nombre_completo,
                     email_contacto,
                     COALESCE(admin_usuario, 'admin') as admin_usuario,
-                    admin_email,
+                    admin_email, admin_password_plain,
+                    COALESCE(admin_password_cambiada, 0) as admin_password_cambiada,
+                    admin_password_fecha_cambio,
                     plan as plan_codigo, modulo_certificatum
              FROM instances
              WHERE id_instancia = ?",
@@ -666,6 +668,26 @@ include VERUMAX_ADMIN_PATH . '/includes/header.php';
                     <span class="text-gray-500">URL Estudiantes:</span>
                     <span class="font-mono text-purple-600 ml-2"><?= e($estudiantes_url) ?></span>
                 </div>
+                <div class="col-span-2 pt-2 border-t border-gray-200 mt-2">
+                    <span class="text-gray-500">Contraseña inicial:</span>
+                    <?php if (!empty($cliente['admin_password_plain'])): ?>
+                        <?php if (empty($cliente['admin_password_cambiada'])): ?>
+                            <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-green-100 text-green-700 text-xs font-medium">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                Disponible
+                            </span>
+                        <?php else: ?>
+                            <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-100 text-amber-700 text-xs font-medium">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                Cambiada por el cliente
+                            </span>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <span class="ml-2 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-gray-100 text-gray-600 text-xs font-medium">
+                            No disponible (cliente antiguo)
+                        </span>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
 
@@ -683,15 +705,31 @@ include VERUMAX_ADMIN_PATH . '/includes/header.php';
 
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-2">Contraseña (texto plano) *</label>
+                <?php if (!empty($cliente['admin_password_cambiada'])): ?>
+                <div class="mb-2 bg-red-50 border border-red-200 rounded-lg p-3">
+                    <div class="flex items-center gap-2 text-red-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                        <span class="font-medium text-sm">El cliente cambió su contraseña<?php if ($cliente['admin_password_fecha_cambio']): ?> el <?= date('d/m/Y H:i', strtotime($cliente['admin_password_fecha_cambio'])) ?><?php endif; ?></span>
+                    </div>
+                    <p class="text-xs text-red-600 mt-1">La contraseña mostrada abajo es la inicial. El cliente ya la modificó, consultale su contraseña actual si necesitás enviarla.</p>
+                </div>
+                <?php endif; ?>
                 <div class="relative">
                     <input type="text" name="password_plano" required id="password_plano"
+                           value="<?= e($cliente['admin_password_plain'] ?? '') ?>"
                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent font-mono"
                            placeholder="Ingresá la contraseña para incluir en el email">
                     <button type="button" onclick="generarPassword()" class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded text-sm text-gray-600">
                         Generar
                     </button>
                 </div>
-                <p class="mt-1 text-xs text-gray-500">Esta contraseña se incluirá en el email. Si es un cliente nuevo, generá una nueva.</p>
+                <?php if (!empty($cliente['admin_password_plain']) && empty($cliente['admin_password_cambiada'])): ?>
+                <p class="mt-1 text-xs text-green-600">✓ Contraseña inicial cargada automáticamente</p>
+                <?php else: ?>
+                <p class="mt-1 text-xs text-gray-500">Esta contraseña se incluirá en el email.</p>
+                <?php endif; ?>
             </div>
 
             <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
@@ -703,8 +741,8 @@ include VERUMAX_ADMIN_PATH . '/includes/header.php';
                         <p class="font-medium">Importante:</p>
                         <ul class="mt-1 list-disc list-inside space-y-1">
                             <li>El email incluirá la contraseña en texto plano</li>
-                            <li>Si generás una nueva contraseña, asegurate de actualizarla en el sistema</li>
-                            <li>El cliente debería cambiar la contraseña después del primer acceso</li>
+                            <li>La contraseña inicial se carga automáticamente si está disponible</li>
+                            <li>Se recomienda que el cliente cambie la contraseña después del primer acceso</li>
                         </ul>
                     </div>
                 </div>
