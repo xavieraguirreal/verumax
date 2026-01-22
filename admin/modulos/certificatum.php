@@ -20,7 +20,7 @@ require_once __DIR__ . '/../../config.php';
 require_once __DIR__ . '/../../identitas/config.php';
 
 // Cargar configuración de General (para getGeneralDBConnection)
-require_once __DIR__ . '/../general/config.php';
+require_once __DIR__ . '/../../general/config.php';
 
 // Cargar configuración y funciones de Certificatum
 require_once __DIR__ . '/../../certificatum/config.php';
