@@ -299,14 +299,21 @@ if ($action === 'send_welcome') {
     $id = (int)($_GET['id'] ?? 0);
 
     // Obtener datos del cliente
-    $cliente = Database::queryOne(
-        "SELECT id_instancia as id, slug as codigo, nombre, nombre_completo,
-                email_contacto, admin_usuario, admin_password, admin_email,
-                plan as plan_codigo, modulo_certificatum, modulo_identitas
-         FROM instances
-         WHERE id_instancia = ?",
-        [$id]
-    );
+    try {
+        $cliente = Database::queryOne(
+            "SELECT id_instancia as id, slug as codigo, nombre, nombre_completo,
+                    email_contacto,
+                    COALESCE(admin_usuario, 'admin') as admin_usuario,
+                    admin_email,
+                    plan as plan_codigo, modulo_certificatum
+             FROM instances
+             WHERE id_instancia = ?",
+            [$id]
+        );
+    } catch (Exception $e) {
+        flash('error', 'Error al obtener cliente: ' . $e->getMessage());
+        redirect('clientes.php');
+    }
 
     if (!$cliente) {
         flash('error', 'Cliente no encontrado');
