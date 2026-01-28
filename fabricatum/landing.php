@@ -1,8 +1,8 @@
 <?php
 /**
- * Landing Page - Desarrollo de Software
+ * Landing Page - Fabricatum (Desarrollo de Software)
  * Estilo: Cyberpunk / Tech
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 // Configuración
@@ -17,7 +17,7 @@ if (!isset($lang_config['languages'][$current_lang])) {
 }
 
 // Cargar traducciones
-$lang_modules = ['land_desarrollo'];
+$lang_modules = ['land_fabricatum'];
 $t = [];
 foreach ($lang_modules as $module) {
     $lang_file = $base_path . "/lang/{$current_lang}/{$module}.php";
@@ -580,17 +580,19 @@ $available_languages = $lang_config['languages'];
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <?php
                 $servicios = [
                     ['icon' => 'globe', 'color' => 'neon-cyan'],
                     ['icon' => 'shopping-cart', 'color' => 'neon-magenta'],
                     ['icon' => 'layout-dashboard', 'color' => 'neon-blue'],
                     ['icon' => 'smartphone', 'color' => 'neon-green'],
-                    ['icon' => 'graduation-cap', 'color' => 'neon-purple'],
-                    ['icon' => 'plug', 'color' => 'neon-cyan'],
+                    ['icon' => 'monitor', 'color' => 'neon-purple'],
+                    ['icon' => 'graduation-cap', 'color' => 'neon-cyan'],
+                    ['icon' => 'plug', 'color' => 'neon-magenta'],
+                    ['icon' => 'bot', 'color' => 'neon-green'],
                 ];
-                for ($i = 1; $i <= 6; $i++):
+                for ($i = 1; $i <= 8; $i++):
                     $serv = $servicios[$i-1];
                     $features = explode(',', __("servicio{$i}_features", ''));
                 ?>
@@ -737,7 +739,7 @@ $available_languages = $lang_config['languages'];
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Backend -->
                 <div class="cyber-card rounded-xl p-6 reveal">
                     <h3 class="font-mono text-neon-cyan text-sm mb-4"><?= __('tech_backend', 'Backend') ?></h3>
@@ -807,8 +809,31 @@ $available_languages = $lang_config['languages'];
                     </div>
                 </div>
 
-                <!-- Databases -->
+                <!-- Desktop -->
                 <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.3s">
+                    <h3 class="font-mono text-neon-purple text-sm mb-4"><?= __('tech_desktop', 'Desktop') ?></h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-gray-300 text-sm">
+                            <span class="w-8 h-8 bg-[#512BD4] rounded flex items-center justify-center text-white font-bold text-xs">C#</span>
+                            C# / .NET
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300 text-sm">
+                            <span class="w-8 h-8 bg-[#47848F] rounded flex items-center justify-center text-white font-bold text-xs">El</span>
+                            Electron
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300 text-sm">
+                            <span class="w-8 h-8 bg-[#3776AB] rounded flex items-center justify-center text-white font-bold text-xs">Tk</span>
+                            Python/Tkinter
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300 text-sm">
+                            <span class="w-8 h-8 bg-[#00599C] rounded flex items-center justify-center text-white font-bold text-xs">C++</span>
+                            C/C++ Nativo
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.4s">
                     <h3 class="font-mono text-neon-blue text-sm mb-4"><?= __('tech_database', 'Bases de Datos') ?></h3>
                     <div class="space-y-3">
                         <div class="flex items-center gap-3 text-gray-300 text-sm">
@@ -831,8 +856,8 @@ $available_languages = $lang_config['languages'];
                 </div>
 
                 <!-- Cloud -->
-                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.4s">
-                    <h3 class="font-mono text-neon-purple text-sm mb-4"><?= __('tech_cloud', 'Cloud & DevOps') ?></h3>
+                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.5s">
+                    <h3 class="font-mono text-neon-green text-sm mb-4"><?= __('tech_cloud', 'Cloud & DevOps') ?></h3>
                     <div class="space-y-3">
                         <div class="flex items-center gap-3 text-gray-300 text-sm">
                             <span class="w-8 h-8 bg-[#FF9900] rounded flex items-center justify-center text-white font-bold text-xs">AWS</span>
@@ -924,9 +949,11 @@ $available_languages = $lang_config['languages'];
                                 <option value=""><?= __('contacto_tipo', 'Seleccionar...') ?></option>
                                 <option value="web"><?= __('contacto_tipo_web', 'Sitio Web') ?></option>
                                 <option value="ecommerce"><?= __('contacto_tipo_ecommerce', 'E-Commerce') ?></option>
-                                <option value="webapp"><?= __('contacto_tipo_webapp', 'Aplicación Web') ?></option>
-                                <option value="mobile"><?= __('contacto_tipo_mobile', 'App Móvil') ?></option>
+                                <option value="webapp"><?= __('contacto_tipo_webapp', 'Aplicación Web / SaaS') ?></option>
+                                <option value="mobile"><?= __('contacto_tipo_mobile', 'App Móvil (Android/iOS)') ?></option>
+                                <option value="desktop"><?= __('contacto_tipo_desktop', 'Software de Escritorio') ?></option>
                                 <option value="lms"><?= __('contacto_tipo_lms', 'Plataforma Educativa') ?></option>
+                                <option value="integracion"><?= __('contacto_tipo_integracion', 'Integración / API') ?></option>
                                 <option value="otro"><?= __('contacto_tipo_otro', 'Otro') ?></option>
                             </select>
                         </div>
