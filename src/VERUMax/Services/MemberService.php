@@ -676,7 +676,6 @@ class MemberService
                     m.nombre_entidad,
                     m.categoria_servicio,
                     m.fecha_ingreso,
-                    m.fecha_vencimiento_credencial,
                     -- Flag para verificar si tiene datos de credencial
                     CASE WHEN m.numero_asociado IS NOT NULL AND m.numero_asociado != ''
                          THEN 1 ELSE 0 END as tiene_credencial,
