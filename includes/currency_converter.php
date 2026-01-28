@@ -364,4 +364,36 @@ function display_price_with_savings($price_usd, $lang_code, $discount_percentage
 
     return $html;
 }
+
+/**
+ * Muestra precio con descuento y ahorro (versión Cyan para Credencialis)
+ * @param float $price_usd Precio base en USD
+ * @param string $lang_code Código de idioma
+ * @param int $discount_percentage Porcentaje de descuento
+ * @param string $savings_text Texto para "Ahorrás"
+ * @return string HTML formateado
+ */
+function display_price_with_savings_cyan($price_usd, $lang_code, $discount_percentage, $savings_text = 'Ahorrás') {
+    $original_data = get_localized_price($price_usd, $lang_code);
+
+    $discounted_usd = $price_usd * (1 - ($discount_percentage / 100));
+    $discounted_data = get_localized_price($discounted_usd, $lang_code);
+
+    $savings_usd = $price_usd - $discounted_usd;
+    $savings_data = get_localized_price($savings_usd, $lang_code);
+
+    $round_to_thousands = in_array($original_data['local_currency'], ['ARS', 'CLP']);
+
+    $original_formatted = format_price($original_data['local'], $original_data['local_currency'], $round_to_thousands);
+    $discounted_formatted = format_price($discounted_data['local'], $discounted_data['local_currency'], $round_to_thousands);
+    $savings_formatted = format_price($savings_data['local'], $savings_data['local_currency'], $round_to_thousands);
+
+    $html = '<div class="flex flex-col">';
+    $html .= '<span class="text-gray-500 line-through text-base">' . $original_formatted . '</span>';
+    $html .= '<span class="text-cyan-400 text-3xl font-bold">' . $discounted_formatted . '</span>';
+    $html .= '<span class="text-green-400 text-xs">(' . htmlspecialchars($savings_text) . ' ' . $savings_formatted . ')</span>';
+    $html .= '</div>';
+
+    return $html;
+}
 ?>

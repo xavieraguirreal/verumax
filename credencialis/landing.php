@@ -1034,108 +1034,355 @@ ob_start();
     </section>
 
     <!-- Planes y Precios -->
-    <section id="planes" class="py-20 bg-black border-y border-cyan-600/20">
+    <?php
+    // Calcular precios con descuento
+    $hay_promo = is_credencialis_promo_active();
+    ?>
+    <section id="planes" class="py-20 bg-gray-950">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-4"><?php echo $lang['cred_planes_titulo']; ?></h2>
-                <p class="text-lg text-gray-400"><?php echo $lang['cred_planes_subtitulo']; ?></p>
+                <h2 class="text-3xl md:text-5xl font-bold text-cyan-400 mb-4"><?php echo $lang['cred_planes_titulo']; ?></h2>
+                <p class="text-lg text-gray-400 mb-3"><?php echo $lang['cred_planes_subtitulo']; ?></p>
+                <?php if ($hay_promo): ?>
+                <?php $alta_prices = display_alta_with_savings($CREDENCIALIS_ALTA_USD, $current_language, $CREDENCIALIS_DISCOUNT); ?>
+                <div class="inline-block mt-4 px-8 py-4 bg-gray-900 border-2 border-red-600 rounded-lg shadow-lg">
+                    <p class="text-red-500 font-bold text-lg mb-3 flex items-center justify-center gap-2">
+                        <span class="text-2xl">🔥</span>
+                        <?php echo $lang['cred_promo_titulo'] ?? 'PROMO LANZAMIENTO'; ?>
+                    </p>
+                    <div class="text-center">
+                        <p class="text-gray-500 text-sm mb-1">
+                            <?php echo $lang['cred_promo_alta'] ?? 'Alta:'; ?> <span class="line-through"><?php echo $alta_prices['original']; ?></span>
+                        </p>
+                        <p class="text-white text-lg font-bold mb-1">
+                            <?php echo $lang['cred_promo_alta_bonificada'] ?? 'Alta Bonificada:'; ?> <span class="text-cyan-400"><?php echo $alta_prices['discounted']; ?></span>
+                        </p>
+                        <p class="text-green-400 text-sm">(<?php echo $lang['price_you_save'] ?? 'Ahorrás'; ?> <?php echo $alta_prices['savings']; ?>)</p>
+                    </div>
+                </div>
+                <?php endif; ?>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Plan Essentialis -->
-                <div class="bg-gray-900 border border-cyan-600/20 rounded-2xl p-8 hover:border-cyan-600/40 transition-all">
-                    <h3 class="text-xl font-bold text-white mb-2">Essentialis</h3>
-                    <p class="text-3xl font-bold text-cyan-400 mb-1">$15.000<span class="text-lg text-gray-400 font-normal"><?php echo $lang['cred_plan_mes']; ?></span></p>
-                    <p class="text-sm text-gray-500 mb-6"><?php echo $lang['cred_plan_anual']; ?></p>
+            <!-- Banner de descuento para planes -->
+            <?php if ($hay_promo): ?>
+            <div class="text-center mb-8">
+                <p class="text-red-500 font-bold text-2xl flex items-center justify-center gap-2">
+                    <span>🔥</span>
+                    <?php echo $CREDENCIALIS_DISCOUNT; ?>% <?php echo $lang['cred_descuento_banner'] ?? 'DE DESCUENTO en planes - Solo por tiempo limitado'; ?>
+                    <span>🔥</span>
+                </p>
+            </div>
+            <?php endif; ?>
 
-                    <p class="text-sm text-gray-400 mb-4"><?php echo $lang['cred_plan_incluye']; ?></p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            50 <?php echo $lang['cred_plan_socios']; ?>
+            <!-- Plan Singularis (Pago por Credencial) - Separado arriba -->
+            <div class="max-w-md mx-auto mb-8">
+                <div class="bg-gray-900 border border-amber-500/30 rounded-xl p-6">
+                    <div class="text-center">
+                        <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-3"><?php echo $lang['cred_plan_sin_suscripcion'] ?? 'SIN SUSCRIPCIÓN'; ?></span>
+                        <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['cred_plan_singularis_titulo']; ?></h3>
+                        <p class="text-gray-400 text-xs mb-4"><?php echo $lang['cred_plan_singularis_desc']; ?></p>
+                        <div class="mb-4">
+                            <?php
+                            $singularis_price = get_localized_price($CREDENCIALIS_PRICING['singularis'], $current_language);
+                            ?>
+                            <span class="text-amber-400 text-3xl font-bold"><?php echo $singularis_price['local_formatted']; ?></span>
+                            <span class="text-gray-400 text-sm ml-1"><?php echo $lang['cred_plan_singularis_precio_label']; ?></span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-gray-300 text-xs text-left max-w-xs mx-auto">
+                            <li class="flex items-start gap-1.5">
+                                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><?php echo $lang['cred_plan_singularis_feat1']; ?></span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><?php echo $lang['cred_plan_singularis_feat2']; ?></span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><?php echo $lang['cred_plan_singularis_feat3']; ?></span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><?php echo $lang['cred_plan_singularis_feat4']; ?></span>
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><?php echo $lang['cred_plan_singularis_feat5']; ?></span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="w-full inline-block text-center px-4 py-2.5 bg-amber-500/20 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/30 transition-colors text-sm">
+                            <?php echo $lang['cred_plan_singularis_cta']; ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Planes con Suscripción -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Plan Essentialis -->
+                <div class="bg-gray-900 border border-cyan-600/20 rounded-xl p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['cred_plan_essentialis_titulo']; ?></h3>
+                    <p class="text-gray-400 text-xs mb-4"><?php echo $lang['cred_plan_essentialis_desc']; ?></p>
+                    <div class="mb-4">
+                        <?php echo display_price_with_savings_cyan($CREDENCIALIS_PRICING['essentialis'], $current_language, $CREDENCIALIS_DISCOUNT, $lang['price_you_save'] ?? 'Ahorrás'); ?>
+                        <p class="text-xs text-gray-400 mt-2"><?php echo $lang['cred_plan_pago_mensual'] ?? 'Pago mensual'; ?></p>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-gray-300 text-xs flex-grow">
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat1']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_branding']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat2']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_qr']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat3']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_soporte']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat4']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat5']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat6']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat7']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_essentialis_feat8']; ?></span>
                         </li>
                     </ul>
-
-                    <a href="#contacto" class="block w-full py-3 text-center border border-cyan-600/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-600/10 transition-all">
-                        <?php echo $lang['cred_plan_contratar']; ?>
+                    <a href="#contacto" class="w-full text-center px-4 py-2.5 bg-gray-800 border border-cyan-600/30 text-cyan-400 font-semibold rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                        <?php echo $lang['cred_plan_essentialis_cta']; ?>
                     </a>
                 </div>
 
-                <!-- Plan Premium (destacado) -->
-                <div class="bg-gradient-to-br from-cyan-900/50 to-gray-900 border-2 border-cyan-500 rounded-2xl p-8 relative transform md:scale-105">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="bg-cyan-500 text-white text-xs font-bold px-4 py-1 rounded-full"><?php echo $lang['cred_plan_popular']; ?></span>
+                <!-- Plan Premium (Destacado) -->
+                <div class="bg-gray-900 border-2 border-cyan-500 rounded-xl p-6 flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-xs font-bold rounded-full uppercase">
+                        <?php echo $lang['cred_plan_premium_badge']; ?>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Premium</h3>
-                    <p class="text-3xl font-bold text-cyan-400 mb-1">$35.000<span class="text-lg text-gray-400 font-normal"><?php echo $lang['cred_plan_mes']; ?></span></p>
-                    <p class="text-sm text-gray-500 mb-6"><?php echo $lang['cred_plan_anual']; ?></p>
-
-                    <p class="text-sm text-gray-400 mb-4"><?php echo $lang['cred_plan_incluye']; ?></p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            200 <?php echo $lang['cred_plan_socios']; ?>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2 mt-2"><?php echo $lang['cred_plan_premium_titulo']; ?></h3>
+                    <p class="text-gray-400 text-xs mb-4"><?php echo $lang['cred_plan_premium_desc']; ?></p>
+                    <div class="mb-4">
+                        <?php echo display_price_with_savings_cyan($CREDENCIALIS_PRICING['premium'], $current_language, $CREDENCIALIS_DISCOUNT, $lang['price_you_save'] ?? 'Ahorrás'); ?>
+                        <p class="text-xs text-gray-400 mt-2"><?php echo $lang['cred_plan_pago_mensual'] ?? 'Pago mensual'; ?></p>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-gray-300 text-xs flex-grow">
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong><?php echo $lang['cred_plan_premium_feat1_strong']; ?></strong></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_branding']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_premium_feat2']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_qr']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_premium_feat3']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_soporte_prioritario']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_premium_feat4']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_premium_feat5']; ?></span>
                         </li>
                     </ul>
-
-                    <a href="#contacto" class="block w-full py-3 text-center credencialis-btn text-white font-semibold rounded-lg hover:opacity-90 transition-all">
-                        <?php echo $lang['cred_plan_contratar']; ?>
+                    <a href="#contacto" class="w-full text-center px-4 py-2.5 credencialis-btn text-white font-bold rounded-lg transition-all text-sm">
+                        <?php echo $lang['cred_plan_premium_cta']; ?>
                     </a>
                 </div>
 
                 <!-- Plan Excellens -->
-                <div class="bg-gray-900 border border-cyan-600/20 rounded-2xl p-8 hover:border-cyan-600/40 transition-all">
-                    <h3 class="text-xl font-bold text-white mb-2">Excellens</h3>
-                    <p class="text-3xl font-bold text-cyan-400 mb-1">$75.000<span class="text-lg text-gray-400 font-normal"><?php echo $lang['cred_plan_mes']; ?></span></p>
-                    <p class="text-sm text-gray-500 mb-6"><?php echo $lang['cred_plan_anual']; ?></p>
-
-                    <p class="text-sm text-gray-400 mb-4"><?php echo $lang['cred_plan_incluye']; ?></p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_socios_ilimitados']; ?>
+                <div class="bg-gray-900 border border-cyan-600/20 rounded-xl p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['cred_plan_excellens_titulo']; ?></h3>
+                    <p class="text-gray-400 text-xs mb-4"><?php echo $lang['cred_plan_excellens_desc']; ?></p>
+                    <div class="mb-4">
+                        <?php echo display_price_with_savings_cyan($CREDENCIALIS_PRICING['excellens'], $current_language, $CREDENCIALIS_DISCOUNT, $lang['price_you_save'] ?? 'Ahorrás'); ?>
+                        <p class="text-xs text-gray-400 mt-2"><?php echo $lang['cred_plan_pago_mensual'] ?? 'Pago mensual'; ?></p>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-gray-300 text-xs flex-grow">
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong><?php echo $lang['cred_plan_excellens_feat1_strong']; ?></strong></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_branding']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat2']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_api']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat3']; ?></span>
                         </li>
-                        <li class="flex items-center gap-2 text-gray-300 text-sm">
-                            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <?php echo $lang['cred_plan_dedicado']; ?>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat4']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat5']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat6']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_excellens_feat7']; ?></span>
                         </li>
                     </ul>
-
-                    <a href="#contacto" class="block w-full py-3 text-center border border-cyan-600/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-600/10 transition-all">
-                        <?php echo $lang['cred_plan_contactar']; ?>
+                    <a href="#contacto" class="w-full text-center px-4 py-2.5 bg-gray-800 border border-cyan-600/30 text-cyan-400 font-semibold rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                        <?php echo $lang['cred_plan_excellens_cta']; ?>
                     </a>
+                </div>
+
+                <!-- Plan Supremus -->
+                <div class="bg-gray-900 border border-cyan-600/20 rounded-xl p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['cred_plan_supremus_titulo']; ?></h3>
+                    <p class="text-gray-400 text-xs mb-4"><?php echo $lang['cred_plan_supremus_desc']; ?></p>
+                    <div class="mb-4">
+                        <?php echo display_price_with_savings_cyan($CREDENCIALIS_PRICING['supremus'], $current_language, $CREDENCIALIS_DISCOUNT, $lang['price_you_save'] ?? 'Ahorrás'); ?>
+                        <p class="text-xs text-gray-400 mt-2"><?php echo $lang['cred_plan_pago_mensual'] ?? 'Pago mensual'; ?></p>
+                    </div>
+                    <ul class="space-y-2 mb-6 text-gray-300 text-xs flex-grow">
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong><?php echo $lang['cred_plan_supremus_feat1_strong']; ?></strong></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat2']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat3']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat4']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat5']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat6']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><?php echo $lang['cred_plan_supremus_feat7']; ?></span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="w-full text-center px-4 py-2.5 bg-gray-800 border border-cyan-600/30 text-cyan-400 font-semibold rounded-lg hover:bg-gray-700 transition-colors text-sm">
+                        <?php echo $lang['cred_plan_supremus_cta']; ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-gradient-to-b from-gray-950 to-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['cred_cta_final_titulo']; ?></h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-4"><?php echo $lang['cred_cta_final_desc']; ?></p>
+            <p class="text-cyan-400 max-w-2xl mx-auto mb-8"><?php echo $lang['cred_cta_final_equipo']; ?></p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#contacto" class="credencialis-btn px-8 py-4 text-white font-bold rounded-lg hover:opacity-90 transition-all">
+                    <?php echo $lang['cred_cta_final_demo']; ?>
+                </a>
+                <a href="#contacto" class="border border-cyan-500 px-8 py-4 text-cyan-400 font-bold rounded-lg hover:bg-cyan-600/10 transition-all">
+                    <?php echo $lang['cred_cta_final_contactar']; ?>
+                </a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-12 text-center">
+                <div>
+                    <p class="text-4xl font-bold text-cyan-400"><?php echo $lang['cred_cta_final_implementacion']; ?></p>
+                    <p class="text-gray-500 text-sm"><?php echo $lang['cred_cta_final_implementacion_desc']; ?></p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-cyan-400"><?php echo $lang['cred_cta_final_ahorro']; ?></p>
+                    <p class="text-gray-500 text-sm"><?php echo $lang['cred_cta_final_ahorro_desc']; ?></p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-cyan-400"><?php echo $lang['cred_cta_final_socios']; ?></p>
+                    <p class="text-gray-500 text-sm"><?php echo $lang['cred_cta_final_socios_desc']; ?></p>
                 </div>
             </div>
         </div>

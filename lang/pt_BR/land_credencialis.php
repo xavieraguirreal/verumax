@@ -258,6 +258,11 @@ return [
     'cred_planes_titulo' => 'Planos e Preços',
     'cred_planes_subtitulo' => 'Escolha o plano que melhor se adapta à sua organização',
     'cred_plan_promo_badge' => 'Promo Lançamento',
+    'cred_promo_titulo' => 'PROMO LANÇAMENTO',
+    'cred_promo_alta' => 'Alta:',
+    'cred_promo_alta_bonificada' => 'Alta Bonificada:',
+    'cred_descuento_banner' => 'DE DESCONTO em planos - Somente por tempo limitado',
+    'cred_plan_pago_mensual' => 'Pagamento mensal',
 
     'cred_plan_mes' => '/mês',
     'cred_plan_anual' => 'Faturamento anual',
