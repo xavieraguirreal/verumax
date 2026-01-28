@@ -59,8 +59,9 @@ if ($tipo_documento === 'credentialis') {
         die("Error: Se requiere DNI para generar credencial.");
     }
 
-    // Obtener datos del miembro usando MemberService
+    // Cargar dependencias necesarias
     require_once __DIR__ . '/../src/VERUMax/Services/MemberService.php';
+    require_once __DIR__ . '/autodetect.php';
 
     $id_instancia = $instance_config['id_instancia'] ?? null;
     if (!$id_instancia) {
