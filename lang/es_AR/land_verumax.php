@@ -33,20 +33,20 @@ return [
     'filosofia_subtitle' => 'Donde otros ponen plugins, nosotros escribimos código',
 
     'filosofia_card1_title' => 'Sin Límites',
-    'filosofia_card1_desc' => 'Los CMS tienen techo. Nosotros no. Tu software crece con tu negocio, sin restricciones de plantillas.',
+    'filosofia_card1_desc' => 'Los CMS tienen techo. Nosotros no. Tu software crece con tu negocio, sin restricciones de plantillas ni módulos prefabricados.',
 
     'filosofia_card2_title' => 'Rendimiento Real',
-    'filosofia_card2_desc' => 'Código optimizado desde cero. Sin plugins innecesarios que ralentizan tu sitio. Velocidad de carga superior.',
+    'filosofia_card2_desc' => 'Código optimizado desde cero. Sin capas innecesarias que ralentizan tu sitio. Velocidad de carga superior.',
 
     'filosofia_card3_title' => 'Seguridad Controlada',
-    'filosofia_card3_desc' => 'Sabemos exactamente qué hace cada línea de código. Sin vulnerabilidades de plugins de terceros.',
+    'filosofia_card3_desc' => 'Sabemos exactamente qué hace cada línea de código. Sin vulnerabilidades de componentes de terceros.',
 
     'filosofia_card4_title' => 'Propiedad Total',
     'filosofia_card4_desc' => 'El código es tuyo. Sin dependencias de licencias, sin sorpresas. Control absoluto de tu proyecto.',
 
     // Sección Anti-CMS (teaser)
-    'anticms_question' => '¿Aún tenés tu sitio en WordPress?',
-    'anticms_answer' => 'Con nosotros podés tener eso y mucho más. Programamos desde cero, sin límites y no por ello más costoso.',
+    'anticms_question' => '¿Tu sitio web depende de un CMS?',
+    'anticms_answer' => 'WordPress, Joomla, Wix, Shopify... todos tienen límites. Con nosotros, programamos desde cero. Sin techo, sin restricciones y no por ello más costoso.',
     'anticms_cta' => 'Descubrí cómo →',
 
     // Banners de Soluciones
@@ -65,7 +65,7 @@ return [
 
     'banner_desarrollo_title' => 'Desarrollo Web',
     'banner_desarrollo_subtitle' => 'Sitios Sin Límites',
-    'banner_desarrollo_desc' => '¿Cansado de los límites de WordPress? Sitios web, e-commerce y plataformas a medida.',
+    'banner_desarrollo_desc' => '¿Cansado de los límites de los CMS? Sitios web, e-commerce y plataformas 100% a medida.',
     'banner_desarrollo_cta' => 'Ver servicios',
 
     'banner_hosting_title' => 'Hosting',
