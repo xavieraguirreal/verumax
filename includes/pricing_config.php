@@ -47,7 +47,7 @@ $CERTIFICATUM_DISCOUNT = 50;
 // Precios de Credencialis (mensuales en USD) - PVP Lista
 // Nota: Son exactamente la MITAD de Certificatum
 $CREDENCIALIS_PRICING = [
-    'singularis' => 1,       // Por credencial (sin suscripción)
+    'singularis' => 0.5,     // Por credencial (sin suscripción) - $0.50
     'essentialis' => 10,     // 100 socios/as - $10/mes
     'premium' => 21,         // 500 socios/as - $21/mes
     'excellens' => 35,       // 2,000 socios/as - $35/mes
