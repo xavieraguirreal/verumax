@@ -21,10 +21,10 @@ return [
     'nav_contacto' => 'Contato',
 
     // Hero
-    'hero_badge' => '< Código Próprio />',
-    'hero_title_line1' => 'Software',
-    'hero_title_line2' => 'Sem Limites',
-    'hero_subtitle' => 'Web, Mobile, Desktop. <span class="text-neon-cyan">Programamos o que você precisar</span>, do zero, sob medida. <span class="text-neon-magenta">Sem templates. Sem restrições.</span>',
+    'hero_badge' => '< Seu Software, Sua Decisão />',
+    'hero_title_line1' => 'Desenvolvimento',
+    'hero_title_line2' => 'Sob Medida',
+    'hero_subtitle' => 'Web, Mobile, Desktop. <span class="text-neon-cyan">Código próprio quando você precisa mais</span>, ou <span class="text-neon-magenta">CMS especialista se é o que procura</span>. Você escolhe, nós fazemos realidade.',
     'hero_cta_primary' => 'Solicitar Orçamento',
     'hero_cta_secondary' => 'Ver Serviços',
     'hero_stat1_value' => '+15',
@@ -34,25 +34,25 @@ return [
     'hero_stat3_value' => '∞',
     'hero_stat3_label' => 'Possibilidades',
 
-    // Seção Problema
-    'problema_title' => 'O Problema com Software Genérico',
-    'problema_subtitle' => 'O que as soluções "prontas para usar" não te contam',
+    // Seção: Quando escolher código próprio?
+    'problema_title' => 'Quando Escolher Código Próprio?',
+    'problema_subtitle' => 'O código sob medida é a melhor opção quando...',
 
-    'problema_card1_icon' => '🔒',
-    'problema_card1_title' => 'Funcionalidades Limitadas',
-    'problema_card1_desc' => 'O software genérico te obriga a se adaptar a ele. Seu negócio é único, seu software também deveria ser.',
+    'problema_card1_icon' => '🎯',
+    'problema_card1_title' => 'Você Precisa de Algo Único',
+    'problema_card1_desc' => 'Sua ideia não cabe em templates. Funcionalidades específicas que nenhum plugin resolve. Seu software, sua visão.',
 
-    'problema_card2_icon' => '🐌',
-    'problema_card2_title' => 'Performance Ruim',
-    'problema_card2_desc' => 'Aplicações pesadas, lentas, cheias de funções que você não usa. Recursos desperdiçados e usuários frustrados.',
+    'problema_card2_icon' => '⚡',
+    'problema_card2_title' => 'Performance é Crítica',
+    'problema_card2_desc' => 'Cada milissegundo conta. Código otimizado sem camadas desnecessárias. Velocidade de carregamento superior.',
 
-    'problema_card3_icon' => '🎯',
-    'problema_card3_title' => 'Sem Integração Real',
-    'problema_card3_desc' => 'Conectar sistemas diferentes é uma dor de cabeça. APIs incompatíveis, dados duplicados, processos manuais.',
+    'problema_card3_icon' => '🔗',
+    'problema_card3_title' => 'Integrações Complexas',
+    'problema_card3_desc' => 'Conectar múltiplos sistemas, hardware especializado, APIs próprias. Tudo funcionando como um só.',
 
-    'problema_card4_icon' => '💸',
-    'problema_card4_title' => 'Custos Crescentes',
-    'problema_card4_desc' => 'Licenças por usuário, módulos adicionais, suporte premium... A conta cresce enquanto as limitações persistem.',
+    'problema_card4_icon' => '📈',
+    'problema_card4_title' => 'Escalabilidade Sem Teto',
+    'problema_card4_desc' => 'Seu projeto cresce sem limites de licenças. Evolua seu software no ritmo do seu negócio.',
 
     // Seção Solução
     'solucion_title' => 'Nossa Solução',
@@ -69,6 +69,23 @@ return [
 
     'solucion_card4_title' => 'Propriedade Absoluta',
     'solucion_card4_desc' => 'O código é seu. Sem licenças mensais, sem dependências, sem amarras. Controle total do seu projeto.',
+
+    // Seção CMS
+    'cms_title' => 'Também Somos Especialistas em CMS',
+    'cms_subtitle' => 'WordPress, Shopify, WooCommerce? Dominamos todos',
+    'cms_desc' => 'Nem todos os projetos precisam de código do zero. Se um CMS resolve sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos você a escolher a melhor opção.</strong>',
+
+    'cms_card1_title' => 'WordPress',
+    'cms_card1_desc' => 'Sites institucionais, blogs, portfolios. Themes personalizados e plugins sob medida.',
+
+    'cms_card2_title' => 'WooCommerce',
+    'cms_card2_desc' => 'E-commerce sobre WordPress. Ideal para lojas que não precisam de soluções complexas.',
+
+    'cms_card3_title' => 'Shopify',
+    'cms_card3_desc' => 'Lojas prontas para vender. Configuração, themes e apps personalizados.',
+
+    'cms_card4_title' => 'Outros CMS',
+    'cms_card4_desc' => 'Prestashop, Magento, Drupal, Joomla. Experiência em múltiplas plataformas.',
 
     // Serviços
     'servicios_title' => 'Serviços',
@@ -115,36 +132,36 @@ return [
     'servicio8_features' => 'Python/Node,Scraping,ETL dados,Relatórios PDF',
 
     // Comparativa
-    'comparativa_title' => 'Software Genérico vs Código Próprio',
-    'comparativa_subtitle' => 'A diferença está nos detalhes',
+    'comparativa_title' => 'CMS vs Código Próprio',
+    'comparativa_subtitle' => 'Ajudamos você a escolher a melhor opção para seu projeto',
 
     'comp_header_aspecto' => 'Aspecto',
-    'comp_header_cms' => 'Software Genérico',
+    'comp_header_cms' => 'CMS (WordPress, etc.)',
     'comp_header_propio' => 'Código Próprio',
 
-    'comp_row1_aspecto' => 'Personalização',
-    'comp_row1_cms' => 'Limitada às opções disponíveis',
-    'comp_row1_propio' => 'Ilimitada, 100% sob medida',
+    'comp_row1_aspecto' => 'Ideal para',
+    'comp_row1_cms' => 'Sites padrão, blogs, lojas simples',
+    'comp_row1_propio' => 'Projetos únicos, sistemas complexos',
 
-    'comp_row2_aspecto' => 'Performance',
-    'comp_row2_cms' => 'Sobrecarregado de funções',
-    'comp_row2_propio' => 'Otimizado para seu caso',
+    'comp_row2_aspecto' => 'Tempo de desenvolvimento',
+    'comp_row2_cms' => 'Rápido (dias a semanas)',
+    'comp_row2_propio' => 'Variável conforme complexidade',
 
-    'comp_row3_aspecto' => 'Integração',
-    'comp_row3_cms' => 'APIs limitadas ou inexistentes',
-    'comp_row3_propio' => 'Se conecta com tudo',
+    'comp_row3_aspecto' => 'Personalização',
+    'comp_row3_cms' => 'Limitada a plugins/themes',
+    'comp_row3_propio' => 'Ilimitada, 100% sob medida',
 
-    'comp_row4_aspecto' => 'Escalabilidade',
-    'comp_row4_cms' => 'Teto segundo a licença',
-    'comp_row4_propio' => 'Sem limites',
+    'comp_row4_aspecto' => 'Performance',
+    'comp_row4_cms' => 'Boa para uso geral',
+    'comp_row4_propio' => 'Otimizado para seu caso',
 
-    'comp_row5_aspecto' => 'Propriedade',
-    'comp_row5_cms' => 'Dependente de licenças',
-    'comp_row5_propio' => '100% seu',
+    'comp_row5_aspecto' => 'Escalabilidade',
+    'comp_row5_cms' => 'Até certo ponto',
+    'comp_row5_propio' => 'Sem limites',
 
-    'comp_row6_aspecto' => 'Suporte',
-    'comp_row6_cms' => 'Tickets genéricos',
-    'comp_row6_propio' => 'Equipe que conhece seu código',
+    'comp_row6_aspecto' => 'Investimento inicial',
+    'comp_row6_cms' => 'Menor',
+    'comp_row6_propio' => 'Maior, mas sem custos recorrentes',
 
     // Processo
     'proceso_title' => 'Nosso Processo',

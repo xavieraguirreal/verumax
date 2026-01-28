@@ -568,6 +568,43 @@ $available_languages = $lang_config['languages'];
         </div>
     </section>
 
+    <!-- CMS Section -->
+    <section class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                    <?= __('cms_title', 'También Somos Expertos en CMS') ?>
+                </h2>
+                <p class="text-neon-magenta text-lg font-mono mb-6">
+                    <?= __('cms_subtitle', '¿WordPress, Shopify, WooCommerce? Los dominamos') ?>
+                </p>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    <?= __('cms_desc', 'No todos los proyectos necesitan código desde cero. Si un CMS resuelve tu necesidad, lo implementamos con la misma calidad.') ?>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <?php
+                $cms_icons = ['file-code', 'shopping-bag', 'store', 'layers'];
+                $cms_colors = ['blue', 'purple', 'green', 'orange'];
+                for ($i = 1; $i <= 4; $i++):
+                ?>
+                <div class="cyber-card rounded-xl p-6 reveal text-center" style="animation-delay: <?= ($i-1) * 0.1 ?>s">
+                    <div class="w-14 h-14 rounded-full bg-<?= $cms_colors[$i-1] ?>-500/10 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="<?= $cms_icons[$i-1] ?>" class="w-7 h-7 text-<?= $cms_colors[$i-1] ?>-400"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white mb-2">
+                        <?= __("cms_card{$i}_title", "CMS $i") ?>
+                    </h3>
+                    <p class="text-gray-400 text-sm">
+                        <?= __("cms_card{$i}_desc", '') ?>
+                    </p>
+                </div>
+                <?php endfor; ?>
+            </div>
+        </div>
+    </section>
+
     <!-- Servicios Section -->
     <section id="servicios" class="py-24 relative grid-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -647,7 +684,7 @@ $available_languages = $lang_config['languages'];
                     <thead>
                         <tr>
                             <th class="px-6 py-4 font-display font-semibold text-white"><?= __('comp_header_aspecto', 'Aspecto') ?></th>
-                            <th class="px-6 py-4 font-display font-semibold text-red-400"><?= __('comp_header_cms', 'CMS') ?></th>
+                            <th class="px-6 py-4 font-display font-semibold text-blue-400"><?= __('comp_header_cms', 'CMS') ?></th>
                             <th class="px-6 py-4 font-display font-semibold text-neon-cyan"><?= __('comp_header_propio', 'Código Propio') ?></th>
                         </tr>
                     </thead>
@@ -655,15 +692,15 @@ $available_languages = $lang_config['languages'];
                         <?php for ($i = 1; $i <= 6; $i++): ?>
                         <tr>
                             <td class="px-6 py-4 text-gray-300 font-medium"><?= __("comp_row{$i}_aspecto", '') ?></td>
-                            <td class="px-6 py-4 text-gray-500">
+                            <td class="px-6 py-4 text-gray-400">
                                 <span class="flex items-center gap-2">
-                                    <i data-lucide="x" class="w-4 h-4 text-red-500"></i>
+                                    <i data-lucide="circle" class="w-3 h-3 text-blue-400"></i>
                                     <?= __("comp_row{$i}_cms", '') ?>
                                 </span>
                             </td>
                             <td class="px-6 py-4 text-gray-300">
                                 <span class="flex items-center gap-2">
-                                    <i data-lucide="check" class="w-4 h-4 text-neon-cyan"></i>
+                                    <i data-lucide="circle" class="w-3 h-3 text-neon-cyan"></i>
                                     <?= __("comp_row{$i}_propio", '') ?>
                                 </span>
                             </td>
