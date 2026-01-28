@@ -34,6 +34,9 @@ class MemberService
      */
     public static function getAll(int $id_instancia, array $filtros = []): array
     {
+        // DEBUG: Log de entrada
+        error_log("MemberService::getAll - id_instancia: $id_instancia, filtros: " . json_encode($filtros));
+
         try {
             $conn = self::getConnection();
 
@@ -329,6 +332,9 @@ class MemberService
      */
     public static function getConInscripciones(int $id_instancia, string $buscar = ''): array
     {
+        // DEBUG: Log de entrada
+        error_log("MemberService::getConInscripciones - id_instancia: $id_instancia, buscar: '$buscar'");
+
         try {
             $conn = self::getConnection();
 
@@ -393,12 +399,20 @@ class MemberService
 
             $stmt = $conn->prepare($sql);
             $stmt->execute($params);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // DEBUG: Log de resultados
+            error_log("MemberService::getConInscripciones - Encontrados: " . count($results) . " registros");
+
+            return $results;
 
         } catch (PDOException $e) {
-            error_log("MemberService::getConInscripciones error: " . $e->getMessage());
+            error_log("MemberService::getConInscripciones ERROR: " . $e->getMessage());
+            error_log("MemberService::getConInscripciones - Intentando fallback getAll...");
             // Fallback: solo miembros sin stats
-            return self::getAll($id_instancia, ['buscar' => $buscar]);
+            $fallback = self::getAll($id_instancia, ['buscar' => $buscar]);
+            error_log("MemberService::getConInscripciones - Fallback encontró: " . count($fallback) . " registros");
+            return $fallback;
         }
     }
 
