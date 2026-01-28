@@ -624,4 +624,126 @@ class MemberService
             return ['success' => false, 'mensaje' => 'Error: ' . $e->getMessage()];
         }
     }
+
+    // ==================== CREDENCIALES (CREDENCIALIS) ====================
+
+    /**
+     * Obtiene los datos de credencial de un miembro por slug de institución y DNI
+     * Usado por el módulo Credencialis para generar credenciales digitales
+     *
+     * @param string $institucion Slug de la institución (ej: 'sajur')
+     * @param string $dni Identificador principal del miembro
+     * @return array|null Datos del miembro con campos de credencial o null si no existe
+     */
+    public static function getCredentialData(string $institucion, string $dni): ?array
+    {
+        try {
+            $conn = self::getConnection();
+
+            // Obtener id_instancia desde el slug usando la BD general
+            $connGeneral = DatabaseService::get('general');
+            $stmtInst = $connGeneral->prepare("
+                SELECT id_instancia FROM instances WHERE slug = :slug AND activo = 1
+            ");
+            $stmtInst->execute([':slug' => $institucion]);
+            $instancia = $stmtInst->fetch(PDO::FETCH_ASSOC);
+
+            if (!$instancia) {
+                return null;
+            }
+
+            $id_instancia = $instancia['id_instancia'];
+
+            // Obtener datos del miembro con campos de credencial
+            $stmt = $conn->prepare("
+                SELECT
+                    m.id_miembro,
+                    m.id_instancia,
+                    m.identificador_principal,
+                    m.identificador_principal as dni,
+                    m.tipo_identificador,
+                    m.nombre,
+                    m.apellido,
+                    COALESCE(m.nombre_completo, CONCAT(m.nombre, ' ', m.apellido)) as nombre_completo,
+                    m.email,
+                    m.telefono,
+                    m.genero,
+                    m.estado,
+                    m.foto_url,
+                    -- Campos específicos de credencial
+                    m.numero_asociado,
+                    m.tipo_asociado,
+                    m.nombre_entidad,
+                    m.categoria_servicio,
+                    m.fecha_ingreso,
+                    m.fecha_vencimiento_credencial,
+                    -- Flag para verificar si tiene datos de credencial
+                    CASE WHEN m.numero_asociado IS NOT NULL AND m.numero_asociado != ''
+                         THEN 1 ELSE 0 END as tiene_credencial,
+                    m.fecha_alta,
+                    m.fecha_modificacion
+                FROM miembros m
+                WHERE m.id_instancia = :id_instancia
+                AND m.identificador_principal = :dni
+                AND m.estado = 'Activo'
+            ");
+
+            $stmt->execute([
+                ':id_instancia' => $id_instancia,
+                ':dni' => $dni
+            ]);
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result ?: null;
+
+        } catch (PDOException $e) {
+            error_log("MemberService::getCredentialData error: " . $e->getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Actualiza los datos de credencial de un miembro
+     *
+     * @param int $id_miembro
+     * @param array $datos Datos de credencial (numero_asociado, tipo_asociado, etc.)
+     * @return array ['success' => bool, 'mensaje' => string]
+     */
+    public static function actualizarCredencial(int $id_miembro, array $datos): array
+    {
+        try {
+            $conn = self::getConnection();
+
+            $campos_credencial = [
+                'numero_asociado', 'tipo_asociado', 'nombre_entidad',
+                'categoria_servicio', 'fecha_ingreso', 'fecha_vencimiento_credencial',
+                'foto_url'
+            ];
+
+            $sets = [];
+            $params = [':id' => $id_miembro];
+
+            foreach ($campos_credencial as $campo) {
+                if (array_key_exists($campo, $datos)) {
+                    $sets[] = "$campo = :$campo";
+                    $params[":$campo"] = $datos[$campo] ?: null;
+                }
+            }
+
+            if (empty($sets)) {
+                return ['success' => false, 'mensaje' => 'No hay campos de credencial para actualizar'];
+            }
+
+            $sql = "UPDATE miembros SET " . implode(', ', $sets) . " WHERE id_miembro = :id";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->execute($params);
+
+            return ['success' => true, 'mensaje' => 'Credencial actualizada correctamente'];
+
+        } catch (PDOException $e) {
+            error_log("MemberService::actualizarCredencial error: " . $e->getMessage());
+            return ['success' => false, 'mensaje' => 'Error: ' . $e->getMessage()];
+        }
+    }
 }
