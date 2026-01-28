@@ -11,24 +11,16 @@ use VERUMax\Services\LanguageService;
 // Función helper para traducciones
 $t = fn($key, $params = [], $default = null) => LanguageService::get($key, $params, $default);
 
-// Si viene con DNI, buscar credencial y mostrar
-if (!empty($_POST['documentum']) || !empty($_GET['documentum'])) {
-    if (!defined('PROXY_MODE')) define('PROXY_MODE', true);
-    if (!defined('INSTITUCION_SLUG')) define('INSTITUCION_SLUG', $instance['slug']);
-    if (!defined('INSTITUCION_PATH')) define('INSTITUCION_PATH', ROOT_PATH . '/' . $instance['slug'] . '/');
-
-    $_GET['institutio'] = $instance['slug'];
-    $_POST['institutio'] = $instance['slug'];
-
-    $creare_path = ROOT_PATH . '/credencialis/creare.php';
-    if (file_exists($creare_path)) {
-        chdir(ROOT_PATH . '/credencialis');
-        ob_start();
-        include $creare_path;
-        $credencial_content = ob_get_clean();
-        echo $credencial_content;
-        return;
+// Si viene con DNI, redirigir a creare.php
+$documentum = $_POST['documentum'] ?? $_GET['documentum'] ?? null;
+if (!empty($documentum)) {
+    $lang = $_GET['lang'] ?? $_POST['lang'] ?? '';
+    $redirect_url = 'creare.php?documentum=' . urlencode($documentum) . '&institutio=' . urlencode($instance['slug']);
+    if ($lang) {
+        $redirect_url .= '&lang=' . urlencode($lang);
     }
+    header('Location: ' . $redirect_url);
+    exit;
 }
 
 // Preparar variables para el header compartido
