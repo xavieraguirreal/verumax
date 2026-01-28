@@ -39,6 +39,9 @@ ob_start();
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo-verumax-escudo.png">
 
+    <!-- Flag Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -377,6 +380,16 @@ ob_start();
             border-radius: 20px;
             font-weight: 500;
         }
+
+        /* Language selector */
+        #lang-chevron {
+            transition: transform 0.2s ease;
+        }
+
+        #lang-menu {
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) #1a1a1a;
+        }
     </style>
 </head>
 <body>
@@ -428,10 +441,29 @@ WHERE limits = NULL;
                     <a href="#contacto" class="text-gray-400 hover:text-gold transition-colors text-sm font-medium"><?php echo $lang['nav_contacto'] ?? 'Contacto'; ?></a>
                 </nav>
 
-                <!-- CTA -->
-                <a href="#contacto" class="cta-button text-sm">
-                    <?php echo $lang['hero_cta_secondary'] ?? 'Contactanos'; ?>
-                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Selector -->
+                    <div class="relative" id="lang-selector">
+                        <button onclick="toggleLangMenu()" class="text-gray-400 hover:text-gold transition-colors px-3 py-2 flex items-center gap-2 border border-white/10 rounded-lg hover:border-gold/50">
+                            <?php echo get_flag_emoji($current_language); ?>
+                            <span class="text-sm font-medium hidden sm:inline"><?php echo get_lang_short_name($current_language); ?></span>
+                            <i data-lucide="chevron-down" class="w-4 h-4" id="lang-chevron"></i>
+                        </button>
+                        <div id="lang-menu" class="absolute right-0 mt-2 w-48 bg-gray-900 border border-gold/30 rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 z-50 max-h-64 overflow-y-auto">
+                            <?php foreach ($available_languages as $code => $name): ?>
+                            <a href="#" onclick="changeLanguage('<?php echo $code; ?>')" class="flex items-center gap-3 px-4 py-3 hover:bg-gold/10 transition-colors <?php echo $current_language === $code ? 'bg-gold/20 text-gold' : 'text-gray-300'; ?> first:rounded-t-lg last:rounded-b-lg">
+                                <?php echo get_flag_emoji($code); ?>
+                                <span class="text-sm font-medium"><?php echo $name; ?></span>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href="#contacto" class="cta-button text-sm hidden sm:inline-flex">
+                        <?php echo $lang['hero_cta_secondary'] ?? 'Contactanos'; ?>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -853,6 +885,44 @@ WHERE limits = NULL;
         // Initialize Lucide icons
         lucide.createIcons();
 
+        // Language selector functions
+        function toggleLangMenu() {
+            const menu = document.getElementById('lang-menu');
+            const chevron = document.getElementById('lang-chevron');
+            if (menu.classList.contains('invisible')) {
+                menu.classList.remove('opacity-0', 'invisible');
+                menu.classList.add('opacity-100', 'visible');
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                menu.classList.add('opacity-0', 'invisible');
+                menu.classList.remove('opacity-100', 'visible');
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function changeLanguage(langCode) {
+            // Preservar el hash actual al cambiar de idioma
+            const currentHash = window.location.hash;
+            const newUrl = window.location.pathname + '?lang=' + langCode + currentHash;
+            window.location.href = newUrl;
+        }
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            const langSelector = document.getElementById('lang-selector');
+            if (langSelector && !langSelector.contains(e.target)) {
+                const menu = document.getElementById('lang-menu');
+                const chevron = document.getElementById('lang-chevron');
+                if (menu) {
+                    menu.classList.add('opacity-0', 'invisible');
+                    menu.classList.remove('opacity-100', 'visible');
+                }
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+
         // Terminal typing animation
         const terminalContent = document.getElementById('terminal-content');
         const codeLines = [
@@ -920,6 +990,18 @@ WHERE limits = NULL;
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
+        });
+
+        // Scroll a la sección si hay hash en la URL (después de cambiar idioma)
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
         });
     </script>
 </body>
