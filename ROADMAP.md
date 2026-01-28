@@ -592,9 +592,12 @@ Sistema de envío automático de reportes de estadísticas de email a los admini
 
 ### 4. Credencialis - Credenciales de Socios/Miembros
 
-**Estado**: Implementación base completa
+**Estado**: En pruebas
 **Prioridad**: Alta
 **Última actualización**: 2026-01-28
+**Sesión actual**: Probando con SAJuR antes de crear cliente AMI
+
+---
 
 #### Descripción
 
@@ -604,41 +607,94 @@ Nueva solución comercial (vendida separada o junto a Certificatum) para generar
 
 **AMI Mutual** - Mutual que emite credenciales para socios de entidades asociadas (cooperativas, etc.)
 
-#### Implementado
+---
 
-- ✅ Campos en BD: `numero_asociado`, `tipo_asociado`, `nombre_entidad`, `categoria_servicio`, `fecha_ingreso`, `foto_url`
-- ✅ Tabla `credenciales` para tracking y validación
-- ✅ Campo `tipos_documento_habilitados` en `instances` (permite restringir por cliente)
-- ✅ Plantilla HTML de credencial en `creare.php`
-- ✅ Generación PDF con TCPDF (individual y múltiples en A4)
-- ✅ Validación QR en `verificatio.php` (muestra datos del socio)
-- ✅ Detección de códigos CRED-XXXX en `validare.php`
+#### 🔄 Estado Actual (Sesión 28-Ene-2026)
 
-#### Pendiente
+**SQL ejecutado:** ✅ `sql/20260128_agregar_campos_credenciales.sql`
+**Git:** ✅ Commit `692d55a` subido a main
 
-- [ ] Admin cliente: subir template JPG de credencial
-- [ ] Admin cliente: configurar posiciones de campos
-- [ ] Super Admin: agregar "Credencialis" como solución independiente
-- [ ] Planes específicos para Credencialis
-- [ ] Carga masiva de socios (CSV)
-- [ ] Opción de impresión múltiple (seleccionar varios socios)
-
-#### SQL a Ejecutar
-
-```bash
-sql/20260128_agregar_campos_credenciales.sql
+**Probando con:**
+- Institución: SAJuR (id_instancia = 1)
+- DNI de prueba: 21090771
+- SQL de prueba ejecutado:
+```sql
+UPDATE verumax_nexus.miembros
+SET numero_asociado = '11023',
+    tipo_asociado = 'INST.',
+    nombre_entidad = 'Cooperativa Liberté',
+    categoria_servicio = 'SERVICIO BÁSICO',
+    fecha_ingreso = '2025-09-09'
+WHERE identificador_principal = '21090771'
+AND id_instancia = 1;
 ```
 
-#### Archivos Creados/Modificados
+**URL de prueba:**
+```
+https://sajur.verumax.com/certificatum/creare.php?institutio=sajur&documentum=21090771&genus=credentialis
+```
 
-| Archivo | Cambio |
-|---------|--------|
-| `sql/20260128_agregar_campos_credenciales.sql` | Nuevo - Campos y tablas |
-| `certificatum/templates/credencial.php` | Nuevo - Template HTML |
-| `certificatum/creare.php` | Modificado - Soporte credentialis |
-| `certificatum/creare_pdf_tcpdf.php` | Modificado - Función generarPDFCredencial |
-| `certificatum/validare.php` | Modificado - Detecta códigos CRED- |
-| `certificatum/verificatio.php` | Modificado - Vista de validación para socios |
+---
+
+#### ✅ Implementado
+
+| # | Funcionalidad | Estado |
+|---|---------------|--------|
+| 1 | Campos en BD (`numero_asociado`, `tipo_asociado`, etc.) | ✅ Hecho |
+| 2 | Tabla `credenciales` para tracking | ✅ Hecho |
+| 3 | Campo `tipos_documento_habilitados` en instances | ✅ Hecho |
+| 4 | Plantilla HTML credencial (`creare.php`) | ✅ Hecho |
+| 5 | Generación PDF (`creare_pdf_tcpdf.php`) | ✅ Hecho |
+| 6 | Validación QR (`verificatio.php`) | ✅ Hecho |
+| 7 | Detección códigos CRED- (`validare.php`) | ✅ Hecho |
+
+---
+
+#### 📋 Próximos Pasos (en orden)
+
+| # | Tarea | Prioridad | Notas |
+|---|-------|-----------|-------|
+| 1 | **Probar URL de credencial** | AHORA | Ver si renderiza correctamente |
+| 2 | **Probar descarga PDF** | AHORA | Agregar `&genus=credentialis` a creare_pdf.php |
+| 3 | **Probar validación QR** | AHORA | Generar código y escanear |
+| 4 | **Ajustar diseño visual** | Alta | Basarse en imagen de AMI que pasó el usuario |
+| 5 | **Crear cliente AMI en Super Admin** | Alta | Una vez que funcione con SAJuR |
+| 6 | **Admin: formulario de socios** | Alta | Campos para cargar numero_asociado, etc. |
+| 7 | **Admin: subir template JPG** | Media | Para credenciales con imagen de fondo |
+| 8 | **Admin: carga masiva CSV** | Media | Importar socios desde Excel |
+| 9 | **Super Admin: Credencialis como solución** | Media | Separar de Certificatum en wizard |
+| 10 | **Planes comerciales Credencialis** | Baja | Definir precios y límites |
+
+---
+
+#### Archivos Clave
+
+| Archivo | Función |
+|---------|---------|
+| `certificatum/creare.php` | Vista previa HTML (buscar `credentialis`) |
+| `certificatum/creare_pdf_tcpdf.php` | Función `generarPDFCredencial()` |
+| `certificatum/templates/credencial.php` | Template HTML de la credencial |
+| `certificatum/validare.php` | Detecta códigos `CRED-*` |
+| `certificatum/verificatio.php` | Vista de validación para socios |
+| `sql/20260128_agregar_campos_credenciales.sql` | Estructura de BD |
+
+---
+
+#### Modelo de Credencial AMI (referencia)
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  [LOGO AMI]                           [LOGO LIBERTÉ]    │
+│  ▓▓ SERVICIO DE BENEFICIOS Y DESCUENTOS ▓▓             │
+│         NOMBRE COMPLETO DEL SOCIO                      │
+│              DNI XX.XXX.XXX                            │
+│           ASOCIADA XXXXX INST.                         │
+│            SERVICIO BÁSICO                             │
+│           INGRESO DD/MM/YYYY                           │
+│                                       [QR]             │
+│  ▓▓ Consultá la cartilla en www.mutualami.org.ar ▓▓    │
+└─────────────────────────────────────────────────────────┘
+```
 
 ---
 
