@@ -236,7 +236,46 @@ Cada solución tiene 2 archivos principales:
 
 ---
 
-### 9. OPERA
+### 9. CREDENCIALIS
+**Nombre Técnico (Latín):** Credencialis
+**Significado:** Relativo a credenciales, de credentia (confianza)
+**Nombre Comercial:** Credenciales Digitales / Carnet de Socio Digital
+**Concepto:** Sistema de credenciales digitales para clubes, cooperativas, mutuales y asociaciones con validación QR
+
+**Archivos:**
+- ✅ `credencialis/index.php` → Landing page
+- 🔜 `admin/modulos/credencialis.php` → Módulo admin
+- ✅ `credencialis/creare.php` → Generador de credenciales
+- ✅ `credencialis/validare.php` → Validación QR
+- ✅ `lang/es_AR/land_credencialis.php` → Traducciones ES
+- ✅ `lang/pt_BR/land_credencialis.php` → Traducciones PT
+
+**Tagline:** *"Credenciales Digitales que tus Socios Llevan en el Bolsillo"*
+
+**Color distintivo:** Teal/Cyan (#0891b2)
+
+**Público objetivo:**
+- Clubes deportivos
+- Cooperativas
+- Mutuales
+- Asociaciones civiles
+- Colegios profesionales
+- Eventos y congresos
+- Gimnasios y centros fitness
+- Bibliotecas
+
+**Diferenciadores:**
+- ✅ Validación QR instantánea
+- ✅ Actualización automática de datos
+- ✅ Sin costos de impresión
+- ✅ Acceso 24/7 desde el celular
+- ✅ Integrado con Nexus (miembros compartidos)
+
+**Integración:** Comparte base de miembros con Certificatum vía Nexus
+
+---
+
+### 10. OPERA
 **Nombre Técnico (Latín):** Opera
 **Significado:** Obras, trabajos
 **Nombre Comercial:** Portfolio de Servicios Profesionales / Casos de Estudio
@@ -266,7 +305,7 @@ Cada solución tiene 2 archivos principales:
 
 ---
 
-### 10. VITREUM
+### 11. VITREUM
 **Nombre Técnico (Latín):** Vitreum
 **Significado:** De vidrio, cristalino (como vitrina)
 **Nombre Comercial:** Catálogo Digital de Productos
@@ -299,7 +338,7 @@ Cada solución tiene 2 archivos principales:
 
 ---
 
-### 11. EMPORIUM
+### 12. EMPORIUM
 **Nombre Técnico (Latín):** Emporium
 **Significado:** Mercado, centro comercial
 **Nombre Comercial:** Tienda Online Profesional
@@ -340,6 +379,7 @@ Cada solución tiene 2 archivos principales:
 | **Scripta** | Metallic Blue | #1976D2 | Blog/contenido |
 | **Lumen** | Sky Blue | #0ea5e9 | Portfolios fotográficos |
 | **Certificatum** | Metallic Green | #2E7D32 | Verificación académica |
+| **Credencialis** | Teal/Cyan | #0891b2 | Credenciales de membresía |
 | **Opera** | (Pendiente) | Púrpura oscuro | Portfolio servicios |
 | **Vitreum** | (Pendiente) | Ámbar/Dorado claro | Catálogo productos |
 | **Emporium** | (Pendiente) | Rojo/Granate | Tienda online |
@@ -503,6 +543,7 @@ o
 | **Cognita** | ❌ | ❌ | ✅ | Planeado |
 | **Nexus** | ❌ | 🟡 | ✅ | Integrado en Identitas |
 | **Certificatum** | ✅ | ✅ | ✅ | Producción (SAJuR, Liberté) |
+| **Credencialis** | ✅ | 🟡 | ✅ | Beta (SAJuR) |
 | **Opera** | ❌ | ❌ | ✅ | Planeado |
 | **Vitreum** | ❌ | ❌ | ✅ | Planeado |
 | **Emporium** | ❌ | ❌ | ✅ | Planeado |
@@ -618,6 +659,6 @@ Este archivo debe actualizarse cada vez que:
 
 ---
 
-**Última actualización:** 2025-11-08 (agregadas Opera, Vitreum y Emporium)
+**Última actualización:** 2026-01-28 (agregada Credencialis)
 **Mantenido por:** Equipo VERUMax
 **Referencia:** Este es el documento oficial de nomenclatura
