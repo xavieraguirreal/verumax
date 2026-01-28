@@ -5,12 +5,8 @@
  * Versión: 1.2
  */
 
-// DEBUG TEMPORAL - Mostrar que el archivo se ejecuta
-echo "<!-- DEBUG: creare.php v1.2 cargado -->";
-
-// Habilitar errores
+// Habilitar errores en desarrollo
 ini_set('display_errors', 1);
-ini_set('log_errors', 1);
 error_reporting(E_ALL);
 
 // Cargar configuración
@@ -73,7 +69,7 @@ try {
 // Si llegamos aquí, todo está OK. Renderizar HTML.
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo LanguageService::getCurrentLanguage(); ?>">
+<html lang="<?php echo LanguageService::getCurrentLang(); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +118,7 @@ try {
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="creare_pdf.php?institutio=<?php echo urlencode($institucion); ?>&documentum=<?php echo urlencode($dni); ?>&genus=credentialis&lang=<?php echo urlencode(LanguageService::getCurrentLanguage()); ?>"
+            <a href="creare_pdf.php?institutio=<?php echo urlencode($institucion); ?>&documentum=<?php echo urlencode($dni); ?>&genus=credentialis&lang=<?php echo urlencode(LanguageService::getCurrentLang()); ?>"
                class="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
                style="background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));">
                 <i data-lucide="download" class="w-5 h-5"></i>
