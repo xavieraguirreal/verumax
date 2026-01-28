@@ -87,11 +87,9 @@ if ($tipo_documento === 'credentialis') {
         $codigo_validacion = 'CRED-' . substr($codigo_validacion, 5);
     }
 
-    // Generar QR
-    $qr_url = QRCodeService::generateDataUri(
-        obtenerURLBaseInstitucion() . "/validare.php?codigo=" . $codigo_validacion,
-        150
-    );
+    // Generar QR (URL externa a API de QR)
+    $url_validacion = obtenerURLBaseInstitucion() . "/validare.php?codigo=" . $codigo_validacion;
+    $qr_url = QRCodeService::generate($url_validacion, 150);
 
     // Variable para watermark de instancia test
     $es_instancia_test = ($instance_config['plan'] ?? '') === 'test';
