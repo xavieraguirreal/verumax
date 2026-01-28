@@ -33,8 +33,8 @@ if (!$institucion) {
 
 // Validar DNI
 if (!$dni) {
-    // Si no hay DNI, redirigir al portal con error
-    header('Location: ?error=not_found');
+    // Si no hay DNI, redirigir al portal
+    header('Location: index.php?institutio=' . urlencode($institucion));
     exit;
 }
 
@@ -59,8 +59,8 @@ $t = fn($key, $params = [], $default = null) => LanguageService::get($key, $para
 $miembro = MemberService::getCredentialData($institucion, $dni);
 
 if (!$miembro || empty($miembro['tiene_credencial'])) {
-    // Miembro no encontrado o no tiene credencial
-    header('Location: ?error=not_found&institutio=' . urlencode($institucion));
+    // Miembro no encontrado o no tiene credencial - redirigir al portal
+    header('Location: index.php?error=not_found&institutio=' . urlencode($institucion));
     exit;
 }
 
