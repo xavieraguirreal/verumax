@@ -606,7 +606,7 @@ WHERE limits = NULL;
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                             WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos <span class="text-gold font-semibold">sitios web, apps Android e iOS</span> desde cero. Sin techo, sin restricciones y no por ello más costoso.
                         </p>
-                        <a href="desarrollo/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
+                        <a href="fabricatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
                             Descubrí cómo →
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
@@ -857,7 +857,7 @@ WHERE limits = NULL;
                 </a>
 
                 <!-- Desarrollo Web -->
-                <a href="desarrollo/" class="solution-card p-8 block reveal" style="animation-delay: 0.2s;">
+                <a href="fabricatum/" class="solution-card p-8 block reveal" style="animation-delay: 0.2s;">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold-dark/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="code-2" class="w-7 h-7 text-gold"></i>
