@@ -88,6 +88,7 @@ if (isset($_GET['msg'])) {
 if (isset($_GET['tab'])) {
     $active_tab = $_GET['tab'];
 }
+$active_subtab = $_GET['subtab'] ?? null;
 
 // DEBUG: Ver si llega el POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -2971,6 +2972,8 @@ foreach ($inscripciones as $insc) {
             <div class="flex flex-wrap gap-2">
                 <form method="GET" class="flex gap-2">
                     <input type="hidden" name="modulo" value="certificatum">
+                    <input type="hidden" name="tab" value="personas">
+                    <input type="hidden" name="subtab" value="estudiantes">
                     <input type="text" name="buscar" placeholder="Buscar por DNI o nombre..." value="<?php echo htmlspecialchars($buscar); ?>" class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-48">
                     <button type="submit" class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-200 text-sm">
                         <i data-lucide="search" class="w-4 h-4"></i>
@@ -3519,8 +3522,10 @@ foreach ($inscripciones as $insc) {
             <div class="flex gap-2">
                 <form method="GET" class="flex gap-2">
                     <input type="hidden" name="modulo" value="certificatum">
+                    <input type="hidden" name="tab" value="personas">
+                    <input type="hidden" name="subtab" value="docentes">
                     <input type="text" name="buscar" placeholder="Buscar por DNI, nombre o email..." value="<?php echo htmlspecialchars($buscar); ?>" class="border border-gray-300 rounded-lg px-4 py-2 text-sm w-64">
-                    <button type="submit" onclick="setTimeout(function(){cambiarTabCert('docentes')}, 100)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-sm font-medium">Buscar</button>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-sm font-medium">Buscar</button>
                 </form>
                 <button onclick="abrirWizardImport('docentes')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-sm font-medium flex items-center gap-2">
                     <i data-lucide="upload" class="w-4 h-4"></i>
@@ -4152,6 +4157,7 @@ foreach ($inscripciones as $insc) {
             <div class="flex gap-2">
                 <form method="GET" class="flex gap-2">
                     <input type="hidden" name="modulo" value="certificatum">
+                    <input type="hidden" name="tab" value="cursos">
                     <input type="text" name="buscar" placeholder="Buscar por código o nombre..." value="<?php echo htmlspecialchars($buscar); ?>" class="border border-gray-300 rounded px-3 py-2 text-sm">
                     <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Buscar</button>
                 </form>
@@ -4848,6 +4854,7 @@ foreach ($inscripciones as $insc) {
             <div class="flex flex-wrap gap-2">
                 <form method="GET" class="flex gap-2">
                     <input type="hidden" name="modulo" value="certificatum">
+                    <input type="hidden" name="tab" value="asignaciones">
                     <select name="estado_asignacion" class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
                         <option value="">Todos los estados</option>
                         <option value="Asignado" <?php echo $filtro_estado_asignacion === 'Asignado' ? 'selected' : ''; ?>>Asignado</option>
@@ -5466,6 +5473,7 @@ foreach ($inscripciones as $insc) {
                 <div class="flex gap-2">
                     <form method="GET" class="flex gap-2">
                         <input type="hidden" name="modulo" value="certificatum">
+                        <input type="hidden" name="tab" value="evaluaciones">
                         <select name="estado_eval" class="border border-gray-300 rounded px-3 py-2 text-sm">
                             <option value="">Todos los estados</option>
                             <option value="borrador" <?php echo $filtro_estado_eval == 'borrador' ? 'selected' : ''; ?>>Borrador</option>
@@ -7938,6 +7946,12 @@ foreach ($inscripciones as $insc) {
         <?php if ($active_tab): ?>
             console.log('🔵 Active tab detectado:', '<?php echo $active_tab; ?>');
             cambiarTabCert('<?php echo $active_tab; ?>');
+            <?php if ($active_subtab): ?>
+                console.log('🔵 Active subtab detectado:', '<?php echo $active_subtab; ?>');
+                setTimeout(function() {
+                    cambiarSubTabPersonas('<?php echo $active_subtab; ?>');
+                }, 100);
+            <?php endif; ?>
         <?php endif; ?>
 
         // Activar tab de evaluaciones si estamos viendo preguntas
