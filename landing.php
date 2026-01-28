@@ -600,11 +600,11 @@ WHERE limits = NULL;
                     <div class="relative z-10">
                         <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-6">
                             <i data-lucide="code-2" class="w-5 h-5 text-gold"></i>
-                            <span class="text-gold text-sm font-medium">Desarrollo Web</span>
+                            <span class="text-gold text-sm font-medium">Desarrollo a Medida</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Tu sitio web depende de un CMS?</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            WordPress, Joomla, Wix, Shopify... todos tienen límites. Con nosotros, programamos desde cero. <span class="text-gold font-semibold">Sin techo, sin restricciones</span> y no por ello más costoso.
+                            WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos <span class="text-gold font-semibold">sitios web, apps Android e iOS</span> desde cero. Sin techo, sin restricciones y no por ello más costoso.
                         </p>
                         <a href="desarrollo/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
                             Descubrí cómo →
@@ -614,20 +614,20 @@ WHERE limits = NULL;
                 </div>
             </div>
 
-            <!-- Slide 2: Certificatum -->
+            <!-- Slide 2: Certificatum - Color: Metallic Green #2E7D32 -->
             <div class="slide">
-                <div class="slide-banner bg-gradient-to-br from-black via-purple-950/30 to-black border border-purple-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-t from-purple-500/10 via-transparent to-transparent"></div>
+                <div class="slide-banner bg-gradient-to-br from-black via-green-950/30 to-black border border-green-600/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-green-600/10 via-transparent to-transparent"></div>
                     <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full mb-6">
-                            <i data-lucide="graduation-cap" class="w-5 h-5 text-purple-400"></i>
-                            <span class="text-purple-400 text-sm font-medium">Certificatum</span>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-600/10 border border-green-600/30 rounded-full mb-6">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-green-500"></i>
+                            <span class="text-green-500 text-sm font-medium">Certificatum</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Certificados digitales infalsificables</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Diplomas, analíticos y constancias con <span class="text-purple-400 font-semibold">código QR verificable al instante</span>. Tus estudiantes acceden 24/7 a su trayectoria académica completa.
+                            Diplomas, analíticos y constancias con <span class="text-green-500 font-semibold">código QR verificable al instante</span>. Tus estudiantes acceden 24/7 a su trayectoria académica completa.
                         </p>
-                        <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition-all hover:scale-105">
+                        <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-green-700 hover:bg-green-600 text-white font-bold rounded-xl transition-all hover:scale-105">
                             Conocer Certificatum
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
@@ -677,18 +677,18 @@ WHERE limits = NULL;
                 </div>
             </div>
 
-            <!-- Slide 5: EduMax -->
+            <!-- Slide 5: Academicus - Color: Azul Zafiro #0F52BA -->
             <div class="slide">
-                <div class="slide-banner bg-gradient-to-br from-black via-orange-950/30 to-black border border-orange-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-t from-orange-500/10 via-transparent to-transparent"></div>
+                <div class="slide-banner bg-gradient-to-br from-black via-blue-950/40 to-black border border-blue-600/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600/10 via-transparent to-transparent"></div>
                     <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
-                            <i data-lucide="book-open" class="w-5 h-5 text-orange-400"></i>
-                            <span class="text-orange-400 text-sm font-medium">EduMax</span>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/10 border border-blue-500/30 rounded-full mb-6">
+                            <i data-lucide="book-open" class="w-5 h-5 text-blue-400"></i>
+                            <span class="text-blue-400 text-sm font-medium">Academicus</span>
                         </div>
                         <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu aula virtual, sin las limitaciones de Moodle</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Plataforma educativa <span class="text-orange-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, foros y seguimiento de alumnos. Todo integrado con Certificatum.
+                            Plataforma de gestión académica <span class="text-blue-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, seguimiento de alumnos. Todo integrado con Certificatum.
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
                             Próximamente
@@ -698,18 +698,18 @@ WHERE limits = NULL;
                 </div>
             </div>
 
-            <!-- Slide 6: E-commerce -->
+            <!-- Slide 6: Emporium - Color: Rojo/Granate -->
             <div class="slide">
-                <div class="slide-banner bg-gradient-to-br from-black via-emerald-950/30 to-black border border-emerald-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-500/10 via-transparent to-transparent"></div>
+                <div class="slide-banner bg-gradient-to-br from-black via-red-950/30 to-black border border-red-600/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-red-600/10 via-transparent to-transparent"></div>
                     <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-6">
-                            <i data-lucide="shopping-cart" class="w-5 h-5 text-emerald-400"></i>
-                            <span class="text-emerald-400 text-sm font-medium">E-commerce</span>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-600/10 border border-red-500/30 rounded-full mb-6">
+                            <i data-lucide="shopping-cart" class="w-5 h-5 text-red-400"></i>
+                            <span class="text-red-400 text-sm font-medium">Emporium</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu tienda online, sin comisiones ocultas</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu tienda online profesional, sin comisiones ocultas</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            E-commerce a medida, <span class="text-emerald-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos los medios de pago que necesites. El código es tuyo.
+                            E-commerce a medida, <span class="text-red-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. El código es tuyo.
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
                             Próximamente
@@ -719,14 +719,17 @@ WHERE limits = NULL;
                 </div>
             </div>
 
-            <!-- Navigation dots -->
-            <div class="flex justify-center gap-3 mt-8">
+            <!-- Navigation dots + pause button -->
+            <div class="flex justify-center items-center gap-3 mt-8">
                 <button class="slide-dot active w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="0"></button>
                 <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="1"></button>
                 <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="2"></button>
                 <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="3"></button>
                 <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="4"></button>
                 <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="5"></button>
+                <button id="pauseSlideshow" class="ml-4 w-8 h-8 rounded-full bg-white/10 hover:bg-gold/20 border border-white/20 hover:border-gold/50 flex items-center justify-center transition-all" title="Pausar/Reanudar">
+                    <i data-lucide="pause" class="w-4 h-4 text-white" id="pauseIcon"></i>
+                </button>
             </div>
 
             <!-- Arrow navigation -->
@@ -1021,27 +1024,44 @@ WHERE limits = NULL;
             </div>
 
             <div class="bg-gradient-to-b from-white/5 to-transparent border border-white/10 rounded-2xl p-8 md:p-12 reveal">
-                <form class="space-y-6">
+                <form id="contactForm" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_nombre'] ?? 'Nombre'; ?></label>
-                            <input type="text" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Tu nombre">
+                            <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_nombre'] ?? 'Nombre'; ?> *</label>
+                            <input type="text" name="nombre" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Tu nombre">
                         </div>
                         <div>
-                            <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_email'] ?? 'Email'; ?></label>
-                            <input type="email" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="tu@email.com">
+                            <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_email'] ?? 'Email'; ?> *</label>
+                            <input type="email" name="email" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="tu@email.com">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_mensaje'] ?? 'Mensaje'; ?></label>
-                        <textarea rows="5" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Contanos sobre tu proyecto..."></textarea>
+                        <label class="block text-sm text-gray-400 mb-2">Empresa / Organización *</label>
+                        <input type="text" name="organizacion" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Nombre de tu empresa u organización">
                     </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">¿Qué te interesa?</label>
+                        <select name="tipo" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold focus:outline-none transition-colors">
+                            <option value="desarrollo">Desarrollo Web / Apps</option>
+                            <option value="certificatum">Certificatum - Certificados Digitales</option>
+                            <option value="credencialis">Credencialis - Credenciales de Membresía</option>
+                            <option value="academicus">Academicus - Plataforma Educativa</option>
+                            <option value="emporium">Emporium - Tienda Online</option>
+                            <option value="hosting">Hosting</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_mensaje'] ?? 'Mensaje'; ?></label>
+                        <textarea name="mensaje" rows="4" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Contanos sobre tu proyecto..."></textarea>
+                    </div>
+                    <div id="formMessage" class="hidden p-4 rounded-lg text-center"></div>
                     <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
-                        <button type="submit" class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                            <?php echo $lang['contacto_btn'] ?? 'Enviar Mensaje'; ?>
+                        <button type="submit" id="submitBtn" class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5" id="sendIcon"></i>
+                            <span id="btnText"><?php echo $lang['contacto_btn'] ?? 'Enviar Mensaje'; ?></span>
                         </button>
-                        <a href="https://wa.me/5491100000000" target="_blank" class="text-gray-400 hover:text-terminal-green transition-colors inline-flex items-center gap-2 text-sm">
+                        <a href="https://wa.me/5491123456789" target="_blank" class="text-gray-400 hover:text-terminal-green transition-colors inline-flex items-center gap-2 text-sm">
                             <i data-lucide="message-circle" class="w-5 h-5"></i>
                             <?php echo $lang['contacto_whatsapp'] ?? 'O escribinos por WhatsApp'; ?>
                         </a>
@@ -1244,8 +1264,11 @@ WHERE limits = NULL;
         const dots = document.querySelectorAll('.slide-dot');
         const prevBtn = document.getElementById('prevSlide');
         const nextBtn = document.getElementById('nextSlide');
+        const pauseBtn = document.getElementById('pauseSlideshow');
+        const pauseIcon = document.getElementById('pauseIcon');
         let currentSlide = 0;
         let slideInterval;
+        let isPaused = false;
 
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -1268,17 +1291,38 @@ WHERE limits = NULL;
         }
 
         function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 6000); // Cambia cada 6 segundos
+            if (!isPaused) {
+                slideInterval = setInterval(nextSlide, 6000); // Cambia cada 6 segundos
+            }
+        }
+
+        function stopSlideshow() {
+            clearInterval(slideInterval);
         }
 
         function resetSlideshow() {
-            clearInterval(slideInterval);
+            stopSlideshow();
             startSlideshow();
+        }
+
+        function togglePause() {
+            isPaused = !isPaused;
+            if (isPaused) {
+                stopSlideshow();
+                pauseIcon.setAttribute('data-lucide', 'play');
+                pauseBtn.title = 'Reanudar';
+            } else {
+                startSlideshow();
+                pauseIcon.setAttribute('data-lucide', 'pause');
+                pauseBtn.title = 'Pausar';
+            }
+            lucide.createIcons();
         }
 
         // Event listeners
         prevBtn.addEventListener('click', () => { prevSlide(); resetSlideshow(); });
         nextBtn.addEventListener('click', () => { nextSlide(); resetSlideshow(); });
+        pauseBtn.addEventListener('click', togglePause);
 
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => { showSlide(index); resetSlideshow(); });
@@ -1324,6 +1368,65 @@ WHERE limits = NULL;
             if (e.target === veritasModal) {
                 veritasModal.classList.add('hidden');
             }
+        });
+
+        // Formulario de contacto
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Deshabilitar botón y mostrar loading
+            submitBtn.disabled = true;
+            btnText.textContent = 'Enviando...';
+
+            const formData = new FormData(contactForm);
+            const data = {
+                nombre: formData.get('nombre'),
+                email: formData.get('email'),
+                organizacion: formData.get('organizacion'),
+                tipo: formData.get('tipo'),
+                mensaje: formData.get('mensaje'),
+                producto: 'VERUMax Landing',
+                socios: 'No especificado',
+                lang: '<?php echo $current_language; ?>'
+            };
+
+            try {
+                const response = await fetch('api/contact.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                formMessage.classList.remove('hidden');
+                if (result.success) {
+                    formMessage.className = 'p-4 rounded-lg text-center bg-green-500/20 border border-green-500/30 text-green-400';
+                    formMessage.textContent = result.message || '¡Gracias! Nos comunicaremos pronto.';
+                    contactForm.reset();
+                } else {
+                    formMessage.className = 'p-4 rounded-lg text-center bg-red-500/20 border border-red-500/30 text-red-400';
+                    formMessage.textContent = result.error || 'Error al enviar. Intentá de nuevo.';
+                }
+            } catch (error) {
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'p-4 rounded-lg text-center bg-red-500/20 border border-red-500/30 text-red-400';
+                formMessage.textContent = 'Error de conexión. Intentá de nuevo.';
+            }
+
+            // Restaurar botón
+            submitBtn.disabled = false;
+            btnText.textContent = '<?php echo $lang['contacto_btn'] ?? 'Enviar Mensaje'; ?>';
+
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
         });
     </script>
 </body>
