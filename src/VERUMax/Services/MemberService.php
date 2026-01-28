@@ -643,7 +643,7 @@ class MemberService
             // Obtener id_instancia desde el slug usando la BD general
             $connGeneral = DatabaseService::get('general');
             $stmtInst = $connGeneral->prepare("
-                SELECT id_instancia FROM instances WHERE slug = :slug AND activo = 1
+                SELECT id_instancia FROM instances WHERE slug = :slug
             ");
             $stmtInst->execute([':slug' => $institucion]);
             $instancia = $stmtInst->fetch(PDO::FETCH_ASSOC);
