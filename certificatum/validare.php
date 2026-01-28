@@ -37,23 +37,40 @@ if ($resultado) {
         $resultado['tipo_documento'] ?? null
     );
 
-    // Detectar si es un documento de docente (formato: CODIGO_docente_ID)
+    // Detectar tipo de documento
     $codigo_curso = $resultado['codigo_curso'];
     $participacion_id = null;
+    $es_credencial = false;
+    $id_miembro = null;
 
-    if (preg_match('/^(.+)_docente_(\d+)$/', $codigo_curso, $matches)) {
+    // Detectar si es credencial (formato: credencial_ID)
+    if (preg_match('/^credencial_(\d+)$/', $codigo_curso, $matches)) {
+        $es_credencial = true;
+        $id_miembro = $matches[1];
+    }
+    // Detectar si es documento de docente (formato: CODIGO_docente_ID)
+    elseif (preg_match('/^(.+)_docente_(\d+)$/', $codigo_curso, $matches)) {
         $codigo_curso = $matches[1];  // Código del curso real
         $participacion_id = $matches[2];  // ID de participación
     }
 
-    // Redirigir a la página de verificación con parámetros en latín
-    $redirect_url = 'verificatio.php?institutio=' . urlencode($resultado['institucion']) .
-           '&documentum=' . urlencode($resultado['dni']) .
-           '&cursus=' . urlencode($codigo_curso);
+    // Redirigir según tipo de documento
+    if ($es_credencial) {
+        // Credencial de socio/miembro
+        $redirect_url = 'verificatio.php?institutio=' . urlencode($resultado['institucion']) .
+               '&documentum=' . urlencode($resultado['dni']) .
+               '&genus=credentialis' .
+               '&id_miembro=' . urlencode($id_miembro);
+    } else {
+        // Certificado o constancia tradicional
+        $redirect_url = 'verificatio.php?institutio=' . urlencode($resultado['institucion']) .
+               '&documentum=' . urlencode($resultado['dni']) .
+               '&cursus=' . urlencode($codigo_curso);
 
-    // Agregar participacion si es documento de docente
-    if ($participacion_id) {
-        $redirect_url .= '&participacion=' . urlencode($participacion_id);
+        // Agregar participacion si es documento de docente
+        if ($participacion_id) {
+            $redirect_url .= '&participacion=' . urlencode($participacion_id);
+        }
     }
 
     header('Location: ' . $redirect_url);

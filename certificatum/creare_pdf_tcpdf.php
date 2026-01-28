@@ -125,6 +125,229 @@ function drawImageCentered($pdf, $img_path, $x, $y, $container_w, $container_h) 
     }
 }
 
+/**
+ * Genera PDF de credencial de socio/miembro
+ * @param array $miembro Datos del miembro
+ * @param array $instance_config Configuración de la institución
+ * @param string $codigo_validacion Código único para QR
+ * @param bool $es_instancia_test Si es instancia de prueba
+ * @param string $formato 'individual' o 'a4_multiple'
+ */
+function generarPDFCredencial($miembro, $instance_config, $codigo_validacion, $es_instancia_test, $formato = 'individual') {
+    // Extraer datos del miembro
+    $nombre_completo = $miembro['nombre_completo'] ?? ($miembro['nombre'] . ' ' . $miembro['apellido']);
+    $dni = $miembro['identificador_principal'] ?? '';
+    $numero_asociado = $miembro['numero_asociado'] ?? '';
+    $tipo_asociado = $miembro['tipo_asociado'] ?? '';
+    $nombre_entidad = $miembro['nombre_entidad'] ?? '';
+    $categoria_servicio = $miembro['categoria_servicio'] ?? '';
+    $fecha_ingreso = $miembro['fecha_ingreso'] ?? '';
+
+    // Formatear DNI
+    $dni_formateado = number_format((int)preg_replace('/[^0-9]/', '', $dni), 0, '', '.');
+
+    // Formatear fecha
+    $fecha_ingreso_fmt = $fecha_ingreso ? date('d/m/Y', strtotime($fecha_ingreso)) : '';
+
+    // Datos institución
+    $nombre_institucion = $instance_config['nombre_completo'] ?? $instance_config['nombre'] ?? 'Institución';
+    $logo_url = $instance_config['logo_url'] ?? '';
+    $logo_secundario_url = $instance_config['logo_secundario_url'] ?? '';
+    $color_primario = $instance_config['color_primario'] ?? '#2E7D32';
+
+    // Config de credencial
+    $credencial_config = json_decode($instance_config['credencial_config'] ?? '{}', true);
+    $texto_superior = $credencial_config['texto_superior'] ?? 'CREDENCIAL DE SOCIO';
+    $texto_inferior = $credencial_config['texto_inferior'] ?? '';
+    $template_url = $credencial_config['template_url'] ?? null;
+
+    // Dimensiones de credencial (tamaño tarjeta de crédito en mm)
+    $card_width = 85.6;
+    $card_height = 54;
+
+    // Crear PDF
+    if ($formato === 'a4_multiple') {
+        // A4 vertical con múltiples credenciales
+        $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
+        $page_width = 210;
+        $page_height = 297;
+        $margin = 10;
+        $cards_per_row = 2;
+        $cards_per_col = 5;
+        $gap_x = 5;
+        $gap_y = 3;
+    } else {
+        // Individual - tamaño tarjeta
+        $pdf = new TCPDF('L', 'mm', array($card_width, $card_height), true, 'UTF-8', false);
+    }
+
+    $pdf->SetCreator('VERUMax');
+    $pdf->SetAuthor($nombre_institucion);
+    $pdf->SetTitle('Credencial - ' . $nombre_completo);
+    $pdf->setPrintHeader(false);
+    $pdf->setPrintFooter(false);
+    $pdf->SetMargins(0, 0, 0);
+    $pdf->SetAutoPageBreak(false, 0);
+
+    // Convertir color hex a RGB
+    $color_rgb = sscanf($color_primario, "#%02x%02x%02x");
+
+    // Generar QR
+    $qrFile = tempnam(sys_get_temp_dir(), 'qr_cred_') . '.png';
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+    $domain = $_SERVER['HTTP_HOST'] ?? 'verumax.com';
+    $qr_url = $protocol . $domain . '/validare.php?codigo=' . $codigo_validacion;
+
+    QRCodeService::generateFile($qr_url, $qrFile, 150);
+
+    // Función para dibujar una credencial
+    $drawCredencial = function($pdf, $x, $y, $w, $h) use (
+        $nombre_completo, $dni_formateado, $numero_asociado, $tipo_asociado,
+        $categoria_servicio, $fecha_ingreso_fmt, $nombre_entidad,
+        $logo_url, $logo_secundario_url, $color_rgb, $texto_superior, $texto_inferior,
+        $template_url, $qrFile, $codigo_validacion, $es_instancia_test, $miembro
+    ) {
+        // Si hay template de fondo
+        if ($template_url && file_exists($template_url)) {
+            $pdf->Image($template_url, $x, $y, $w, $h, '', '', '', false, 300, '', false, false, 0);
+        } else {
+            // Fondo blanco con borde
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Rect($x, $y, $w, $h, 'F');
+            $pdf->SetDrawColor(200, 200, 200);
+            $pdf->Rect($x, $y, $w, $h, 'D');
+
+            // Header con color
+            $header_h = 12;
+            $pdf->SetFillColor($color_rgb[0], $color_rgb[1], $color_rgb[2]);
+            $pdf->Rect($x, $y, $w, $header_h, 'F');
+
+            // Logos en header
+            if ($logo_url && isValidImagePath($logo_url)) {
+                $pdf->Image($logo_url, $x + 3, $y + 2, 0, $header_h - 4, '', '', '', false, 300, '', false, false, 0);
+            }
+            if ($logo_secundario_url && isValidImagePath($logo_secundario_url)) {
+                $pdf->Image($logo_secundario_url, $x + $w - 28, $y + 2, 0, $header_h - 4, '', '', '', false, 300, '', false, false, 0);
+            }
+
+            // Banner con texto
+            if ($texto_superior) {
+                $banner_y = $y + $header_h;
+                $banner_h = 6;
+                $pdf->SetFillColor($color_rgb[0], $color_rgb[1], $color_rgb[2]);
+                $pdf->Rect($x, $banner_y, $w, $banner_h, 'F');
+                $pdf->SetFont('helvetica', 'B', 7);
+                $pdf->SetTextColor(255, 255, 255);
+                $pdf->SetXY($x, $banner_y + 1);
+                $pdf->Cell($w, $banner_h - 2, $texto_superior, 0, 0, 'C');
+            }
+
+            // Datos del socio
+            $content_y = $y + $header_h + 8;
+            $pdf->SetTextColor(0, 0, 0);
+
+            // Nombre
+            $pdf->SetFont('helvetica', 'B', 10);
+            $pdf->SetXY($x + 3, $content_y);
+            $pdf->Cell($w - 25, 5, mb_strtoupper($nombre_completo, 'UTF-8'), 0, 1, 'L');
+
+            // DNI
+            $pdf->SetFont('helvetica', '', 9);
+            $pdf->SetXY($x + 3, $content_y + 5);
+            $pdf->Cell($w - 25, 4, 'DNI ' . $dni_formateado, 0, 1, 'L');
+
+            // Número asociado
+            if ($numero_asociado) {
+                $pdf->SetFont('helvetica', 'B', 9);
+                $pdf->SetTextColor($color_rgb[0], $color_rgb[1], $color_rgb[2]);
+                $pdf->SetXY($x + 3, $content_y + 11);
+                $genero = $miembro['genero'] ?? '';
+                $prefijo = ($genero === 'Femenino' || $nombre_entidad) ? 'ASOCIADA' : 'ASOCIADO';
+                $texto_asociado = $prefijo . ' ' . $numero_asociado;
+                if ($tipo_asociado) $texto_asociado .= ' ' . $tipo_asociado;
+                $pdf->Cell($w - 25, 4, $texto_asociado, 0, 1, 'L');
+            }
+
+            // Categoría servicio
+            if ($categoria_servicio) {
+                $pdf->SetFont('helvetica', 'B', 8);
+                $pdf->SetXY($x + 3, $content_y + 16);
+                $pdf->Cell($w - 25, 4, $categoria_servicio, 0, 1, 'L');
+            }
+
+            // Fecha ingreso
+            if ($fecha_ingreso_fmt) {
+                $pdf->SetFont('helvetica', 'B', 8);
+                $pdf->SetXY($x + 3, $content_y + 21);
+                $pdf->Cell($w - 25, 4, 'INGRESO ' . $fecha_ingreso_fmt, 0, 1, 'L');
+            }
+
+            // QR
+            $qr_size = 18;
+            $qr_x = $x + $w - $qr_size - 3;
+            $qr_y = $content_y;
+            if (file_exists($qrFile)) {
+                $pdf->Image($qrFile, $qr_x, $qr_y, $qr_size, $qr_size, 'PNG');
+            }
+
+            // Footer
+            if ($texto_inferior) {
+                $footer_y = $y + $h - 6;
+                $pdf->SetFillColor($color_rgb[0], $color_rgb[1], $color_rgb[2]);
+                $pdf->Rect($x, $footer_y, $w, 6, 'F');
+                $pdf->SetFont('helvetica', '', 6);
+                $pdf->SetTextColor(255, 255, 255);
+                $pdf->SetXY($x, $footer_y + 1);
+                $pdf->Cell($w, 4, $texto_inferior, 0, 0, 'C');
+            }
+        }
+
+        // Watermark para test
+        if ($es_instancia_test) {
+            $pdf->SetAlpha(0.3);
+            $pdf->SetFont('helvetica', 'B', 20);
+            $pdf->SetTextColor(220, 38, 38);
+            $pdf->StartTransform();
+            $pdf->Rotate(-25, $x + $w/2, $y + $h/2);
+            $pdf->SetXY($x, $y + $h/2 - 5);
+            $pdf->Cell($w, 10, 'PRUEBA', 0, 0, 'C');
+            $pdf->StopTransform();
+            $pdf->SetAlpha(1);
+        }
+    };
+
+    // Generar según formato
+    if ($formato === 'a4_multiple') {
+        $pdf->AddPage();
+        $start_x = $margin;
+        $start_y = $margin;
+
+        for ($row = 0; $row < $cards_per_col; $row++) {
+            for ($col = 0; $col < $cards_per_row; $col++) {
+                $cx = $start_x + $col * ($card_width + $gap_x);
+                $cy = $start_y + $row * ($card_height + $gap_y);
+                $drawCredencial($pdf, $cx, $cy, $card_width, $card_height);
+            }
+        }
+    } else {
+        $pdf->AddPage();
+        $drawCredencial($pdf, 0, 0, $card_width, $card_height);
+    }
+
+    // Limpiar QR temporal
+    if (file_exists($qrFile)) {
+        @unlink($qrFile);
+    }
+
+    // Limpiar buffer y enviar PDF
+    while (ob_get_level()) {
+        ob_end_clean();
+    }
+
+    $nombre_archivo = 'Credencial_' . preg_replace('/[^A-Za-z0-9]/', '_', $nombre_completo) . '.pdf';
+    $pdf->Output($nombre_archivo, 'I');
+}
+
 // Parámetros de entrada
 $institucion = $_GET['institutio'] ?? null;
 $dni = $_GET['documentum'] ?? null;
@@ -132,6 +355,50 @@ $curso_id = $_GET['cursus'] ?? null;
 $participacion_id = $_GET['participacion'] ?? null;
 $tipo_documento = $_GET['genus'] ?? 'certificatum_approbationis';
 $lang_request = $_GET['lang'] ?? null;
+$formato_salida = $_GET['formato'] ?? 'individual'; // individual, a4_multiple
+
+// ============================================================
+// CREDENCIALES: Flujo especial sin curso
+// ============================================================
+if ($tipo_documento === 'credentialis') {
+    if (!$institucion || !$dni) {
+        die('Parámetros inválidos para credencial');
+    }
+
+    // Cargar MemberService
+    require_once __DIR__ . '/../src/VERUMax/Services/MemberService.php';
+
+    $instance_config = InstitutionService::getConfig($institucion);
+    LanguageService::init($institucion, $lang_request);
+
+    $id_instancia = $instance_config['id_instancia'] ?? null;
+    if (!$id_instancia) {
+        die('Error: Institución no configurada');
+    }
+
+    $miembro = \VERUMax\Services\MemberService::getByIdentificador($id_instancia, $dni);
+    if (!$miembro) {
+        die('Error: Miembro no encontrado');
+    }
+
+    // Generar código de validación
+    $codigo_validacion = CertificateService::getValidationCode(
+        $institucion,
+        $dni,
+        'credencial_' . $miembro['id_miembro'],
+        'credentialis'
+    );
+    if (strpos($codigo_validacion, 'CERT-') === 0) {
+        $codigo_validacion = 'CRED-' . substr($codigo_validacion, 5);
+    }
+
+    // Detectar modo test
+    $es_instancia_test = ($instance_config['plan'] ?? '') === 'test';
+
+    // Generar PDF de credencial
+    generarPDFCredencial($miembro, $instance_config, $codigo_validacion, $es_instancia_test, $formato_salida);
+    exit;
+}
 
 if (!$institucion || !$dni || !$curso_id) {
     die('Parámetros inválidos');

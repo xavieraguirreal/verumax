@@ -50,6 +50,87 @@ $participacion_id = $_GET['participacion'] ?? null;
 $tipo_documento = $_GET['genus'] ?? 'analyticum';
 
 // ============================================================
+// CREDENCIALES: Flujo especial sin curso
+// Uso: ?institutio=ami&documentum=12345678&genus=credentialis
+// ============================================================
+if ($tipo_documento === 'credentialis') {
+    // Validar DNI requerido
+    if (!$dni) {
+        die("Error: Se requiere DNI para generar credencial.");
+    }
+
+    // Obtener datos del miembro usando MemberService
+    require_once __DIR__ . '/../src/VERUMax/Services/MemberService.php';
+
+    $id_instancia = $instance_config['id_instancia'] ?? null;
+    if (!$id_instancia) {
+        die("Error: Institución no configurada correctamente.");
+    }
+
+    $miembro = \VERUMax\Services\MemberService::getByIdentificador($id_instancia, $dni);
+
+    if (!$miembro) {
+        die("Error: Miembro no encontrado con DNI: " . htmlspecialchars($dni));
+    }
+
+    // Generar código de validación para credencial (prefijo CRED-)
+    $codigo_validacion = CertificateService::getValidationCode(
+        $institucion,
+        $dni,
+        'credencial_' . $miembro['id_miembro'],
+        'credentialis'
+    );
+
+    // Reemplazar prefijo si es necesario (CERT- -> CRED-)
+    if (strpos($codigo_validacion, 'CERT-') === 0) {
+        $codigo_validacion = 'CRED-' . substr($codigo_validacion, 5);
+    }
+
+    // Generar QR
+    $qr_url = QRCodeService::generateDataUri(
+        obtenerURLBaseInstitucion() . "/validare.php?codigo=" . $codigo_validacion,
+        150
+    );
+
+    // Variable para watermark de instancia test
+    $es_instancia_test = ($instance_config['plan'] ?? '') === 'test';
+
+    // Incluir header compartido
+    include __DIR__ . '/../templates/shared/header.php';
+    ?>
+    <main class="flex-grow bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <!-- Botones de acción -->
+            <div class="text-center mb-6 no-print">
+                <a href="creare_pdf.php?institutio=<?php echo urlencode($institucion); ?>&documentum=<?php echo urlencode($dni); ?>&genus=credentialis&lang=<?php echo $current_lang; ?>"
+                   class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+                   style="background-color: <?php echo $color_primario; ?>;">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <?php echo $t('certificatum.download_pdf', [], 'Descargar PDF'); ?>
+                </a>
+                <button onclick="window.print()"
+                        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-600 text-white font-semibold shadow-lg hover:bg-gray-700 transition-all ml-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                    </svg>
+                    <?php echo $t('certificatum.print', [], 'Imprimir'); ?>
+                </button>
+            </div>
+
+            <?php
+            // Incluir template de credencial
+            include __DIR__ . '/templates/credencial.php';
+            ?>
+        </div>
+    </main>
+    <?php
+    include __DIR__ . '/../templates/shared/footer.php';
+    exit; // Terminar ejecución, no continuar con flujo de certificados
+}
+
+// ============================================================
 // MODO PREVIEW: Generar certificado con datos ficticios
 // Uso: ?preview=1&template_id=X&institutio=sajur
 // ============================================================

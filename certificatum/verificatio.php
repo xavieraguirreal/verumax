@@ -20,6 +20,173 @@ require_once 'autodetect.php';
 $dni = $_GET['documentum'] ?? null;
 $curso_id = $_GET['cursus'] ?? null;
 $participacion_id = $_GET['participacion'] ?? null;
+$tipo_documento = $_GET['genus'] ?? null;
+$id_miembro_param = $_GET['id_miembro'] ?? null;
+
+// ============================================================
+// CREDENCIALES: Flujo especial para validación de credenciales
+// ============================================================
+if ($tipo_documento === 'credentialis') {
+    require_once __DIR__ . '/../src/VERUMax/Services/MemberService.php';
+
+    $id_instancia = $instance_config['id_instancia'] ?? null;
+
+    // Buscar miembro por DNI o por id_miembro
+    if ($id_miembro_param) {
+        $miembro = \VERUMax\Services\MemberService::getById((int)$id_miembro_param);
+    } else {
+        $miembro = \VERUMax\Services\MemberService::getByIdentificador($id_instancia, $dni);
+    }
+
+    if (!$miembro) {
+        // Mostrar error de credencial no encontrada
+        $nombre_inst = $instance_config['nombre'] ?? ucfirst($institucion);
+        $logo_url = $instance_config['logo_url'] ?? '';
+        ?>
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Credencial No Encontrada - <?php echo htmlspecialchars($nombre_inst); ?></title>
+            <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-md text-center">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-red-600 mb-2">Credencial No Encontrada</h1>
+                <p class="text-gray-600">No se encontró información para esta credencial.</p>
+            </div>
+        </body>
+        </html>
+        <?php
+        exit;
+    }
+
+    // Datos del miembro para mostrar
+    $nombre_completo = $miembro['nombre_completo'] ?? ($miembro['nombre'] . ' ' . $miembro['apellido']);
+    $dni_miembro = $miembro['identificador_principal'] ?? '';
+    $dni_formateado = number_format((int)preg_replace('/[^0-9]/', '', $dni_miembro), 0, '', '.');
+    $numero_asociado = $miembro['numero_asociado'] ?? '';
+    $tipo_asociado = $miembro['tipo_asociado'] ?? '';
+    $nombre_entidad = $miembro['nombre_entidad'] ?? '';
+    $categoria_servicio = $miembro['categoria_servicio'] ?? '';
+    $fecha_ingreso = $miembro['fecha_ingreso'] ?? '';
+    $estado_miembro = $miembro['estado'] ?? 'Activo';
+
+    // Formatear fecha
+    $fecha_ingreso_fmt = $fecha_ingreso ? date('d/m/Y', strtotime($fecha_ingreso)) : '';
+
+    // Configuración visual
+    $nombre_inst = $instance_config['nombre_completo'] ?? $instance_config['nombre'] ?? 'Institución';
+    $logo_url = $instance_config['logo_url'] ?? '';
+    $color_primario = $instance_config['color_primario'] ?? '#2E7D32';
+
+    // Determinar estado de la credencial
+    $credencial_valida = ($estado_miembro === 'Activo');
+    $estado_clase = $credencial_valida ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
+    $estado_texto = $credencial_valida ? 'CREDENCIAL VÁLIDA' : 'CREDENCIAL INACTIVA';
+    $icono_estado = $credencial_valida ? 'M5 13l4 4L19 7' : 'M6 18L18 6M6 6l12 12';
+
+    // Incluir header
+    include __DIR__ . '/../templates/shared/header.php';
+    ?>
+    <main class="flex-grow bg-gray-50 py-8">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <!-- Tarjeta de verificación -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Header con estado -->
+                <div class="<?php echo $credencial_valida ? 'bg-green-500' : 'bg-red-500'; ?> text-white p-6 text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="<?php echo $icono_estado; ?>"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold"><?php echo $estado_texto; ?></h1>
+                    <p class="text-white/80 mt-1">Verificado el <?php echo date('d/m/Y'); ?> a las <?php echo date('H:i'); ?></p>
+                </div>
+
+                <!-- Datos del socio -->
+                <div class="p-6">
+                    <!-- Logo institución -->
+                    <?php if ($logo_url): ?>
+                        <div class="text-center mb-6">
+                            <img src="<?php echo htmlspecialchars($logo_url); ?>" alt="<?php echo htmlspecialchars($nombre_inst); ?>" class="h-16 mx-auto">
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Información del socio -->
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-500 mb-1">Nombre completo</p>
+                            <p class="text-xl font-bold text-gray-900"><?php echo htmlspecialchars($nombre_completo); ?></p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-500 mb-1">DNI</p>
+                                <p class="font-semibold text-gray-900"><?php echo htmlspecialchars($dni_formateado); ?></p>
+                            </div>
+
+                            <?php if ($numero_asociado): ?>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-500 mb-1">N° Asociado</p>
+                                <p class="font-semibold" style="color: <?php echo $color_primario; ?>;">
+                                    <?php echo htmlspecialchars($numero_asociado); ?>
+                                    <?php if ($tipo_asociado): ?> <?php echo htmlspecialchars($tipo_asociado); ?><?php endif; ?>
+                                </p>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <?php if ($nombre_entidad): ?>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-500 mb-1">Entidad</p>
+                            <p class="font-semibold text-gray-900"><?php echo htmlspecialchars($nombre_entidad); ?></p>
+                        </div>
+                        <?php endif; ?>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <?php if ($categoria_servicio): ?>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-500 mb-1">Categoría</p>
+                                <p class="font-semibold" style="color: <?php echo $color_primario; ?>;"><?php echo htmlspecialchars($categoria_servicio); ?></p>
+                            </div>
+                            <?php endif; ?>
+
+                            <?php if ($fecha_ingreso_fmt): ?>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-500 mb-1">Socio desde</p>
+                                <p class="font-semibold text-gray-900"><?php echo $fecha_ingreso_fmt; ?></p>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-500 mb-1">Estado</p>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium <?php echo $estado_clase; ?>">
+                                <?php echo htmlspecialchars($estado_miembro); ?>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Institución emisora -->
+                    <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                        <p class="text-sm text-gray-500">Credencial emitida por</p>
+                        <p class="font-semibold text-gray-900"><?php echo htmlspecialchars($nombre_inst); ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php
+    include __DIR__ . '/../templates/shared/footer.php';
+    exit;
+}
 
 // Detectar si el curso tiene formato de docente (CODIGO_docente_ID)
 // Esto puede venir de QRs generados con el formato antiguo

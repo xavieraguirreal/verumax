@@ -590,6 +590,58 @@ Sistema de envío automático de reportes de estadísticas de email a los admini
 
 ---
 
+### 4. Credencialis - Credenciales de Socios/Miembros
+
+**Estado**: Implementación base completa
+**Prioridad**: Alta
+**Última actualización**: 2026-01-28
+
+#### Descripción
+
+Nueva solución comercial (vendida separada o junto a Certificatum) para generar credenciales digitales con QR verificable. Dirigida a mutuales, cooperativas, clubes, asociaciones profesionales.
+
+#### Cliente Piloto
+
+**AMI Mutual** - Mutual que emite credenciales para socios de entidades asociadas (cooperativas, etc.)
+
+#### Implementado
+
+- ✅ Campos en BD: `numero_asociado`, `tipo_asociado`, `nombre_entidad`, `categoria_servicio`, `fecha_ingreso`, `foto_url`
+- ✅ Tabla `credenciales` para tracking y validación
+- ✅ Campo `tipos_documento_habilitados` en `instances` (permite restringir por cliente)
+- ✅ Plantilla HTML de credencial en `creare.php`
+- ✅ Generación PDF con TCPDF (individual y múltiples en A4)
+- ✅ Validación QR en `verificatio.php` (muestra datos del socio)
+- ✅ Detección de códigos CRED-XXXX en `validare.php`
+
+#### Pendiente
+
+- [ ] Admin cliente: subir template JPG de credencial
+- [ ] Admin cliente: configurar posiciones de campos
+- [ ] Super Admin: agregar "Credencialis" como solución independiente
+- [ ] Planes específicos para Credencialis
+- [ ] Carga masiva de socios (CSV)
+- [ ] Opción de impresión múltiple (seleccionar varios socios)
+
+#### SQL a Ejecutar
+
+```bash
+sql/20260128_agregar_campos_credenciales.sql
+```
+
+#### Archivos Creados/Modificados
+
+| Archivo | Cambio |
+|---------|--------|
+| `sql/20260128_agregar_campos_credenciales.sql` | Nuevo - Campos y tablas |
+| `certificatum/templates/credencial.php` | Nuevo - Template HTML |
+| `certificatum/creare.php` | Modificado - Soporte credentialis |
+| `certificatum/creare_pdf_tcpdf.php` | Modificado - Función generarPDFCredencial |
+| `certificatum/validare.php` | Modificado - Detecta códigos CRED- |
+| `certificatum/verificatio.php` | Modificado - Vista de validación para socios |
+
+---
+
 ## Funcionalidades Futuras (Sin Planificar)
 
 - API REST para validación de certificados
