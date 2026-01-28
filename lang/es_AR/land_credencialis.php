@@ -9,12 +9,12 @@ return [
     // META TAGS Y SEO
     // =====================================
     'cred_meta_title' => 'Credencialis - Credenciales Digitales para Organizaciones | Verumax',
-    'cred_meta_description' => 'Sistema de credenciales digitales para clubes, cooperativas, mutuales y asociaciones. Carnet de socio digital con validación QR. Sin impresión, siempre actualizado.',
-    'cred_meta_keywords' => 'credencial digital, carnet de socio, credencial QR, membresía digital, carnet club, credencial cooperativa, carnet mutual, acreditación eventos',
+    'cred_meta_description' => 'Sistema de credenciales digitales para clubes, cooperativas, mutuales y asociaciones. Carnet de socio/a digital con validación QR. Sin impresión, siempre actualizado.',
+    'cred_meta_keywords' => 'credencial digital, carnet de socio, carnet de socia, credencial QR, membresía digital, carnet club, credencial cooperativa, carnet mutual, acreditación eventos',
     'cred_meta_og_title' => 'Credencialis - Credenciales Digitales Verificables',
-    'cred_meta_og_description' => 'Credenciales digitales que tus socios llevan en el bolsillo. Validación QR instantánea, sin costos de impresión.',
+    'cred_meta_og_description' => 'Credenciales digitales que tus socios y socias llevan en el bolsillo. Validación QR instantánea, sin costos de impresión.',
     'cred_meta_twitter_title' => 'Credencialis | Credenciales Digitales para Organizaciones',
-    'cred_meta_twitter_description' => 'Carnet de socio digital con validación QR. La forma moderna de identificar a tus miembros.',
+    'cred_meta_twitter_description' => 'Carnet de socio/a digital con validación QR. La forma moderna de identificar a tus miembros.',
 
     // =====================================
     // NAVEGACIÓN
@@ -32,7 +32,7 @@ return [
     'cred_hero_badge' => '✓ Solución de Membresías Completa',
     'cred_hero_title' => 'Credenciales Digitales',
     'cred_hero_title_highlight' => 'para tu Organización',
-    'cred_hero_propuesta_valor' => 'Cargás tus socios, asignás credenciales, y ellos acceden con su DNI. Así de simple.',
+    'cred_hero_propuesta_valor' => 'Cargás tus socios/as, asignás credenciales, y acceden con su DNI. Así de simple.',
     'cred_hero_subtitle' => 'Solución completa para',
     'cred_hero_clubes' => 'clubes deportivos',
     'cred_hero_cooperativas' => 'cooperativas',
@@ -49,7 +49,7 @@ return [
 
     // Hero stats
     'cred_hero_stat_ahorro' => 'Ahorro en impresión',
-    'cred_hero_stat_acceso' => 'Acceso del socio',
+    'cred_hero_stat_acceso' => 'Acceso del socio/a',
     'cred_hero_stat_validacion' => 'Validación',
 
     // =====================================
@@ -62,7 +62,7 @@ return [
     'cred_problema_impresion_desc' => 'Carnets plásticos, impresoras especiales, insumos. Un gasto recurrente que nunca termina.',
 
     'cred_problema_perdidos' => 'Carnets Perdidos',
-    'cred_problema_perdidos_desc' => 'Socios que pierden o dañan su carnet y piden reposición constantemente.',
+    'cred_problema_perdidos_desc' => 'Socios/as que pierden o dañan su carnet y piden reposición constantemente.',
 
     'cred_problema_falsificaciones' => 'Falsificaciones',
     'cred_problema_falsificaciones_desc' => 'Carnets fáciles de copiar sin forma efectiva de verificar autenticidad.',
@@ -74,7 +74,7 @@ return [
     'cred_problema_acceso_desc' => 'Verificar manualmente cada carnet en la entrada demora y genera colas.',
 
     'cred_problema_archivos' => 'Registros Desorganizados',
-    'cred_problema_archivos_desc' => 'Planillas dispersas, sin centralizar quién es socio activo y quién no.',
+    'cred_problema_archivos_desc' => 'Planillas dispersas, sin centralizar quién es socio/a activo/a y quién no.',
 
     // =====================================
     // CÓMO FUNCIONA
@@ -86,12 +86,12 @@ return [
     'cred_como_funciona_paso1_desc' => 'Subí tu logo, elegí los colores institucionales y personalizá el texto de la credencial.',
     'cred_como_funciona_paso1_alt' => '¿Preferís delegar? Nuestro equipo configura todo por vos.',
 
-    'cred_como_funciona_paso2_titulo' => 'Cargá tus Socios',
+    'cred_como_funciona_paso2_titulo' => 'Cargá tus Socios/as',
     'cred_como_funciona_paso2_desc' => 'Importá desde Excel o cargá uno por uno. Si ya usás Certificatum, los datos ya están.',
     'cred_como_funciona_paso2_alt' => 'Envianos tu listado y lo importamos nosotros.',
 
-    'cred_como_funciona_paso3_titulo' => 'El Socio Accede',
-    'cred_como_funciona_paso3_desc' => 'Con solo ingresar su DNI, el socio ve y descarga su credencial digital al instante.',
+    'cred_como_funciona_paso3_titulo' => 'El/La Socio/a Accede',
+    'cred_como_funciona_paso3_desc' => 'Con solo ingresar su DNI, el/la socio/a ve y descarga su credencial digital al instante.',
     'cred_como_funciona_paso3_alt' => 'También puede guardarla en el celular o imprimirla si lo prefiere.',
 
     // =====================================
@@ -101,7 +101,7 @@ return [
     'cred_organizaciones_subtitulo' => 'Organizaciones que confían en credenciales digitales',
 
     'cred_org_clubes' => 'Clubes Deportivos',
-    'cred_org_clubes_desc' => 'Carnet de socio digital para acceso a instalaciones, pileta, gimnasio y actividades.',
+    'cred_org_clubes_desc' => 'Carnet de socio/a digital para acceso a instalaciones, pileta, gimnasio y actividades.',
 
     'cred_org_cooperativas' => 'Cooperativas',
     'cred_org_cooperativas_desc' => 'Credencial de asociado con categoría de servicio y datos de membresía.',
@@ -140,13 +140,13 @@ return [
     'cred_func_branding_desc' => 'Logo, colores y textos personalizados. La credencial proyecta tu imagen institucional.',
 
     'cred_func_acceso' => 'Acceso 24/7',
-    'cred_func_acceso_desc' => 'El socio ingresa su DNI desde cualquier dispositivo y accede a su credencial.',
+    'cred_func_acceso_desc' => 'El/la socio/a ingresa su DNI desde cualquier dispositivo y accede a su credencial.',
 
     'cred_func_compartir' => 'Compartir y Descargar',
     'cred_func_compartir_desc' => 'PDF descargable, imprimible o para guardar en el celular como imagen.',
 
     'cred_func_masivo' => 'Carga Masiva',
-    'cred_func_masivo_desc' => 'Importá cientos de socios desde Excel o copiando y pegando. Asigná credenciales en minutos.',
+    'cred_func_masivo_desc' => 'Importá cientos de socios/as desde Excel o copiando y pegando. Asigná credenciales en minutos.',
 
     // =====================================
     // BENEFICIOS
@@ -161,7 +161,7 @@ return [
     'cred_beneficio_tiempo_desc' => 'Automatizá la emisión y actualización de credenciales',
 
     'cred_beneficio_seguridad_titulo' => 'Seguridad Garantizada',
-    'cred_beneficio_seguridad_desc' => 'QR único e infalsificable para cada socio',
+    'cred_beneficio_seguridad_desc' => 'QR único e infalsificable para cada socio/a',
 
     'cred_beneficio_imagen_titulo' => 'Imagen Profesional',
     'cred_beneficio_imagen_desc' => 'Credenciales modernas que reflejan innovación',
@@ -182,22 +182,22 @@ return [
     'cred_faq_titulo' => 'Preguntas Frecuentes',
     'cred_faq_subtitulo' => 'Todo lo que necesitás saber sobre Credencialis',
 
-    'cred_faq_acceso_titulo' => '¿Cómo accede el socio a su credencial?',
+    'cred_faq_acceso_titulo' => '¿Cómo accede el/la socio/a a su credencial?',
     'cred_faq_acceso_desc' => 'Ingresando a tu portal personalizado (ej: tuorganizacion.verumax.com/credencialis) y escribiendo su número de documento. En segundos ve su credencial digital.',
 
     'cred_faq_imprimir_titulo' => '¿Se puede imprimir la credencial?',
-    'cred_faq_imprimir_desc' => 'Sí. El socio puede descargar un PDF de alta calidad para imprimir en casa o llevar al celular. También ofrecemos servicio de impresión profesional en PVC.',
+    'cred_faq_imprimir_desc' => 'Sí. El/la socio/a puede descargar un PDF de alta calidad para imprimir en casa o llevar al celular. También ofrecemos servicio de impresión profesional en PVC.',
 
     'cred_faq_vencimiento_titulo' => '¿Las credenciales tienen vencimiento?',
     'cred_faq_vencimiento_desc' => 'Podés configurar vencimiento automático (mensual, anual) o sin vencimiento. Cuando vence, la credencial muestra estado inactivo.',
 
-    'cred_faq_actualizar_titulo' => '¿Qué pasa si cambio datos del socio?',
-    'cred_faq_actualizar_desc' => 'Los cambios se reflejan instantáneamente. Si actualizás la categoría de servicio, el socio ve su credencial actualizada sin hacer nada.',
+    'cred_faq_actualizar_titulo' => '¿Qué pasa si cambio datos del/la socio/a?',
+    'cred_faq_actualizar_desc' => 'Los cambios se reflejan instantáneamente. Si actualizás la categoría de servicio, el/la socio/a ve su credencial actualizada sin hacer nada.',
 
     'cred_faq_validar_titulo' => '¿Cómo se valida una credencial?',
-    'cred_faq_validar_desc' => 'Escaneando el código QR con cualquier celular. Se abre una página que muestra si la credencial es válida, los datos del socio y su estado de membresía.',
+    'cred_faq_validar_desc' => 'Escaneando el código QR con cualquier celular. Se abre una página que muestra si la credencial es válida, los datos del/la socio/a y su estado de membresía.',
 
-    'cred_faq_existentes_titulo' => '¿Puedo usar datos de socios que ya tengo cargados?',
+    'cred_faq_existentes_titulo' => '¿Puedo usar datos de socios/as que ya tengo cargados?',
     'cred_faq_existentes_desc' => 'Si ya usás Certificatum u otro módulo de Verumax, los datos de tus miembros ya están en el sistema. Solo tenés que asignarles credenciales.',
 
     // =====================================
@@ -214,8 +214,8 @@ return [
     'cred_plan_contactar' => 'Contactar Ventas',
 
     'cred_plan_incluye' => 'Incluye:',
-    'cred_plan_socios' => 'socios',
-    'cred_plan_socios_ilimitados' => 'Socios ilimitados',
+    'cred_plan_socios' => 'socios/as',
+    'cred_plan_socios_ilimitados' => 'Socios/as ilimitados',
     'cred_plan_branding' => 'Branding personalizado',
     'cred_plan_qr' => 'Validación QR',
     'cred_plan_soporte' => 'Soporte por email',
@@ -239,7 +239,7 @@ return [
     'cred_contacto_tipo_colegio' => 'Colegio profesional',
     'cred_contacto_tipo_evento' => 'Eventos',
     'cred_contacto_tipo_otro' => 'Otro',
-    'cred_contacto_socios' => 'Cantidad aproximada de socios',
+    'cred_contacto_socios' => 'Cantidad aproximada de socios/as',
     'cred_contacto_mensaje' => 'Mensaje (opcional)',
     'cred_contacto_enviar' => 'Solicitar Demo',
     'cred_contacto_enviando' => 'Enviando...',
