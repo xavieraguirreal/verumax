@@ -8,6 +8,11 @@
  * Reutiliza el motor de QR y validación de Certificatum.
  */
 
+// DEBUG: Mostrar errores
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Cargar configuración
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/../certificatum/autodetect.php';
