@@ -176,6 +176,10 @@ return [
     'cred_caso_sajur_tipo' => 'Associação Civil',
     'cred_caso_sajur_testimonio' => '"Nossos associados e associadas acessam sua credencial pelo celular em segundos. Não precisamos mais reimprimir carteirinhas quando muda a categoria de filiação. A validação QR nos dá tranquilidade."',
 
+    'cred_caso_liberte_nombre' => 'Liberté - Cooperativa de Trabalho',
+    'cred_caso_liberte_tipo' => 'Cooperativa',
+    'cred_caso_liberte_testimonio' => '"Com o Credencialis simplificamos a gestão dos nossos associados/as. Cada cooperado/a tem sua credencial digital atualizada e pode acessá-la a qualquer momento."',
+
     // =====================================
     // FAQ
     // =====================================
