@@ -364,11 +364,45 @@ https://{{SLUG}}.verumax.com/validare.php?codigo=XXX      # Validar QR
 ├── assets/
 │   └── images/
 │       └── logo.png     ← Logo institución
-└── certificatum/
-    ├── index.php        ← Redirect a cursus
-    ├── creare.php       ← Proxy alternativo
-    ├── cursus.php       ← Proxy alternativo
-    └── tabularium.php   ← Proxy alternativo
+├── certificatum/        ← Proxies de Certificatum
+│   ├── index.php        ← Redirect a cursus
+│   ├── creare.php       ← Proxy alternativo
+│   ├── cursus.php       ← Proxy alternativo
+│   └── tabularium.php   ← Proxy alternativo
+└── credencialis/        ← Proxies de Credencialis (si usa módulo)
+    ├── index.php        ← Portal acceso por DNI
+    ├── creare.php       ← Ver credencial
+    ├── creare_pdf.php   ← Descargar PDF
+    ├── validare.php     ← Validar código QR
+    └── verificatio.php  ← Vista pública verificación
+```
+
+## 9. Módulo Credencialis (Opcional)
+
+Si la institución usará credenciales de membresía (mutuales, cooperativas, asociaciones):
+
+### 9.1 Copiar carpeta credencialis
+
+```bash
+# Ya está incluida en _template_institucion
+# Solo reemplazar {{SLUG}} en los archivos
+```
+
+### 9.2 Configurar datos de miembros
+
+Los datos de credencial se almacenan en `verumax_nexus.miembros`:
+- `numero_asociado` - Número de socio
+- `tipo_asociado` - Tipo (Inst., Adh., etc.)
+- `categoria_servicio` - Plan o categoría
+- `fecha_ingreso` - Fecha de alta
+- `fecha_vencimiento_credencial` - Vencimiento (opcional)
+
+### 9.3 URLs de Credencialis
+
+```
+https://{{SLUG}}.verumax.com/credencialis/                    # Portal acceso
+https://{{SLUG}}.verumax.com/credencialis/creare.php?documentum=XXX  # Ver credencial
+https://verumax.com/credencialis/validare.php?codigo=XXX     # Validar QR
 ```
 
 ---
