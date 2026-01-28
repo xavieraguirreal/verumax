@@ -367,6 +367,9 @@ return [
     'cred_contacto_mensaje' => 'Mensagem (opcional)',
     'cred_contacto_enviar' => 'Solicitar Demo',
     'cred_contacto_enviando' => 'Enviando...',
+    'cred_contacto_exito_titulo' => 'Mensagem Enviada!',
+    'cred_contacto_exito_cerrar' => 'Fechar',
+    'cred_contacto_error' => 'Erro ao enviar. Tente novamente.',
 
     // =====================================
     // FOOTER

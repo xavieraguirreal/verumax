@@ -1502,19 +1502,55 @@ ob_start();
         });
 
         // Formulario de contacto
-        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.textContent;
-            btn.textContent = '<?php echo $lang['cred_contacto_enviando']; ?>';
+            btn.textContent = '<?php echo $lang['cred_contacto_enviando'] ?? 'Enviando...'; ?>';
             btn.disabled = true;
 
-            setTimeout(() => {
-                alert('Gracias por contactarnos. Nos comunicaremos pronto.');
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/contact.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Mostrar mensaje de éxito
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'fixed inset-0 bg-black/80 flex items-center justify-center z-50';
+                    successMsg.innerHTML = `
+                        <div class="bg-gray-900 border border-cyan-500 rounded-2xl p-8 max-w-md mx-4 text-center">
+                            <div class="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['cred_contacto_exito_titulo'] ?? '¡Mensaje Enviado!'; ?></h3>
+                            <p class="text-gray-400 mb-6">${result.message}</p>
+                            <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 credencialis-btn text-white rounded-lg">
+                                <?php echo $lang['cred_contacto_exito_cerrar'] ?? 'Cerrar'; ?>
+                            </button>
+                        </div>
+                    `;
+                    document.body.appendChild(successMsg);
+                    this.reset();
+                } else {
+                    alert(result.error || '<?php echo $lang['cred_contacto_error'] ?? 'Error al enviar. Intenta nuevamente.'; ?>');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('<?php echo $lang['cred_contacto_error'] ?? 'Error al enviar. Intenta nuevamente.'; ?>');
+            } finally {
                 btn.textContent = originalText;
                 btn.disabled = false;
-                this.reset();
-            }, 1500);
+            }
         });
     </script>
 
