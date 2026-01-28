@@ -2,11 +2,15 @@
 /**
  * CREDENCIALIS - Generación de Credenciales de Membresía
  * Sistema VERUMax
- * Versión: 1.1
+ * Versión: 1.2
  */
+
+// DEBUG TEMPORAL - Mostrar que el archivo se ejecuta
+echo "<!-- DEBUG: creare.php v1.2 cargado -->";
 
 // Habilitar errores
 ini_set('display_errors', 1);
+ini_set('log_errors', 1);
 error_reporting(E_ALL);
 
 // Cargar configuración
