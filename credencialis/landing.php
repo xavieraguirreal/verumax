@@ -346,8 +346,8 @@ ob_start();
                     </div>
                 </div>
 
-                <p class="text-xl text-gray-300 mb-8 shimmer-text">
-                    <?php echo $lang['cred_hero_subtitle']; ?> <strong class="text-cyan-600"><?php echo $lang['cred_hero_clubes']; ?></strong>, <strong class="text-cyan-600"><?php echo $lang['cred_hero_cooperativas']; ?></strong>, <strong class="text-cyan-600"><?php echo $lang['cred_hero_mutuales']; ?></strong> y <strong class="text-cyan-600"><?php echo $lang['cred_hero_asociaciones']; ?></strong>
+                <p class="text-xl text-gray-300 mb-8 shimmer-text-cyan">
+                    <?php echo $lang['cred_hero_subtitle']; ?> <strong><?php echo $lang['cred_hero_clubes']; ?></strong>, <strong><?php echo $lang['cred_hero_cooperativas']; ?></strong>, <strong><?php echo $lang['cred_hero_mutuales']; ?></strong> y <strong><?php echo $lang['cred_hero_asociaciones']; ?></strong>
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -1063,7 +1063,7 @@ ob_start();
                         <p class="text-white text-lg font-bold mb-1">
                             <?php echo $lang['cred_promo_alta_bonificada'] ?? 'Alta Bonificada:'; ?> <span class="text-cyan-600"><?php echo $alta_prices['discounted']; ?></span>
                         </p>
-                        <p class="text-green-400 text-sm">(<?php echo $lang['price_you_save'] ?? 'Ahorrás'; ?> <?php echo $alta_prices['savings']; ?>)</p>
+                        <p class="text-cyan-400 text-sm">(<?php echo $lang['price_you_save'] ?? 'Ahorrás'; ?> <?php echo $alta_prices['savings']; ?>)</p>
                     </div>
                 </div>
                 <?php endif; ?>
