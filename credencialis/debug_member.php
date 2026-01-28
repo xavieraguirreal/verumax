@@ -93,4 +93,66 @@ try {
 } catch (Exception $e) {
     echo "<p style='color:red'>Error en método: " . $e->getMessage() . "</p>";
 }
+
+// 4. Test manual de la query exacta del método
+echo "<h3>4. Test manual de la query del método</h3>";
+try {
+    $connNexus = DatabaseService::get('nexus');
+    $connGeneral = DatabaseService::get('general');
+
+    // Query 1: Buscar instancia
+    $stmt1 = $connGeneral->prepare("SELECT id_instancia FROM instances WHERE slug = :slug");
+    $stmt1->execute([':slug' => $institucion]);
+    $inst = $stmt1->fetch(PDO::FETCH_ASSOC);
+    echo "<p>Query instancia: " . ($inst ? "OK, id={$inst['id_instancia']}" : "FALLÓ") . "</p>";
+
+    if ($inst) {
+        // Query 2: Buscar miembro con la query exacta del método
+        $sql = "
+            SELECT
+                m.id_miembro,
+                m.id_instancia,
+                m.identificador_principal,
+                m.identificador_principal as dni,
+                m.tipo_identificador,
+                m.nombre,
+                m.apellido,
+                COALESCE(m.nombre_completo, CONCAT(m.nombre, ' ', m.apellido)) as nombre_completo,
+                m.email,
+                m.telefono,
+                m.genero,
+                m.estado,
+                m.foto_url,
+                m.numero_asociado,
+                m.tipo_asociado,
+                m.nombre_entidad,
+                m.categoria_servicio,
+                m.fecha_ingreso,
+                m.fecha_vencimiento_credencial,
+                CASE WHEN m.numero_asociado IS NOT NULL AND m.numero_asociado != ''
+                     THEN 1 ELSE 0 END as tiene_credencial,
+                m.fecha_alta,
+                m.fecha_modificacion
+            FROM miembros m
+            WHERE m.id_instancia = :id_instancia
+            AND m.identificador_principal = :dni
+            AND m.estado = 'Activo'
+        ";
+
+        $stmt2 = $connNexus->prepare($sql);
+        $stmt2->execute([':id_instancia' => $inst['id_instancia'], ':dni' => $dni]);
+        $miembro = $stmt2->fetch(PDO::FETCH_ASSOC);
+
+        if ($miembro) {
+            echo "<p style='color:green'>✓ Query manual encontró miembro:</p>";
+            echo "<pre>" . print_r($miembro, true) . "</pre>";
+        } else {
+            echo "<p style='color:red'>✗ Query manual no encontró miembro</p>";
+            echo "<p>SQL: " . htmlspecialchars(substr($sql, 0, 200)) . "...</p>";
+        }
+    }
+} catch (Exception $e) {
+    echo "<p style='color:red'>Error en query manual: " . $e->getMessage() . "</p>";
+    echo "<pre>" . $e->getTraceAsString() . "</pre>";
+}
 ?>
