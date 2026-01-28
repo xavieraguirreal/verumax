@@ -24,8 +24,8 @@ chdir($certificatum_path);
 // Determinar qué generador usar según el tipo de documento
 $tipo_documento = $_GET['genus'] ?? 'analyticum';
 
-// TCPDF solo para certificados con imagen de fondo
-$tipos_tcpdf = ['certificatum_approbationis', 'certificatum_completionis', 'certificatum_doctoris', 'certificatum_docente'];
+// TCPDF solo para certificados con imagen de fondo y credenciales
+$tipos_tcpdf = ['certificatum_approbationis', 'certificatum_completionis', 'certificatum_doctoris', 'certificatum_docente', 'credentialis'];
 
 if (in_array($tipo_documento, $tipos_tcpdf)) {
     // Usar TCPDF para certificados elegantes con imagen de fondo
