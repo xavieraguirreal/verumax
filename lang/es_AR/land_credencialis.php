@@ -146,7 +146,7 @@ return [
     'cred_func_compartir_desc' => 'PDF descargable, imprimible o para guardar en el celular como imagen.',
 
     'cred_func_masivo' => 'Carga Masiva',
-    'cred_func_masivo_desc' => 'Importá cientos de socios desde Excel. Asigná credenciales en minutos.',
+    'cred_func_masivo_desc' => 'Importá cientos de socios desde Excel o copiando y pegando. Asigná credenciales en minutos.',
 
     // =====================================
     // BENEFICIOS

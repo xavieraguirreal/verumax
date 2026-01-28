@@ -146,7 +146,7 @@ return [
     'cred_func_compartir_desc' => 'PDF para download, para impressão ou para salvar no celular como imagem.',
 
     'cred_func_masivo' => 'Cadastro em Massa',
-    'cred_func_masivo_desc' => 'Importe centenas de associados do Excel. Atribua credenciais em minutos.',
+    'cred_func_masivo_desc' => 'Importe centenas de associados do Excel ou copiando e colando. Atribua credenciais em minutos.',
 
     // =====================================
     // BENEFÍCIOS
