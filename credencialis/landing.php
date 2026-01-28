@@ -225,6 +225,12 @@ ob_start();
 
                 <!-- Links de navegación (desktop) -->
                 <div class="hidden md:flex items-center gap-4">
+                    <a href="../?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <?php echo $lang['nav_inicio'] ?? 'Inicio'; ?>
+                    </a>
                     <a href="#beneficios" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm"><?php echo $lang['cred_nav_beneficios']; ?></a>
                     <a href="#funcionalidades" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm"><?php echo $lang['cred_nav_funcionalidades']; ?></a>
                     <a href="#casos-exito" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm"><?php echo $lang['cred_nav_casos']; ?></a>
@@ -1454,61 +1460,7 @@ ob_start();
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black border-t border-cyan-600/20 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="../assets/images/logo-verumax-escudo.png" alt="Verumax" class="h-10 w-10">
-                        <div>
-                            <p class="font-bold text-white">Credencialis</p>
-                            <p class="text-xs text-gray-400">by Verumax</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm"><?php echo $lang['cred_footer_descripcion']; ?></p>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4"><?php echo $lang['cred_footer_producto']; ?></h4>
-                    <ul class="space-y-2">
-                        <li><a href="#funcionalidades" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['cred_nav_funcionalidades']; ?></a></li>
-                        <li><a href="#planes" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['cred_nav_planes']; ?></a></li>
-                        <li><a href="#faq" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['cred_nav_faq']; ?></a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4"><?php echo $lang['cred_footer_empresa']; ?></h4>
-                    <ul class="space-y-2">
-                        <li><a href="../?lang=<?php echo $current_language; ?>" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Verumax</a></li>
-                        <li><a href="../certificatum/?lang=<?php echo $current_language; ?>" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Certificatum</a></li>
-                        <li><a href="#contacto" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['cred_nav_solicitar_demo']; ?></a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-white mb-4"><?php echo $lang['cred_footer_legal']; ?></h4>
-                    <ul class="space-y-2">
-                        <li><a href="../legal/terminos.php?lang=<?php echo $current_language; ?>" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['footer_terminos'] ?? 'Términos de Servicio'; ?></a></li>
-                        <li><a href="../legal/privacidad.php?lang=<?php echo $current_language; ?>" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors"><?php echo $lang['footer_privacidad'] ?? 'Privacidad'; ?></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm">&copy; <?php echo date('Y'); ?> Verumax. <?php echo $lang['cred_footer_derechos']; ?></p>
-                <div class="flex items-center gap-4">
-                    <?php foreach ($credencialis_languages as $code => $name): ?>
-                        <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-2 text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                            <?php echo get_flag_emoji($code); ?>
-                            <span><?php echo explode(' ', $name)[0]; ?></span>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include '../includes/footer.php'; ?>
 
     <!-- Scripts -->
     <script>
