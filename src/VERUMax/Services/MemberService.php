@@ -70,12 +70,17 @@ class MemberService
 
             // Filtro por búsqueda
             if (!empty($filtros['buscar'])) {
-                $sql .= " AND (m.identificador_principal LIKE :buscar
-                          OR m.nombre LIKE :buscar
-                          OR m.apellido LIKE :buscar
-                          OR m.nombre_completo LIKE :buscar
-                          OR m.email LIKE :buscar)";
-                $params[':buscar'] = "%{$filtros['buscar']}%";
+                $sql .= " AND (m.identificador_principal LIKE :buscar1
+                          OR m.nombre LIKE :buscar2
+                          OR m.apellido LIKE :buscar3
+                          OR m.nombre_completo LIKE :buscar4
+                          OR m.email LIKE :buscar5)";
+                $buscarParam = "%{$filtros['buscar']}%";
+                $params[':buscar1'] = $buscarParam;
+                $params[':buscar2'] = $buscarParam;
+                $params[':buscar3'] = $buscarParam;
+                $params[':buscar4'] = $buscarParam;
+                $params[':buscar5'] = $buscarParam;
             }
 
             // Filtro por estado
@@ -388,11 +393,15 @@ class MemberService
             $params = [':id_instancia' => $id_instancia];
 
             if (!empty($buscar)) {
-                $sql .= " AND (m.identificador_principal LIKE :buscar
-                          OR m.nombre LIKE :buscar
-                          OR m.apellido LIKE :buscar
-                          OR m.nombre_completo LIKE :buscar)";
-                $params[':buscar'] = "%$buscar%";
+                $sql .= " AND (m.identificador_principal LIKE :buscar1
+                          OR m.nombre LIKE :buscar2
+                          OR m.apellido LIKE :buscar3
+                          OR m.nombre_completo LIKE :buscar4)";
+                $buscarParam = "%$buscar%";
+                $params[':buscar1'] = $buscarParam;
+                $params[':buscar2'] = $buscarParam;
+                $params[':buscar3'] = $buscarParam;
+                $params[':buscar4'] = $buscarParam;
             }
 
             $sql .= " ORDER BY m.fecha_alta DESC";
