@@ -391,28 +391,35 @@ ob_start();
             scrollbar-color: var(--gold) #1a1a1a;
         }
 
-        /* Solutions Carousel */
-        .solutions-carousel {
-            width: 100%;
-            overflow: hidden;
+        /* Solutions Slideshow */
+        .slideshow-container {
+            position: relative;
         }
 
-        .carousel-track {
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-dot.active {
+            background-color: #D4AF37;
+            transform: scale(1.3);
+        }
+
+        .slide-banner {
+            min-height: 320px;
             display: flex;
-            width: max-content;
-        }
-
-        .animate-scroll {
-            animation: scroll 30s linear infinite;
-        }
-
-        .animate-scroll:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            align-items: center;
+            justify-content: center;
         }
 
         /* Floating buttons */
@@ -582,107 +589,153 @@ WHERE limits = NULL;
         </div>
     </section>
 
-    <!-- Solutions Carousel -->
-    <section class="py-16 overflow-hidden border-y border-white/5 bg-gradient-to-r from-black via-gold/5 to-black">
-        <div class="solutions-carousel">
-            <div class="carousel-track flex gap-8 animate-scroll">
-                <!-- Certificatum -->
-                <a href="certificatum/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Certificatum</h3>
-                        <p class="text-sm text-gray-400">Certificados Digitales</p>
-                    </div>
-                </a>
+    <!-- Solutions Slideshow -->
+    <section class="py-8 relative overflow-hidden" id="slideshow">
+        <div class="slideshow-container max-w-5xl mx-auto px-6">
 
-                <!-- Credencialis -->
-                <a href="credencialis/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="id-card" class="w-6 h-6 text-teal-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Credencialis</h3>
-                        <p class="text-sm text-gray-400">Credenciales de Membresía</p>
-                    </div>
-                </a>
-
-                <!-- Desarrollo Web -->
-                <a href="desarrollo/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="code-2" class="w-6 h-6 text-gold"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Desarrollo Web</h3>
-                        <p class="text-sm text-gray-400">Sitios Sin Límites</p>
-                    </div>
-                </a>
-
-                <!-- Hosting -->
-                <div class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl opacity-60">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white">Hosting</h3>
-                        <p class="text-sm text-gray-500">Próximamente</p>
+            <!-- Slide 1: Desarrollo Web / Anti-CMS -->
+            <div class="slide active">
+                <div class="slide-banner bg-gradient-to-br from-black via-gray-900 to-black border border-gold/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gold/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-6">
+                            <i data-lucide="code-2" class="w-5 h-5 text-gold"></i>
+                            <span class="text-gold text-sm font-medium">Desarrollo Web</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Tu sitio web depende de un CMS?</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            WordPress, Joomla, Wix, Shopify... todos tienen límites. Con nosotros, programamos desde cero. <span class="text-gold font-semibold">Sin techo, sin restricciones</span> y no por ello más costoso.
+                        </p>
+                        <a href="desarrollo/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
+                            Descubrí cómo →
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
-
-                <!-- EduMax -->
-                <div class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl opacity-60">
-                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="book-open" class="w-6 h-6 text-orange-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white">EduMax</h3>
-                        <p class="text-sm text-gray-500">Próximamente</p>
-                    </div>
-                </div>
-
-                <!-- E-commerce -->
-                <div class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl opacity-60">
-                    <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="shopping-cart" class="w-6 h-6 text-emerald-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white">E-commerce</h3>
-                        <p class="text-sm text-gray-500">Próximamente</p>
-                    </div>
-                </div>
-
-                <!-- Duplicados para loop infinito -->
-                <a href="certificatum/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Certificatum</h3>
-                        <p class="text-sm text-gray-400">Certificados Digitales</p>
-                    </div>
-                </a>
-
-                <a href="credencialis/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="id-card" class="w-6 h-6 text-teal-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Credencialis</h3>
-                        <p class="text-sm text-gray-400">Credenciales de Membresía</p>
-                    </div>
-                </a>
-
-                <a href="desarrollo/" class="carousel-item flex-shrink-0 flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-gold/50 hover:bg-gold/5 transition-all group">
-                    <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                        <i data-lucide="code-2" class="w-6 h-6 text-gold"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-white group-hover:text-gold transition-colors">Desarrollo Web</h3>
-                        <p class="text-sm text-gray-400">Sitios Sin Límites</p>
-                    </div>
-                </a>
             </div>
+
+            <!-- Slide 2: Certificatum -->
+            <div class="slide">
+                <div class="slide-banner bg-gradient-to-br from-black via-purple-950/30 to-black border border-purple-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-500/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full mb-6">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-purple-400"></i>
+                            <span class="text-purple-400 text-sm font-medium">Certificatum</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Certificados digitales infalsificables</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Diplomas, analíticos y constancias con <span class="text-purple-400 font-semibold">código QR verificable al instante</span>. Tus estudiantes acceden 24/7 a su trayectoria académica completa.
+                        </p>
+                        <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl transition-all hover:scale-105">
+                            Conocer Certificatum
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Credencialis -->
+            <div class="slide">
+                <div class="slide-banner bg-gradient-to-br from-black via-teal-950/30 to-black border border-teal-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-teal-500/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 border border-teal-500/30 rounded-full mb-6">
+                            <i data-lucide="id-card" class="w-5 h-5 text-teal-400"></i>
+                            <span class="text-teal-400 text-sm font-medium">Credencialis</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Credenciales digitales para tu organización</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Carnets de socios, membresías y credenciales con <span class="text-teal-400 font-semibold">QR verificable y diseño personalizado</span>. Ideal para mutuales, cooperativas, clubes y asociaciones.
+                        </p>
+                        <a href="credencialis/" class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all hover:scale-105">
+                            Conocer Credencialis
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Hosting -->
+            <div class="slide">
+                <div class="slide-banner bg-gradient-to-br from-black via-blue-950/30 to-black border border-blue-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-6">
+                            <i data-lucide="server" class="w-5 h-5 text-blue-400"></i>
+                            <span class="text-blue-400 text-sm font-medium">Hosting</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Hosting configurado por desarrolladores</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Servidores optimizados para <span class="text-blue-400 font-semibold">máximo rendimiento y seguridad</span>. No somos revendedores, configuramos cada servidor a medida de tu proyecto.
+                        </p>
+                        <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
+                            Próximamente
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: EduMax -->
+            <div class="slide">
+                <div class="slide-banner bg-gradient-to-br from-black via-orange-950/30 to-black border border-orange-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-500/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
+                            <i data-lucide="book-open" class="w-5 h-5 text-orange-400"></i>
+                            <span class="text-orange-400 text-sm font-medium">EduMax</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu aula virtual, sin las limitaciones de Moodle</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            Plataforma educativa <span class="text-orange-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, foros y seguimiento de alumnos. Todo integrado con Certificatum.
+                        </p>
+                        <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
+                            Próximamente
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: E-commerce -->
+            <div class="slide">
+                <div class="slide-banner bg-gradient-to-br from-black via-emerald-950/30 to-black border border-emerald-500/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-500/10 via-transparent to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-6">
+                            <i data-lucide="shopping-cart" class="w-5 h-5 text-emerald-400"></i>
+                            <span class="text-emerald-400 text-sm font-medium">E-commerce</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu tienda online, sin comisiones ocultas</h3>
+                        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                            E-commerce a medida, <span class="text-emerald-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos los medios de pago que necesites. El código es tuyo.
+                        </p>
+                        <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
+                            Próximamente
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation dots -->
+            <div class="flex justify-center gap-3 mt-8">
+                <button class="slide-dot active w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="0"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="1"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="2"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="3"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="4"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-gold/30 hover:bg-gold transition-all" data-slide="5"></button>
+            </div>
+
+            <!-- Arrow navigation -->
+            <button id="prevSlide" class="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/5 hover:bg-gold/20 border border-white/10 hover:border-gold/50 rounded-full flex items-center justify-center transition-all z-10">
+                <i data-lucide="chevron-left" class="w-6 h-6 text-white"></i>
+            </button>
+            <button id="nextSlide" class="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/5 hover:bg-gold/20 border border-white/10 hover:border-gold/50 rounded-full flex items-center justify-center transition-all z-10">
+                <i data-lucide="chevron-right" class="w-6 h-6 text-white"></i>
+            </button>
         </div>
     </section>
 
@@ -743,26 +796,6 @@ WHERE limits = NULL;
                     <p class="text-gray-400 text-sm leading-relaxed">
                         <?php echo $lang['filosofia_card4_desc'] ?? 'El código es tuyo. Sin dependencias de licencias.'; ?>
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Anti-CMS Teaser -->
-    <section class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="anticms-banner p-12 md:p-16 relative z-10 reveal">
-                <div class="relative z-10 text-center">
-                    <p class="text-2xl md:text-3xl text-gray-300 mb-4">
-                        <?php echo $lang['anticms_question'] ?? '¿Aún tenés tu sitio en WordPress?'; ?>
-                    </p>
-                    <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-                        <?php echo $lang['anticms_answer'] ?? 'Con nosotros podés tener eso y mucho más. Programamos desde cero, sin límites y no por ello más costoso.'; ?>
-                    </p>
-                    <a href="desarrollo/" class="cta-button inline-flex items-center gap-2">
-                        <?php echo $lang['anticms_cta'] ?? 'Descubrí cómo'; ?>
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -1205,6 +1238,54 @@ WHERE limits = NULL;
                 }
             }
         });
+
+        // Slideshow
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 6000); // Cambia cada 6 segundos
+        }
+
+        function resetSlideshow() {
+            clearInterval(slideInterval);
+            startSlideshow();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => { prevSlide(); resetSlideshow(); });
+        nextBtn.addEventListener('click', () => { nextSlide(); resetSlideshow(); });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => { showSlide(index); resetSlideshow(); });
+        });
+
+        // Iniciar slideshow automático
+        startSlideshow();
 
         // Botón Scroll to Top
         const scrollToTopBtn = document.getElementById('scrollToTop');
