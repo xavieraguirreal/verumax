@@ -134,5 +134,30 @@ if (file_exists($template_path)) {
     echo "<span style='color:red'>NO EXISTE en $template_path</span></p>";
 }
 
+// Paso 12: Probar include del template
+echo "<p>12. Probando include del template credencial.php... ";
+try {
+    // Variables necesarias para el template
+    $codigo_validacion = $codigo;
+    $url_validacion = obtenerURLBaseInstitucion() . "/credencialis/validare.php?codigo=" . $codigo_validacion;
+    $qr_url = \VERUMax\Services\QRCodeService::generate($url_validacion, 150);
+    $es_instancia_test = false;
+    $t = fn($key, $params = [], $default = null) => \VERUMax\Services\LanguageService::get($key, $params, $default);
+
+    ob_start();
+    include $template_path;
+    $html = ob_get_clean();
+
+    if (strlen($html) > 100) {
+        echo "<span style='color:green'>OK - " . strlen($html) . " bytes</span></p>";
+        echo "<details><summary>Ver HTML generado</summary><pre>" . htmlspecialchars(substr($html, 0, 2000)) . "...</pre></details>";
+    } else {
+        echo "<span style='color:orange'>HTML muy corto: " . strlen($html) . " bytes</span></p>";
+    }
+} catch (Throwable $e) {
+    echo "<span style='color:red'>ERROR: " . $e->getMessage() . "</span></p>";
+    echo "<pre>" . $e->getTraceAsString() . "</pre>";
+}
+
 echo "<hr><p style='color:green;font-weight:bold'>Todos los pasos OK!</p>";
 ?>
