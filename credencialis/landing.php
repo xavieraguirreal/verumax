@@ -736,8 +736,222 @@ ob_start();
         </div>
     </section>
 
+    <!-- Panel de Administración -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-cyan-600/30 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row items-start gap-8">
+                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-2"><?php echo $lang['cred_panel_titulo']; ?></h2>
+                        <p class="text-gray-400 mb-6"><?php echo $lang['cred_panel_subtitulo']; ?></p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300"><?php echo $lang['cred_panel_carga_masiva']; ?></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300"><?php echo $lang['cred_panel_crud']; ?></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300"><?php echo $lang['cred_panel_dashboard']; ?></span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span class="text-gray-300"><?php echo $lang['cred_panel_multiusuario']; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Antes vs Después -->
+    <section class="py-20 bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-4"><?php echo $lang['cred_antes_despues_titulo']; ?></h2>
+                <p class="text-lg text-gray-400"><?php echo $lang['cred_antes_despues_subtitulo']; ?></p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Antes -->
+                <div class="bg-gray-900 border border-red-500/30 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-400"><?php echo $lang['cred_antes_titulo']; ?></h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_impresion']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_perdidos']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_falsificacion']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_actualizacion']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_control']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            <span class="text-gray-400"><?php echo $lang['cred_antes_planillas']; ?></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Después -->
+                <div class="bg-gray-900 border border-cyan-500/30 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400"><?php echo $lang['cred_despues_titulo']; ?></h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><span class="text-cyan-400 font-semibold"><?php echo $lang['cred_despues_ahorro']; ?></span> <?php echo $lang['cred_despues_ahorro_highlight']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><span class="text-cyan-400 font-semibold"><?php echo $lang['cred_despues_digital']; ?></span> <?php echo $lang['cred_despues_digital_highlight']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><?php echo $lang['cred_despues_validacion']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><span class="text-cyan-400 font-semibold"><?php echo $lang['cred_despues_acceso']; ?></span> <?php echo $lang['cred_despues_acceso_highlight']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><span class="text-cyan-400 font-semibold"><?php echo $lang['cred_despues_centralizado']; ?></span> <?php echo $lang['cred_despues_centralizado_highlight']; ?></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-300"><?php echo $lang['cred_despues_control']; ?></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integraciones -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-4"><?php echo $lang['cred_integraciones_titulo']; ?></h2>
+                <p class="text-lg text-gray-400"><?php echo $lang['cred_integraciones_subtitulo']; ?></p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <!-- Excel -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-600/50 transition-colors">
+                    <div class="w-14 h-14 bg-cyan-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-cyan-400 mb-2"><?php echo $lang['cred_integracion_excel']; ?></h3>
+                    <p class="text-gray-400 text-sm"><?php echo $lang['cred_integracion_excel_desc']; ?></p>
+                </div>
+
+                <!-- API -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-600/50 transition-colors">
+                    <div class="w-14 h-14 bg-cyan-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-cyan-400 mb-2"><?php echo $lang['cred_integracion_api']; ?></h3>
+                    <p class="text-gray-400 text-sm"><?php echo $lang['cred_integracion_api_desc']; ?></p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-600/50 transition-colors">
+                    <div class="w-14 h-14 bg-cyan-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-cyan-400 mb-2"><?php echo $lang['cred_integracion_email']; ?></h3>
+                    <p class="text-gray-400 text-sm"><?php echo $lang['cred_integracion_email_desc']; ?></p>
+                </div>
+
+                <!-- Subdominios -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-600/50 transition-colors">
+                    <div class="w-14 h-14 bg-cyan-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-cyan-400 mb-2"><?php echo $lang['cred_integracion_subdominio']; ?></h3>
+                    <p class="text-gray-400 text-sm"><?php echo $lang['cred_integracion_subdominio_desc']; ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Casos de Éxito -->
-    <section id="casos-exito" class="py-20 bg-black border-y border-cyan-600/20">
+    <section id="casos-exito" class="py-20 bg-gray-950 border-y border-cyan-600/20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-4"><?php echo $lang['cred_casos_titulo']; ?></h2>

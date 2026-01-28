@@ -41,6 +41,26 @@ $CERTIFICATUM_ALTA_USD = 50;
 $CERTIFICATUM_DISCOUNT = 50;
 
 // ============================================
+// CREDENCIALIS - Credenciales de Membresía
+// ============================================
+
+// Precios de Credencialis (mensuales en USD) - PVP Lista
+$CREDENCIALIS_PRICING = [
+    'singularis' => 1,       // Por credencial (sin suscripción)
+    'essentialis' => 20,     // 100 socios/as
+    'premium' => 40,         // 500 socios/as
+    'excellens' => 80,       // 2,000 socios/as
+    'supremus' => 150,       // Socios/as ilimitados
+];
+
+// Precio de alta Credencialis (setup fee) en USD
+$CREDENCIALIS_ALTA_USD = 30;
+
+// Descuento actual Credencialis (en porcentaje)
+// Promo Lanzamiento = 50% OFF sobre PVP Lista
+$CREDENCIALIS_DISCOUNT = 50;
+
+// ============================================
 // SCRIPTA - Blog Profesional
 // ============================================
 
@@ -100,6 +120,25 @@ function is_certificatum_promo_active() {
 }
 
 /**
+ * Obtiene el precio con descuento para Credencialis
+ * @param float $base_price Precio base en USD
+ * @return float Precio con descuento
+ */
+function get_credencialis_discounted_price($base_price) {
+    global $CREDENCIALIS_DISCOUNT;
+    return $base_price * (1 - ($CREDENCIALIS_DISCOUNT / 100));
+}
+
+/**
+ * Verifica si hay promoción activa en Credencialis
+ * @return bool True si hay descuento activo
+ */
+function is_credencialis_promo_active() {
+    global $CREDENCIALIS_DISCOUNT;
+    return $CREDENCIALIS_DISCOUNT > 0;
+}
+
+/**
  * Obtiene la configuración completa de precios para una solución
  * @param string $solution Nombre de la solución (certificatum, scripta, etc.)
  * @return array Configuración de precios
@@ -107,6 +146,7 @@ function is_certificatum_promo_active() {
 function get_solution_pricing($solution) {
     global $PRICING, $ALTA_PRICE_USD, $DISCOUNT_PERCENTAGE;
     global $CERTIFICATUM_PRICING, $CERTIFICATUM_ALTA_USD, $CERTIFICATUM_DISCOUNT;
+    global $CREDENCIALIS_PRICING, $CREDENCIALIS_ALTA_USD, $CREDENCIALIS_DISCOUNT;
     global $SCRIPTA_PRICING;
 
     switch (strtolower($solution)) {
@@ -115,6 +155,12 @@ function get_solution_pricing($solution) {
                 'pricing' => $CERTIFICATUM_PRICING,
                 'alta' => $CERTIFICATUM_ALTA_USD,
                 'discount' => $CERTIFICATUM_DISCOUNT,
+            ];
+        case 'credencialis':
+            return [
+                'pricing' => $CREDENCIALIS_PRICING,
+                'alta' => $CREDENCIALIS_ALTA_USD,
+                'discount' => $CREDENCIALIS_DISCOUNT,
             ];
         case 'scripta':
             return [

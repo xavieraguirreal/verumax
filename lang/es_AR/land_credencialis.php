@@ -205,30 +205,145 @@ return [
     'cred_faq_existentes_desc' => 'Si ya usás Certificatum u otro módulo de Verumax, los datos de tus miembros ya están en el sistema. Solo tenés que asignarles credenciales.',
 
     // =====================================
+    // PANEL DE ADMINISTRACIÓN
+    // =====================================
+    'cred_panel_titulo' => 'Panel de Administración Completo',
+    'cred_panel_subtitulo' => 'Todo lo que necesitás para gestionar tus membresías',
+    'cred_panel_carga_masiva' => 'Carga masiva desde Excel o copiando',
+    'cred_panel_crud' => 'CRUD completo de socios/as y categorías',
+    'cred_panel_dashboard' => 'Dashboard con métricas en tiempo real',
+    'cred_panel_multiusuario' => 'Gestión multi-usuario con roles',
+
+    // =====================================
+    // ANTES VS DESPUÉS
+    // =====================================
+    'cred_antes_despues_titulo' => 'Antes vs Después de Credencialis',
+    'cred_antes_despues_subtitulo' => 'La transformación digital de tu gestión de membresías',
+    'cred_antes_titulo' => 'Antes (Tradicional)',
+    'cred_antes_impresion' => 'Costos constantes de impresión de carnets',
+    'cred_antes_perdidos' => 'Reposiciones por carnets perdidos o dañados',
+    'cred_antes_falsificacion' => 'Riesgo de falsificación sin verificación',
+    'cred_antes_actualizacion' => 'Reimprimir carnets por cada cambio de datos',
+    'cred_antes_control' => 'Control de acceso lento y manual',
+    'cred_antes_planillas' => 'Planillas dispersas y desactualizadas',
+    'cred_despues_titulo' => 'Después (Credencialis)',
+    'cred_despues_ahorro' => 'Ahorro del 100%',
+    'cred_despues_ahorro_highlight' => 'en impresión de carnets',
+    'cred_despues_digital' => 'Credencial siempre actualizada',
+    'cred_despues_digital_highlight' => 'en el celular',
+    'cred_despues_validacion' => 'Validación QR imposible de falsificar',
+    'cred_despues_acceso' => 'Acceso instantáneo',
+    'cred_despues_acceso_highlight' => 'solo con el DNI',
+    'cred_despues_centralizado' => 'Base de datos centralizada',
+    'cred_despues_centralizado_highlight' => 'y siempre sincronizada',
+    'cred_despues_control' => 'Control de acceso en segundos con QR',
+
+    // =====================================
+    // INTEGRACIONES
+    // =====================================
+    'cred_integraciones_titulo' => 'Integraciones y Compatibilidad',
+    'cred_integraciones_subtitulo' => 'Se adapta a tu flujo de trabajo existente',
+    'cred_integracion_excel' => 'Excel / CSV',
+    'cred_integracion_excel_desc' => 'Importación masiva de socios/as desde archivos Excel.',
+    'cred_integracion_api' => 'API REST',
+    'cred_integracion_api_desc' => 'Integración con sistemas de gestión y CRMs.',
+    'cred_integracion_email' => 'Email Institucional',
+    'cred_integracion_email_desc' => 'Notificaciones desde tu dominio institucional.',
+    'cred_integracion_subdominio' => 'Subdominios',
+    'cred_integracion_subdominio_desc' => 'Portal en tu propio dominio: credenciales.tuclub.com.',
+
+    // =====================================
     // PLANES Y PRECIOS
     // =====================================
     'cred_planes_titulo' => 'Planes y Precios',
     'cred_planes_subtitulo' => 'Elegí el plan que mejor se adapte a tu organización',
+    'cred_plan_promo_badge' => 'Promo Lanzamiento',
 
     'cred_plan_mes' => '/mes',
     'cred_plan_anual' => 'Facturación anual',
-    'cred_plan_mensual' => 'Facturación mensual',
+    'cred_plan_mensual' => 'Pago mensual',
     'cred_plan_popular' => 'Más Popular',
     'cred_plan_contratar' => 'Contratar',
     'cred_plan_contactar' => 'Contactar Ventas',
 
-    'cred_plan_incluye' => 'Incluye:',
-    'cred_plan_socios' => 'socios/as',
-    'cred_plan_socios_ilimitados' => 'Socios/as ilimitados',
-    'cred_plan_branding' => 'Branding personalizado',
-    'cred_plan_qr' => 'Validación QR',
-    'cred_plan_soporte' => 'Soporte por email',
-    'cred_plan_soporte_prioritario' => 'Soporte prioritario',
-    'cred_plan_api' => 'API de integración',
-    'cred_plan_dedicado' => 'Soporte dedicado',
+    // Plan Singularis
+    'cred_plan_sin_suscripcion' => 'SIN SUSCRIPCIÓN',
+    'cred_plan_singularis_titulo' => 'Singularis',
+    'cred_plan_singularis_desc' => 'Ideal para eventos únicos o pruebas. Pagá solo por lo que usás.',
+    'cred_plan_singularis_precio_label' => 'por credencial',
+    'cred_plan_singularis_feat1' => 'Sin suscripción ni compromiso',
+    'cred_plan_singularis_feat2' => 'Pagá solo cuando emitas',
+    'cred_plan_singularis_feat3' => 'Credenciales con QR verificable',
+    'cred_plan_singularis_feat4' => 'Validación instantánea',
+    'cred_plan_singularis_feat5' => 'Portal público de validación',
+    'cred_plan_singularis_cta' => 'Empezar sin suscripción',
+
+    // Plan Essentialis
+    'cred_plan_essentialis_titulo' => 'Essentialis',
+    'cred_plan_essentialis_desc' => 'Ideal para clubes pequeños y asociaciones en crecimiento',
+    'cred_plan_essentialis_feat1' => '100 Socios/as activos',
+    'cred_plan_essentialis_feat2' => 'Carga Masiva desde Excel/CSV',
+    'cred_plan_essentialis_feat3' => 'Credencial Digital con QR',
+    'cred_plan_essentialis_feat4' => 'Portal de Acceso (tuclub.verumax.com)',
+    'cred_plan_essentialis_feat5' => 'Validación QR Infalsificable',
+    'cred_plan_essentialis_feat6' => 'Branding Institucional Personalizado',
+    'cred_plan_essentialis_feat7' => 'Categorías de Membresía',
+    'cred_plan_essentialis_feat8' => 'Panel de Administración',
+    'cred_plan_essentialis_feat9' => 'Configuración por Equipo Humano',
+    'cred_plan_essentialis_cta' => 'Comenzar con Essentialis',
+
+    // Plan Premium
+    'cred_plan_premium_badge' => 'Más Popular',
+    'cred_plan_premium_titulo' => 'Premium',
+    'cred_plan_premium_desc' => 'La elección ideal para organizaciones medianas',
+    'cred_plan_premium_feat1_strong' => 'TODO lo de Essentialis +',
+    'cred_plan_premium_feat2' => '500 Socios/as activos',
+    'cred_plan_premium_feat3' => 'Historial de Membresía Completo',
+    'cred_plan_premium_feat4' => 'Múltiples Categorías de Servicio',
+    'cred_plan_premium_feat5' => 'Control de Vencimientos',
+    'cred_plan_premium_feat6' => 'Notificaciones por Email',
+    'cred_plan_premium_cta' => 'Solicitar Plan Premium',
+
+    // Plan Excellens
+    'cred_plan_excellens_titulo' => 'Excellens',
+    'cred_plan_excellens_desc' => 'Para grandes organizaciones y federaciones',
+    'cred_plan_excellens_feat1_strong' => 'TODO lo de Premium +',
+    'cred_plan_excellens_feat2' => '2,000 Socios/as activos',
+    'cred_plan_excellens_feat3' => 'Multi-Sede (hasta 5 sedes)',
+    'cred_plan_excellens_feat4' => 'Roles y Permisos Avanzados',
+    'cred_plan_excellens_feat5' => 'API REST para Integraciones',
+    'cred_plan_excellens_feat6' => 'Dominio Personalizado',
+    'cred_plan_excellens_cta' => 'Solicitar Plan Excellens',
+
+    // Plan Supremus
+    'cred_plan_supremus_titulo' => 'Supremus',
+    'cred_plan_supremus_desc' => 'Solución enterprise para federaciones y grandes redes',
+    'cred_plan_supremus_feat1_strong' => 'TODO lo de Excellens +',
+    'cred_plan_supremus_feat2' => 'Socios/as ILIMITADOS',
+    'cred_plan_supremus_feat3' => 'Multi-Organización (Redes/Federaciones)',
+    'cred_plan_supremus_feat4' => 'Sistema Multi-Sede Ilimitado',
+    'cred_plan_supremus_feat5' => 'Diseño 100% Personalizado',
+    'cred_plan_supremus_feat6' => 'Integraciones a Medida',
+    'cred_plan_supremus_feat7' => 'Gerente de Cuenta Dedicado',
+    'cred_plan_supremus_cta' => 'Contactar para Plan Supremus',
 
     // =====================================
-    // CONTACTO / CTA FINAL
+    // CTA FINAL
+    // =====================================
+    'cred_cta_final_titulo' => 'Modernizá la Gestión de Membresías de tu Organización',
+    'cred_cta_final_desc' => 'Únete a las organizaciones que ya eliminaron los costos de impresión y proyectan una imagen profesional con credenciales digitales.',
+    'cred_cta_final_equipo' => 'Nuestro equipo de expertos/as se encarga de la configuración inicial para que puedas empezar a emitir credenciales en minutos.',
+    'cred_cta_final_demo' => 'Solicitar Demo Personalizada',
+    'cred_cta_final_contactar' => 'Contactar Ventas',
+    'cred_cta_final_implementacion' => '24hs',
+    'cred_cta_final_implementacion_desc' => 'Tiempo de implementación',
+    'cred_cta_final_ahorro' => '100%',
+    'cred_cta_final_ahorro_desc' => 'Ahorro en impresión',
+    'cred_cta_final_socios' => '∞',
+    'cred_cta_final_socios_desc' => 'Credenciales ilimitadas',
+
+    // =====================================
+    // CONTACTO (formulario)
     // =====================================
     'cred_contacto_titulo' => '¿Listo para Modernizar tu Organización?',
     'cred_contacto_subtitulo' => 'Solicitá una demo personalizada y descubrí cómo Credencialis puede ayudarte',
@@ -251,9 +366,29 @@ return [
     // =====================================
     // FOOTER
     // =====================================
-    'cred_footer_descripcion' => 'Credenciales digitales verificables para organizaciones modernas.',
-    'cred_footer_producto' => 'Producto',
-    'cred_footer_empresa' => 'Empresa',
+    'cred_footer_tagline' => 'Credenciales Digitales Verificables',
+    'cred_footer_descripcion' => 'La plataforma definitiva para credenciales digitales seguras con validación QR.',
+    'cred_footer_enlaces' => 'Enlaces Rápidos',
+    'cred_footer_inicio' => 'Inicio',
+    'cred_footer_contacto' => 'Contacto',
     'cred_footer_legal' => 'Legal',
-    'cred_footer_derechos' => 'Todos los derechos reservados.',
+    'cred_footer_terminos' => 'Términos de Servicio',
+    'cred_footer_privacidad' => 'Política de Privacidad',
+    'cred_footer_derechos' => '© 2026 Verumax. Todos los derechos reservados.',
+    'cred_footer_seguridad' => 'Tecnología y Seguridad de Nivel Empresarial',
+    'cred_footer_ssl' => 'SSL',
+    'cred_footer_ssl_desc' => 'Encriptación 256-bit',
+    'cred_footer_https' => 'HTTPS',
+    'cred_footer_https_desc' => 'Conexión Segura',
+    'cred_footer_privacidad_badge' => 'Privacidad',
+    'cred_footer_privacidad_badge_desc' => 'Datos Protegidos',
+    'cred_footer_backup' => 'Backup',
+    'cred_footer_backup_desc' => 'Automático Diario',
+    'cred_footer_uptime' => 'Uptime 99.9%',
+    'cred_footer_uptime_desc' => 'Disponibilidad',
+    'cred_footer_soporte' => 'Soporte',
+    'cred_footer_soporte_desc' => 'Técnico 24/7',
+
+    // Botón subir
+    'cred_btn_subir' => 'Volver arriba',
 ];
