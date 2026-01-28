@@ -47,7 +47,12 @@ class ClientSetup {
             return false;
         }
 
-        // 5. Crear archivos
+        // 5. Crear subcarpeta credencialis (para credenciales de membresía)
+        if (!$this->createDirectory($clientPath . '/credencialis')) {
+            return false;
+        }
+
+        // 6. Crear archivos
         $files = [
             // Archivos raíz
             '/index.php' => $this->getIndexContent(),
@@ -72,6 +77,13 @@ class ClientSetup {
             '/admin/login.php' => $this->getAdminLoginContent(),
             '/admin/logout.php' => $this->getAdminLogoutContent(),
             '/admin/manual.php' => $this->getAdminManualContent(),
+
+            // Credencialis proxies (credenciales de membresía)
+            '/credencialis/index.php' => $this->getCredencialisIndexContent(),
+            '/credencialis/creare.php' => $this->getCredencialisCreareContent(),
+            '/credencialis/creare_pdf.php' => $this->getCredencialisCrearePdfContent(),
+            '/credencialis/validare.php' => $this->getCredencialisValidareContent(),
+            '/credencialis/verificatio.php' => $this->getCredencialisVerificatioContent(),
         ];
 
         foreach ($files as $file => $content) {
@@ -585,6 +597,100 @@ chdir(\$certificatum_path);
 
 // Incluir el motor central de Certificatum
 require_once \$certificatum_path . '/verificatio.php';
+";
+    }
+
+    // =========================================================================
+    // PROXIES PARA CREDENCIALIS (Credenciales de Membresía)
+    // =========================================================================
+
+    private function getCredencialisIndexContent(): string {
+        return "<?php
+/**
+ * Proxy a Credencialis - Portal Principal
+ * {$this->nombre}
+ *
+ * Este archivo redirige al motor central de Credencialis
+ * con la institución pre-configurada.
+ */
+
+// Auto-configuración de institución
+\$_POST['institutio'] = \$_GET['institutio'] = '{$this->codigo}';
+
+// Incluir el motor central de Credencialis
+require_once dirname(dirname(__DIR__)) . '/credencialis/index.php';
+";
+    }
+
+    private function getCredencialisCreareContent(): string {
+        return "<?php
+/**
+ * Proxy a Credencialis - Generación de Credencial
+ * {$this->nombre}
+ *
+ * Este archivo redirige al motor central de Credencialis
+ * con la institución pre-configurada.
+ */
+
+// Auto-configuración de institución
+\$_POST['institutio'] = \$_GET['institutio'] = '{$this->codigo}';
+
+// Incluir el motor central de Credencialis
+require_once dirname(dirname(__DIR__)) . '/credencialis/creare.php';
+";
+    }
+
+    private function getCredencialisCrearePdfContent(): string {
+        return "<?php
+/**
+ * Proxy a Credencialis - Generación de PDF
+ * {$this->nombre}
+ *
+ * Este archivo redirige al motor central de Credencialis
+ * con la institución pre-configurada.
+ */
+
+// Auto-configuración de institución
+\$_POST['institutio'] = \$_GET['institutio'] = '{$this->codigo}';
+
+// Incluir el motor central de Credencialis
+require_once dirname(dirname(__DIR__)) . '/credencialis/creare_pdf.php';
+";
+    }
+
+    private function getCredencialisValidareContent(): string {
+        return "<?php
+/**
+ * Proxy a Credencialis - Validación QR
+ * {$this->nombre}
+ *
+ * Este archivo redirige al motor central de Credencialis
+ * con la institución pre-configurada.
+ */
+
+// Auto-configuración de institución
+\$_POST['institutio'] = \$_GET['institutio'] = '{$this->codigo}';
+
+// Incluir el motor central de Credencialis
+require_once dirname(dirname(__DIR__)) . '/credencialis/validare.php';
+";
+    }
+
+    private function getCredencialisVerificatioContent(): string {
+        return "<?php
+/**
+ * Proxy a Credencialis - Verificación Pública
+ * {$this->nombre}
+ *
+ * Este archivo redirige al motor central de Credencialis
+ * con la institución pre-configurada.
+ */
+
+// Auto-configuración de institución
+\$_POST['institutio'] = \$_GET['institutio'] = '{$this->codigo}';
+
+// Incluir el motor central de Credencialis
+require_once dirname(dirname(__DIR__)) . '/credencialis/verificatio.php';
 ";
     }
 }
