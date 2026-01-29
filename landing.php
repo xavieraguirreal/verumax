@@ -1071,56 +1071,7 @@ WHERE limits = NULL;
         </div>
     </section>
 
-    <!-- Botón Chat Veritas (IA) -->
-    <button id="veritasChatBtn" class="fixed bottom-24 right-8 w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group">
-        <i data-lucide="message-circle" class="w-7 h-7"></i>
-        <span class="absolute right-16 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            Chat con Veritas IA
-        </span>
-    </button>
-
-    <!-- Botón Scroll to Top -->
-    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gold hover:bg-gold-light text-black rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center justify-center">
-        <i data-lucide="arrow-up" class="w-6 h-6"></i>
-    </button>
-
-    <!-- Modal de Veritas -->
-    <div id="veritasModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-        <div class="bg-gradient-to-br from-gray-900 to-black border-2 border-purple-500/30 rounded-2xl max-w-md w-full p-8 relative animate-fade-in">
-            <!-- Close button -->
-            <button id="closeVeritas" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-
-            <!-- Icon -->
-            <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-indigo-700 rounded-full flex items-center justify-center">
-                <i data-lucide="sparkles" class="w-10 h-10 text-white"></i>
-            </div>
-
-            <!-- Content -->
-            <h2 class="text-2xl font-bold text-center mb-3 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                Veritas IA
-            </h2>
-            <p class="text-gray-300 text-center mb-2">
-                Nuestro Agente de Inteligencia Artificial Especializado
-            </p>
-            <p class="text-gold text-center text-lg font-semibold mb-6">
-                ¡Próximamente!
-            </p>
-
-            <div class="bg-gray-800/50 border border-purple-500/20 rounded-xl p-4 mb-6">
-                <p class="text-sm text-gray-400 text-center leading-relaxed">
-                    Veritas estará disponible muy pronto para ayudarte con consultas sobre nuestros servicios, presupuestos y más.
-                </p>
-            </div>
-
-            <button id="closeVeritasBtn" class="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-200">
-                Entendido
-            </button>
-        </div>
-    </div>
-
-    <!-- Footer -->
+    <!-- Footer (incluye botones Veritas y Scroll-to-top) -->
     <?php include 'includes/footer.php'; ?>
 
     <!-- Scripts -->
@@ -1318,45 +1269,6 @@ WHERE limits = NULL;
 
         // Iniciar slideshow automático
         startSlideshow();
-
-        // Botón Scroll to Top
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 500) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        });
-
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Botón de Veritas IA
-        const veritasChatBtn = document.getElementById('veritasChatBtn');
-        const veritasModal = document.getElementById('veritasModal');
-        const closeVeritas = document.getElementById('closeVeritas');
-        const closeVeritasBtn = document.getElementById('closeVeritasBtn');
-
-        veritasChatBtn.addEventListener('click', function() {
-            veritasModal.classList.remove('hidden');
-        });
-
-        closeVeritas.addEventListener('click', function() {
-            veritasModal.classList.add('hidden');
-        });
-
-        closeVeritasBtn.addEventListener('click', function() {
-            veritasModal.classList.add('hidden');
-        });
-
-        // Cerrar modal al hacer clic fuera
-        veritasModal.addEventListener('click', function(e) {
-            if (e.target === veritasModal) {
-                veritasModal.classList.add('hidden');
-            }
-        });
 
         // Formulario de contacto
         const contactForm = document.getElementById('contactForm');
