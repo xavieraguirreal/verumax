@@ -12,10 +12,10 @@ require_once 'config.php';
 require_once 'lang_config.php';
 require_once 'maintenance_config.php';
 
-// Limitar idiomas disponibles solo a es_AR y pt_BR
+// Limitar idiomas disponibles solo a es_AR y pt_BR (nombres nativos)
 $available_languages = [
-    'es_AR' => 'Español (Argentina)',
-    'pt_BR' => 'Português (Brasil)'
+    'es_AR' => 'Español',
+    'pt_BR' => 'Português'
 ];
 
 // NO activar maintenance para esta página de desarrollo
@@ -606,14 +606,14 @@ WHERE limits = NULL;
                     <div class="relative z-10">
                         <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-6">
                             <i data-lucide="code-2" class="w-5 h-5 text-gold"></i>
-                            <span class="text-gold text-sm font-medium">Desarrollo a Medida</span>
+                            <span class="text-gold text-sm font-medium"><?php echo $lang['slide_desarrollo_badge'] ?? 'Desarrollo a Medida'; ?></span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Tu sitio web depende de un CMS?</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_desarrollo_title'] ?? '¿Su sitio web depende de un CMS?'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos <span class="text-gold font-semibold">sitios web, apps Android e iOS</span> desde cero. Sin techo, sin restricciones y no por ello más costoso.
+                            <?php echo $lang['slide_desarrollo_desc'] ?? 'WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos sitios web, apps Android e iOS desde cero.'; ?>
                         </p>
                         <a href="fabricatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
-                            Descubrí cómo →
+                            <?php echo $lang['slide_desarrollo_cta'] ?? 'Descubra cómo'; ?> →
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                     </div>

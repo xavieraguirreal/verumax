@@ -30,7 +30,7 @@ return [
 
     // Seção Filosofia
     'filosofia_title' => 'Por Que Código Próprio',
-    'filosofia_subtitle' => 'Onde outros colocam plugins, nós escrevemos código',
+    'filosofia_subtitle' => 'Onde outros/as colocam plugins, nós escrevemos código',
 
     'filosofia_card1_title' => 'Sem Limites',
     'filosofia_card1_desc' => 'Os CMS têm teto. Nós não. Seu software cresce com seu negócio, sem restrições de templates nem módulos pré-fabricados.',
@@ -39,7 +39,7 @@ return [
     'filosofia_card2_desc' => 'Código otimizado do zero. Sem camadas desnecessárias que deixam seu site lento. Velocidade de carregamento superior.',
 
     'filosofia_card3_title' => 'Segurança Controlada',
-    'filosofia_card3_desc' => 'Sabemos exatamente o que cada linha de código faz. Sem vulnerabilidades de componentes de terceiros.',
+    'filosofia_card3_desc' => 'Sabemos exatamente o que cada linha de código faz. Sem vulnerabilidades de componentes de terceiros/as.',
 
     'filosofia_card4_title' => 'Propriedade Total',
     'filosofia_card4_desc' => 'O código é seu. Sem dependências de licenças, sem surpresas. Controle absoluto do seu projeto.',
@@ -65,12 +65,12 @@ return [
 
     'banner_desarrollo_title' => 'Desenvolvimento Web',
     'banner_desarrollo_subtitle' => 'Sites Sem Limites',
-    'banner_desarrollo_desc' => 'Cansado dos limites dos CMS? Sites, e-commerce e plataformas 100% sob medida.',
+    'banner_desarrollo_desc' => 'Cansado/a dos limites dos CMS? Sites, e-commerce e plataformas 100% sob medida.',
     'banner_desarrollo_cta' => 'Ver serviços',
 
     'banner_hosting_title' => 'Hospedagem',
     'banner_hosting_subtitle' => 'Servidores Otimizados',
-    'banner_hosting_desc' => 'Hospedagem configurada por desenvolvedores. Performance e segurança garantidas.',
+    'banner_hosting_desc' => 'Hospedagem configurada por desenvolvedores/as. Performance e segurança garantidas.',
     'banner_hosting_cta' => 'Em breve',
 
     'banner_edumax_title' => 'Academicus',
@@ -96,6 +96,11 @@ return [
     'slide_emporium_title' => 'Sua loja online profissional, sem taxas ocultas',
     'slide_emporium_desc' => 'E-commerce sob medida, <span class="text-red-400 font-semibold">sem depender de Shopify ou WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. O código é seu.',
 
+    'slide_desarrollo_badge' => 'Desenvolvimento Sob Medida',
+    'slide_desarrollo_title' => 'Seu site depende de um CMS?',
+    'slide_desarrollo_desc' => 'WordPress, Joomla, Wix, Shopify... todos têm limites. Desenvolvemos <span class="text-gold font-semibold">sites, apps Android e iOS</span> do zero. Sem teto, sem restrições e não por isso mais caro.',
+    'slide_desarrollo_cta' => 'Descubra como',
+
     // Seção Tecnologias
     'tech_title' => 'Tecnologias que Dominamos',
     'tech_subtitle' => 'Mais de 15 anos de experiência em desenvolvimento',
@@ -106,7 +111,7 @@ return [
 
     // Seção Equipe
     'equipo_title' => 'Equipe Humana Real',
-    'equipo_subtitle' => 'Não deixamos você sozinho com um software',
+    'equipo_subtitle' => 'Não deixamos você sozinho/a com um software',
     'equipo_desc' => 'Por trás de cada linha de código há pessoas reais. Acompanhamos você desde o primeiro dia até que seu projeto esteja em produção e além.',
 
     // Contato

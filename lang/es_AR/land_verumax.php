@@ -96,6 +96,11 @@ return [
     'slide_emporium_title' => 'Su tienda online profesional, sin comisiones ocultas',
     'slide_emporium_desc' => 'E-commerce a medida, <span class="text-red-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. El código es suyo.',
 
+    'slide_desarrollo_badge' => 'Desarrollo a Medida',
+    'slide_desarrollo_title' => '¿Su sitio web depende de un CMS?',
+    'slide_desarrollo_desc' => 'WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos <span class="text-gold font-semibold">sitios web, apps Android e iOS</span> desde cero. Sin techo, sin restricciones y no por ello más costoso.',
+    'slide_desarrollo_cta' => 'Descubra cómo',
+
     // Sección Tecnologías
     'tech_title' => 'Tecnologías que Dominamos',
     'tech_subtitle' => 'Más de 15 años de experiencia en desarrollo',
