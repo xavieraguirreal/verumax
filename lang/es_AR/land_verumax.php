@@ -21,12 +21,12 @@ return [
     'nav_contacto' => 'Contacto',
 
     // Hero
-    'hero_badge' => 'Desarrolladores de raíz',
+    'hero_badge' => 'Desarrolladores/as de raíz',
     'hero_title_line1' => 'Del Código C',
     'hero_title_line2' => 'a la Nube',
     'hero_subtitle' => 'Nacimos programando en <span class="text-gold font-bold">lenguaje C</span>. Conocemos el código desde adentro. <span class="text-gold font-bold">Programar no es nuestro trabajo</span>, es nuestra pasión.',
     'hero_cta_primary' => 'Ver Soluciones',
-    'hero_cta_secondary' => 'Contactanos',
+    'hero_cta_secondary' => 'Contáctenos',
 
     // Sección Filosofía
     'filosofia_title' => 'Por Qué Código Propio',
@@ -55,7 +55,7 @@ return [
 
     'banner_certificatum_title' => 'Certificatum',
     'banner_certificatum_subtitle' => 'Certificados Digitales',
-    'banner_certificatum_desc' => 'Diplomas y analíticos verificables con QR infalsificable. Para instituciones educativas y formadores.',
+    'banner_certificatum_desc' => 'Diplomas y analíticos verificables con QR infalsificable. Para instituciones educativas y formadores/as.',
     'banner_certificatum_cta' => 'Conocer más',
 
     'banner_credencialis_title' => 'Credencialis',
