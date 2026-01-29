@@ -356,7 +356,7 @@ function __($key, $default = '') {
                 <!-- Logo -->
                 <a href="/fabricatum/?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
                     <span class="text-xl font-display font-bold text-white group-hover:text-gray-300 transition-colors">VERUM</span>
-                    <span class="text-xl font-display font-bold text-[#D4AF37]">MAX</span>
+                    <span class="text-xl font-display font-bold text-[#D4AF37]">ax</span>
                     <span class="text-xs text-gray-500 ml-2 font-mono">/fabricatum</span>
                 </a>
 
@@ -1288,7 +1288,7 @@ function __($key, $default = '') {
                 <div class="flex flex-col items-center md:items-start gap-2">
                     <div class="flex items-center gap-1">
                         <span class="font-display text-2xl font-bold text-white">VERUM</span>
-                        <span class="font-display text-2xl font-bold text-[#D4AF37]">MAX</span>
+                        <span class="font-display text-2xl font-bold text-[#D4AF37]">ax</span>
                     </div>
                     <span class="text-gray-500 text-sm"><?= __('footer_slogan', 'Programamos desde cero. Sin límites.') ?></span>
                 </div>
