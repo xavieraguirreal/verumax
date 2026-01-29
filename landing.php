@@ -889,7 +889,7 @@ WHERE limits = NULL;
                     </p>
                 </div>
 
-                <!-- EduMax -->
+                <!-- Academicus -->
                 <div class="solution-card p-8 reveal opacity-70" style="animation-delay: 0.4s;">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-xl flex items-center justify-center">
@@ -897,7 +897,7 @@ WHERE limits = NULL;
                         </div>
                         <span class="badge-proximamente"><?php echo $lang['proximamente'] ?? 'Próximamente'; ?></span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['banner_edumax_title'] ?? 'EduMax'; ?></h3>
+                    <h3 class="text-xl font-bold text-white mb-2"><?php echo $lang['banner_edumax_title'] ?? 'Academicus'; ?></h3>
                     <p class="text-gold text-sm font-medium mb-3"><?php echo $lang['banner_edumax_subtitle'] ?? 'Plataformas Educativas'; ?></p>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         <?php echo $lang['banner_edumax_desc'] ?? 'Tu aula virtual a medida. LMS personalizado.'; ?>

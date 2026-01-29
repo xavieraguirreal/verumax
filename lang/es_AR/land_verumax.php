@@ -73,7 +73,7 @@ return [
     'banner_hosting_desc' => 'Hosting configurado por desarrolladores/as. Rendimiento y seguridad garantizados.',
     'banner_hosting_cta' => 'Próximamente',
 
-    'banner_edumax_title' => 'EduMax',
+    'banner_edumax_title' => 'Academicus',
     'banner_edumax_subtitle' => 'Plataformas Educativas',
     'banner_edumax_desc' => 'Su aula virtual a medida. LMS personalizado sin las limitaciones de Moodle.',
     'banner_edumax_cta' => 'Próximamente',
