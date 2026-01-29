@@ -361,6 +361,9 @@ function __($key, $default = '') {
 
                 <!-- Nav Links (Desktop) -->
                 <div class="hidden md:flex items-center gap-8">
+                    <a href="#nosotros" class="text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm">
+                        <?= __('nav_nosotros', 'Nosotros') ?>
+                    </a>
                     <a href="#servicios" class="text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm">
                         <?= __('nav_servicios', 'Servicios') ?>
                     </a>
@@ -413,6 +416,7 @@ function __($key, $default = '') {
         <!-- Mobile Menu Panel -->
         <div id="mobileMenu" class="hidden md:hidden border-t border-gray-800/50 bg-cyber-dark/95">
             <div class="px-4 py-4 space-y-3">
+                <a href="#nosotros" class="block text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm"><?= __('nav_nosotros', 'Nosotros') ?></a>
                 <a href="#servicios" class="block text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm"><?= __('nav_servicios', 'Servicios') ?></a>
                 <a href="#proceso" class="block text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm"><?= __('nav_proceso', 'Proceso') ?></a>
                 <a href="#tech" class="block text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm"><?= __('nav_tech', 'Tech') ?></a>
@@ -568,6 +572,147 @@ function __($key, $default = '') {
                     </p>
                 </div>
                 <?php endfor; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section id="nosotros" class="py-24 relative overflow-hidden">
+        <!-- Background decorativo -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyber-dark via-cyber-black to-cyber-dark"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-neon-magenta/5 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-neon-cyan/5 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block px-4 py-1 bg-neon-magenta/10 border border-neon-magenta/30 rounded-full text-neon-magenta text-sm font-mono mb-4">
+                    &lt;about/&gt;
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+                    <?= __('nosotros_title', 'Quiénes Somos') ?>
+                </h2>
+                <p class="text-gray-400 text-lg font-mono">
+                    <?= __('nosotros_subtitle', 'Más de 30 años en el mundo del código') ?>
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-16 reveal">
+                <div class="text-center cyber-card rounded-xl p-6">
+                    <div class="font-display text-4xl font-bold neon-text-cyan mb-2">
+                        <?= __('nosotros_stat1_value', '+30') ?>
+                    </div>
+                    <div class="text-gray-500 text-xs font-mono uppercase tracking-wider">
+                        <?= __('nosotros_stat1_label', 'Años en tecnología') ?>
+                    </div>
+                </div>
+                <div class="text-center cyber-card rounded-xl p-6">
+                    <div class="font-display text-4xl font-bold neon-text-magenta mb-2">
+                        <?= __('nosotros_stat2_value', '1997') ?>
+                    </div>
+                    <div class="text-gray-500 text-xs font-mono uppercase tracking-wider">
+                        <?= __('nosotros_stat2_label', 'Pioneros IA Social') ?>
+                    </div>
+                </div>
+                <div class="text-center cyber-card rounded-xl p-6">
+                    <div class="font-display text-4xl font-bold text-white mb-2">
+                        <?= __('nosotros_stat3_value', 'C') ?>
+                    </div>
+                    <div class="text-gray-500 text-xs font-mono uppercase tracking-wider">
+                        <?= __('nosotros_stat3_label', 'Donde empezamos') ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro destacado -->
+            <div class="max-w-4xl mx-auto mb-16 reveal">
+                <div class="code-block rounded-xl p-8 relative">
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-gray-600 text-xs ml-2 font-mono">historia.c</span>
+                    </div>
+                    <div class="pt-6">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            <?= __('nosotros_intro', 'Nacimos en el mundo del desarrollo con el <strong>lenguaje C</strong>...') ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de información -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Historia -->
+                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.1s">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-neon-cyan/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="history" class="w-6 h-6 text-neon-cyan"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                                <?= __('nosotros_historia_title', 'Nuestra Historia') ?>
+                            </h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                <?= __('nosotros_historia_desc', 'Desde la década del 90...') ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IA Social -->
+                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.2s">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-neon-magenta/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="brain" class="w-6 h-6 text-neon-magenta"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                                <?= __('nosotros_ia_title', 'Pioneros en IA Social') ?>
+                            </h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                <?= __('nosotros_ia_desc', 'Desde 1997, impulsamos la IA Social...') ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación -->
+                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.3s">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-neon-blue/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-neon-blue"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                                <?= __('nosotros_formacion_title', 'Formación Académica') ?>
+                            </h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                <?= __('nosotros_formacion_desc', 'Egresados de la UNLP y UTN...') ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filosofía -->
+                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.4s">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-neon-green/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="code-2" class="w-6 h-6 text-neon-green"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                                <?= __('nosotros_filosofia_title', 'Nuestra Filosofía') ?>
+                            </h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                <?= __('nosotros_filosofia_desc', 'No somos una agencia que instala plantillas...') ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

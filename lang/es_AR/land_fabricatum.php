@@ -15,6 +15,7 @@ return [
 
     // Navegación
     'nav_inicio' => 'Inicio',
+    'nav_nosotros' => 'Nosotros',
     'nav_servicios' => 'Servicios',
     'nav_proceso' => 'Proceso',
     'nav_tech' => 'Tecnologías',
@@ -69,6 +70,31 @@ return [
 
     'solucion_card4_title' => 'Propiedad Absoluta',
     'solucion_card4_desc' => 'El código es tuyo. Sin licencias mensuales, sin dependencias, sin ataduras. Control total de tu proyecto.',
+
+    // Sección Quiénes Somos
+    'nosotros_title' => 'Quiénes Somos',
+    'nosotros_subtitle' => 'Más de 30 años en el mundo del código',
+
+    'nosotros_intro' => 'Nacimos en el mundo del desarrollo con el <strong>lenguaje C</strong>, uno de los más cercanos al lenguaje de máquina. Entendemos las computadoras desde adentro del gabinete. Sabemos qué ocurre cuando ejecutás un programa, cómo se comunican los procesos, cómo fluyen los datos.',
+
+    'nosotros_historia_title' => 'Nuestra Historia',
+    'nosotros_historia_desc' => 'Desde la <strong>década del 90</strong> nos dedicamos a <strong>formar programadores y diseñadores web</strong>. Durante más de dos décadas, capacitamos a cientos de profesionales que hoy trabajan en empresas de todo el mundo. Ahora, aplicamos toda esa experiencia en lo que mejor sabemos hacer: <strong>programar y desarrollar software</strong>.',
+
+    'nosotros_ia_title' => 'Pioneros en IA Social',
+    'nosotros_ia_desc' => 'Desde <strong>1997</strong>, impulsamos la <strong>Inteligencia Artificial Social</strong> en colaboración con <strong>Michigan State University</strong>. Cuando la IA era solo teoría académica, ya explorábamos sus aplicaciones sociales y educativas.',
+
+    'nosotros_formacion_title' => 'Formación Académica',
+    'nosotros_formacion_desc' => 'Egresados de la <strong>Universidad Nacional de La Plata</strong> y la <strong>Universidad Tecnológica Nacional</strong>. Formación sólida en ciencias de la computación, combinada con décadas de experiencia práctica.',
+
+    'nosotros_filosofia_title' => 'Nuestra Filosofía',
+    'nosotros_filosofia_desc' => 'No somos una agencia que instala plantillas. Somos <strong>programadores de verdad</strong> que entienden cada línea de código que escriben. Cuando te decimos que algo se puede hacer, es porque sabemos exactamente cómo hacerlo.',
+
+    'nosotros_stat1_value' => '+30',
+    'nosotros_stat1_label' => 'Años en tecnología',
+    'nosotros_stat2_value' => '1997',
+    'nosotros_stat2_label' => 'Pioneros en IA Social',
+    'nosotros_stat3_value' => 'C',
+    'nosotros_stat3_label' => 'Donde empezamos',
 
     // Sección CMS
     'cms_title' => 'También Somos Expertos en CMS',
