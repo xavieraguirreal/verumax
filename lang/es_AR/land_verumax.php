@@ -131,4 +131,42 @@ return [
     'proximamente' => 'Próximamente',
     'ver_mas' => 'Ver más',
     'leer_mas' => 'Leer más',
+
+    // Footer
+    'footer_descripcion' => 'Plataforma profesional de desarrollo de software a medida con código propio.',
+    'footer_enlaces' => 'Enlaces Rápidos',
+    'footer_inicio' => 'Inicio',
+    'footer_contacto' => 'Contacto',
+    'footer_legal' => 'Legal',
+    'footer_terminos' => 'Términos y Condiciones',
+    'footer_privacidad' => 'Política de Privacidad',
+    'footer_seguridad' => 'Tecnología y Seguridad de Nivel Empresarial',
+    'footer_copyright' => 'Todos los derechos reservados.',
+
+    // Badges de seguridad
+    'badge_ssl' => 'SSL',
+    'badge_ssl_desc' => 'Encriptación 256-bit',
+    'badge_https' => 'HTTPS',
+    'badge_https_desc' => 'Conexión Segura',
+    'badge_privacidad' => 'Privacidad',
+    'badge_privacidad_desc' => 'Datos Protegidos',
+    'badge_backup' => 'Backup',
+    'badge_backup_desc' => 'Automático Diario',
+    'badge_uptime' => 'Uptime 99.9%',
+    'badge_uptime_desc' => 'Disponibilidad',
+    'badge_soporte' => 'Soporte',
+    'badge_soporte_desc' => 'Técnico 24/7',
+
+    // Veritas IA
+    'veritas_chat_btn' => 'Chat con Veritas IA',
+    'veritas_titulo' => 'Veritas IA',
+    'veritas_subtitulo' => 'Nuestro Agente de Inteligencia Artificial Especializado',
+    'veritas_proximamente' => '¡Próximamente!',
+    'veritas_descripcion' => 'Veritas estará disponible muy pronto para ayudarle con consultas sobre certificados, validaciones y más.',
+    'veritas_entendido' => 'Entendido',
+
+    // Cookies
+    'cookies_message' => 'Usamos cookies para recordar sus preferencias de idioma y tema.',
+    'cookies_more_info' => 'Ver más',
+    'cookies_accept' => 'Entendido',
 ];
