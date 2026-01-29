@@ -644,70 +644,92 @@ function __($key, $default = '') {
                 </div>
             </div>
 
-            <!-- Grid de información -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Historia -->
-                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.1s">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-neon-cyan/10 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="history" class="w-6 h-6 text-neon-cyan"></i>
+            <!-- Dos Pilares Principales -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Pilar 1: Expertise en Código -->
+                <div class="cyber-card rounded-xl p-8 reveal border-2 border-neon-cyan/30 hover:border-neon-cyan" style="animation-delay: 0.1s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-neon-cyan/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="cpu" class="w-7 h-7 text-neon-cyan"></i>
                         </div>
                         <div>
-                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                            <span class="text-neon-cyan text-xs font-mono uppercase tracking-wider">Pilar 1</span>
+                            <h3 class="font-display text-xl font-bold text-white">
+                                <?= __('nosotros_codigo_title', 'Expertise en Código') ?>
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        <?= __('nosotros_codigo_desc', 'Nacimos con el lenguaje C...') ?>
+                    </p>
+                </div>
+
+                <!-- Pilar 2: IA con Mirada Humana -->
+                <div class="cyber-card rounded-xl p-8 reveal border-2 border-neon-magenta/30 hover:border-neon-magenta" style="animation-delay: 0.2s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-neon-magenta/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="brain" class="w-7 h-7 text-neon-magenta"></i>
+                        </div>
+                        <div>
+                            <span class="text-neon-magenta text-xs font-mono uppercase tracking-wider">Pilar 2</span>
+                            <h3 class="font-display text-xl font-bold text-white">
+                                <?= __('nosotros_ia_title', 'IA con Mirada Humana') ?>
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        <?= __('nosotros_ia_desc', 'Desde 1997, impulsamos la IA Social...') ?>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cards secundarias -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Historia -->
+                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.3s">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="history" class="w-5 h-5 text-[#D4AF37]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-white mb-2">
                                 <?= __('nosotros_historia_title', 'Nuestra Historia') ?>
                             </h3>
-                            <p class="text-gray-400 leading-relaxed">
+                            <p class="text-gray-400 text-sm leading-relaxed">
                                 <?= __('nosotros_historia_desc', 'Desde la década del 90...') ?>
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- IA Social -->
-                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.2s">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-neon-magenta/10 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="brain" class="w-6 h-6 text-neon-magenta"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-display text-xl font-bold text-white mb-2">
-                                <?= __('nosotros_ia_title', 'Pioneros en IA Social') ?>
-                            </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                <?= __('nosotros_ia_desc', 'Desde 1997, impulsamos la IA Social...') ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Formación -->
-                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.3s">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-neon-blue/10 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="graduation-cap" class="w-6 h-6 text-neon-blue"></i>
+                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.4s">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-neon-blue/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-neon-blue"></i>
                         </div>
                         <div>
-                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                            <h3 class="font-display text-lg font-bold text-white mb-2">
                                 <?= __('nosotros_formacion_title', 'Formación Académica') ?>
                             </h3>
-                            <p class="text-gray-400 leading-relaxed">
-                                <?= __('nosotros_formacion_desc', 'Egresados de la UNLP y UTN...') ?>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                <?= __('nosotros_formacion_desc', 'Formados en la UNLP y UTN...') ?>
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Filosofía -->
-                <div class="cyber-card rounded-xl p-8 reveal" style="animation-delay: 0.4s">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="w-12 h-12 rounded-lg bg-neon-green/10 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="code-2" class="w-6 h-6 text-neon-green"></i>
+                <div class="cyber-card rounded-xl p-6 reveal" style="animation-delay: 0.5s">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-neon-green/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="heart-handshake" class="w-5 h-5 text-neon-green"></i>
                         </div>
                         <div>
-                            <h3 class="font-display text-xl font-bold text-white mb-2">
+                            <h3 class="font-display text-lg font-bold text-white mb-2">
                                 <?= __('nosotros_filosofia_title', 'Nuestra Filosofía') ?>
                             </h3>
-                            <p class="text-gray-400 leading-relaxed">
+                            <p class="text-gray-400 text-sm leading-relaxed">
                                 <?= __('nosotros_filosofia_desc', 'No somos una agencia que instala plantillas...') ?>
                             </p>
                         </div>

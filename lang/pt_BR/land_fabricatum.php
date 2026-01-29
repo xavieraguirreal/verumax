@@ -73,21 +73,24 @@ return [
 
     // Seção Quem Somos
     'nosotros_title' => 'Quem Somos',
-    'nosotros_subtitle' => 'Mais de 30 anos no mundo do código',
+    'nosotros_subtitle' => 'Código profundo + Inteligência Artificial com olhar humano',
 
-    'nosotros_intro' => 'Nascemos no mundo do desenvolvimento com a <strong>linguagem C</strong>, uma das mais próximas da linguagem de máquina. Entendemos os computadores por dentro. Sabemos o que acontece quando você executa um programa, como os processos se comunicam, como os dados fluem.',
+    'nosotros_intro' => 'Combinamos duas fortalezas únicas: <strong>expertise em programação de baixo nível</strong> (nascemos com a linguagem C, entendemos as máquinas por dentro) e <strong>especialização em Inteligência Artificial Social</strong> (aplicamos IA com olhar humano desde 1997). Essa combinação nos permite criar software que não só funciona, mas que <strong>potencializa as pessoas</strong>.',
 
     'nosotros_historia_title' => 'Nossa História',
     'nosotros_historia_desc' => 'Desde a <strong>década de 90</strong>, nos dedicamos a <strong>formar programadores/as e designers web</strong>. Durante mais de duas décadas, capacitamos centenas de profissionais. Agora, aplicamos toda essa experiência no que fazemos de melhor: <strong>programar e desenvolver software</strong>.',
 
-    'nosotros_ia_title' => 'Pioneiros em IA Social',
-    'nosotros_ia_desc' => 'Desde <strong>1997</strong>, impulsionamos a <strong>Inteligência Artificial Social</strong> na <strong>Michigan State University</strong>. Quando a IA era apenas teoria acadêmica, já explorávamos suas aplicações sociais e educacionais.',
+    'nosotros_codigo_title' => 'Expertise em Código',
+    'nosotros_codigo_desc' => 'Nascemos com a <strong>linguagem C</strong>, uma das mais próximas da máquina. Entendemos o que acontece dentro do gabinete: como os processos se comunicam, como os dados fluem, como otimizar cada ciclo. <strong>Não só programamos, entendemos as máquinas.</strong>',
+
+    'nosotros_ia_title' => 'IA com Olhar Humano',
+    'nosotros_ia_desc' => 'Desde <strong>1997</strong>, impulsionamos a <strong>Inteligência Artificial Social</strong> na <strong>Michigan State University</strong>. Não usamos IA para substituir pessoas, mas para <strong>potencializá-las</strong>. Integramos IA em nossos desenvolvimentos para melhorar experiências, automatizar o repetitivo e liberar o potencial humano.',
 
     'nosotros_formacion_title' => 'Formação Acadêmica',
     'nosotros_formacion_desc' => 'Formados na <strong>Universidad Nacional de La Plata</strong> e na <strong>Universidad Tecnológica Nacional</strong>. Conhecimentos sólidos em ciências da computação.',
 
     'nosotros_filosofia_title' => 'Nossa Filosofia',
-    'nosotros_filosofia_desc' => 'Não somos uma agência que instala templates. Somos <strong>programadores/as de verdade</strong> que entendem cada linha de código que escrevem. Quando dizemos que algo pode ser feito, é porque sabemos exatamente como fazer.',
+    'nosotros_filosofia_desc' => 'Não somos uma agência que instala templates. Somos <strong>programadores/as de verdade</strong> que entendem cada linha de código que escrevem. E somos <strong>especialistas em IA Social</strong> que sabem como aplicar inteligência artificial para melhorar a vida das pessoas.',
 
     'nosotros_stat1_value' => '+30',
     'nosotros_stat1_label' => 'Anos em tecnologia',
