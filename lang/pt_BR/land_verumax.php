@@ -78,6 +78,24 @@ return [
     'banner_edumax_desc' => 'Sua sala de aula virtual sob medida. LMS personalizado sem as limitações do Moodle.',
     'banner_edumax_cta' => 'Em breve',
 
+    // Slides do carrossel
+    'slide_certificatum_title' => 'Certificados digitais infalsificáveis',
+    'slide_certificatum_desc' => 'Diplomas, históricos e declarações com <span class="text-green-500 font-semibold">código QR verificável instantaneamente</span>. Seus estudantes acessam 24/7 sua trajetória acadêmica completa.',
+    'slide_certificatum_cta' => 'Conhecer Certificatum',
+
+    'slide_credencialis_title' => 'Credenciais digitais para sua organização',
+    'slide_credencialis_desc' => 'Carteirinhas de associados/as, filiações e credenciais com <span class="text-teal-400 font-semibold">QR verificável e design personalizado</span>. Ideal para associações, cooperativas, clubes e entidades.',
+    'slide_credencialis_cta' => 'Conhecer Credencialis',
+
+    'slide_hosting_title' => 'Hospedagem configurada por desenvolvedores/as',
+    'slide_hosting_desc' => 'Servidores otimizados para <span class="text-blue-400 font-semibold">máxima performance e segurança</span>. Não somos revendedores/as, configuramos cada servidor sob medida para seu projeto.',
+
+    'slide_academicus_title' => 'Sua sala de aula virtual, sem as limitações do Moodle',
+    'slide_academicus_desc' => 'Plataforma de gestão acadêmica <span class="text-blue-400 font-semibold">100% personalizada</span>. Cursos, avaliações, acompanhamento de estudantes. Tudo integrado com Certificatum.',
+
+    'slide_emporium_title' => 'Sua loja online profissional, sem taxas ocultas',
+    'slide_emporium_desc' => 'E-commerce sob medida, <span class="text-red-400 font-semibold">sem depender de Shopify ou WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. O código é seu.',
+
     // Seção Tecnologias
     'tech_title' => 'Tecnologias que Dominamos',
     'tech_subtitle' => 'Mais de 15 anos de experiência em desenvolvimento',

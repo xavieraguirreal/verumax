@@ -12,6 +12,12 @@ require_once 'config.php';
 require_once 'lang_config.php';
 require_once 'maintenance_config.php';
 
+// Limitar idiomas disponibles solo a es_AR y pt_BR
+$available_languages = [
+    'es_AR' => 'Español (Argentina)',
+    'pt_BR' => 'Português (Brasil)'
+];
+
 // NO activar maintenance para esta página de desarrollo
 // check_maintenance_mode();
 
@@ -623,12 +629,12 @@ WHERE limits = NULL;
                             <i data-lucide="graduation-cap" class="w-5 h-5 text-green-500"></i>
                             <span class="text-green-500 text-sm font-medium">Certificatum</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Certificados digitales infalsificables</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_certificatum_title'] ?? 'Certificados digitales infalsificables'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Diplomas, analíticos y constancias con <span class="text-green-500 font-semibold">código QR verificable al instante</span>. Sus estudiantes acceden 24/7 a su trayectoria académica completa.
+                            <?php echo $lang['slide_certificatum_desc'] ?? 'Diplomas, analíticos y constancias con código QR verificable al instante.'; ?>
                         </p>
                         <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-green-700 hover:bg-green-600 text-white font-bold rounded-xl transition-all hover:scale-105">
-                            Conocer Certificatum
+                            <?php echo $lang['slide_certificatum_cta'] ?? 'Conocer Certificatum'; ?>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -644,12 +650,12 @@ WHERE limits = NULL;
                             <i data-lucide="id-card" class="w-5 h-5 text-teal-400"></i>
                             <span class="text-teal-400 text-sm font-medium">Credencialis</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Credenciales digitales para su organización</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_credencialis_title'] ?? 'Credenciales digitales para su organización'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Carnets de socios/as, membresías y credenciales con <span class="text-teal-400 font-semibold">QR verificable y diseño personalizado</span>. Ideal para mutuales, cooperativas, clubes y asociaciones.
+                            <?php echo $lang['slide_credencialis_desc'] ?? 'Carnets de socios/as, membresías y credenciales con QR verificable.'; ?>
                         </p>
                         <a href="credencialis/" class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all hover:scale-105">
-                            Conocer Credencialis
+                            <?php echo $lang['slide_credencialis_cta'] ?? 'Conocer Credencialis'; ?>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -665,12 +671,12 @@ WHERE limits = NULL;
                             <i data-lucide="server" class="w-5 h-5 text-blue-400"></i>
                             <span class="text-blue-400 text-sm font-medium">Hosting</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Hosting configurado por desarrolladores</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_hosting_title'] ?? 'Hosting configurado por desarrolladores/as'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Servidores optimizados para <span class="text-blue-400 font-semibold">máximo rendimiento y seguridad</span>. No somos revendedores/as, configuramos cada servidor a medida de su proyecto.
+                            <?php echo $lang['slide_hosting_desc'] ?? 'Servidores optimizados para máximo rendimiento y seguridad.'; ?>
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
-                            Próximamente
+                            <?php echo $lang['proximamente'] ?? 'Próximamente'; ?>
                             <i data-lucide="clock" class="w-5 h-5"></i>
                         </span>
                     </div>
@@ -686,12 +692,12 @@ WHERE limits = NULL;
                             <i data-lucide="book-open" class="w-5 h-5 text-blue-400"></i>
                             <span class="text-blue-400 text-sm font-medium">Academicus</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Su aula virtual, sin las limitaciones de Moodle</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_academicus_title'] ?? 'Su aula virtual, sin las limitaciones de Moodle'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Plataforma de gestión académica <span class="text-blue-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, seguimiento de estudiantes. Todo integrado con Certificatum.
+                            <?php echo $lang['slide_academicus_desc'] ?? 'Plataforma de gestión académica 100% personalizada.'; ?>
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
-                            Próximamente
+                            <?php echo $lang['proximamente'] ?? 'Próximamente'; ?>
                             <i data-lucide="clock" class="w-5 h-5"></i>
                         </span>
                     </div>
@@ -707,12 +713,12 @@ WHERE limits = NULL;
                             <i data-lucide="shopping-cart" class="w-5 h-5 text-red-400"></i>
                             <span class="text-red-400 text-sm font-medium">Emporium</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Su tienda online profesional, sin comisiones ocultas</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4"><?php echo $lang['slide_emporium_title'] ?? 'Su tienda online profesional, sin comisiones ocultas'; ?></h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            E-commerce a medida, <span class="text-red-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. El código es suyo.
+                            <?php echo $lang['slide_emporium_desc'] ?? 'E-commerce a medida, sin depender de Shopify o WooCommerce.'; ?>
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
-                            Próximamente
+                            <?php echo $lang['proximamente'] ?? 'Próximamente'; ?>
                             <i data-lucide="clock" class="w-5 h-5"></i>
                         </span>
                     </div>
