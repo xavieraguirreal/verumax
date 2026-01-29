@@ -30,7 +30,7 @@ return [
 
     // Sección Filosofía
     'filosofia_title' => 'Por Qué Código Propio',
-    'filosofia_subtitle' => 'Donde otros ponen plugins, nosotros/as escribimos código',
+    'filosofia_subtitle' => 'Donde otros/as ponen plugins, nosotros/as escribimos código',
 
     'filosofia_card1_title' => 'Sin Límites',
     'filosofia_card1_desc' => 'Los CMS tienen techo. Nosotros/as no. Su software crece con su negocio, sin restricciones de plantillas ni módulos prefabricados.',
