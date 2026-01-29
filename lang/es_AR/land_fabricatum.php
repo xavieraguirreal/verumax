@@ -101,7 +101,7 @@ return [
     'nosotros_stat3_label' => 'Donde empezamos',
 
     // Sección CMS
-    'cms_title' => 'También Somos Expertos en CMS',
+    'cms_title' => 'También Somos Especialistas en CMS',
     'cms_subtitle' => '¿WordPress, Joomla, Shopify? Los dominamos todos',
     'cms_desc' => 'No todos los proyectos necesitan código desde cero. Si un CMS resuelve su necesidad, lo implementamos con la misma calidad y profesionalismo. <strong>Lo asesoramos para elegir la mejor opción.</strong>',
 
