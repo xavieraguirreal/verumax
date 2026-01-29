@@ -380,9 +380,9 @@ function __($key, $default = '') {
                     <!-- Language -->
                     <div class="relative">
                         <select id="langSelector" class="lang-dropdown appearance-none px-3 py-1.5 pr-8 rounded text-sm text-gray-300 cursor-pointer focus:outline-none focus:border-neon-cyan">
-                            <?php foreach ($available_languages as $code => $lang): ?>
+                            <?php foreach ($available_languages as $code => $name): ?>
                             <option value="<?= $code ?>" <?= $code === $current_lang ? 'selected' : '' ?>>
-                                <?= $lang['flag'] ?> <?= strtoupper(substr($code, 0, 2)) ?>
+                                <?= strtoupper(substr($code, 0, 2)) ?>
                             </option>
                             <?php endforeach; ?>
                         </select>
@@ -427,17 +427,17 @@ function __($key, $default = '') {
             <div class="circuit-line w-1/2 bottom-1/3 left-1/4"></div>
         </div>
 
-        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="z-index: 10;">
             <!-- Badge -->
             <div class="inline-block mb-8">
-                <span class="font-mono text-neon-cyan text-sm px-4 py-2 border border-neon-cyan/30 rounded-full bg-neon-cyan/5">
+                <span class="font-mono text-sm px-4 py-2 border rounded-full" style="color: #00fff2; border-color: rgba(0,255,242,0.3); background: rgba(0,255,242,0.05);">
                     <?= __('hero_badge', '< Código Propio />') ?>
                 </span>
             </div>
 
             <!-- Title with glitch effect -->
-            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight">
-                <span class="text-white"><?= __('hero_title_line1', '¿Tu Sitio Web') ?></span>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight" style="font-family: 'Orbitron', sans-serif;">
+                <span style="color: white;"><?= __('hero_title_line1', '¿Tu Sitio Web') ?></span>
                 <br>
                 <span class="gradient-text"><?= __('hero_title_line2', 'Tiene Techo?') ?></span>
             </h1>
