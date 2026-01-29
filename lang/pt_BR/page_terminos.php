@@ -15,15 +15,15 @@ return [
 
     // Seção 2: Descrição do Serviço
     'terminos_seccion2_titulo' => '2. Descrição do Serviço',
-    'terminos_seccion2_p1' => 'O Verumax é uma plataforma integral que permite a instituições educacionais, profissionais independentes, organizadores de eventos, empresas, cooperativas e mutualidades emitir, gerenciar e validar documentos digitais com códigos QR de verificação.',
+    'terminos_seccion2_p1' => 'O Verumax é uma empresa de desenvolvimento de software que combina mais de 30 anos de experiência em programação com especialização em Inteligência Artificial Social. Oferecemos soluções tecnológicas integrais para instituições educacionais, empresas e organizações.',
     'terminos_seccion2_p2' => 'Nossas soluções incluem:',
-    'terminos_seccion2_li1' => '<strong>Certificatum</strong>: Sistema completo de certificações acadêmicas digitais com geração automática de certificados de aprovação, analíticos acadêmicos, constâncias de inscrição, constâncias de aluno regular e certificados para docentes',
-    'terminos_seccion2_li2' => 'Portal personalizado para cada instituição com acesso 24/7 para estudantes e docentes',
-    'terminos_seccion2_li3' => 'Sistema de validação instantânea com códigos QR únicos e infalseáveis',
-    'terminos_seccion2_li4' => 'Armazenamento seguro na nuvem com backup automático diário',
-    'terminos_seccion2_li5' => 'Notificação automática por e-mail quando os documentos estão disponíveis',
-    'terminos_seccion2_li6' => 'Carga massiva de dados e emissão por lotes',
-    'terminos_seccion2_li7' => 'Opção de impressão premium de documentos físicos',
+    'terminos_seccion2_li1' => '<strong>Certificatum</strong>: Sistema completo de certificações acadêmicas digitais com geração automática de certificados de aprovação, analíticos acadêmicos, constâncias de inscrição, constâncias de aluno regular e certificados para docentes. Inclui validação QR infalseável.',
+    'terminos_seccion2_li2' => '<strong>Credencialis</strong>: Sistema de credenciais digitais de membros para organizações, associações, mutualidades e cooperativas. Carteiras digitais com código QR verificável.',
+    'terminos_seccion2_li3' => '<strong>Fabricatum</strong>: Desenvolvimento de software sob medida incluindo sites web, aplicações web, apps móveis (Android/iOS), software desktop (Windows/Linux/macOS), plataformas LMS, e-commerce e integrações com APIs.',
+    'terminos_seccion2_li4' => 'Portal personalizado para cada instituição com acesso 24/7',
+    'terminos_seccion2_li5' => 'Sistema de validação instantânea com códigos QR únicos e infalseáveis',
+    'terminos_seccion2_li6' => 'Armazenamento seguro na nuvem com backup automático diário',
+    'terminos_seccion2_li7' => 'Integração de Inteligência Artificial Social em desenvolvimentos sob medida',
 
     // Seção 3: Registro e Conta
     'terminos_seccion3_titulo' => '3. Registro e Conta de Usuário',
