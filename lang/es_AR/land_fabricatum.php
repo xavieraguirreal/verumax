@@ -22,18 +22,18 @@ return [
     'nav_contacto' => 'Contacto',
 
     // Hero
-    'hero_badge' => '< Sitios Web & Sistemas />',
+    'hero_badge' => '< Código + IA Social />',
     'hero_title_line1' => 'Desarrollo Web',
     'hero_title_line2' => 'y Sistemas',
-    'hero_subtitle' => 'Desde <span class="text-neon-cyan">tu sitio web institucional</span> hasta <span class="text-neon-magenta">sistemas complejos a medida</span>. Con CMS si te alcanza, con código propio si necesitás más. Vos elegís.',
+    'hero_subtitle' => 'Desde <span class="text-neon-cyan">tu sitio web institucional</span> hasta <span class="text-neon-magenta">sistemas complejos con IA</span>. Código propio + Inteligencia Artificial con mirada humana. <strong>Potenciamos tu proyecto.</strong>',
     'hero_cta_primary' => 'Solicitar Presupuesto',
     'hero_cta_secondary' => 'Ver Servicios',
-    'hero_stat1_value' => '👨‍🏫→👨‍💻',
-    'hero_stat1_label' => 'De formadores/as a programadores/as',
-    'hero_stat2_value' => '100%',
-    'hero_stat2_label' => 'Código Propio',
-    'hero_stat3_value' => '∞',
-    'hero_stat3_label' => 'Posibilidades',
+    'hero_stat1_value' => '1997',
+    'hero_stat1_label' => 'Pioneros en IA Social',
+    'hero_stat2_value' => 'C',
+    'hero_stat2_label' => 'Lenguaje de origen',
+    'hero_stat3_value' => '+30',
+    'hero_stat3_label' => 'Años en tecnología',
 
     // Sección: ¿Cuándo elegir código propio?
     'problema_title' => '¿Cuándo Elegir Código Propio?',
