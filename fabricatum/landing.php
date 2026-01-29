@@ -353,10 +353,10 @@ function __($key, $default = '') {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="/landing.php?lang=<?= $current_lang ?>" class="flex items-center gap-2 group">
-                    <span class="text-xl font-display font-bold text-white group-hover:text-neon-cyan transition-colors">VERU</span>
-                    <span class="text-xl font-display font-bold text-neon-cyan">MAX</span>
-                    <span class="text-xs text-gray-500 ml-2 font-mono">/dev</span>
+                <a href="/landing.php?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
+                    <span class="text-xl font-display font-bold text-white group-hover:text-gray-300 transition-colors">VERU</span>
+                    <span class="text-xl font-display font-bold text-[#D4AF37]">MAX</span>
+                    <span class="text-xs text-gray-500 ml-2 font-mono">/fabricatum</span>
                 </a>
 
                 <!-- Nav Links (Desktop) -->
@@ -1202,15 +1202,84 @@ function __($key, $default = '') {
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-gray-800">
+    <footer class="py-12 border-t border-gray-800 bg-cyber-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center gap-2">
-                    <span class="font-display font-bold text-white">VERU</span>
-                    <span class="font-display font-bold text-neon-cyan">MAX</span>
-                    <span class="text-gray-500 text-sm ml-2"><?= __('footer_slogan', 'Programamos desde cero. Sin límites.') ?></span>
+            <!-- Security & Trust Badges -->
+            <div class="mb-10 pb-8 border-b border-gray-800">
+                <p class="text-center text-sm text-gray-500 mb-6"><?= __('footer_seguridad', 'Tecnología y Seguridad de Nivel Empresarial') ?></p>
+                <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+                    <!-- SSL -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]">SSL</div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_ssl_desc', 'Encriptación 256-bit') ?></div>
+                        </div>
+                    </div>
+                    <!-- HTTPS -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="lock" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]">HTTPS</div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_https_desc', 'Conexión Segura') ?></div>
+                        </div>
+                    </div>
+                    <!-- Código Propio -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="code-2" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]"><?= __('badge_codigo', 'Código Propio') ?></div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_codigo_desc', '100% Original') ?></div>
+                        </div>
+                    </div>
+                    <!-- Backup -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="database" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]">Backup</div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_backup_desc', 'Automático Diario') ?></div>
+                        </div>
+                    </div>
+                    <!-- Uptime -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="activity" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]">99.9%</div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_uptime_desc', 'Disponibilidad') ?></div>
+                        </div>
+                    </div>
+                    <!-- Soporte -->
+                    <div class="flex items-center gap-2 bg-cyber-black border border-gray-700 px-3 py-2 rounded-lg hover:border-neon-cyan/50 transition-colors">
+                        <i data-lucide="headphones" class="w-4 h-4 text-neon-green"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold text-[#D4AF37]"><?= __('badge_soporte', 'Soporte') ?></div>
+                            <div class="text-[10px] text-gray-500"><?= __('badge_soporte_desc', 'Técnico 24/7') ?></div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-gray-500 text-sm font-mono">
+            </div>
+
+            <!-- Footer Content -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Logo & Slogan -->
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <div class="flex items-center gap-1">
+                        <span class="font-display text-2xl font-bold text-white">VERU</span>
+                        <span class="font-display text-2xl font-bold text-[#D4AF37]">MAX</span>
+                    </div>
+                    <span class="text-gray-500 text-sm"><?= __('footer_slogan', 'Programamos desde cero. Sin límites.') ?></span>
+                </div>
+
+                <!-- Links -->
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="/landing.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors">Verumax</a>
+                    <a href="/stipulationes.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors"><?= __('footer_terminos', 'Términos') ?></a>
+                    <a href="/secretum.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors"><?= __('footer_privacidad', 'Privacidad') ?></a>
+                    <a href="mailto:contacto@verumax.com" class="text-gray-400 hover:text-neon-cyan transition-colors">contacto@verumax.com</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-gray-600 text-sm font-mono">
                     <?= __('footer_copy', '© 2026 Verumax. Todos los derechos reservados.') ?>
                 </p>
             </div>

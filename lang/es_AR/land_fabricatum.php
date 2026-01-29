@@ -29,7 +29,7 @@ return [
     'hero_cta_primary' => 'Solicitar Presupuesto',
     'hero_cta_secondary' => 'Ver Servicios',
     'hero_stat1_value' => '👨‍🏫→👨‍💻',
-    'hero_stat1_label' => 'De formadores a programadores',
+    'hero_stat1_label' => 'De formadores/as a programadores/as',
     'hero_stat2_value' => '100%',
     'hero_stat2_label' => 'Código Propio',
     'hero_stat3_value' => '∞',
@@ -57,7 +57,7 @@ return [
 
     // Sección Solución
     'solucion_title' => 'Nuestra Solución',
-    'solucion_subtitle' => 'Código escrito para vos, no para todos',
+    'solucion_subtitle' => 'Código escrito para vos, no para todas las personas',
 
     'solucion_card1_title' => 'A Tu Medida',
     'solucion_card1_desc' => 'Cada línea de código pensada para tu negocio. Sin funcionalidades innecesarias, sin limitaciones artificiales.',
@@ -78,16 +78,16 @@ return [
     'nosotros_intro' => 'Nacimos en el mundo del desarrollo con el <strong>lenguaje C</strong>, uno de los más cercanos al lenguaje de máquina. Entendemos las computadoras desde adentro del gabinete. Sabemos qué ocurre cuando ejecutás un programa, cómo se comunican los procesos, cómo fluyen los datos.',
 
     'nosotros_historia_title' => 'Nuestra Historia',
-    'nosotros_historia_desc' => 'Desde la <strong>década del 90</strong> nos dedicamos a <strong>formar programadores y diseñadores web</strong>. Durante más de dos décadas, capacitamos a cientos de profesionales que hoy trabajan en empresas de todo el mundo. Ahora, aplicamos toda esa experiencia en lo que mejor sabemos hacer: <strong>programar y desarrollar software</strong>.',
+    'nosotros_historia_desc' => 'Desde la <strong>década del 90</strong> nos dedicamos a <strong>formar programadores/as y diseñadores/as web</strong>. Durante más de dos décadas, capacitamos a cientos de profesionales. Ahora, aplicamos toda esa experiencia en lo que mejor sabemos hacer: <strong>programar y desarrollar software</strong>.',
 
     'nosotros_ia_title' => 'Pioneros en IA Social',
-    'nosotros_ia_desc' => 'Desde <strong>1997</strong>, impulsamos la <strong>Inteligencia Artificial Social</strong> en colaboración con <strong>Michigan State University</strong>. Cuando la IA era solo teoría académica, ya explorábamos sus aplicaciones sociales y educativas.',
+    'nosotros_ia_desc' => 'Desde <strong>1997</strong>, impulsamos la <strong>Inteligencia Artificial Social</strong> en la <strong>Michigan State University</strong>. Cuando la IA era solo teoría académica, ya explorábamos sus aplicaciones sociales y educativas.',
 
     'nosotros_formacion_title' => 'Formación Académica',
-    'nosotros_formacion_desc' => 'Egresados de la <strong>Universidad Nacional de La Plata</strong> y la <strong>Universidad Tecnológica Nacional</strong>. Formación sólida en ciencias de la computación, combinada con décadas de experiencia práctica.',
+    'nosotros_formacion_desc' => 'Formados en la <strong>Universidad Nacional de La Plata</strong> y la <strong>Universidad Tecnológica Nacional</strong>. Conocimientos sólidos en ciencias de la computación.',
 
     'nosotros_filosofia_title' => 'Nuestra Filosofía',
-    'nosotros_filosofia_desc' => 'No somos una agencia que instala plantillas. Somos <strong>programadores de verdad</strong> que entienden cada línea de código que escriben. Cuando te decimos que algo se puede hacer, es porque sabemos exactamente cómo hacerlo.',
+    'nosotros_filosofia_desc' => 'No somos una agencia que instala plantillas. Somos <strong>programadores/as de verdad</strong> que entienden cada línea de código que escriben. Cuando te decimos que algo se puede hacer, es porque sabemos exactamente cómo hacerlo.',
 
     'nosotros_stat1_value' => '+30',
     'nosotros_stat1_label' => 'Años en tecnología',
@@ -255,6 +255,19 @@ return [
     'footer_copy' => '© 2026 Verumax. Todos los derechos reservados.',
     'footer_links_title' => 'Soluciones',
     'footer_contacto_title' => 'Contacto',
+    'footer_seguridad' => 'Tecnología y Seguridad de Nivel Empresarial',
+    'footer_terminos' => 'Términos',
+    'footer_privacidad' => 'Privacidad',
+
+    // Badges
+    'badge_ssl_desc' => 'Encriptación 256-bit',
+    'badge_https_desc' => 'Conexión Segura',
+    'badge_codigo' => 'Código Propio',
+    'badge_codigo_desc' => '100% Original',
+    'badge_backup_desc' => 'Automático Diario',
+    'badge_uptime_desc' => 'Disponibilidad',
+    'badge_soporte' => 'Soporte',
+    'badge_soporte_desc' => 'Técnico 24/7',
 
     // Misc
     'volver_verumax' => '← Volver a Verumax',
