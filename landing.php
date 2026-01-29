@@ -1121,19 +1121,7 @@ WHERE limits = NULL;
     </div>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-3">
-                    <img src="assets/images/logo-verumax-escudo.png" alt="Verumax" class="h-8 w-8">
-                    <span class="text-gray-500 text-sm font-mono"><?php echo $lang['footer_slogan'] ?? 'Del código C a la nube'; ?></span>
-                </div>
-                <p class="text-gray-600 text-sm">
-                    <?php echo $lang['footer_copy'] ?? '© 2026 Verumax. Todos los derechos reservados.'; ?>
-                </p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- Scripts -->
     <script>
