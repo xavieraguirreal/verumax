@@ -2,7 +2,8 @@
 /**
  * Português Brasil - pt_BR - Landing Fabricatum
  * Serviços de desenvolvimento de software completo
- * @version 1.1.0
+ * Linguagem formal para público amplo
+ * @version 1.2.0
  */
 
 return [
@@ -25,7 +26,7 @@ return [
     'hero_badge' => '< Código + IA Social />',
     'hero_title_line1' => 'Desenvolvimento Web',
     'hero_title_line2' => 'e Sistemas',
-    'hero_subtitle' => 'Do <span class="text-neon-cyan">seu site institucional</span> a <span class="text-neon-magenta">sistemas complexos com IA</span>. Código próprio + Inteligência Artificial com olhar humano. <strong>Potencializamos seu projeto.</strong>',
+    'hero_subtitle' => 'Do <span class="text-neon-cyan">site institucional da sua empresa</span> a <span class="text-neon-magenta">sistemas complexos com IA</span>. Código próprio + Inteligência Artificial com olhar humano. <strong>Potencializamos o seu projeto.</strong>',
     'hero_cta_primary' => 'Solicitar Orçamento',
     'hero_cta_secondary' => 'Ver Serviços',
     'hero_stat1_value' => '1997',
@@ -40,11 +41,11 @@ return [
     'problema_subtitle' => 'O código sob medida é a melhor opção quando...',
 
     'problema_card1_icon' => '🎯',
-    'problema_card1_title' => 'Você Precisa de Algo Único',
+    'problema_card1_title' => 'Precisa de Algo Único',
     'problema_card1_desc' => 'Sua ideia não cabe em templates. Funcionalidades específicas que nenhum plugin resolve. Seu software, sua visão.',
 
     'problema_card2_icon' => '⚡',
-    'problema_card2_title' => 'Performance é Crítica',
+    'problema_card2_title' => 'A Performance é Crítica',
     'problema_card2_desc' => 'Cada milissegundo conta. Código otimizado sem camadas desnecessárias. Velocidade de carregamento superior.',
 
     'problema_card3_icon' => '🔗',
@@ -57,10 +58,10 @@ return [
 
     // Seção Solução
     'solucion_title' => 'Nossa Solução',
-    'solucion_subtitle' => 'Código escrito para você, não para todas as pessoas',
+    'solucion_subtitle' => 'Código escrito para a sua empresa, não para todas as pessoas',
 
     'solucion_card1_title' => 'Sob Medida',
-    'solucion_card1_desc' => 'Cada linha de código pensada para seu negócio. Sem funcionalidades desnecessárias, sem limitações artificiais.',
+    'solucion_card1_desc' => 'Cada linha de código pensada para o seu negócio. Sem funcionalidades desnecessárias, sem limitações artificiais.',
 
     'solucion_card2_title' => 'Performance Real',
     'solucion_card2_desc' => 'Código otimizado do zero. Seu software faz exatamente o que precisa, rápido e eficiente.',
@@ -102,7 +103,7 @@ return [
     // Seção CMS
     'cms_title' => 'Também Somos Especialistas em CMS',
     'cms_subtitle' => 'WordPress, Joomla, Shopify? Dominamos todos',
-    'cms_desc' => 'Nem todos os projetos precisam de código do zero. Se um CMS resolve sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos você a escolher a melhor opção.</strong>',
+    'cms_desc' => 'Nem todos os projetos precisam de código do zero. Se um CMS resolve a sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos na escolha da melhor opção.</strong>',
 
     'cms_card1_title' => 'WordPress',
     'cms_card1_desc' => 'O CMS mais popular do mundo. Sites institucionais, blogs, portfolios. Themes e plugins sob medida.',
@@ -114,7 +115,7 @@ return [
     'cms_card3_desc' => 'WooCommerce, Shopify, Prestashop. Lojas online prontas para vender com a plataforma que preferir.',
 
     'cms_card4_title' => 'Outros CMS',
-    'cms_card4_desc' => 'Drupal, Magento, Ghost, Strapi. Experiência em múltiplas plataformas conforme sua necessidade.',
+    'cms_card4_desc' => 'Drupal, Magento, Ghost, Strapi. Experiência em múltiplas plataformas conforme a sua necessidade.',
 
     // Serviços
     'servicios_title' => 'Serviços',
@@ -127,12 +128,12 @@ return [
 
     'servicio2_title' => 'E-Commerce',
     'servicio2_subtitle' => 'Lojas Online Sob Medida',
-    'servicio2_desc' => 'Venda sem comissões de plataforma. Sua loja, suas regras. Integração total com sua operação.',
+    'servicio2_desc' => 'Venda sem comissões de plataforma. Sua loja, suas regras. Integração total com a sua operação.',
     'servicio2_features' => 'Sem comissões, Múltiplos pagamentos, Estoque integrado, Nota Fiscal',
 
     'servicio3_title' => 'Aplicações Web',
     'servicio3_subtitle' => 'Sistemas & Plataformas SaaS',
-    'servicio3_desc' => 'Sistemas de gestão, dashboards, intranets, CRMs. Soluções web complexas que automatizam sua operação.',
+    'servicio3_desc' => 'Sistemas de gestão, dashboards, intranets, CRMs. Soluções web complexas que automatizam a sua operação.',
     'servicio3_features' => 'APIs REST, Tempo real, Multi-tenant, Escalável',
 
     'servicio4_title' => 'Apps Móveis',
@@ -152,7 +153,7 @@ return [
 
     'servicio7_title' => 'Integrações',
     'servicio7_subtitle' => 'APIs & Conectores',
-    'servicio7_desc' => 'Conectamos seus sistemas. ERPs, hardware industrial, nota fiscal eletrônica, serviços externos.',
+    'servicio7_desc' => 'Conectamos os seus sistemas. ERPs, hardware industrial, nota fiscal eletrônica, serviços externos.',
     'servicio7_features' => 'Nota Fiscal, Hardware/IoT, WhatsApp API, APIs custom',
 
     'servicio8_title' => 'Automação',
@@ -162,7 +163,7 @@ return [
 
     // Comparativa
     'comparativa_title' => 'CMS vs Código Próprio',
-    'comparativa_subtitle' => 'Ajudamos você a escolher a melhor opção para seu projeto',
+    'comparativa_subtitle' => 'Ajudamos a escolher a melhor opção para o seu projeto',
 
     'comp_header_aspecto' => 'Aspecto',
     'comp_header_cms' => 'CMS (WordPress, etc.)',
@@ -182,7 +183,7 @@ return [
 
     'comp_row4_aspecto' => 'Performance',
     'comp_row4_cms' => 'Boa para uso geral',
-    'comp_row4_propio' => 'Otimizado para seu caso',
+    'comp_row4_propio' => 'Otimizado para o seu caso',
 
     'comp_row5_aspecto' => 'Escalabilidade',
     'comp_row5_cms' => 'Até certo ponto',
@@ -197,13 +198,13 @@ return [
     'proceso_subtitle' => 'Da ideia ao software funcionando',
 
     'proceso_step1_title' => 'Análise',
-    'proceso_step1_desc' => 'Entendemos seu negócio, suas necessidades e seus objetivos. Definimos escopo e requisitos.',
+    'proceso_step1_desc' => 'Entendemos o seu negócio, suas necessidades e seus objetivos. Definimos escopo e requisitos.',
 
     'proceso_step2_title' => 'Design',
     'proceso_step2_desc' => 'Arquitetura, wireframes e protótipos. Validamos cada decisão técnica antes de programar.',
 
     'proceso_step3_title' => 'Desenvolvimento',
-    'proceso_step3_desc' => 'Programamos com entregas incrementais. Você vê avanços reais toda semana.',
+    'proceso_step3_desc' => 'Programamos com entregas incrementais. Acompanhe avanços reais toda semana.',
 
     'proceso_step4_title' => 'Testes',
     'proceso_step4_desc' => 'Testes exaustivos de funcionalidade, segurança e performance em todos os ambientes.',
@@ -212,7 +213,7 @@ return [
     'proceso_step5_desc' => 'Instalação em servidores, equipamentos ou lojas de apps. Tudo configurado e funcionando.',
 
     'proceso_step6_title' => 'Suporte',
-    'proceso_step6_desc' => 'Acompanhamos pós-lançamento. Manutenção, melhorias e suporte técnico contínuo.',
+    'proceso_step6_desc' => 'Acompanhamos no pós-lançamento. Manutenção, melhorias e suporte técnico contínuo.',
 
     // Tech Stack
     'tech_title' => 'Stack Tecnológico',
@@ -227,7 +228,7 @@ return [
 
     // CTA
     'cta_title' => 'Tem uma Ideia? A Tornamos Realidade',
-    'cta_subtitle' => 'Conte-nos seu projeto e assessoramos sem compromisso',
+    'cta_subtitle' => 'Conte-nos sobre o seu projeto e o assessoramos sem compromisso',
     'cta_btn' => 'Solicitar Orçamento',
 
     // Contato
@@ -246,9 +247,9 @@ return [
     'contacto_tipo_lms' => 'Plataforma Educacional',
     'contacto_tipo_integracion' => 'Integração / API',
     'contacto_tipo_otro' => 'Outro',
-    'contacto_mensaje' => 'Conte-nos sobre seu projeto...',
+    'contacto_mensaje' => 'Conte-nos sobre o seu projeto...',
     'contacto_btn' => 'Enviar Consulta',
-    'contacto_whatsapp' => 'Ou nos escreva pelo WhatsApp',
+    'contacto_whatsapp' => 'Ou escreva-nos pelo WhatsApp',
 
     'contacto_success' => 'Mensagem enviada! Entraremos em contato em breve.',
     'contacto_error' => 'Erro ao enviar. Tente novamente.',

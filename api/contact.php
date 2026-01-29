@@ -244,7 +244,7 @@ function sendEmail($apiKey, $to, $toName, $subject, $html, $from = 'notificacion
 }
 
 // Enviar emails
-$emailEquipo = sendEmail($apiKey, 'contacto@verumax.com', 'VERUMax Equipo', $asuntoEquipo, $htmlEquipo);
+$emailEquipo = sendEmail($apiKey, 'proyectos@verumax.com', 'VERUMax Proyectos', $asuntoEquipo, $htmlEquipo);
 $emailUsuario = sendEmail($apiKey, $email, $nombre, $asuntoUsuario, $htmlUsuario);
 
 if (!$emailEquipo) {
