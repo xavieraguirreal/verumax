@@ -16,7 +16,7 @@ return [
 
     // Navegación
     'nav_inicio' => 'Inicio',
-    'nav_nosotros' => 'Nosotros',
+    'nav_nosotros' => 'Nosotros/as',
     'nav_servicios' => 'Servicios',
     'nav_proceso' => 'Proceso',
     'nav_tech' => 'Tecnologías',
