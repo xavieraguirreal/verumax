@@ -35,13 +35,37 @@ function __($key, $default = '') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= __('meta_title', 'Desarrollo de Software | Verumax') ?></title>
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="<?= __('meta_description') ?>">
     <meta name="keywords" content="<?= __('meta_keywords') ?>">
+    <meta name="author" content="Verumax">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="<?= substr($current_lang, 0, 2) ?>">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="AR">
+    <meta name="geo.placename" content="Argentina">
 
     <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verumax.com/fabricatum/?lang=<?= $current_lang ?>">
     <meta property="og:title" content="<?= __('meta_og_title') ?>">
     <meta property="og:description" content="<?= __('meta_og_description') ?>">
-    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://verumax.com/og-image-fabricatum.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Fabricatum - Desarrollo Web y Sistemas">
+    <meta property="og:locale" content="<?= str_replace('_', '_', $current_lang) ?>">
+    <meta property="og:site_name" content="Verumax Fabricatum">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verumax.com/fabricatum/?lang=<?= $current_lang ?>">
+    <meta name="twitter:title" content="<?= __('meta_og_title') ?>">
+    <meta name="twitter:description" content="<?= __('meta_og_description') ?>">
+    <meta name="twitter:image" content="https://verumax.com/og-image-fabricatum.png">
+    <meta name="twitter:image:alt" content="Fabricatum - Desarrollo Web y Sistemas a Medida">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>

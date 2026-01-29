@@ -1,12 +1,14 @@
 # Verumax - Plataforma de Soluciones Digitales
 # robots.txt - Producción
-# Actualizado: 2025-12-20
+# Actualizado: 2026-01-29
 
 User-agent: *
 Allow: /
 
 # Páginas públicas permitidas
 Allow: /certificatum/
+Allow: /credencialis/
+Allow: /fabricatum/
 Allow: /sajur/
 
 # Directorios restringidos
@@ -19,6 +21,7 @@ Disallow: /vendor/
 Disallow: /node_modules/
 Disallow: /lang/
 Disallow: /viejo/
+Disallow: /general/
 
 # Archivos de configuración
 Disallow: /config.php

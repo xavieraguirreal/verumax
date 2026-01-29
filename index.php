@@ -34,13 +34,32 @@ ob_start();
     <meta name="description" content="<?php echo $lang['meta_description'] ?? ''; ?>">
     <meta name="keywords" content="<?php echo $lang['meta_keywords'] ?? ''; ?>">
     <meta name="author" content="Verumax">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="<?php echo substr($current_language, 0, 2); ?>">
+    <meta name="revisit-after" content="7 days">
+    <meta name="geo.region" content="AR">
+    <meta name="geo.placename" content="Argentina">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://verumax.com/">
+    <meta property="og:url" content="https://verumax.com/?lang=<?php echo $current_language; ?>">
     <meta property="og:title" content="<?php echo $lang['meta_og_title'] ?? 'Verumax'; ?>">
     <meta property="og:description" content="<?php echo $lang['meta_og_description'] ?? ''; ?>">
-    <meta property="og:image" content="https://verumax.com/og-image.png">
+    <meta property="og:image" content="https://verumax.com/og-image-verumax.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verumax - Del Código C a la Nube">
+    <meta property="og:locale" content="<?php echo str_replace('_', '_', $current_language); ?>">
+    <meta property="og:site_name" content="Verumax">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verumax.com/?lang=<?php echo $current_language; ?>">
+    <meta name="twitter:title" content="<?php echo $lang['meta_og_title'] ?? 'Verumax'; ?>">
+    <meta name="twitter:description" content="<?php echo $lang['meta_og_description'] ?? ''; ?>">
+    <meta name="twitter:image" content="https://verumax.com/og-image-verumax.png">
+    <meta name="twitter:image:alt" content="Verumax - Desarrollo de Software a Medida">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo-verumax-escudo.png">
