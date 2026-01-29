@@ -625,7 +625,7 @@ WHERE limits = NULL;
                         </div>
                         <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Certificados digitales infalsificables</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Diplomas, analíticos y constancias con <span class="text-green-500 font-semibold">código QR verificable al instante</span>. Tus estudiantes acceden 24/7 a su trayectoria académica completa.
+                            Diplomas, analíticos y constancias con <span class="text-green-500 font-semibold">código QR verificable al instante</span>. Sus estudiantes acceden 24/7 a su trayectoria académica completa.
                         </p>
                         <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-green-700 hover:bg-green-600 text-white font-bold rounded-xl transition-all hover:scale-105">
                             Conocer Certificatum
@@ -644,9 +644,9 @@ WHERE limits = NULL;
                             <i data-lucide="id-card" class="w-5 h-5 text-teal-400"></i>
                             <span class="text-teal-400 text-sm font-medium">Credencialis</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Credenciales digitales para tu organización</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Credenciales digitales para su organización</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Carnets de socios, membresías y credenciales con <span class="text-teal-400 font-semibold">QR verificable y diseño personalizado</span>. Ideal para mutuales, cooperativas, clubes y asociaciones.
+                            Carnets de socios/as, membresías y credenciales con <span class="text-teal-400 font-semibold">QR verificable y diseño personalizado</span>. Ideal para mutuales, cooperativas, clubes y asociaciones.
                         </p>
                         <a href="credencialis/" class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all hover:scale-105">
                             Conocer Credencialis
@@ -667,7 +667,7 @@ WHERE limits = NULL;
                         </div>
                         <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Hosting configurado por desarrolladores</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Servidores optimizados para <span class="text-blue-400 font-semibold">máximo rendimiento y seguridad</span>. No somos revendedores, configuramos cada servidor a medida de tu proyecto.
+                            Servidores optimizados para <span class="text-blue-400 font-semibold">máximo rendimiento y seguridad</span>. No somos revendedores/as, configuramos cada servidor a medida de su proyecto.
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
                             Próximamente
@@ -686,9 +686,9 @@ WHERE limits = NULL;
                             <i data-lucide="book-open" class="w-5 h-5 text-blue-400"></i>
                             <span class="text-blue-400 text-sm font-medium">Academicus</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu aula virtual, sin las limitaciones de Moodle</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Su aula virtual, sin las limitaciones de Moodle</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            Plataforma de gestión académica <span class="text-blue-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, seguimiento de alumnos. Todo integrado con Certificatum.
+                            Plataforma de gestión académica <span class="text-blue-400 font-semibold">100% personalizada</span>. Cursos, evaluaciones, seguimiento de estudiantes. Todo integrado con Certificatum.
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
                             Próximamente
@@ -707,9 +707,9 @@ WHERE limits = NULL;
                             <i data-lucide="shopping-cart" class="w-5 h-5 text-red-400"></i>
                             <span class="text-red-400 text-sm font-medium">Emporium</span>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu tienda online profesional, sin comisiones ocultas</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Su tienda online profesional, sin comisiones ocultas</h3>
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                            E-commerce a medida, <span class="text-red-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. El código es tuyo.
+                            E-commerce a medida, <span class="text-red-400 font-semibold">sin depender de Shopify o WooCommerce</span>. Integramos Mercado Pago, PayPal, Stripe. El código es suyo.
                         </p>
                         <span class="inline-flex items-center gap-2 px-8 py-4 bg-gray-700 text-gray-300 font-bold rounded-xl cursor-not-allowed">
                             Próximamente
@@ -1037,7 +1037,7 @@ WHERE limits = NULL;
                     </div>
                     <div>
                         <label class="block text-sm text-gray-400 mb-2">Empresa / Organización *</label>
-                        <input type="text" name="organizacion" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Nombre de tu empresa u organización">
+                        <input type="text" name="organizacion" required class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors" placeholder="Nombre de su empresa u organización">
                     </div>
                     <div>
                         <label class="block text-sm text-gray-400 mb-2">¿Qué te interesa?</label>
@@ -1053,7 +1053,7 @@ WHERE limits = NULL;
                     </div>
                     <div>
                         <label class="block text-sm text-gray-400 mb-2"><?php echo $lang['contacto_mensaje'] ?? 'Mensaje'; ?></label>
-                        <textarea name="mensaje" rows="4" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Contanos sobre tu proyecto..."></textarea>
+                        <textarea name="mensaje" rows="4" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Cuéntenos sobre su proyecto..."></textarea>
                     </div>
                     <div id="formMessage" class="hidden p-4 rounded-lg text-center"></div>
                     <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">

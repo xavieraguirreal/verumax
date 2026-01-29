@@ -12,9 +12,9 @@ return [
     'cred_meta_description' => 'Sistema de credenciales digitales para clubes, cooperativas, mutuales y asociaciones. Carnet de socio/a digital con validación QR. Sin impresión, siempre actualizado.',
     'cred_meta_keywords' => 'credencial digital, carnet de socio, carnet de socia, credencial QR, membresía digital, carnet club, credencial cooperativa, carnet mutual, acreditación eventos',
     'cred_meta_og_title' => 'Credencialis - Credenciales Digitales Verificables',
-    'cred_meta_og_description' => 'Credenciales digitales que tus socios y socias llevan en el bolsillo. Validación QR instantánea, sin costos de impresión.',
+    'cred_meta_og_description' => 'Credenciales digitales que sus socios y socias llevan en el bolsillo. Validación QR instantánea, sin costos de impresión.',
     'cred_meta_twitter_title' => 'Credencialis | Credenciales Digitales para Organizaciones',
-    'cred_meta_twitter_description' => 'Carnet de socio/a digital con validación QR. La forma moderna de identificar a tus miembros.',
+    'cred_meta_twitter_description' => 'Carnet de socio/a digital con validación QR. La forma moderna de identificar a sus miembros.',
 
     // =====================================
     // NAVEGACIÓN
@@ -31,8 +31,8 @@ return [
     // =====================================
     'cred_hero_badge' => '✓ Solución de Membresías Completa',
     'cred_hero_title' => 'Credenciales Digitales',
-    'cred_hero_title_highlight' => 'para tu Organización',
-    'cred_hero_propuesta_valor' => 'Cargás tus socios/as, asignás credenciales, y acceden con su DNI. Así de simple.',
+    'cred_hero_title_highlight' => 'para su Organización',
+    'cred_hero_propuesta_valor' => 'Cargue sus socios/as, asigne credenciales, y acceden con su DNI. Así de simple.',
     'cred_hero_subtitle' => 'Solución completa para',
     'cred_hero_clubes' => 'clubes deportivos',
     'cred_hero_cooperativas' => 'cooperativas',
@@ -55,7 +55,7 @@ return [
     // =====================================
     // PROBLEMAS QUE RESUELVE
     // =====================================
-    'cred_problemas_titulo' => '¿Te suena familiar?',
+    'cred_problemas_titulo' => '¿Le suena familiar?',
     'cred_problemas_subtitulo' => 'Estos son los problemas que Credencialis elimina',
 
     'cred_problema_impresion' => 'Costos de Impresión',
@@ -82,13 +82,13 @@ return [
     'cred_como_funciona_titulo' => 'Tan simple como 1, 2, 3',
     'cred_como_funciona_subtitulo' => 'Implementación inmediata, sin complicaciones técnicas',
 
-    'cred_como_funciona_paso1_titulo' => 'Configurá tu Organización',
-    'cred_como_funciona_paso1_desc' => 'Subí tu logo, elegí los colores institucionales y personalizá el texto de la credencial.',
-    'cred_como_funciona_paso1_alt' => '¿Preferís delegar? Nuestro equipo configura todo por vos.',
+    'cred_como_funciona_paso1_titulo' => 'Configure su Organización',
+    'cred_como_funciona_paso1_desc' => 'Suba su logo, elija los colores institucionales y personalice el texto de la credencial.',
+    'cred_como_funciona_paso1_alt' => '¿Prefiere delegar? Nuestro equipo configura todo por usted.',
 
-    'cred_como_funciona_paso2_titulo' => 'Cargá tus Socios/as',
-    'cred_como_funciona_paso2_desc' => 'Importá desde Excel o cargá uno por uno. Si ya usás Certificatum, los datos ya están.',
-    'cred_como_funciona_paso2_alt' => 'Envianos tu listado y lo importamos nosotros.',
+    'cred_como_funciona_paso2_titulo' => 'Cargue sus Socios/as',
+    'cred_como_funciona_paso2_desc' => 'Importe desde Excel o cargue uno por uno. Si ya usa Certificatum, los datos ya están.',
+    'cred_como_funciona_paso2_alt' => 'Envíenos su listado y lo importamos nosotros/as.',
 
     'cred_como_funciona_paso3_titulo' => 'El/La Socio/a Accede',
     'cred_como_funciona_paso3_desc' => 'Con solo ingresar su DNI, el/la socio/a ve y descarga su credencial digital al instante.',
@@ -127,17 +127,17 @@ return [
     // =====================================
     // FUNCIONALIDADES
     // =====================================
-    'cred_func_titulo' => 'Todo lo que Necesitás',
-    'cred_func_subtitulo' => 'Funcionalidades pensadas para simplificar tu gestión',
+    'cred_func_titulo' => 'Todo lo que Necesita',
+    'cred_func_subtitulo' => 'Funcionalidades pensadas para simplificar su gestión',
 
     'cred_func_qr' => 'Validación QR Instantánea',
-    'cred_func_qr_desc' => 'Escaneá el código y verificá la membresía en segundos. Ideal para control de acceso.',
+    'cred_func_qr_desc' => 'Escanee el código y verifique la membresía en segundos. Ideal para control de acceso.',
 
     'cred_func_actualizacion' => 'Actualización Automática',
     'cred_func_actualizacion_desc' => 'Cambios en categoría o datos se reflejan al instante. Sin reimprimir nada.',
 
-    'cred_func_branding' => 'Tu Marca, Tu Identidad',
-    'cred_func_branding_desc' => 'Logo, colores y textos personalizados. La credencial proyecta tu imagen institucional.',
+    'cred_func_branding' => 'Su Marca, Su Identidad',
+    'cred_func_branding_desc' => 'Logo, colores y textos personalizados. La credencial proyecta su imagen institucional.',
 
     'cred_func_acceso' => 'Acceso 24/7',
     'cred_func_acceso_desc' => 'El/la socio/a ingresa su DNI desde cualquier dispositivo y accede a su credencial.',
@@ -146,19 +146,19 @@ return [
     'cred_func_compartir_desc' => 'PDF descargable, imprimible o para guardar en el celular como imagen.',
 
     'cred_func_masivo' => 'Carga Masiva',
-    'cred_func_masivo_desc' => 'Importá cientos de socios/as desde Excel o copiando y pegando. Asigná credenciales en minutos.',
+    'cred_func_masivo_desc' => 'Importe cientos de socios/as desde Excel o copiando y pegando. Asigne credenciales en minutos.',
 
     // =====================================
     // BENEFICIOS
     // =====================================
     'cred_beneficios_titulo' => 'Resultados que Importan',
-    'cred_beneficios_subtitulo' => 'Beneficios concretos para tu organización',
+    'cred_beneficios_subtitulo' => 'Beneficios concretos para su organización',
 
     'cred_beneficio_ahorro_titulo' => 'Ahorro Real',
-    'cred_beneficio_ahorro_desc' => 'Eliminá gastos de impresión, plásticos e insumos',
+    'cred_beneficio_ahorro_desc' => 'Elimine gastos de impresión, plásticos e insumos',
 
     'cred_beneficio_tiempo_titulo' => 'Menos Trabajo Administrativo',
-    'cred_beneficio_tiempo_desc' => 'Automatizá la emisión y actualización de credenciales',
+    'cred_beneficio_tiempo_desc' => 'Automatice la emisión y actualización de credenciales',
 
     'cred_beneficio_seguridad_titulo' => 'Seguridad Garantizada',
     'cred_beneficio_seguridad_desc' => 'QR único e infalsificable para cada socio/a',
@@ -184,31 +184,31 @@ return [
     // FAQ
     // =====================================
     'cred_faq_titulo' => 'Preguntas Frecuentes',
-    'cred_faq_subtitulo' => 'Todo lo que necesitás saber sobre Credencialis',
+    'cred_faq_subtitulo' => 'Todo lo que necesita saber sobre Credencialis',
 
     'cred_faq_acceso_titulo' => '¿Cómo accede el/la socio/a a su credencial?',
-    'cred_faq_acceso_desc' => 'Ingresando a tu portal personalizado (ej: tuorganizacion.verumax.com/credencialis) y escribiendo su número de documento. En segundos ve su credencial digital.',
+    'cred_faq_acceso_desc' => 'Ingresando a su portal personalizado (ej: suorganizacion.verumax.com/credencialis) y escribiendo su número de documento. En segundos ve su credencial digital.',
 
     'cred_faq_imprimir_titulo' => '¿Se puede imprimir la credencial?',
     'cred_faq_imprimir_desc' => 'Sí. El/la socio/a puede descargar un PDF de alta calidad para imprimir en casa o llevar al celular. También ofrecemos servicio de impresión profesional en PVC.',
 
     'cred_faq_vencimiento_titulo' => '¿Las credenciales tienen vencimiento?',
-    'cred_faq_vencimiento_desc' => 'Podés configurar vencimiento automático (mensual, anual) o sin vencimiento. Cuando vence, la credencial muestra estado inactivo.',
+    'cred_faq_vencimiento_desc' => 'Puede configurar vencimiento automático (mensual, anual) o sin vencimiento. Cuando vence, la credencial muestra estado inactivo.',
 
     'cred_faq_actualizar_titulo' => '¿Qué pasa si cambio datos del/la socio/a?',
-    'cred_faq_actualizar_desc' => 'Los cambios se reflejan instantáneamente. Si actualizás la categoría de servicio, el/la socio/a ve su credencial actualizada sin hacer nada.',
+    'cred_faq_actualizar_desc' => 'Los cambios se reflejan instantáneamente. Si actualiza la categoría de servicio, el/la socio/a ve su credencial actualizada sin hacer nada.',
 
     'cred_faq_validar_titulo' => '¿Cómo se valida una credencial?',
     'cred_faq_validar_desc' => 'Escaneando el código QR con cualquier celular. Se abre una página que muestra si la credencial es válida, los datos del/la socio/a y su estado de membresía.',
 
     'cred_faq_existentes_titulo' => '¿Puedo usar datos de socios/as que ya tengo cargados?',
-    'cred_faq_existentes_desc' => 'Si ya usás Certificatum u otro módulo de Verumax, los datos de tus miembros ya están en el sistema. Solo tenés que asignarles credenciales.',
+    'cred_faq_existentes_desc' => 'Si ya usa Certificatum u otro módulo de Verumax, los datos de sus miembros ya están en el sistema. Solo tiene que asignarles credenciales.',
 
     // =====================================
     // PANEL DE ADMINISTRACIÓN
     // =====================================
     'cred_panel_titulo' => 'Panel de Administración Completo',
-    'cred_panel_subtitulo' => 'Todo lo que necesitás para gestionar tus membresías',
+    'cred_panel_subtitulo' => 'Todo lo que necesita para gestionar sus membresías',
     'cred_panel_carga_masiva' => 'Carga masiva desde Excel o copiando',
     'cred_panel_crud' => 'CRUD completo de socios/as y categorías',
     'cred_panel_dashboard' => 'Dashboard con métricas en tiempo real',
@@ -218,7 +218,7 @@ return [
     // ANTES VS DESPUÉS
     // =====================================
     'cred_antes_despues_titulo' => 'Antes vs Después de Credencialis',
-    'cred_antes_despues_subtitulo' => 'La transformación digital de tu gestión de membresías',
+    'cred_antes_despues_subtitulo' => 'La transformación digital de su gestión de membresías',
     'cred_antes_titulo' => 'Antes (Tradicional)',
     'cred_antes_impresion' => 'Costos constantes de impresión de carnets',
     'cred_antes_perdidos' => 'Reposiciones por carnets perdidos o dañados',
@@ -242,21 +242,21 @@ return [
     // INTEGRACIONES
     // =====================================
     'cred_integraciones_titulo' => 'Integraciones y Compatibilidad',
-    'cred_integraciones_subtitulo' => 'Se adapta a tu flujo de trabajo existente',
+    'cred_integraciones_subtitulo' => 'Se adapta a su flujo de trabajo existente',
     'cred_integracion_excel' => 'Excel / CSV',
     'cred_integracion_excel_desc' => 'Importación masiva de socios/as desde archivos Excel.',
     'cred_integracion_api' => 'API REST',
     'cred_integracion_api_desc' => 'Integración con sistemas de gestión y CRMs.',
     'cred_integracion_email' => 'Email Institucional',
-    'cred_integracion_email_desc' => 'Notificaciones desde tu dominio institucional.',
+    'cred_integracion_email_desc' => 'Notificaciones desde su dominio institucional.',
     'cred_integracion_subdominio' => 'Subdominios',
-    'cred_integracion_subdominio_desc' => 'Portal en tu propio dominio: credenciales.tuclub.com.',
+    'cred_integracion_subdominio_desc' => 'Portal en su propio dominio: credenciales.suclub.com.',
 
     // =====================================
     // PLANES Y PRECIOS
     // =====================================
     'cred_planes_titulo' => 'Planes y Precios',
-    'cred_planes_subtitulo' => 'Elegí el plan que mejor se adapte a tu organización',
+    'cred_planes_subtitulo' => 'Elija el plan que mejor se adapte a su organización',
     'cred_plan_promo_badge' => 'Promo Lanzamiento',
     'cred_promo_titulo' => 'PROMO LANZAMIENTO',
     'cred_promo_alta' => 'Alta:',
@@ -274,10 +274,10 @@ return [
     // Plan Singularis
     'cred_plan_sin_suscripcion' => 'SIN SUSCRIPCIÓN',
     'cred_plan_singularis_titulo' => 'Singularis',
-    'cred_plan_singularis_desc' => 'Ideal para eventos únicos o pruebas. Pagá solo por lo que usás.',
+    'cred_plan_singularis_desc' => 'Ideal para eventos únicos o pruebas. Pague solo por lo que usa.',
     'cred_plan_singularis_precio_label' => 'por credencial',
     'cred_plan_singularis_feat1' => 'Sin suscripción ni compromiso',
-    'cred_plan_singularis_feat2' => 'Pagá solo cuando emitas',
+    'cred_plan_singularis_feat2' => 'Pague solo cuando emita',
     'cred_plan_singularis_feat3' => 'Credenciales con QR verificable',
     'cred_plan_singularis_feat4' => 'Validación instantánea',
     'cred_plan_singularis_feat5' => 'Portal público de validación',
@@ -335,9 +335,9 @@ return [
     // =====================================
     // CTA FINAL
     // =====================================
-    'cred_cta_final_titulo' => 'Modernizá la Gestión de Membresías de tu Organización',
-    'cred_cta_final_desc' => 'Únete a las organizaciones que ya eliminaron los costos de impresión y proyectan una imagen profesional con credenciales digitales.',
-    'cred_cta_final_equipo' => 'Nuestro equipo de expertos/as se encarga de la configuración inicial para que puedas empezar a emitir credenciales en minutos.',
+    'cred_cta_final_titulo' => 'Modernice la Gestión de Membresías de su Organización',
+    'cred_cta_final_desc' => 'Únase a las organizaciones que ya eliminaron los costos de impresión y proyectan una imagen profesional con credenciales digitales.',
+    'cred_cta_final_equipo' => 'Nuestro equipo de expertos/as se encarga de la configuración inicial para que pueda empezar a emitir credenciales en minutos.',
     'cred_cta_final_demo' => 'Solicitar Demo Personalizada',
     'cred_cta_final_contactar' => 'Contactar Ventas',
     'cred_cta_final_implementacion' => '24hs',
@@ -350,8 +350,8 @@ return [
     // =====================================
     // CONTACTO (formulario)
     // =====================================
-    'cred_contacto_titulo' => '¿Listo para Modernizar tu Organización?',
-    'cred_contacto_subtitulo' => 'Solicitá una demo personalizada y descubrí cómo Credencialis puede ayudarte',
+    'cred_contacto_titulo' => '¿Listo/a para Modernizar su Organización?',
+    'cred_contacto_subtitulo' => 'Solicite una demo personalizada y descubra cómo Credencialis puede ayudarle',
     'cred_contacto_nombre' => 'Nombre completo',
     'cred_contacto_email' => 'Email',
     'cred_contacto_organizacion' => 'Nombre de la organización',
