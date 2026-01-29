@@ -9,21 +9,19 @@
 $base_path = dirname(__DIR__);
 require_once $base_path . '/config.php';
 
+// Definir módulos de traducción ANTES de cargar lang_config.php
+// para que use el sistema modular y no resetee el idioma
+$lang_modules = ['land_fabricatum'];
+
 // Sistema de idiomas - cargar configuración
 require_once $base_path . '/lang_config.php';
 
 // Usar el idioma detectado por lang_config.php
 $current_lang = $current_language ?? 'es_AR';
 
-// Cargar traducciones para esta landing
-$lang_modules = ['land_fabricatum'];
-$t = [];
-foreach ($lang_modules as $module) {
-    $lang_file = $base_path . "/lang/{$current_lang}/{$module}.php";
-    if (file_exists($lang_file)) {
-        $t = array_merge($t, require $lang_file);
-    }
-}
+// Las traducciones ya están cargadas en $lang por lang_config.php
+// Copiar a $t para compatibilidad con el helper __()
+$t = $lang;
 
 // Helper de traducción
 function __($key, $default = '') {
@@ -356,8 +354,8 @@ function __($key, $default = '') {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="/landing.php?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
-                    <span class="text-xl font-display font-bold text-white group-hover:text-gray-300 transition-colors">VERU</span>
+                <a href="/fabricatum/landing.php?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
+                    <span class="text-xl font-display font-bold text-white group-hover:text-gray-300 transition-colors">VERUM</span>
                     <span class="text-xl font-display font-bold text-[#D4AF37]">MAX</span>
                     <span class="text-xs text-gray-500 ml-2 font-mono">/fabricatum</span>
                 </a>
@@ -1217,7 +1215,7 @@ function __($key, $default = '') {
                     </a>
 
                     <!-- Back to Verumax -->
-                    <a href="/landing.php?lang=<?= $current_lang ?>" class="flex items-center gap-2 text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm">
+                    <a href="/?lang=<?= $current_lang ?>" class="flex items-center gap-2 text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i>
                         <?= __('volver_verumax', '← Volver a Verumax') ?>
                     </a>
@@ -1289,7 +1287,7 @@ function __($key, $default = '') {
                 <!-- Logo & Slogan -->
                 <div class="flex flex-col items-center md:items-start gap-2">
                     <div class="flex items-center gap-1">
-                        <span class="font-display text-2xl font-bold text-white">VERU</span>
+                        <span class="font-display text-2xl font-bold text-white">VERUM</span>
                         <span class="font-display text-2xl font-bold text-[#D4AF37]">MAX</span>
                     </div>
                     <span class="text-gray-500 text-sm"><?= __('footer_slogan', 'Programamos desde cero. Sin límites.') ?></span>
@@ -1297,7 +1295,7 @@ function __($key, $default = '') {
 
                 <!-- Links -->
                 <div class="flex items-center gap-6 text-sm">
-                    <a href="/landing.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors">Verumax</a>
+                    <a href="/fabricatum/landing.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors">Verumax</a>
                     <a href="/stipulationes.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors"><?= __('footer_terminos', 'Términos') ?></a>
                     <a href="/secretum.php?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors"><?= __('footer_privacidad', 'Privacidad') ?></a>
                     <a href="mailto:contacto@verumax.com" class="text-gray-400 hover:text-neon-cyan transition-colors">contacto@verumax.com</a>
