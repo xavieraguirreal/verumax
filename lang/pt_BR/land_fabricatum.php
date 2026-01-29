@@ -21,14 +21,14 @@ return [
     'nav_contacto' => 'Contato',
 
     // Hero
-    'hero_badge' => '< Seu Software, Sua Decisão />',
-    'hero_title_line1' => 'Desenvolvimento',
-    'hero_title_line2' => 'Sob Medida',
-    'hero_subtitle' => 'Web, Mobile, Desktop. <span class="text-neon-cyan">Código próprio quando você precisa mais</span>, ou <span class="text-neon-magenta">CMS especialista se é o que procura</span>. Você escolhe, nós fazemos realidade.',
+    'hero_badge' => '< Sites & Sistemas />',
+    'hero_title_line1' => 'Desenvolvimento Web',
+    'hero_title_line2' => 'e Sistemas',
+    'hero_subtitle' => 'Do <span class="text-neon-cyan">seu site institucional</span> a <span class="text-neon-magenta">sistemas complexos sob medida</span>. Com CMS se resolve, com código próprio se precisar mais. Você escolhe.',
     'hero_cta_primary' => 'Solicitar Orçamento',
     'hero_cta_secondary' => 'Ver Serviços',
-    'hero_stat1_value' => '+15',
-    'hero_stat1_label' => 'Anos de Experiência',
+    'hero_stat1_value' => '👨‍🏫→👨‍💻',
+    'hero_stat1_label' => 'De formadores a programadores',
     'hero_stat2_value' => '100%',
     'hero_stat2_label' => 'Código Próprio',
     'hero_stat3_value' => '∞',
@@ -72,20 +72,20 @@ return [
 
     // Seção CMS
     'cms_title' => 'Também Somos Especialistas em CMS',
-    'cms_subtitle' => 'WordPress, Shopify, WooCommerce? Dominamos todos',
+    'cms_subtitle' => 'WordPress, Joomla, Shopify? Dominamos todos',
     'cms_desc' => 'Nem todos os projetos precisam de código do zero. Se um CMS resolve sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos você a escolher a melhor opção.</strong>',
 
     'cms_card1_title' => 'WordPress',
-    'cms_card1_desc' => 'Sites institucionais, blogs, portfolios. Themes personalizados e plugins sob medida.',
+    'cms_card1_desc' => 'O CMS mais popular do mundo. Sites institucionais, blogs, portfolios. Themes e plugins sob medida.',
 
-    'cms_card2_title' => 'WooCommerce',
-    'cms_card2_desc' => 'E-commerce sobre WordPress. Ideal para lojas que não precisam de soluções complexas.',
+    'cms_card2_title' => 'Joomla',
+    'cms_card2_desc' => 'Potente e flexível. Ideal para sites corporativos, portais e comunidades. Extensões personalizadas.',
 
-    'cms_card3_title' => 'Shopify',
-    'cms_card3_desc' => 'Lojas prontas para vender. Configuração, themes e apps personalizados.',
+    'cms_card3_title' => 'E-Commerce',
+    'cms_card3_desc' => 'WooCommerce, Shopify, Prestashop. Lojas online prontas para vender com a plataforma que preferir.',
 
     'cms_card4_title' => 'Outros CMS',
-    'cms_card4_desc' => 'Prestashop, Magento, Drupal, Joomla. Experiência em múltiplas plataformas.',
+    'cms_card4_desc' => 'Drupal, Magento, Ghost, Strapi. Experiência em múltiplas plataformas conforme sua necessidade.',
 
     // Serviços
     'servicios_title' => 'Serviços',
