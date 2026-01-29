@@ -9,14 +9,13 @@
 $base_path = dirname(__DIR__);
 require_once $base_path . '/config.php';
 
-// Sistema de idiomas
-$lang_config = require $base_path . '/lang/lang_config.php';
-$current_lang = $_GET['lang'] ?? $_COOKIE['verumax_lang'] ?? 'es_AR';
-if (!isset($lang_config['languages'][$current_lang])) {
-    $current_lang = 'es_AR';
-}
+// Sistema de idiomas - cargar configuración
+require_once $base_path . '/lang_config.php';
 
-// Cargar traducciones
+// Usar el idioma detectado por lang_config.php
+$current_lang = $current_language ?? 'es_AR';
+
+// Cargar traducciones para esta landing
 $lang_modules = ['land_fabricatum'];
 $t = [];
 foreach ($lang_modules as $module) {
@@ -31,9 +30,6 @@ function __($key, $default = '') {
     global $t;
     return $t[$key] ?? $default;
 }
-
-// Obtener idiomas disponibles
-$available_languages = $lang_config['languages'];
 ?>
 <!DOCTYPE html>
 <html lang="<?= substr($current_lang, 0, 2) ?>">
