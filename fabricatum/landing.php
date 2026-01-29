@@ -377,16 +377,24 @@ function __($key, $default = '') {
 
                 <!-- Language Selector + CTA -->
                 <div class="flex items-center gap-4">
-                    <!-- Language -->
+                    <!-- Language Dropdown -->
+                    <?php
+                    // Solo es_AR y pt_BR para Fabricatum
+                    $fabricatum_languages = ['es_AR' => 'Español (Argentina)', 'pt_BR' => 'Português (Brasil)'];
+                    ?>
                     <div class="relative">
-                        <select id="langSelector" class="lang-dropdown appearance-none px-3 py-1.5 pr-8 rounded text-sm text-gray-300 cursor-pointer focus:outline-none focus:border-neon-cyan">
-                            <?php foreach ($available_languages as $code => $name): ?>
-                            <option value="<?= $code ?>" <?= $code === $current_lang ? 'selected' : '' ?>>
-                                <?= strtoupper(substr($code, 0, 2)) ?>
-                            </option>
+                        <button id="langToggle" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors border border-transparent hover:border-gray-700">
+                            <?= get_flag_emoji($current_lang) ?>
+                            <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500"></i>
+                        </button>
+                        <div id="langDropdown" class="hidden absolute right-0 top-full mt-2 bg-cyber-dark border border-gray-700 rounded-lg shadow-xl overflow-hidden z-50 min-w-[200px]">
+                            <?php foreach ($fabricatum_languages as $code => $name): ?>
+                            <a href="?lang=<?= $code ?>" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 transition-colors <?= $current_lang === $code ? 'bg-gray-800 border-l-2 border-neon-cyan' : '' ?>">
+                                <?= get_flag_emoji($code) ?>
+                                <span class="text-sm text-gray-300"><?= $name ?></span>
+                            </a>
                             <?php endforeach; ?>
-                        </select>
-                        <i data-lucide="chevron-down" class="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i>
+                        </div>
                     </div>
 
                     <!-- CTA -->
@@ -1089,10 +1097,20 @@ function __($key, $default = '') {
             });
         });
 
-        // Language selector
-        document.getElementById('langSelector')?.addEventListener('change', function() {
-            const hash = window.location.hash;
-            window.location.href = '?lang=' + this.value + hash;
+        // Language dropdown toggle
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+
+        langToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langToggle?.contains(e.target) && !langDropdown?.contains(e.target)) {
+                langDropdown?.classList.add('hidden');
+            }
         });
 
         // Scroll reveal

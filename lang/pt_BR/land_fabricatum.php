@@ -94,42 +94,42 @@ return [
     'servicio1_title' => 'Sites',
     'servicio1_subtitle' => 'Institucionais & Corporativos',
     'servicio1_desc' => 'Presença web profissional sem depender de CMS. Design único, código próprio, performance superior.',
-    'servicio1_features' => 'Sem WordPress,SEO otimizado,Painel admin próprio,Hospedagem incluída',
+    'servicio1_features' => 'Sem WordPress, SEO otimizado, Painel admin próprio, Hospedagem incluída',
 
     'servicio2_title' => 'E-Commerce',
     'servicio2_subtitle' => 'Lojas Online Sob Medida',
     'servicio2_desc' => 'Venda sem comissões de plataforma. Sua loja, suas regras. Integração total com sua operação.',
-    'servicio2_features' => 'Sem comissões,Múltiplos pagamentos,Estoque integrado,Nota Fiscal',
+    'servicio2_features' => 'Sem comissões, Múltiplos pagamentos, Estoque integrado, Nota Fiscal',
 
     'servicio3_title' => 'Aplicações Web',
     'servicio3_subtitle' => 'Sistemas & Plataformas SaaS',
     'servicio3_desc' => 'Sistemas de gestão, dashboards, intranets, CRMs. Soluções web complexas que automatizam sua operação.',
-    'servicio3_features' => 'APIs REST,Tempo real,Multi-tenant,Escalável',
+    'servicio3_features' => 'APIs REST, Tempo real, Multi-tenant, Escalável',
 
     'servicio4_title' => 'Apps Móveis',
     'servicio4_subtitle' => 'Android & iOS',
     'servicio4_desc' => 'Aplicativos nativos e multiplataforma. Desde apps empresariais até produtos para o mercado.',
-    'servicio4_features' => 'Android nativo,iOS nativo,Flutter/React Native,Publicação incluída',
+    'servicio4_features' => 'Android nativo, iOS nativo, Flutter/React Native, Publicação incluída',
 
     'servicio5_title' => 'Software Desktop',
     'servicio5_subtitle' => 'Windows, Linux & macOS',
     'servicio5_desc' => 'Programas de desktop sob medida. Gestão, automação, controle de hardware, interfaces especializadas.',
-    'servicio5_features' => 'Windows nativo,Linux compatível,Instalador incluído,Atualizações OTA',
+    'servicio5_features' => 'Windows nativo, Linux compatível, Instalador incluído, Atualizações OTA',
 
     'servicio6_title' => 'Plataformas LMS',
     'servicio6_subtitle' => 'E-Learning Sob Medida',
     'servicio6_desc' => 'Salas de aula virtuais sem as limitações do Moodle. Cursos, avaliações, certificados e gamificação.',
-    'servicio6_features' => 'Cursos ilimitados,Avaliações,Certificados digitais,Gamificação',
+    'servicio6_features' => 'Cursos ilimitados, Avaliações, Certificados digitais, Gamificação',
 
     'servicio7_title' => 'Integrações',
     'servicio7_subtitle' => 'APIs & Conectores',
     'servicio7_desc' => 'Conectamos seus sistemas. ERPs, hardware industrial, nota fiscal eletrônica, serviços externos.',
-    'servicio7_features' => 'Nota Fiscal,Hardware/IoT,WhatsApp API,APIs custom',
+    'servicio7_features' => 'Nota Fiscal, Hardware/IoT, WhatsApp API, APIs custom',
 
     'servicio8_title' => 'Automação',
     'servicio8_subtitle' => 'Scripts & Bots',
     'servicio8_desc' => 'Automatize tarefas repetitivas. Bots, scripts, processamento de dados, relatórios automáticos.',
-    'servicio8_features' => 'Python/Node,Scraping,ETL dados,Relatórios PDF',
+    'servicio8_features' => 'Python/Node, Scraping, ETL dados, Relatórios PDF',
 
     // Comparativa
     'comparativa_title' => 'CMS vs Código Próprio',

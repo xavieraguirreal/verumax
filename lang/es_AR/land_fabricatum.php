@@ -94,42 +94,42 @@ return [
     'servicio1_title' => 'Sitios Web',
     'servicio1_subtitle' => 'Institucionales & Corporativos',
     'servicio1_desc' => 'Presencia web profesional sin depender de CMS. Diseño único, código propio, rendimiento superior.',
-    'servicio1_features' => 'Sin WordPress,SEO optimizado,Panel admin propio,Hosting incluido',
+    'servicio1_features' => 'Sin WordPress, SEO optimizado, Panel admin propio, Hosting incluido',
 
     'servicio2_title' => 'E-Commerce',
     'servicio2_subtitle' => 'Tiendas Online a Medida',
     'servicio2_desc' => 'Vendé sin comisiones de plataforma. Tu tienda, tus reglas. Integración total con tu operación.',
-    'servicio2_features' => 'Sin comisiones,Múltiples pagos,Stock integrado,Facturación AFIP',
+    'servicio2_features' => 'Sin comisiones, Múltiples pagos, Stock integrado, Facturación AFIP',
 
     'servicio3_title' => 'Aplicaciones Web',
     'servicio3_subtitle' => 'Sistemas & Plataformas SaaS',
     'servicio3_desc' => 'Sistemas de gestión, dashboards, intranets, CRMs. Soluciones web complejas que automatizan tu operación.',
-    'servicio3_features' => 'APIs REST,Tiempo real,Multi-tenant,Escalable',
+    'servicio3_features' => 'APIs REST, Tiempo real, Multi-tenant, Escalable',
 
     'servicio4_title' => 'Apps Móviles',
     'servicio4_subtitle' => 'Android & iOS',
     'servicio4_desc' => 'Aplicaciones nativas y multiplataforma. Desde apps empresariales hasta productos para el mercado.',
-    'servicio4_features' => 'Android nativo,iOS nativo,Flutter/React Native,Publicación incluida',
+    'servicio4_features' => 'Android nativo, iOS nativo, Flutter/React Native, Publicación incluida',
 
     'servicio5_title' => 'Software Desktop',
     'servicio5_subtitle' => 'Windows, Linux & macOS',
     'servicio5_desc' => 'Programas de escritorio a medida. Gestión, automatización, control de hardware, interfaces especializadas.',
-    'servicio5_features' => 'Windows nativo,Linux compatible,Instalador incluido,Actualizaciones OTA',
+    'servicio5_features' => 'Windows nativo, Linux compatible, Instalador incluido, Actualizaciones OTA',
 
     'servicio6_title' => 'Plataformas LMS',
     'servicio6_subtitle' => 'E-Learning a Medida',
     'servicio6_desc' => 'Aulas virtuales sin las limitaciones de Moodle. Cursos, evaluaciones, certificados y gamificación.',
-    'servicio6_features' => 'Cursos ilimitados,Evaluaciones,Certificados digitales,Gamificación',
+    'servicio6_features' => 'Cursos ilimitados, Evaluaciones, Certificados digitales, Gamificación',
 
     'servicio7_title' => 'Integraciones',
     'servicio7_subtitle' => 'APIs & Conectores',
     'servicio7_desc' => 'Conectamos tus sistemas. ERPs, hardware industrial, facturación electrónica, servicios externos.',
-    'servicio7_features' => 'AFIP/ARCA,Hardware/IoT,WhatsApp API,APIs custom',
+    'servicio7_features' => 'AFIP/ARCA, Hardware/IoT, WhatsApp API, APIs custom',
 
     'servicio8_title' => 'Automatización',
     'servicio8_subtitle' => 'Scripts & Bots',
     'servicio8_desc' => 'Automatizá tareas repetitivas. Bots, scripts, procesamiento de datos, reportes automáticos.',
-    'servicio8_features' => 'Python/Node,Scraping,ETL datos,Reportes PDF',
+    'servicio8_features' => 'Python/Node, Scraping, ETL datos, Reportes PDF',
 
     // Comparativa
     'comparativa_title' => 'CMS vs Código Propio',
