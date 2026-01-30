@@ -88,8 +88,8 @@ return [
     'cred_como_funciona_paso1_alt' => 'Prefere delegar? A nossa equipa configura tudo por si.',
 
     'cred_como_funciona_paso2_titulo' => 'Carregue os seus Associados/as',
-    'cred_como_funciona_paso2_desc' => 'Importe a partir de Excel ou carregue um por um. Se já usa o Certificatum, os dados já lá estão.',
-    'cred_como_funciona_paso2_alt' => 'Envie-nos a sua lista e importamos nós.',
+    'cred_como_funciona_paso2_desc' => 'Importe do Excel ou registe um por um. O sistema gera todas as credenciais em segundos e notifica cada associado/a por e-mail com o respetivo link de transferência.',
+    'cred_como_funciona_paso2_alt' => 'Prefere delegar? Envie-nos a sua lista e importamos por si.',
 
     'cred_como_funciona_paso3_titulo' => 'O Associado ou Associada Acede',
     'cred_como_funciona_paso3_desc' => 'Apenas introduzindo o seu NIF, o associado ou associada visualiza e descarrega a sua credencial digital instantaneamente.',

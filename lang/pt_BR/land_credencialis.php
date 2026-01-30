@@ -87,8 +87,8 @@ return [
     'cred_como_funciona_paso1_alt' => 'Prefere não configurar? Nossa equipe faz tudo para você.',
 
     'cred_como_funciona_paso2_titulo' => 'Cadastre seus Associados/as',
-    'cred_como_funciona_paso2_desc' => 'Importe do Excel ou cadastre um por um. Se já usa Certificatum, os dados já estão lá.',
-    'cred_como_funciona_paso2_alt' => 'Envie sua lista que a importamos para você.',
+    'cred_como_funciona_paso2_desc' => 'Importe do Excel ou cadastre um por um. O sistema gera todas as credenciais em segundos e notifica cada associado/a por e-mail com seu link de download.',
+    'cred_como_funciona_paso2_alt' => 'Prefere delegar? Envie sua lista e importamos para você.',
 
     'cred_como_funciona_paso3_titulo' => 'O/A Associado/a Acessa',
     'cred_como_funciona_paso3_desc' => 'Basta digitar o CPF para ver e baixar sua credencial digital na hora.',

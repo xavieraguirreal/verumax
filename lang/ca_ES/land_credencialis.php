@@ -89,8 +89,8 @@ return [
     'cred_como_funciona_paso1_alt' => 'Prefereix delegar? El nostre equip configura tot per voste.',
 
     'cred_como_funciona_paso2_titulo' => 'Carregui els seus Socis i Socies',
-    'cred_como_funciona_paso2_desc' => 'Importi des d\'Excel o carregui un per un. Si ja utilitza Certificatum, les dades ja hi son.',
-    'cred_como_funciona_paso2_alt' => 'Enviï\'ns el seu llistat i l\'importem nosaltres.',
+    'cred_como_funciona_paso2_desc' => 'Importeu des d\'Excel o carregueu un per un. El sistema genera totes les credencials en segons i notifica per correu electrònic a cada soci/sòcia amb el seu enllaç de descàrrega.',
+    'cred_como_funciona_paso2_alt' => 'Preferiu delegar? Envieu-nos la vostra llista i la importem nosaltres.',
 
     'cred_como_funciona_paso3_titulo' => 'El Soci o la Socia Accedeix',
     'cred_como_funciona_paso3_desc' => 'Nomes introduint el seu DNI/NIF, el soci o la socia visualitza i descarrega la seva credencial digital a l\'instant.',

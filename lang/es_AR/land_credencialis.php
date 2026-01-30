@@ -87,8 +87,8 @@ return [
     'cred_como_funciona_paso1_alt' => '¿Prefiere delegar? Nuestro equipo configura todo por usted.',
 
     'cred_como_funciona_paso2_titulo' => 'Cargue sus Socios/as',
-    'cred_como_funciona_paso2_desc' => 'Importe desde Excel o cargue uno por uno. Si ya usa Certificatum, los datos ya están.',
-    'cred_como_funciona_paso2_alt' => 'Envíenos su listado y lo importamos nosotros/as.',
+    'cred_como_funciona_paso2_desc' => 'Importe desde Excel o cargue uno por uno. El sistema genera todas las credenciales en segundos y notifica por email a cada socio/a con su enlace de descarga.',
+    'cred_como_funciona_paso2_alt' => '¿Prefiere delegar? Envíenos su listado y lo importamos nosotros/as.',
 
     'cred_como_funciona_paso3_titulo' => 'El/La Socio/a Accede',
     'cred_como_funciona_paso3_desc' => 'Con solo ingresar su DNI, el/la socio/a ve y descarga su credencial digital al instante.',

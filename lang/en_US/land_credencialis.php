@@ -90,8 +90,8 @@ return [
     'cred_como_funciona_paso1_alt' => 'Prefer to delegate? Our team configures everything for you.',
 
     'cred_como_funciona_paso2_titulo' => 'Upload Your Members',
-    'cred_como_funciona_paso2_desc' => 'Import from Excel or add one by one. If you already use Certificatum, the data is already there.',
-    'cred_como_funciona_paso2_alt' => 'Send us your list and we will import it for you.',
+    'cred_como_funciona_paso2_desc' => 'Import from Excel or add one by one. The system generates all credentials in seconds and notifies each member by email with their download link.',
+    'cred_como_funciona_paso2_alt' => 'Prefer to delegate? Send us your list and we will import it for you.',
 
     'cred_como_funciona_paso3_titulo' => 'Members Access',
     'cred_como_funciona_paso3_desc' => 'By simply entering their ID, members view and download their digital credential instantly.',

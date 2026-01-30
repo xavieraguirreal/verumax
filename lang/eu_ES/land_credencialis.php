@@ -89,8 +89,8 @@ return [
     'cred_como_funciona_paso1_alt' => 'Delegatzea nahiago? Gure taldeak dena konfiguratzen dizu.',
 
     'cred_como_funciona_paso2_titulo' => 'Kargatu zure Bazkideak',
-    'cred_como_funciona_paso2_desc' => 'Inportatu Excel-etik edo kargatu banan-banan. Dagoeneko Certificatum erabiltzen baduzu, datuak prest daude.',
-    'cred_como_funciona_paso2_alt' => 'Bidali zure zerrenda eta guk inportatzen dugu.',
+    'cred_como_funciona_paso2_desc' => 'Inportatu Excel-etik edo kargatu banan-banan. Sistemak kredenzial guztiak segundotan sortzen ditu eta bazkide bakoitzari posta elektronikoz jakinarazten dio deskarga-estekarekin.',
+    'cred_como_funciona_paso2_alt' => 'Delegatzea nahiago duzu? Bidali zerrenda eta guk inportatuko dugu.',
 
     'cred_como_funciona_paso3_titulo' => 'Bazkideak Sartzen Dira',
     'cred_como_funciona_paso3_desc' => 'NANa sartu besterik ez, eta bazkideak bere kredentizal digitala ikusten eta deskargatzen du berehala.',
