@@ -71,6 +71,7 @@ $usar_template_imagen = !empty($template_url);
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        border: 1px solid #333;
     }
 
     .credencial-template-bg {
