@@ -152,14 +152,14 @@
         <div class="flex items-center gap-3 text-sm">
             <span class="text-xl">🍪</span>
             <p>
-                <?php echo $lang['cookies_message'] ?? 'Usamos cookies para recordar tus preferencias de idioma y tema.'; ?>
-                <a href="/secretum.php" target="_blank" class="underline hover:text-gold ml-1">
+                <?php echo $lang['cookies_message'] ?? 'Usamos cookies para recordar sus preferencias de idioma y tema.'; ?>
+                <a href="https://verumax.com/secretum.php" target="_blank" class="underline hover:text-yellow-400 ml-1">
                     <?php echo $lang['cookies_more_info'] ?? 'Ver más'; ?>
                 </a>
             </p>
         </div>
         <button id="cookie-accept"
-                class="px-4 py-2 bg-gold text-black rounded-lg font-medium hover:bg-gold-light transition-colors text-sm whitespace-nowrap">
+                class="px-4 py-2 bg-amber-500 text-black rounded-lg font-medium hover:bg-amber-400 transition-colors text-sm whitespace-nowrap">
             <?php echo $lang['cookies_accept'] ?? 'Entendido'; ?>
         </button>
     </div>
