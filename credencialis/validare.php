@@ -81,5 +81,5 @@ if (!$miembro) {
 }
 
 // Redirigir a la página de verificación pública
-header('Location: verificatio.php?codigo=' . urlencode($codigo) . '&lang=' . urlencode(LanguageService::getCurrentLanguage()));
+header('Location: verificatio.php?codigo=' . urlencode($codigo) . '&lang=' . urlencode(LanguageService::getCurrentLang()));
 exit;
