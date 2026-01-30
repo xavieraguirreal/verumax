@@ -413,8 +413,8 @@ function __($key, $default = '') {
                 <div class="flex items-center gap-4">
                     <!-- Language Dropdown -->
                     <?php
-                    // Solo es_AR y pt_BR para Fabricatum
-                    $fabricatum_languages = ['es_AR' => 'Español (Argentina)', 'pt_BR' => 'Português (Brasil)'];
+                    // Solo es_AR y pt_BR para Fabricatum (nombres simples)
+                    $fabricatum_languages = ['es_AR' => 'Español', 'pt_BR' => 'Português'];
                     ?>
                     <div class="relative">
                         <button id="langToggle" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors border border-transparent hover:border-gray-700">

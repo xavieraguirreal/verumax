@@ -527,7 +527,6 @@ WHERE limits = NULL;
                     <div class="relative" id="lang-selector">
                         <button onclick="toggleLangMenu()" class="text-gray-400 hover:text-gold transition-colors px-3 py-2 flex items-center gap-2 border border-white/10 rounded-lg hover:border-gold/50">
                             <?php echo get_flag_emoji($current_language); ?>
-                            <span class="text-sm font-medium hidden sm:inline"><?php echo get_lang_short_name($current_language); ?></span>
                             <i data-lucide="chevron-down" class="w-4 h-4" id="lang-chevron"></i>
                         </button>
                         <div id="lang-menu" class="absolute right-0 mt-2 w-48 bg-gray-900 border border-gold/30 rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 z-50 max-h-64 overflow-y-auto">
