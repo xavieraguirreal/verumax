@@ -96,7 +96,7 @@ ob_start();
     <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
     <meta property="og:title" content="<?php echo $lang['cred_meta_og_title']; ?>">
     <meta property="og:description" content="<?php echo $lang['cred_meta_og_description']; ?>">
-    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/og-image-credencialis.png">
+    <meta property="og:image" content="https://verumax.com/og-image-credencialis.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="<?php echo str_replace('_', '_', $current_language); ?>">
@@ -107,7 +107,7 @@ ob_start();
     <meta name="twitter:url" content="https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
     <meta name="twitter:title" content="<?php echo $lang['cred_meta_twitter_title']; ?>">
     <meta name="twitter:description" content="<?php echo $lang['cred_meta_twitter_description']; ?>">
-    <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/og-image-credencialis.png">
+    <meta name="twitter:image" content="https://verumax.com/og-image-credencialis.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://verumax.com/assets/images/logo-verumax-escudo.png">
