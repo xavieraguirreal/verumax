@@ -12,10 +12,10 @@ require_once 'config.php';
 require_once 'lang_config.php';
 require_once 'maintenance_config.php';
 
-// Limitar idiomas disponibles solo a es_AR y pt_BR (nombres nativos)
+// Idiomas disponibles para Verumax (con nombres regionales)
 $available_languages = [
-    'es_AR' => 'Español',
-    'pt_BR' => 'Português'
+    'es_AR' => 'Español (Argentina)',
+    'pt_BR' => 'Português (Brasil)'
 ];
 
 // NO activar maintenance para esta página de desarrollo

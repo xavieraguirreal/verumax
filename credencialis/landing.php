@@ -11,10 +11,10 @@ require_once '../config.php';
 $lang_modules = ['common', 'land_credencialis'];
 require_once '../lang_config.php';
 
-// Sobreescribir idiomas disponibles con nombres simples (solo bandera + idioma)
+// Idiomas disponibles para Credencialis (con nombres regionales)
 $available_languages = [
-    'es_AR' => 'Español',
-    'pt_BR' => 'Português'
+    'es_AR' => 'Español (Argentina)',
+    'pt_BR' => 'Português (Brasil)'
 ];
 
 require_once '../includes/currency_converter.php';

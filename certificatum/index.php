@@ -9,14 +9,21 @@ require_once '../config.php';
 $lang_modules = ['common', 'land_certificatum'];
 require_once '../lang_config.php';
 
-// Sobreescribir idiomas disponibles con nombres simples (solo bandera + idioma)
+// Sobreescribir idiomas disponibles con nombres regionales
 $available_languages = [
-    'es_AR' => 'Español',
-    'es_BO' => 'Español',
-    'es_PY' => 'Español',
-    'es_EC' => 'Español',
-    'pt_BR' => 'Português',
-    'en_US' => 'English'
+    'es_AR' => 'Español (Argentina)',
+    'es_BO' => 'Español (Bolivia)',
+    'es_CL' => 'Español (Chile)',
+    'es_EC' => 'Español (Ecuador)',
+    'es_ES' => 'Español (España)',
+    'es_PY' => 'Español (Paraguay)',
+    'es_UY' => 'Español (Uruguay)',
+    'pt_BR' => 'Português (Brasil)',
+    'pt_PT' => 'Português (Portugal)',
+    'en_US' => 'English (US)',
+    'ca_ES' => 'Català',
+    'eu_ES' => 'Euskara',
+    'el_GR' => 'Ελληνικά'
 ];
 
 require_once '../includes/currency_converter.php';
@@ -66,9 +73,17 @@ ob_start();
     <!-- Hreflang para versiones de idioma (SEO internacional) -->
     <link rel="alternate" hreflang="es-ar" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_AR">
     <link rel="alternate" hreflang="es-bo" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_BO">
+    <link rel="alternate" hreflang="es-cl" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_CL">
+    <link rel="alternate" hreflang="es-ec" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_EC">
+    <link rel="alternate" hreflang="es-es" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_ES">
     <link rel="alternate" hreflang="es-py" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_PY">
+    <link rel="alternate" hreflang="es-uy" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=es_UY">
     <link rel="alternate" hreflang="pt-br" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=pt_BR">
+    <link rel="alternate" hreflang="pt-pt" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=pt_PT">
     <link rel="alternate" hreflang="en-us" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=en_US">
+    <link rel="alternate" hreflang="ca" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=ca_ES">
+    <link rel="alternate" hreflang="eu" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=eu_ES">
+    <link rel="alternate" hreflang="el" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/?lang=el_GR">
     <link rel="alternate" hreflang="x-default" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/certificatum/">
 
     <!-- Geo Tags para Argentina -->
