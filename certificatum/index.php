@@ -85,8 +85,8 @@ ob_start();
     <meta name="twitter:image:alt" content="Certificatum - Certificados Digitales Profesionales">
 
     <!-- Favicon - Escudo Verumax -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo-verumax-escudo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo-verumax-escudo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://verumax.com/assets/images/logo-verumax-escudo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://verumax.com/assets/images/logo-verumax-escudo.png">
 
     <!-- Preconnect para recursos externos (mejora rendimiento) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,9 +94,9 @@ ob_start();
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Preload recursos críticos (mejora LCP - Largest Contentful Paint) -->
-    <link rel="preload" href="/assets/css/tailwind.min.css" as="style">
+    <link rel="preload" href="https://verumax.com/assets/css/tailwind.min.css" as="style">
     <link rel="preload" href="<?php echo CSS_PATH; ?>styles.css" as="style">
-    <link rel="preload" href="../assets/images/logo-verumax-escudo.png" as="image">
+    <link rel="preload" href="https://verumax.com/assets/images/logo-verumax-escudo.png" as="image">
 
     <!-- Google Fonts - Inter (carga no bloqueante) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -106,7 +106,7 @@ ob_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" media="print" onload="this.media='all'">
 
     <!-- Tailwind CSS Compilado (producción) -->
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <link rel="stylesheet" href="https://verumax.com/assets/css/tailwind.min.css">
 
     <!-- Estilos Compartidos -->
     <link rel="stylesheet" href="<?php echo CSS_PATH; ?>styles.css">
@@ -285,10 +285,10 @@ ob_start();
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <img src="../assets/images/logo-verumax-escudo.png" alt="Logotipo escudo de Verumax - Sistema de certificados digitales" class="h-10 w-10" width="40" height="40" fetchpriority="high">
+                    <img src="https://verumax.com/assets/images/logo-verumax-escudo.png" alt="Logotipo escudo de Verumax - Sistema de certificados digitales" class="h-10 w-10" width="40" height="40" fetchpriority="high">
                     <div>
-                        <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="flex items-center" aria-label="Volver a inicio de Verumax">
-                            <img src="../assets/images/logo-verumax-texto.png" alt="Verumax - Plataforma de gestión educativa" class="h-8" width="120" height="32" fetchpriority="high">
+                        <a href="/?lang=<?php echo $current_language; ?>" class="flex items-center" aria-label="Certificatum">
+                            <img src="https://verumax.com/assets/images/logo-verumax-texto.png" alt="Verumax - Plataforma de gestión educativa" class="h-8" width="120" height="32" fetchpriority="high">
                         </a>
                         <p class="text-xs text-gray-400">Certificatum</p>
                     </div>

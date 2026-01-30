@@ -378,7 +378,7 @@ function __($key, $default = '') {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="/fabricatum/?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
+                <a href="/?lang=<?= $current_lang ?>" class="flex items-center gap-1 group">
                     <span class="text-xl font-display font-bold text-white group-hover:text-gray-300 transition-colors">VERUM</span>
                     <span class="text-xl font-display font-bold text-[#D4AF37]">ax</span>
                     <span class="text-xs text-gray-500 ml-2 font-mono">/fabricatum</span>

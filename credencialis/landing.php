@@ -78,8 +78,8 @@ ob_start();
     <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/og-image-credencialis.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo-verumax-escudo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo-verumax-escudo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://verumax.com/assets/images/logo-verumax-escudo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://verumax.com/assets/images/logo-verumax-escudo.png">
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -241,10 +241,10 @@ ob_start();
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                    <img src="../assets/images/logo-verumax-escudo.png" alt="Verumax" class="h-10 w-10" width="40" height="40">
+                    <img src="https://verumax.com/assets/images/logo-verumax-escudo.png" alt="Verumax" class="h-10 w-10" width="40" height="40">
                     <div>
-                        <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="flex items-center">
-                            <img src="../assets/images/logo-verumax-texto.png" alt="Verumax" class="h-8" width="120" height="32">
+                        <a href="/?lang=<?php echo $current_language; ?>" class="flex items-center">
+                            <img src="https://verumax.com/assets/images/logo-verumax-texto.png" alt="Verumax" class="h-8" width="120" height="32">
                         </a>
                         <p class="text-xs text-gray-400">Credencialis</p>
                     </div>

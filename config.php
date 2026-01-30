@@ -13,10 +13,10 @@ define('APP_YEAR', '2025');
 // Versión de assets para cache busting (cambiar cuando se modifiquen CSS/JS/imágenes)
 define('ASSET_VERSION', '2.0.0');
 
-// Rutas de assets (absolutas desde la raíz del sitio)
-define('CSS_PATH', '/assets/css/');
-define('JS_PATH', '/assets/js/');
-define('IMG_PATH', '/assets/img/');
+// Rutas de assets (URLs absolutas para compatibilidad con subdominios)
+define('CSS_PATH', 'https://verumax.com/assets/css/');
+define('JS_PATH', 'https://verumax.com/assets/js/');
+define('IMG_PATH', 'https://verumax.com/assets/images/');
 
 // =============================================================================
 // Configuracion de Inteligencia Artificial (servicio interno de VERUMax)
