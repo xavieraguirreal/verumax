@@ -1362,7 +1362,9 @@ function __($key, $default = '') {
     <!-- Scroll to top button -->
     <button id="scrollTopBtn" class="fixed bottom-6 right-6 w-12 h-12 bg-neon-cyan text-cyber-black rounded-full shadow-lg opacity-0 invisible transition-all hover:scale-110 z-50 flex items-center justify-center"
         aria-label="Scroll to top">
-        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
     </button>
 
     <script>
@@ -1446,7 +1448,7 @@ function __($key, $default = '') {
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData.entries());
 
-                const res = await fetch('/api/contact.php', {
+                const res = await fetch('https://verumax.com/api/contact.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)

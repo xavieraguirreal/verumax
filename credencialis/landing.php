@@ -1533,6 +1533,14 @@ ob_start();
 
     <?php include '../includes/footer.php'; ?>
 
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 w-12 h-12 bg-cyan-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all hover:bg-cyan-500 hover:scale-110 z-50 flex items-center justify-center"
+        aria-label="Volver arriba">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
     <!-- Scripts -->
     <script>
         // Ocultar loader
@@ -1584,7 +1592,7 @@ ob_start();
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('/api/contact.php', {
+                const response = await fetch('https://verumax.com/api/contact.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -1622,6 +1630,22 @@ ob_start();
                 btn.textContent = originalText;
                 btn.disabled = false;
             }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'invisible');
+                scrollTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        scrollTopBtn?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 
