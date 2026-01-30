@@ -202,8 +202,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion'])) {
                 $tpl_path = $tpl_dir . '/' . $tpl_filename;
 
                 if (move_uploaded_file($tpl_tmp, $tpl_path)) {
-                    // URL absoluta para que funcione desde cualquier página
-                    $config['template_url'] = 'https://' . $slug . '.verumax.com/uploads/templates/' . $slug . '/' . $tpl_filename;
+                    // URL absoluta usando dominio principal (uploads está en root, no en subdominio)
+                    $config['template_url'] = 'https://verumax.com/uploads/templates/' . $slug . '/' . $tpl_filename;
                 }
             }
         } else {
