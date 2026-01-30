@@ -56,7 +56,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion'])) {
         'autocompletar_ia',
         'generar_stats_ia',
         'generar_combinado_ia',
-        'generar_imagen_ia'
+        'generar_imagen_ia',
+        // Credencialis
+        'buscar_miembros_credencialis',
+        'guardar_credencial',
+        'quitar_credencial',
+        'guardar_config_credencialis',
+        'obtener_siguiente_numero',
+        'importar_miembros_credencialis'
     ];
 
     if (in_array($_POST['accion'], $acciones_ajax)) {
