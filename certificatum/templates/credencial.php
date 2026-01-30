@@ -92,13 +92,14 @@ $usar_template_imagen = !empty($template_url);
         z-index: 2;
     }
 
-    /* Posiciones configurables para los datos */
+    /* Posiciones para datos CENTRADOS (estilo AMI/Liberté) */
     .cred-tpl-nombre {
         position: absolute;
-        top: 120px;
-        left: 20px;
-        right: 100px;
-        font-size: 18px;
+        top: 115px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 20px;
         font-weight: 700;
         color: #333;
         text-transform: uppercase;
@@ -107,71 +108,80 @@ $usar_template_imagen = !empty($template_url);
     .cred-tpl-dni {
         position: absolute;
         top: 145px;
-        left: 20px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #555;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
     }
 
     .cred-tpl-asociado {
         position: absolute;
-        top: 175px;
-        left: 20px;
-        font-size: 16px;
+        top: 180px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 18px;
         font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-servicio {
         position: absolute;
-        top: 200px;
-        left: 20px;
-        font-size: 14px;
-        font-weight: 600;
+        top: 210px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-ingreso {
         position: absolute;
-        top: 225px;
-        left: 20px;
-        font-size: 13px;
-        font-weight: 600;
+        top: 240px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-qr {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        bottom: 50px;
+        right: 15px;
         text-align: center;
         z-index: 3;
     }
 
     .cred-tpl-qr img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         background: white;
-        padding: 3px;
+        padding: 2px;
         border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
     .cred-tpl-qr-code {
-        font-size: 7px;
+        font-size: 6px;
         color: #666;
         margin-top: 2px;
         font-family: monospace;
-        background: rgba(255,255,255,0.8);
-        padding: 1px 4px;
+        background: rgba(255,255,255,0.9);
+        padding: 1px 3px;
         border-radius: 2px;
     }
 
     .cred-tpl-foto {
         position: absolute;
         top: 115px;
-        right: 100px;
-        width: 80px;
-        height: 100px;
+        left: 15px;
+        width: 70px;
+        height: 90px;
         border: 2px solid #ddd;
         border-radius: 6px;
         overflow: hidden;
