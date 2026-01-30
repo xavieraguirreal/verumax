@@ -111,7 +111,7 @@ return [
 
     // Seção Equipe
     'equipo_title' => 'Equipe Humana Real',
-    'equipo_subtitle' => 'Não deixamos você sozinho/a com um software',
+    'equipo_subtitle' => 'Não deixamos você sozinho com um software',
     'equipo_desc' => 'Por trás de cada linha de código há pessoas reais. Acompanhamos você desde o primeiro dia até que seu projeto esteja em produção e além.',
 
     // Contato
@@ -162,7 +162,7 @@ return [
     'veritas_titulo' => 'Veritas IA',
     'veritas_subtitulo' => 'Nosso Agente de Inteligência Artificial Especializado',
     'veritas_proximamente' => 'Em breve!',
-    'veritas_descripcion' => 'Veritas estará disponível muito em breve para ajudá-lo/a com consultas sobre certificados, validações e mais.',
+    'veritas_descripcion' => 'Veritas estará disponível muito em breve para ajudá-lo com consultas sobre certificados, validações e mais.',
     'veritas_entendido' => 'Entendido',
 
     // Cookies

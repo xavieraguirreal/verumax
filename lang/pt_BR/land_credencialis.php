@@ -84,11 +84,11 @@ return [
 
     'cred_como_funciona_paso1_titulo' => 'Configure sua Organização',
     'cred_como_funciona_paso1_desc' => 'Envie seu logo, escolha as cores institucionais e personalize o texto da credencial.',
-    'cred_como_funciona_paso1_alt' => 'Prefere delegar? Nossa equipe configura tudo para você.',
+    'cred_como_funciona_paso1_alt' => 'Prefere não configurar? Nossa equipe faz tudo para você.',
 
     'cred_como_funciona_paso2_titulo' => 'Cadastre seus Associados/as',
     'cred_como_funciona_paso2_desc' => 'Importe do Excel ou cadastre um por um. Se já usa Certificatum, os dados já estão lá.',
-    'cred_como_funciona_paso2_alt' => 'Envie sua lista que importamos para você.',
+    'cred_como_funciona_paso2_alt' => 'Envie sua lista que a importamos para você.',
 
     'cred_como_funciona_paso3_titulo' => 'O/A Associado/a Acessa',
     'cred_como_funciona_paso3_desc' => 'Basta digitar o CPF para ver e baixar sua credencial digital na hora.',
@@ -193,10 +193,10 @@ return [
     'cred_faq_imprimir_desc' => 'Sim. O/a associado/a pode baixar um PDF de alta qualidade para imprimir em casa ou salvar no celular. Também oferecemos serviço de impressão profissional em PVC.',
 
     'cred_faq_vencimiento_titulo' => 'As credenciais têm validade?',
-    'cred_faq_vencimiento_desc' => 'Você pode configurar vencimento automático (mensal, anual) ou sem vencimento. Quando vence, a credencial mostra status inativo.',
+    'cred_faq_vencimiento_desc' => 'É possível configurar vencimento automático (mensal, anual) ou sem vencimento. Quando vence, a credencial mostra status inativo.',
 
     'cred_faq_actualizar_titulo' => 'O que acontece se eu alterar dados do/a associado/a?',
-    'cred_faq_actualizar_desc' => 'As alterações são refletidas instantaneamente. Se você atualizar a categoria de serviço, o/a associado/a vê sua credencial atualizada sem fazer nada.',
+    'cred_faq_actualizar_desc' => 'As alterações são refletidas instantaneamente. Se for atualizada a categoria de serviço, o/a associado/a vê sua credencial atualizada sem fazer nada.',
 
     'cred_faq_validar_titulo' => 'Como se valida uma credencial?',
     'cred_faq_validar_desc' => 'Escaneando o QR Code com qualquer celular. Abre uma página que mostra se a credencial é válida, os dados do/a associado/a e seu status de filiação.',
@@ -294,7 +294,7 @@ return [
     'cred_plan_essentialis_feat6' => 'Branding Institucional Personalizado',
     'cred_plan_essentialis_feat7' => 'Categorias de Filiação',
     'cred_plan_essentialis_feat8' => 'Painel de Administração',
-    'cred_plan_essentialis_feat9' => 'Configuração pela Equipe',
+    'cred_plan_essentialis_feat9' => 'Configuração pela Equipe Humana',
     'cred_plan_essentialis_cta' => 'Começar com Essentialis',
 
     // Plan Premium

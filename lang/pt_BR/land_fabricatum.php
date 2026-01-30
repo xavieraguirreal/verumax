@@ -103,7 +103,7 @@ return [
     // Seção CMS
     'cms_title' => 'Também Somos Especialistas em CMS',
     'cms_subtitle' => 'WordPress, Joomla, Shopify? Dominamos todos',
-    'cms_desc' => 'Nem todos os projetos precisam de código do zero. Se um CMS resolve a sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos na escolha da melhor opção.</strong>',
+    'cms_desc' => 'Nem todos os projetos precisam de código desde zero. Se um CMS resolve a sua necessidade, implementamos com a mesma qualidade e profissionalismo. <strong>Assessoramos na escolha da melhor opção.</strong>',
 
     'cms_card1_title' => 'WordPress',
     'cms_card1_desc' => 'O CMS mais popular do mundo. Sites institucionais, blogs, portfolios. Themes e plugins sob medida.',
@@ -204,7 +204,7 @@ return [
     'proceso_step2_desc' => 'Arquitetura, wireframes e protótipos. Validamos cada decisão técnica antes de programar.',
 
     'proceso_step3_title' => 'Desenvolvimento',
-    'proceso_step3_desc' => 'Programamos com entregas incrementais. Acompanhe avanços reais toda semana.',
+    'proceso_step3_desc' => 'Programamos com entregas incrementais. Acompanhe avanços reais a cada semana.',
 
     'proceso_step4_title' => 'Testes',
     'proceso_step4_desc' => 'Testes exaustivos de funcionalidade, segurança e performance em todos os ambientes.',
@@ -228,7 +228,7 @@ return [
 
     // CTA
     'cta_title' => 'Tem uma Ideia? A Tornamos Realidade',
-    'cta_subtitle' => 'Conte-nos sobre o seu projeto e o assessoramos sem compromisso',
+    'cta_subtitle' => 'Conte-nos sobre o seu projeto e oferecemos consultoria sem compromisso',
     'cta_btn' => 'Solicitar Orçamento',
 
     // Contato

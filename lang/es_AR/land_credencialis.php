@@ -104,13 +104,13 @@ return [
     'cred_org_clubes_desc' => 'Carnet de socio/a digital para acceso a instalaciones, pileta, gimnasio y actividades.',
 
     'cred_org_cooperativas' => 'Cooperativas',
-    'cred_org_cooperativas_desc' => 'Credencial de asociado con categoría de servicio y datos de membresía.',
+    'cred_org_cooperativas_desc' => 'Credencial de asociado/a con categoría de servicio y datos de membresía.',
 
     'cred_org_mutuales' => 'Mutuales',
-    'cred_org_mutuales_desc' => 'Carnet de afiliado con información de cobertura y beneficios.',
+    'cred_org_mutuales_desc' => 'Carnet de afiliado/a con información de cobertura y beneficios.',
 
     'cred_org_colegios' => 'Colegios Profesionales',
-    'cred_org_colegios_desc' => 'Matrícula digital verificable para abogados, contadores, médicos y más.',
+    'cred_org_colegios_desc' => 'Matrícula digital verificable para abogados/as, contadores/as, médicos/as y otros/as profesionales.',
 
     'cred_org_asociaciones' => 'Asociaciones Civiles',
     'cred_org_asociaciones_desc' => 'Membresía con validación QR para ONG, fundaciones y cámaras empresarias.',
@@ -122,7 +122,7 @@ return [
     'cred_org_gimnasios_desc' => 'Carnet de membresía con control de vencimiento automático.',
 
     'cred_org_bibliotecas' => 'Bibliotecas',
-    'cred_org_bibliotecas_desc' => 'Carnet de lector digital con acceso a préstamos y servicios.',
+    'cred_org_bibliotecas_desc' => 'Carnet de lector/a digital con acceso a préstamos y servicios.',
 
     // =====================================
     // FUNCIONALIDADES
@@ -174,7 +174,7 @@ return [
 
     'cred_caso_sajur_nombre' => 'SAJuR - Sociedad Argentina de Justicia Restaurativa',
     'cred_caso_sajur_tipo' => 'Asociación Civil',
-    'cred_caso_sajur_testimonio' => '"Nuestros asociados acceden a su credencial desde el celular en segundos. Ya no tenemos que reimprimir carnets cuando cambia la categoría de membresía. La validación QR nos da tranquilidad."',
+    'cred_caso_sajur_testimonio' => '"Nuestros/as asociados/as acceden a su credencial desde el celular en segundos. Ya no tenemos que reimprimir carnets cuando cambia la categoría de membresía. La validación QR nos da tranquilidad."',
 
     'cred_caso_liberte_nombre' => 'Liberté - Cooperativa de Trabajo',
     'cred_caso_liberte_tipo' => 'Cooperativa',
@@ -289,7 +289,7 @@ return [
     'cred_plan_essentialis_feat1' => '100 Socios/as activos',
     'cred_plan_essentialis_feat2' => 'Carga Masiva desde Excel/CSV',
     'cred_plan_essentialis_feat3' => 'Credencial Digital con QR',
-    'cred_plan_essentialis_feat4' => 'Portal de Acceso (tuclub.verumax.com)',
+    'cred_plan_essentialis_feat4' => 'Portal de Acceso (suclub.verumax.com)',
     'cred_plan_essentialis_feat5' => 'Validación QR Infalsificable',
     'cred_plan_essentialis_feat6' => 'Branding Institucional Personalizado',
     'cred_plan_essentialis_feat7' => 'Categorías de Membresía',
@@ -369,7 +369,7 @@ return [
     'cred_contacto_enviando' => 'Enviando...',
     'cred_contacto_exito_titulo' => '¡Mensaje Enviado!',
     'cred_contacto_exito_cerrar' => 'Cerrar',
-    'cred_contacto_error' => 'Error al enviar. Intenta nuevamente.',
+    'cred_contacto_error' => 'Error al enviar. Intente nuevamente.',
 
     // =====================================
     // FOOTER
