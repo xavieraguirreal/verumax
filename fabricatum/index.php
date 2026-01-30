@@ -11,7 +11,7 @@ require_once $base_path . '/config.php';
 
 // Definir módulos de traducción ANTES de cargar lang_config.php
 // para que use el sistema modular y no resetee el idioma
-$lang_modules = ['land_fabricatum'];
+$lang_modules = ['common', 'land_fabricatum'];
 
 // Sistema de idiomas - cargar configuración
 require_once $base_path . '/lang_config.php';
@@ -1461,5 +1461,8 @@ function __($key, $default = '') {
             }
         });
     </script>
+
+    <!-- Footer con Cookie Banner y Veritas -->
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>

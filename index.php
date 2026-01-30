@@ -6,7 +6,7 @@
  */
 
 // Definir módulos de idioma ANTES de cargar lang_config
-$lang_modules = ['land_verumax'];
+$lang_modules = ['common', 'land_verumax'];
 
 require_once 'config.php';
 require_once 'lang_config.php';
