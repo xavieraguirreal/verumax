@@ -411,22 +411,36 @@ function __($key, $default = '') {
 
                 <!-- Language Selector + CTA -->
                 <div class="flex items-center gap-4">
-                    <!-- Language Dropdown -->
+                    <!-- Language Dropdown (Agrupado) -->
                     <?php
-                    // Idiomas disponibles para Fabricatum (con nombres regionales)
-                    $fabricatum_languages = ['es_AR' => 'Español (Argentina)', 'pt_BR' => 'Português (Brasil)'];
+                    // Idiomas agrupados por familia lingüística
+                    $language_groups = [
+                        'Español' => [
+                            'es_AR' => 'Argentina', 'es_BO' => 'Bolivia', 'es_CL' => 'Chile',
+                            'es_EC' => 'Ecuador', 'es_ES' => 'España', 'es_PY' => 'Paraguay', 'es_UY' => 'Uruguay'
+                        ],
+                        'Português' => ['pt_BR' => 'Brasil', 'pt_PT' => 'Portugal'],
+                        'Other' => ['en_US' => 'English', 'ca_ES' => 'Català', 'eu_ES' => 'Euskara', 'el_GR' => 'Ελληνικά']
+                    ];
                     ?>
                     <div class="relative">
                         <button id="langToggle" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors border border-transparent hover:border-gray-700">
                             <?= get_flag_emoji($current_lang) ?>
                             <i data-lucide="chevron-down" class="w-3 h-3 text-gray-500"></i>
                         </button>
-                        <div id="langDropdown" class="hidden absolute right-0 top-full mt-2 bg-cyber-dark border border-gray-700 rounded-lg shadow-xl overflow-hidden z-50 min-w-[200px]">
-                            <?php foreach ($fabricatum_languages as $code => $name): ?>
-                            <a href="?lang=<?= $code ?>" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 transition-colors <?= $current_lang === $code ? 'bg-gray-800 border-l-2 border-neon-cyan' : '' ?>">
-                                <?= get_flag_emoji($code) ?>
-                                <span class="text-sm text-gray-300"><?= $name ?></span>
-                            </a>
+                        <div id="langDropdown" class="hidden absolute right-0 top-full mt-2 bg-cyber-dark border border-gray-700 rounded-lg shadow-xl overflow-hidden z-50 w-80 p-3">
+                            <?php foreach ($language_groups as $group_name => $langs): ?>
+                            <div class="mb-3 last:mb-0">
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mb-2 px-1"><?= $group_name ?></div>
+                                <div class="grid grid-cols-2 gap-1">
+                                    <?php foreach ($langs as $code => $name): ?>
+                                    <a href="?lang=<?= $code ?>" class="flex items-center gap-2 px-2 py-2 rounded hover:bg-gray-800 transition-colors <?= $current_lang === $code ? 'bg-neon-cyan/20 border border-neon-cyan/30' : '' ?>">
+                                        <?= get_flag_emoji($code) ?>
+                                        <span class="text-sm text-gray-300 truncate"><?= $name ?></span>
+                                    </a>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
                             <?php endforeach; ?>
                         </div>
                     </div>

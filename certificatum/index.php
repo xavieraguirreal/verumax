@@ -9,22 +9,36 @@ require_once '../config.php';
 $lang_modules = ['common', 'land_certificatum'];
 require_once '../lang_config.php';
 
-// Sobreescribir idiomas disponibles con nombres regionales
-$available_languages = [
-    'es_AR' => 'Español (Argentina)',
-    'es_BO' => 'Español (Bolivia)',
-    'es_CL' => 'Español (Chile)',
-    'es_EC' => 'Español (Ecuador)',
-    'es_ES' => 'Español (España)',
-    'es_PY' => 'Español (Paraguay)',
-    'es_UY' => 'Español (Uruguay)',
-    'pt_BR' => 'Português (Brasil)',
-    'pt_PT' => 'Português (Portugal)',
-    'en_US' => 'English (US)',
-    'ca_ES' => 'Català',
-    'eu_ES' => 'Euskara',
-    'el_GR' => 'Ελληνικά'
+// Idiomas agrupados por familia lingüística
+$language_groups = [
+    'Español' => [
+        'es_AR' => 'Argentina',
+        'es_BO' => 'Bolivia',
+        'es_CL' => 'Chile',
+        'es_EC' => 'Ecuador',
+        'es_ES' => 'España',
+        'es_PY' => 'Paraguay',
+        'es_UY' => 'Uruguay'
+    ],
+    'Português' => [
+        'pt_BR' => 'Brasil',
+        'pt_PT' => 'Portugal'
+    ],
+    'Other' => [
+        'en_US' => 'English',
+        'ca_ES' => 'Català',
+        'eu_ES' => 'Euskara',
+        'el_GR' => 'Ελληνικά'
+    ]
 ];
+
+// Array plano para compatibilidad
+$available_languages = [];
+foreach ($language_groups as $group => $langs) {
+    foreach ($langs as $code => $name) {
+        $available_languages[$code] = $name;
+    }
+}
 
 require_once '../includes/currency_converter.php';
 require_once '../includes/pricing_config.php';
@@ -345,12 +359,19 @@ ob_start();
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="langMenu" class="hidden absolute right-0 mt-2 w-48 bg-gray-900 border border-metallic-green/20 rounded-lg shadow-lg overflow-hidden z-50" role="menu" aria-labelledby="langToggle">
-                            <?php foreach ($available_languages as $code => $name): ?>
-                                <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 transition-colors <?php echo $current_language === $code ? 'bg-gray-800' : ''; ?>" role="menuitem" aria-label="Cambiar idioma a <?php echo $name; ?>">
-                                    <?php echo get_flag_emoji($code); ?>
-                                    <span class="text-sm"><?php echo $name; ?></span>
-                                </a>
+                        <div id="langMenu" class="hidden absolute right-0 mt-2 w-80 bg-gray-900 border border-metallic-green/20 rounded-lg shadow-lg overflow-hidden z-50 p-3" role="menu" aria-labelledby="langToggle">
+                            <?php foreach ($language_groups as $group_name => $langs): ?>
+                                <div class="mb-3 last:mb-0">
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider mb-2 px-1"><?php echo $group_name; ?></div>
+                                    <div class="grid grid-cols-2 gap-1">
+                                        <?php foreach ($langs as $code => $name): ?>
+                                            <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-2 px-2 py-2 rounded hover:bg-gray-800 transition-colors <?php echo $current_language === $code ? 'bg-metallic-green/20 border border-metallic-green/30' : ''; ?>" role="menuitem">
+                                                <?php echo get_flag_emoji($code); ?>
+                                                <span class="text-sm truncate"><?php echo $name; ?></span>
+                                            </a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
                             <?php endforeach; ?>
                         </div>
                     </div>
@@ -392,12 +413,20 @@ ob_start();
                     <a href="#planes" class="text-gray-300 hover:text-metallic-green-light transition-colors py-2"><?php echo $lang['acad_nav_planes']; ?></a>
                     <a href="#faq" class="text-gray-300 hover:text-metallic-green-light transition-colors py-2"><?php echo $lang['acad_nav_faq']; ?></a>
 
-                    <!-- Selector de idioma móvil -->
-                    <div class="flex items-center gap-3 py-2 border-t border-gray-800 mt-2 pt-4">
-                        <?php foreach ($available_languages as $code => $name): ?>
-                            <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-2 px-3 py-2 rounded-lg <?php echo $current_language === $code ? 'bg-metallic-green/20 border border-metallic-green/30' : 'bg-gray-800'; ?> transition-colors">
-                                <?php echo get_flag_emoji($code); ?>
-                            </a>
+                    <!-- Selector de idioma móvil (agrupado) -->
+                    <div class="py-2 border-t border-gray-800 mt-2 pt-4">
+                        <?php foreach ($language_groups as $group_name => $langs): ?>
+                            <div class="mb-3">
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mb-2"><?php echo $group_name; ?></div>
+                                <div class="flex flex-wrap gap-2">
+                                    <?php foreach ($langs as $code => $name): ?>
+                                        <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs <?php echo $current_language === $code ? 'bg-metallic-green/20 border border-metallic-green/30' : 'bg-gray-800'; ?> transition-colors" title="<?php echo $name; ?>">
+                                            <?php echo get_flag_emoji($code); ?>
+                                            <span class="hidden xs:inline"><?php echo $name; ?></span>
+                                        </a>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
                         <?php endforeach; ?>
                     </div>
 

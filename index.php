@@ -12,11 +12,36 @@ require_once 'config.php';
 require_once 'lang_config.php';
 require_once 'maintenance_config.php';
 
-// Idiomas disponibles para Verumax (con nombres regionales)
-$available_languages = [
-    'es_AR' => 'Español (Argentina)',
-    'pt_BR' => 'Português (Brasil)'
+// Idiomas agrupados por familia lingüística
+$language_groups = [
+    'Español' => [
+        'es_AR' => 'Argentina',
+        'es_BO' => 'Bolivia',
+        'es_CL' => 'Chile',
+        'es_EC' => 'Ecuador',
+        'es_ES' => 'España',
+        'es_PY' => 'Paraguay',
+        'es_UY' => 'Uruguay'
+    ],
+    'Português' => [
+        'pt_BR' => 'Brasil',
+        'pt_PT' => 'Portugal'
+    ],
+    'Other' => [
+        'en_US' => 'English',
+        'ca_ES' => 'Català',
+        'eu_ES' => 'Euskara',
+        'el_GR' => 'Ελληνικά'
+    ]
 ];
+
+// Array plano para compatibilidad
+$available_languages = [];
+foreach ($language_groups as $group => $langs) {
+    foreach ($langs as $code => $name) {
+        $available_languages[$code] = $name;
+    }
+}
 
 // NO activar maintenance para esta página de desarrollo
 // check_maintenance_mode();
@@ -529,12 +554,19 @@ WHERE limits = NULL;
                             <?php echo get_flag_emoji($current_language); ?>
                             <i data-lucide="chevron-down" class="w-4 h-4" id="lang-chevron"></i>
                         </button>
-                        <div id="lang-menu" class="absolute right-0 mt-2 w-48 bg-gray-900 border border-gold/30 rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 z-50 max-h-64 overflow-y-auto">
-                            <?php foreach ($available_languages as $code => $name): ?>
-                            <a href="#" onclick="changeLanguage('<?php echo $code; ?>')" class="flex items-center gap-3 px-4 py-3 hover:bg-gold/10 transition-colors <?php echo $current_language === $code ? 'bg-gold/20 text-gold' : 'text-gray-300'; ?> first:rounded-t-lg last:rounded-b-lg">
-                                <?php echo get_flag_emoji($code); ?>
-                                <span class="text-sm font-medium"><?php echo $name; ?></span>
-                            </a>
+                        <div id="lang-menu" class="absolute right-0 mt-2 w-80 bg-gray-900 border border-gold/30 rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 z-50 max-h-96 overflow-y-auto p-3">
+                            <?php foreach ($language_groups as $group_name => $langs): ?>
+                            <div class="mb-3 last:mb-0">
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mb-2 px-1"><?php echo $group_name; ?></div>
+                                <div class="grid grid-cols-2 gap-1">
+                                    <?php foreach ($langs as $code => $name): ?>
+                                    <a href="#" onclick="changeLanguage('<?php echo $code; ?>')" class="flex items-center gap-2 px-2 py-2 rounded hover:bg-gold/10 transition-colors <?php echo $current_language === $code ? 'bg-gold/20 text-gold border border-gold/30' : 'text-gray-300'; ?>">
+                                        <?php echo get_flag_emoji($code); ?>
+                                        <span class="text-sm truncate"><?php echo $name; ?></span>
+                                    </a>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
                             <?php endforeach; ?>
                         </div>
                     </div>
