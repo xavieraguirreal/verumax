@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     id_instancia, slug, nombre, nombre_completo,
                     admin_usuario, admin_password, admin_email,
                     modulo_certificatum, modulo_scripta, modulo_nexus,
-                    modulo_vitae, modulo_lumen, modulo_opera
+                    modulo_vitae, modulo_lumen, modulo_opera, modulo_credencialis
                 FROM instances
                 WHERE admin_usuario = :usuario
                 AND activo = 1
@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         'vitae' => (bool)$instance['modulo_vitae'],
                         'lumen' => (bool)$instance['modulo_lumen'],
                         'opera' => (bool)$instance['modulo_opera'],
+                        'credencialis' => (bool)($instance['modulo_credencialis'] ?? 0),
                     ]
                 ];
 
