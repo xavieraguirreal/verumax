@@ -10,6 +10,13 @@ require_once '../config.php';
 // Definir módulos de idioma a cargar (modo modular)
 $lang_modules = ['common', 'land_credencialis'];
 require_once '../lang_config.php';
+
+// Sobreescribir idiomas disponibles con nombres simples (solo bandera + idioma)
+$available_languages = [
+    'es_AR' => 'Español',
+    'pt_BR' => 'Português'
+];
+
 require_once '../includes/currency_converter.php';
 require_once '../includes/pricing_config.php';
 require_once '../includes/cache_helper.php';
@@ -276,10 +283,7 @@ ob_start();
                             </svg>
                         </button>
                         <div id="langMenu" class="hidden absolute right-0 mt-2 w-48 bg-gray-900 border border-cyan-600/20 rounded-lg shadow-lg overflow-hidden z-50">
-                            <?php
-                            // Solo mostrar es_AR y pt_BR para Credencialis
-                            $credencialis_languages = ['es_AR' => 'Español (Argentina)', 'pt_BR' => 'Português (Brasil)'];
-                            foreach ($credencialis_languages as $code => $name): ?>
+                            <?php foreach ($available_languages as $code => $name): ?>
                                 <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 transition-colors <?php echo $current_language === $code ? 'bg-gray-800' : ''; ?>">
                                     <?php echo get_flag_emoji($code); ?>
                                     <span class="text-sm"><?php echo $name; ?></span>
@@ -316,7 +320,7 @@ ob_start();
                     <a href="#faq" class="text-gray-300 hover:text-cyan-600 transition-colors py-2"><?php echo $lang['cred_nav_faq']; ?></a>
 
                     <div class="flex items-center gap-3 py-2 border-t border-gray-800 mt-2 pt-4">
-                        <?php foreach ($credencialis_languages as $code => $name): ?>
+                        <?php foreach ($available_languages as $code => $name): ?>
                             <a href="?lang=<?php echo $code; ?>" class="flex items-center gap-2 px-3 py-2 rounded-lg <?php echo $current_language === $code ? 'bg-cyan-600/20 border border-cyan-600/30' : 'bg-gray-800'; ?> transition-colors">
                                 <?php echo get_flag_emoji($code); ?>
                             </a>

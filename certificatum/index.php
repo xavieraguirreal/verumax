@@ -8,6 +8,17 @@ require_once '../config.php';
 // Definir módulos de idioma a cargar (modo modular)
 $lang_modules = ['common', 'land_certificatum'];
 require_once '../lang_config.php';
+
+// Sobreescribir idiomas disponibles con nombres simples (solo bandera + idioma)
+$available_languages = [
+    'es_AR' => 'Español',
+    'es_BO' => 'Español',
+    'es_PY' => 'Español',
+    'es_EC' => 'Español',
+    'pt_BR' => 'Português',
+    'en_US' => 'English'
+];
+
 require_once '../includes/currency_converter.php';
 require_once '../includes/pricing_config.php';
 require_once '../includes/cache_helper.php';
