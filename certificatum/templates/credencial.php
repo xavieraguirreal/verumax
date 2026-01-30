@@ -95,7 +95,7 @@ $usar_template_imagen = !empty($template_url);
     /* Posiciones para datos CENTRADOS (estilo AMI/Liberté) */
     .cred-tpl-nombre {
         position: absolute;
-        top: 130px;
+        top: 140px;
         left: 0;
         right: 0;
         text-align: center;
@@ -107,7 +107,7 @@ $usar_template_imagen = !empty($template_url);
 
     .cred-tpl-dni {
         position: absolute;
-        top: 155px;
+        top: 165px;
         left: 0;
         right: 0;
         text-align: center;
@@ -118,18 +118,29 @@ $usar_template_imagen = !empty($template_url);
 
     .cred-tpl-asociado {
         position: absolute;
-        top: 185px;
+        top: 195px;
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-servicio {
         position: absolute;
-        top: 210px;
+        top: 222px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        color: <?php echo $color_primario; ?>;
+    }
+
+    .cred-tpl-ingreso {
+        position: absolute;
+        top: 245px;
         left: 0;
         right: 0;
         text-align: center;
@@ -138,36 +149,25 @@ $usar_template_imagen = !empty($template_url);
         color: <?php echo $color_primario; ?>;
     }
 
-    .cred-tpl-ingreso {
-        position: absolute;
-        top: 235px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 13px;
-        font-weight: 700;
-        color: <?php echo $color_primario; ?>;
-    }
-
     .cred-tpl-qr {
         position: absolute;
-        bottom: 50px;
-        right: 15px;
+        bottom: 45px;
+        right: 12px;
         text-align: center;
         z-index: 3;
     }
 
     .cred-tpl-qr img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         background: white;
-        padding: 2px;
+        padding: 3px;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
     .cred-tpl-qr-code {
-        font-size: 6px;
+        font-size: 7px;
         color: #666;
         margin-top: 2px;
         font-family: monospace;
