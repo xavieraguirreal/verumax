@@ -146,8 +146,8 @@
 
 <!-- Banner de Cookies -->
 <div id="cookie-banner"
-     class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white px-4 py-3 shadow-lg z-50 transform translate-y-full transition-transform duration-300"
-     style="display: none;">
+     class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white px-4 py-3 shadow-lg transform translate-y-full transition-transform duration-300"
+     style="display: none; z-index: 9999;">
     <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         <div class="flex items-center gap-3 text-sm">
             <span class="text-xl">🍪</span>
