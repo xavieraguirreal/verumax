@@ -96,7 +96,7 @@ $usar_template_imagen = !empty($template_url);
     /* Posiciones para datos CENTRADOS (estilo AMI/Liberté) */
     .cred-tpl-nombre {
         position: absolute;
-        top: 140px;
+        top: 150px;
         left: 0;
         right: 0;
         text-align: center;
@@ -108,7 +108,7 @@ $usar_template_imagen = !empty($template_url);
 
     .cred-tpl-dni {
         position: absolute;
-        top: 165px;
+        top: 175px;
         left: 0;
         right: 0;
         text-align: center;
@@ -119,33 +119,33 @@ $usar_template_imagen = !empty($template_url);
 
     .cred-tpl-asociado {
         position: absolute;
-        top: 195px;
+        top: 205px;
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-servicio {
         position: absolute;
-        top: 222px;
+        top: 230px;
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
 
     .cred-tpl-ingreso {
         position: absolute;
-        top: 245px;
+        top: 255px;
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 700;
         color: <?php echo $color_primario; ?>;
     }
