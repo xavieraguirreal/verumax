@@ -202,7 +202,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accion'])) {
                 $tpl_path = $tpl_dir . '/' . $tpl_filename;
 
                 if (move_uploaded_file($tpl_tmp, $tpl_path)) {
-                    $config['template_url'] = '/uploads/templates/' . $slug . '/' . $tpl_filename;
+                    // URL absoluta para que funcione desde cualquier página
+                    $config['template_url'] = 'https://' . $slug . '.verumax.com/uploads/templates/' . $slug . '/' . $tpl_filename;
                 }
             }
         } else {
@@ -497,7 +498,7 @@ $categorias_servicio = ['SERVICIO BÁSICO', 'SERVICIO PREMIUM', 'SERVICIO VIP', 
 
     <!-- Tab: Configuración -->
     <div id="tab-configuracion" class="tab-content p-6 <?php echo $active_tab !== 'configuracion' ? 'hidden' : ''; ?>">
-        <form id="form-config" class="space-y-6">
+        <form id="form-config" class="space-y-6" enctype="multipart/form-data">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Texto Superior (Banner)</label>
