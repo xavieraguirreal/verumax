@@ -631,7 +631,7 @@ WHERE limits = NULL;
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                             <?php echo $lang['slide_desarrollo_desc'] ?? 'WordPress, Joomla, Wix, Shopify... todos tienen límites. Desarrollamos sitios web, apps Android e iOS desde cero.'; ?>
                         </p>
-                        <a href="fabricatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
+                        <a href="https://fabricatum.verumax.com/?lang=<?php echo $current_language; ?>" class="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-light text-black font-bold rounded-xl transition-all hover:scale-105">
                             <?php echo $lang['slide_desarrollo_cta'] ?? 'Descubra cómo'; ?> →
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
@@ -652,7 +652,7 @@ WHERE limits = NULL;
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                             <?php echo $lang['slide_certificatum_desc'] ?? 'Diplomas, analíticos y constancias con código QR verificable al instante.'; ?>
                         </p>
-                        <a href="certificatum/" class="inline-flex items-center gap-2 px-8 py-4 bg-green-700 hover:bg-green-600 text-white font-bold rounded-xl transition-all hover:scale-105">
+                        <a href="https://certificatum.verumax.com/?lang=<?php echo $current_language; ?>" class="inline-flex items-center gap-2 px-8 py-4 bg-green-700 hover:bg-green-600 text-white font-bold rounded-xl transition-all hover:scale-105">
                             <?php echo $lang['slide_certificatum_cta'] ?? 'Conocer Certificatum'; ?>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
@@ -673,7 +673,7 @@ WHERE limits = NULL;
                         <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                             <?php echo $lang['slide_credencialis_desc'] ?? 'Carnets de socios/as, membresías y credenciales con QR verificable.'; ?>
                         </p>
-                        <a href="credencialis/" class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all hover:scale-105">
+                        <a href="https://credencialis.verumax.com/?lang=<?php echo $current_language; ?>" class="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl transition-all hover:scale-105">
                             <?php echo $lang['slide_credencialis_cta'] ?? 'Conocer Credencialis'; ?>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
@@ -846,7 +846,7 @@ WHERE limits = NULL;
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Certificatum -->
-                <a href="certificatum/" class="solution-card p-8 block reveal">
+                <a href="https://certificatum.verumax.com/?lang=<?php echo $current_language; ?>" class="solution-card p-8 block reveal">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="graduation-cap" class="w-7 h-7 text-purple-400"></i>
@@ -864,7 +864,7 @@ WHERE limits = NULL;
                 </a>
 
                 <!-- Credencialis -->
-                <a href="credencialis/" class="solution-card p-8 block reveal" style="animation-delay: 0.1s;">
+                <a href="https://credencialis.verumax.com/?lang=<?php echo $current_language; ?>" class="solution-card p-8 block reveal" style="animation-delay: 0.1s;">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 bg-gradient-to-br from-teal-500/20 to-teal-600/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="id-card" class="w-7 h-7 text-teal-400"></i>
@@ -882,7 +882,7 @@ WHERE limits = NULL;
                 </a>
 
                 <!-- Desarrollo Web -->
-                <a href="fabricatum/" class="solution-card p-8 block reveal" style="animation-delay: 0.2s;">
+                <a href="https://fabricatum.verumax.com/?lang=<?php echo $current_language; ?>" class="solution-card p-8 block reveal" style="animation-delay: 0.2s;">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 bg-gradient-to-br from-gold/20 to-gold-dark/10 rounded-xl flex items-center justify-center">
                             <i data-lucide="code-2" class="w-7 h-7 text-gold"></i>

@@ -287,7 +287,7 @@ ob_start();
                 <div class="flex items-center gap-3">
                     <img src="../assets/images/logo-verumax-escudo.png" alt="Logotipo escudo de Verumax - Sistema de certificados digitales" class="h-10 w-10" width="40" height="40" fetchpriority="high">
                     <div>
-                        <a href="../?lang=<?php echo $current_language; ?>" class="flex items-center" aria-label="Volver a inicio de Verumax">
+                        <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="flex items-center" aria-label="Volver a inicio de Verumax">
                             <img src="../assets/images/logo-verumax-texto.png" alt="Verumax - Plataforma de gestión educativa" class="h-8" width="120" height="32" fetchpriority="high">
                         </a>
                         <p class="text-xs text-gray-400">Certificatum</p>
@@ -295,7 +295,7 @@ ob_start();
                 </div>
                 <!-- Links de navegación (visibles en md+) -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="../?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-metallic-green-light transition-colors text-sm flex items-center gap-1">
+                    <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-metallic-green-light transition-colors text-sm flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -354,7 +354,7 @@ ob_start();
             <!-- Menú Móvil (oculto en md+) -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-metallic-green/20 pt-4">
                 <div class="flex flex-col gap-3">
-                    <a href="../?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-metallic-green-light transition-colors flex items-center gap-2 py-2">
+                    <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-metallic-green-light transition-colors flex items-center gap-2 py-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>

@@ -49,7 +49,7 @@ function __($key, $default = '') {
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://verumax.com/fabricatum/?lang=<?= $current_lang ?>">
+    <meta property="og:url" content="https://fabricatum.verumax.com/?lang=<?= $current_lang ?>">
     <meta property="og:title" content="<?= __('meta_og_title') ?>">
     <meta property="og:description" content="<?= __('meta_og_description') ?>">
     <meta property="og:image" content="https://verumax.com/og-image-fabricatum.png">
@@ -61,7 +61,7 @@ function __($key, $default = '') {
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://verumax.com/fabricatum/?lang=<?= $current_lang ?>">
+    <meta name="twitter:url" content="https://fabricatum.verumax.com/?lang=<?= $current_lang ?>">
     <meta name="twitter:title" content="<?= __('meta_og_title') ?>">
     <meta name="twitter:description" content="<?= __('meta_og_description') ?>">
     <meta name="twitter:image" content="https://verumax.com/og-image-fabricatum.png">
@@ -386,7 +386,7 @@ function __($key, $default = '') {
 
                 <!-- Nav Links (Desktop) -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="../?lang=<?= $current_language ?>" class="text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm flex items-center gap-1">
+                    <a href="https://verumax.com/?lang=<?= $current_lang ?>" class="text-gray-400 hover:text-neon-cyan transition-colors font-mono text-sm flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -447,7 +447,7 @@ function __($key, $default = '') {
         <!-- Mobile Menu Panel -->
         <div id="mobileMenu" class="hidden md:hidden border-t border-gray-800/50 bg-cyber-dark/95">
             <div class="px-4 py-4 space-y-3">
-                <a href="../?lang=<?= $current_language ?>" class="flex items-center gap-2 text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm">
+                <a href="https://verumax.com/?lang=<?= $current_lang ?>" class="flex items-center gap-2 text-gray-300 hover:text-neon-cyan py-2 font-mono text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>

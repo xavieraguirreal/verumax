@@ -14,7 +14,7 @@ return [
     'cred_meta_og_title' => 'Credencialis - Credenciais Digitais Verificáveis',
     'cred_meta_og_description' => 'Credenciais digitais que seus associados e associadas levam no bolso. Validação por QR Code instantânea, sem custos de impressão.',
     'cred_meta_twitter_title' => 'Credencialis | Credenciais Digitais para Organizações',
-    'cred_meta_twitter_description' => 'Carteirinha de sócio digital com validação QR. A forma moderna de identificar seus membros.',
+    'cred_meta_twitter_description' => 'Carteirinha de sócio/a digital com validação QR. A forma moderna de identificar seus membros.',
 
     // =====================================
     // NAVEGAÇÃO
@@ -101,16 +101,16 @@ return [
     'cred_organizaciones_subtitulo' => 'Organizações que confiam em credenciais digitais',
 
     'cred_org_clubes' => 'Clubes Esportivos',
-    'cred_org_clubes_desc' => 'Carteirinha de sócio digital para acesso às instalações, piscina, academia e atividades.',
+    'cred_org_clubes_desc' => 'Carteirinha de sócio/a digital para acesso às instalações, piscina, academia e atividades.',
 
     'cred_org_cooperativas' => 'Cooperativas',
     'cred_org_cooperativas_desc' => 'Credencial de associado/a com categoria de serviço e dados de filiação.',
 
     'cred_org_mutuales' => 'Associações de Classe',
-    'cred_org_mutuales_desc' => 'Carteira de filiado com informações de cobertura e benefícios.',
+    'cred_org_mutuales_desc' => 'Carteira de filiado/a com informações de cobertura e benefícios.',
 
     'cred_org_colegios' => 'Conselhos Profissionais',
-    'cred_org_colegios_desc' => 'Carteira digital verificável para advogados, contadores, médicos e mais.',
+    'cred_org_colegios_desc' => 'Carteira digital verificável para advogados/as, contadores/as, médicos/as e outros/as profissionais.',
 
     'cred_org_asociaciones' => 'Entidades Civis',
     'cred_org_asociaciones_desc' => 'Associação com validação QR para ONG, fundações e câmaras empresariais.',
@@ -122,7 +122,7 @@ return [
     'cred_org_gimnasios_desc' => 'Carteirinha de associado/a com controle de vencimento automático.',
 
     'cred_org_bibliotecas' => 'Bibliotecas',
-    'cred_org_bibliotecas_desc' => 'Carteira de leitor digital com acesso a empréstimos e serviços.',
+    'cred_org_bibliotecas_desc' => 'Carteira de leitor/a digital com acesso a empréstimos e serviços.',
 
     // =====================================
     // FUNCIONALIDADES
@@ -187,7 +187,7 @@ return [
     'cred_faq_subtitulo' => 'Tudo o que você precisa saber sobre o Credencialis',
 
     'cred_faq_acceso_titulo' => 'Como o/a associado/a acessa sua credencial?',
-    'cred_faq_acceso_desc' => 'Entrando no seu portal personalizado (ex: suaorganizacao.verumax.com/credencialis) e digitando seu CPF. Em segundos ele vê sua credencial digital.',
+    'cred_faq_acceso_desc' => 'Entrando no seu portal personalizado (ex: suaorganizacao.verumax.com/credencialis) e digitando seu CPF. Em segundos visualiza sua credencial digital.',
 
     'cred_faq_imprimir_titulo' => 'É possível imprimir a credencial?',
     'cred_faq_imprimir_desc' => 'Sim. O/a associado/a pode baixar um PDF de alta qualidade para imprimir em casa ou salvar no celular. Também oferecemos serviço de impressão profissional em PVC.',
@@ -350,7 +350,7 @@ return [
     // =====================================
     // CONTATO (formulário)
     // =====================================
-    'cred_contacto_titulo' => 'Pronto para Modernizar sua Organização?',
+    'cred_contacto_titulo' => 'Pronto/a para Modernizar sua Organização?',
     'cred_contacto_subtitulo' => 'Solicite uma demo personalizada e descubra como o Credencialis pode ajudar',
     'cred_contacto_nombre' => 'Nome completo',
     'cred_contacto_email' => 'Email',

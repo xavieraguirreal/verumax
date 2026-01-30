@@ -87,7 +87,6 @@ ob_start();
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Preload -->
-    <link rel="preload" href="/assets/css/tailwind.min.css" as="style">
     <link rel="preload" href="<?php echo CSS_PATH; ?>styles.css" as="style">
 
     <!-- Google Fonts -->
@@ -97,8 +96,36 @@ ob_start();
     <!-- Flag Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" media="print" onload="this.media='all'">
 
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <!-- Tailwind CSS CDN con colores personalizados -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyan': {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
+                            950: '#083344'
+                        },
+                        'teal': {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Estilos Compartidos -->
     <link rel="stylesheet" href="<?php echo CSS_PATH; ?>styles.css">
@@ -216,7 +243,7 @@ ob_start();
                 <div class="flex items-center gap-3">
                     <img src="../assets/images/logo-verumax-escudo.png" alt="Verumax" class="h-10 w-10" width="40" height="40">
                     <div>
-                        <a href="../?lang=<?php echo $current_language; ?>" class="flex items-center">
+                        <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="flex items-center">
                             <img src="../assets/images/logo-verumax-texto.png" alt="Verumax" class="h-8" width="120" height="32">
                         </a>
                         <p class="text-xs text-gray-400">Credencialis</p>
@@ -225,7 +252,7 @@ ob_start();
 
                 <!-- Links de navegación (desktop) -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="../?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-cyan-600 transition-colors text-sm flex items-center gap-1">
+                    <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-cyan-600 transition-colors text-sm flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -276,7 +303,7 @@ ob_start();
             <!-- Menú Móvil -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-cyan-600/20 pt-4">
                 <div class="flex flex-col gap-3">
-                    <a href="../?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-cyan-600 transition-colors flex items-center gap-2 py-2">
+                    <a href="https://verumax.com/?lang=<?php echo $current_language; ?>" class="text-gray-300 hover:text-cyan-600 transition-colors flex items-center gap-2 py-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
